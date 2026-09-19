@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2025-INDU-001",
+    "customer": "Sims-Anderson",
+    "company": "industrialsupply_co",
+    "start_date": "2025-01-18",
+    "end_date": "2026-01-18",
+    "total_contract_value": 6066967.94,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4853574.35
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1213393.59
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-002",
+    "customer": "Johnson Ltd",
+    "company": "industrialsupply_co",
+    "start_date": "2025-04-29",
+    "end_date": "2026-04-29",
+    "total_contract_value": 2592686.76,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2074149.41
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 518537.35
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-003",
+    "customer": "Dalton-Nguyen",
+    "company": "industrialsupply_co",
+    "start_date": "2025-05-03",
+    "end_date": "2027-05-03",
+    "total_contract_value": 7424393.83,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5939515.06
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1484878.77
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-004",
+    "customer": "Mcdonald-Pitts",
+    "company": "industrialsupply_co",
+    "start_date": "2024-08-17",
+    "end_date": "2025-08-17",
+    "total_contract_value": 2183452.42,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1746761.94
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 436690.48
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-005",
+    "customer": "Dunn-Taylor",
+    "company": "industrialsupply_co",
+    "start_date": "2025-05-24",
+    "end_date": "2026-05-24",
+    "total_contract_value": 3194223.64,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2555378.91
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 638844.73
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-006",
+    "customer": "Ryan, Garza and Bryant",
+    "company": "industrialsupply_co",
+    "start_date": "2024-10-14",
+    "end_date": "2026-10-14",
+    "total_contract_value": 1825662.81,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1238887.33
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 309721.83
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-007",
+    "customer": "Fields, Elliott and Mills",
+    "company": "industrialsupply_co",
+    "start_date": "2025-06-20",
+    "end_date": "2026-06-20",
+    "total_contract_value": 2845438.24,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2016998.19
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 504249.55
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-008",
+    "customer": "Ferguson, Stout and Olson",
+    "company": "industrialsupply_co",
+    "start_date": "2024-12-12",
+    "end_date": "2025-12-12",
+    "total_contract_value": 5838787.41,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4671029.93
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1167757.48
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-009",
+    "customer": "Ballard Group",
+    "company": "industrialsupply_co",
+    "start_date": "2025-08-30",
+    "end_date": "2026-08-30",
+    "total_contract_value": 6721664.18,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4678642.67
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1169660.67
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-010",
+    "customer": "Diaz-Green",
+    "company": "industrialsupply_co",
+    "start_date": "2025-02-24",
+    "end_date": "2028-02-24",
+    "total_contract_value": 3496997.72,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2797598.18
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 699399.54
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-011",
+    "customer": "Smith-Mills",
+    "company": "industrialsupply_co",
+    "start_date": "2025-03-27",
+    "end_date": "2028-03-26",
+    "total_contract_value": 1126483.85,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 761157.21
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 190289.3
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-012",
+    "customer": "Cooper Group",
+    "company": "industrialsupply_co",
+    "start_date": "2024-07-16",
+    "end_date": "2026-07-16",
+    "total_contract_value": 2248081.18,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1798464.94
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 449616.24
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-013",
+    "customer": "Smith, Weeks and Arroyo",
+    "company": "industrialsupply_co",
+    "start_date": "2025-05-12",
+    "end_date": "2028-05-11",
+    "total_contract_value": 3656510.45,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2925208.36
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 731302.09
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-014",
+    "customer": "Evans-Cannon",
+    "company": "industrialsupply_co",
+    "start_date": "2025-02-09",
+    "end_date": "2027-02-09",
+    "total_contract_value": 4424461.52,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3539569.22
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 884892.3
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-015",
+    "customer": "Harper-Robles",
+    "company": "industrialsupply_co",
+    "start_date": "2025-06-09",
+    "end_date": "2028-06-08",
+    "total_contract_value": 3037299.64,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2429839.71
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 607459.93
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-016",
+    "customer": "Brooks, Jenkins and Castro",
+    "company": "industrialsupply_co",
+    "start_date": "2024-11-06",
+    "end_date": "2026-11-06",
+    "total_contract_value": 1571275.6,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1257020.48
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 314255.12
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-017",
+    "customer": "Wright-Espinoza",
+    "company": "industrialsupply_co",
+    "start_date": "2024-07-05",
+    "end_date": "2026-07-05",
+    "total_contract_value": 2919972.85,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2093617.85
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 523404.46
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-018",
+    "customer": "Price, Gray and Baker",
+    "company": "industrialsupply_co",
+    "start_date": "2024-04-27",
+    "end_date": "2025-04-27",
+    "total_contract_value": 6647540.99,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5318032.79
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1329508.2
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-019",
+    "customer": "Garrett-Black",
+    "company": "industrialsupply_co",
+    "start_date": "2024-03-03",
+    "end_date": "2025-03-03",
+    "total_contract_value": 6685611.05,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5348488.84
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1337122.21
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-020",
+    "customer": "Aguirre, Cohen and Mitchell",
+    "company": "industrialsupply_co",
+    "start_date": "2025-10-23",
+    "end_date": "2028-10-22",
+    "total_contract_value": 4407908.37,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3526326.7
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 881581.67
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-021",
+    "customer": "Patel, Adams and Lopez",
+    "company": "industrialsupply_co",
+    "start_date": "2024-01-11",
+    "end_date": "2025-01-10",
+    "total_contract_value": 2350770.74,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1647053.38
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 411763.35
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-022",
+    "customer": "White LLC",
+    "company": "industrialsupply_co",
+    "start_date": "2024-12-03",
+    "end_date": "2026-12-03",
+    "total_contract_value": 1320003.11,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1056002.49
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 264000.62
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-INDU-023",
+    "customer": "Walsh PLC",
+    "company": "industrialsupply_co",
+    "start_date": "2024-11-18",
+    "end_date": "2025-11-18",
+    "total_contract_value": 5736504.85,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4589203.88
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1147300.97
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-024",
+    "customer": "Nelson-Dean",
+    "company": "industrialsupply_co",
+    "start_date": "2025-09-24",
+    "end_date": "2028-09-23",
+    "total_contract_value": 1626870.79,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1301496.63
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 325374.16
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-INDU-025",
+    "customer": "Flores and Sons",
+    "company": "industrialsupply_co",
+    "start_date": "2025-09-03",
+    "end_date": "2028-09-02",
+    "total_contract_value": 7258769.47,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5807015.58
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1451753.89
+      }
+    ]
+  }
+]

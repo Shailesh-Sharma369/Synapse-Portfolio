@@ -1,0 +1,552 @@
+[
+  {
+    "contract_id": "CNTR-2024-TECH-001",
+    "customer": "Thomas, Jackson and Nielsen",
+    "company": "techforge_saas",
+    "start_date": "2024-06-13",
+    "end_date": "2026-06-13",
+    "total_contract_value": 1994376.69,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1497067.93
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 264188.46,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-002",
+    "customer": "Mullen, Greene and Elliott",
+    "company": "techforge_saas",
+    "start_date": "2024-01-21",
+    "end_date": "2025-01-20",
+    "total_contract_value": 1656148.54,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1407726.26
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 248422.28,
+        "completion_percentage": 92
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-003",
+    "customer": "Johns Ltd",
+    "company": "techforge_saas",
+    "start_date": "2024-03-24",
+    "end_date": "2026-03-24",
+    "total_contract_value": 1683865.15,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1431285.38
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 252579.77,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-004",
+    "customer": "Nicholson, Valentine and Robinson",
+    "company": "techforge_saas",
+    "start_date": "2024-03-26",
+    "end_date": "2027-03-26",
+    "total_contract_value": 953226.46,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 810242.49
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 142983.97,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-005",
+    "customer": "Haney, Dillon and Jackson",
+    "company": "techforge_saas",
+    "start_date": "2024-05-25",
+    "end_date": "2027-05-25",
+    "total_contract_value": 654764.79,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 556550.07
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 98214.72,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-006",
+    "customer": "Burke-Norton",
+    "company": "techforge_saas",
+    "start_date": "2025-10-23",
+    "end_date": "2027-10-23",
+    "total_contract_value": 324917.29,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 276179.7
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 48737.59,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-007",
+    "customer": "Hanson PLC",
+    "company": "techforge_saas",
+    "start_date": "2024-07-17",
+    "end_date": "2027-07-17",
+    "total_contract_value": 953584.96,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 810547.22
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 143037.74,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-008",
+    "customer": "Jackson-Jennings",
+    "company": "techforge_saas",
+    "start_date": "2024-05-24",
+    "end_date": "2026-05-24",
+    "total_contract_value": 471724.04,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 400965.43
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 70758.61,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-009",
+    "customer": "Carlson-Jones",
+    "company": "techforge_saas",
+    "start_date": "2025-08-02",
+    "end_date": "2026-08-02",
+    "total_contract_value": 1158303.71,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 984558.15
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 173745.56,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-010",
+    "customer": "Cruz-Rodriguez",
+    "company": "techforge_saas",
+    "start_date": "2025-03-30",
+    "end_date": "2028-03-29",
+    "total_contract_value": 2062379.04,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1753022.18
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 309356.86,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-011",
+    "customer": "Mills PLC",
+    "company": "techforge_saas",
+    "start_date": "2024-07-03",
+    "end_date": "2025-07-03",
+    "total_contract_value": 1640122.63,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1394104.24
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 246018.39,
+        "completion_percentage": 61
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-012",
+    "customer": "Barnes, Hernandez and Davis",
+    "company": "techforge_saas",
+    "start_date": "2025-01-12",
+    "end_date": "2026-01-12",
+    "total_contract_value": 1750748.2,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1488135.97
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 262612.23,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-013",
+    "customer": "Valenzuela-Greene",
+    "company": "techforge_saas",
+    "start_date": "2025-11-09",
+    "end_date": "2027-11-09",
+    "total_contract_value": 1299882.59,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1104900.2
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 194982.39,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-014",
+    "customer": "Gordon, Wilson and Olson",
+    "company": "techforge_saas",
+    "start_date": "2024-04-26",
+    "end_date": "2026-04-26",
+    "total_contract_value": 523364.27,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 444859.63
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 78504.64,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-015",
+    "customer": "Winters PLC",
+    "company": "techforge_saas",
+    "start_date": "2025-10-22",
+    "end_date": "2027-10-22",
+    "total_contract_value": 2068689.21,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1434968.53
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 253229.74,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-016",
+    "customer": "Prince Ltd",
+    "company": "techforge_saas",
+    "start_date": "2025-04-17",
+    "end_date": "2027-04-17",
+    "total_contract_value": 2154540.45,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1831359.38
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 323181.07,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-017",
+    "customer": "Reynolds, Fisher and Golden",
+    "company": "techforge_saas",
+    "start_date": "2024-02-16",
+    "end_date": "2026-02-15",
+    "total_contract_value": 588665.69,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 500365.84
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 88299.85,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-018",
+    "customer": "Moreno, Perez and Lang",
+    "company": "techforge_saas",
+    "start_date": "2024-08-12",
+    "end_date": "2026-08-12",
+    "total_contract_value": 1005145.51,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 703797.18
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 124199.5,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-019",
+    "customer": "Bell-Ballard",
+    "company": "techforge_saas",
+    "start_date": "2025-02-27",
+    "end_date": "2026-02-27",
+    "total_contract_value": 631344.76,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 536643.05
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 94701.71,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-020",
+    "customer": "Johnston, Coleman and Scott",
+    "company": "techforge_saas",
+    "start_date": "2025-03-17",
+    "end_date": "2028-03-16",
+    "total_contract_value": 1149629.8,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 977185.33
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 172444.47,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-021",
+    "customer": "Kent Inc",
+    "company": "techforge_saas",
+    "start_date": "2025-03-20",
+    "end_date": "2028-03-19",
+    "total_contract_value": 579044.7,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 492187.99
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 86856.7,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-022",
+    "customer": "George-Stephens",
+    "company": "techforge_saas",
+    "start_date": "2024-05-18",
+    "end_date": "2027-05-18",
+    "total_contract_value": 1952376.57,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1511858.48
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 266798.56,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-023",
+    "customer": "Lopez-Fletcher",
+    "company": "techforge_saas",
+    "start_date": "2024-04-07",
+    "end_date": "2027-04-07",
+    "total_contract_value": 777004.3,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 660453.66
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 116550.65,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-TECH-024",
+    "customer": "Lane Inc",
+    "company": "techforge_saas",
+    "start_date": "2024-01-17",
+    "end_date": "2025-01-16",
+    "total_contract_value": 1932574.26,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1421626.54
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 250875.27,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-TECH-025",
+    "customer": "Smith, Pena and Watts",
+    "company": "techforge_saas",
+    "start_date": "2025-10-26",
+    "end_date": "2028-10-25",
+    "total_contract_value": 2218808.75,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1656909.52
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 292395.8,
+        "completion_percentage": 100
+      }
+    ]
+  }
+]

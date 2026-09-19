@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2024-LOGI-001",
+    "customer": "Combs-Davis",
+    "company": "logisticspro",
+    "start_date": "2024-03-07",
+    "end_date": "2025-03-07",
+    "total_contract_value": 2428838.6,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1943070.88
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 485767.72
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-002",
+    "customer": "Cook, Ward and Castro",
+    "company": "logisticspro",
+    "start_date": "2025-06-01",
+    "end_date": "2027-06-01",
+    "total_contract_value": 2459952.36,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1967961.89
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 491990.47
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-003",
+    "customer": "Cooper-Jenkins",
+    "company": "logisticspro",
+    "start_date": "2025-11-20",
+    "end_date": "2026-11-20",
+    "total_contract_value": 1810025.11,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1448020.09
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 362005.02
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-LOGI-004",
+    "customer": "Dillon-Mccarty",
+    "company": "logisticspro",
+    "start_date": "2024-03-12",
+    "end_date": "2026-03-12",
+    "total_contract_value": 2464948.91,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1971959.13
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 492989.78
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-LOGI-005",
+    "customer": "Ray Ltd",
+    "company": "logisticspro",
+    "start_date": "2024-04-06",
+    "end_date": "2025-04-06",
+    "total_contract_value": 595535.81,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 476428.65
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 119107.16
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-LOGI-006",
+    "customer": "Ryan, Krause and Mitchell",
+    "company": "logisticspro",
+    "start_date": "2024-10-19",
+    "end_date": "2025-10-19",
+    "total_contract_value": 2558904.23,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2047123.38
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 511780.85
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-007",
+    "customer": "Nunez-Freeman",
+    "company": "logisticspro",
+    "start_date": "2025-01-29",
+    "end_date": "2026-01-29",
+    "total_contract_value": 1211273.8,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 969019.04
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 242254.76
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-LOGI-008",
+    "customer": "Griffin, Miller and Austin",
+    "company": "logisticspro",
+    "start_date": "2024-11-07",
+    "end_date": "2026-11-07",
+    "total_contract_value": 561098.93,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 448879.14
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 112219.79
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-LOGI-009",
+    "customer": "Welch-Thomas",
+    "company": "logisticspro",
+    "start_date": "2024-04-24",
+    "end_date": "2027-04-24",
+    "total_contract_value": 2173324.85,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1738659.88
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 434664.97
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-010",
+    "customer": "Davidson LLC",
+    "company": "logisticspro",
+    "start_date": "2025-03-19",
+    "end_date": "2026-03-19",
+    "total_contract_value": 2736888.99,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2189511.19
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 547377.8
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-011",
+    "customer": "Welch-Duncan",
+    "company": "logisticspro",
+    "start_date": "2025-01-28",
+    "end_date": "2026-01-28",
+    "total_contract_value": 3164102.97,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2531282.38
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 632820.59
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-LOGI-012",
+    "customer": "Miller LLC",
+    "company": "logisticspro",
+    "start_date": "2024-01-25",
+    "end_date": "2025-01-24",
+    "total_contract_value": 3960425.49,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3168340.39
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 792085.1
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-013",
+    "customer": "Edwards Ltd",
+    "company": "logisticspro",
+    "start_date": "2025-02-11",
+    "end_date": "2028-02-11",
+    "total_contract_value": 3015022.78,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2412018.22
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 603004.56
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-014",
+    "customer": "Page-Jacobs",
+    "company": "logisticspro",
+    "start_date": "2025-06-12",
+    "end_date": "2026-06-12",
+    "total_contract_value": 2382490.95,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1905992.76
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 476498.19
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-LOGI-015",
+    "customer": "Nelson-Wallace",
+    "company": "logisticspro",
+    "start_date": "2024-03-21",
+    "end_date": "2025-03-21",
+    "total_contract_value": 3938547.13,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3150837.7
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 787709.43
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-016",
+    "customer": "Adkins-Meyer",
+    "company": "logisticspro",
+    "start_date": "2025-09-18",
+    "end_date": "2026-09-18",
+    "total_contract_value": 3970291.78,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2748970.26
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 687242.56
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-017",
+    "customer": "Gutierrez-White",
+    "company": "logisticspro",
+    "start_date": "2025-07-03",
+    "end_date": "2026-07-03",
+    "total_contract_value": 3273065.85,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2618452.68
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 654613.17
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-018",
+    "customer": "Martinez and Sons",
+    "company": "logisticspro",
+    "start_date": "2025-06-18",
+    "end_date": "2028-06-17",
+    "total_contract_value": 1755795.54,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1404636.43
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 351159.11
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-LOGI-019",
+    "customer": "King, Manning and Brady",
+    "company": "logisticspro",
+    "start_date": "2024-07-02",
+    "end_date": "2026-07-02",
+    "total_contract_value": 1534817.88,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1227854.3
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 306963.58
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-LOGI-020",
+    "customer": "Jackson Inc",
+    "company": "logisticspro",
+    "start_date": "2024-08-22",
+    "end_date": "2027-08-22",
+    "total_contract_value": 3037144.73,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2429715.78
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 607428.95
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-021",
+    "customer": "Brown Group",
+    "company": "logisticspro",
+    "start_date": "2025-01-14",
+    "end_date": "2028-01-14",
+    "total_contract_value": 1084435.45,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 768014.94
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 192003.73
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-022",
+    "customer": "Brown, Wise and Warren",
+    "company": "logisticspro",
+    "start_date": "2025-01-16",
+    "end_date": "2026-01-16",
+    "total_contract_value": 1566721.61,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1253377.29
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 313344.32
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-LOGI-023",
+    "customer": "Garcia PLC",
+    "company": "logisticspro",
+    "start_date": "2024-02-09",
+    "end_date": "2026-02-08",
+    "total_contract_value": 942661.28,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 754129.02
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 188532.26
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-024",
+    "customer": "Miller Group",
+    "company": "logisticspro",
+    "start_date": "2025-06-19",
+    "end_date": "2026-06-19",
+    "total_contract_value": 3106089.27,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2484871.42
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 621217.85
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-LOGI-025",
+    "customer": "Perez-Rojas",
+    "company": "logisticspro",
+    "start_date": "2025-12-21",
+    "end_date": "2028-12-20",
+    "total_contract_value": 1786092.89,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1428874.31
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 357218.58
+      }
+    ]
+  }
+]

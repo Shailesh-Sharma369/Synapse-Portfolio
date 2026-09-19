@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2024-RETA-001",
+    "customer": "Dunn Ltd",
+    "company": "retailco",
+    "start_date": "2024-05-27",
+    "end_date": "2026-05-27",
+    "total_contract_value": 8924710.18,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 7139768.14
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1784942.04
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-002",
+    "customer": "Herman, Bailey and Richmond",
+    "company": "retailco",
+    "start_date": "2024-06-10",
+    "end_date": "2026-06-10",
+    "total_contract_value": 9419262.84,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 7535410.27
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1883852.57
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-003",
+    "customer": "Perez-Mccarty",
+    "company": "retailco",
+    "start_date": "2025-07-23",
+    "end_date": "2026-07-23",
+    "total_contract_value": 7821187.26,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6256949.81
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1564237.45
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-004",
+    "customer": "Spears-Andrews",
+    "company": "retailco",
+    "start_date": "2024-02-05",
+    "end_date": "2026-02-04",
+    "total_contract_value": 8004534.03,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6403627.22
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1600906.81
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-005",
+    "customer": "Thompson-Hunter",
+    "company": "retailco",
+    "start_date": "2024-06-11",
+    "end_date": "2026-06-11",
+    "total_contract_value": 8739140.13,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6991312.1
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1747828.03
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-006",
+    "customer": "Jones, Phillips and Arroyo",
+    "company": "retailco",
+    "start_date": "2025-05-21",
+    "end_date": "2028-05-20",
+    "total_contract_value": 7736877.64,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6189502.11
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1547375.53
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-007",
+    "customer": "Frye, Walter and Li",
+    "company": "retailco",
+    "start_date": "2025-06-18",
+    "end_date": "2027-06-18",
+    "total_contract_value": 3103936.25,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2483149.0
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 620787.25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-008",
+    "customer": "Wright, Ramos and Bennett",
+    "company": "retailco",
+    "start_date": "2025-08-15",
+    "end_date": "2028-08-14",
+    "total_contract_value": 6284479.5,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5027583.6
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1256895.9
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-009",
+    "customer": "Carrillo-Todd",
+    "company": "retailco",
+    "start_date": "2025-03-08",
+    "end_date": "2027-03-08",
+    "total_contract_value": 7493405.0,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5994724.0
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1498681.0
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-010",
+    "customer": "Maldonado-Mosley",
+    "company": "retailco",
+    "start_date": "2025-11-29",
+    "end_date": "2027-11-29",
+    "total_contract_value": 8965131.74,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 7172105.39
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1793026.35
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-011",
+    "customer": "Olson LLC",
+    "company": "retailco",
+    "start_date": "2024-01-09",
+    "end_date": "2027-01-08",
+    "total_contract_value": 7791586.46,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6233269.17
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1558317.29
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-012",
+    "customer": "Reyes and Sons",
+    "company": "retailco",
+    "start_date": "2024-04-20",
+    "end_date": "2025-04-20",
+    "total_contract_value": 8146213.57,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6516970.86
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1629242.71
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-013",
+    "customer": "Haynes, Mcbride and Gutierrez",
+    "company": "retailco",
+    "start_date": "2025-02-17",
+    "end_date": "2026-02-17",
+    "total_contract_value": 9011329.93,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 7209063.94
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1802265.99
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-014",
+    "customer": "Black-Smith",
+    "company": "retailco",
+    "start_date": "2025-10-28",
+    "end_date": "2026-10-28",
+    "total_contract_value": 3026692.83,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2421354.26
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 605338.57
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-015",
+    "customer": "Wright-Davis",
+    "company": "retailco",
+    "start_date": "2025-01-15",
+    "end_date": "2026-01-15",
+    "total_contract_value": 3208934.98,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2567147.98
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 641787.0
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-016",
+    "customer": "Goodman, Peterson and Spencer",
+    "company": "retailco",
+    "start_date": "2024-01-07",
+    "end_date": "2027-01-06",
+    "total_contract_value": 5667864.59,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4534291.67
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1133572.92
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-017",
+    "customer": "Woods LLC",
+    "company": "retailco",
+    "start_date": "2024-02-03",
+    "end_date": "2026-02-02",
+    "total_contract_value": 8095443.59,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6476354.87
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1619088.72
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-018",
+    "customer": "Shannon LLC",
+    "company": "retailco",
+    "start_date": "2025-09-29",
+    "end_date": "2027-09-29",
+    "total_contract_value": 6568959.5,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5255167.6
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1313791.9
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-019",
+    "customer": "Valentine Ltd",
+    "company": "retailco",
+    "start_date": "2024-10-19",
+    "end_date": "2027-10-19",
+    "total_contract_value": 6952581.09,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5562064.87
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1390516.22
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-020",
+    "customer": "Porter and Sons",
+    "company": "retailco",
+    "start_date": "2024-03-24",
+    "end_date": "2027-03-24",
+    "total_contract_value": 3002644.57,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2402115.66
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 600528.91
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-021",
+    "customer": "Moss LLC",
+    "company": "retailco",
+    "start_date": "2025-03-01",
+    "end_date": "2027-03-01",
+    "total_contract_value": 9210389.69,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6531903.06
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1632975.77
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-022",
+    "customer": "Perez and Sons",
+    "company": "retailco",
+    "start_date": "2025-09-30",
+    "end_date": "2026-09-30",
+    "total_contract_value": 5637970.39,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4510376.31
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1127594.08
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-023",
+    "customer": "Kelly, Maxwell and Wilson",
+    "company": "retailco",
+    "start_date": "2024-03-12",
+    "end_date": "2025-03-12",
+    "total_contract_value": 4310001.17,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3448000.94
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 862000.23
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-RETA-024",
+    "customer": "Lowe Ltd",
+    "company": "retailco",
+    "start_date": "2024-11-23",
+    "end_date": "2026-11-23",
+    "total_contract_value": 4537118.49,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3629694.79
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 907423.7
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-RETA-025",
+    "customer": "Austin-Duran",
+    "company": "retailco",
+    "start_date": "2025-02-27",
+    "end_date": "2026-02-27",
+    "total_contract_value": 7421479.69,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5937183.75
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1484295.94
+      }
+    ]
+  }
+]

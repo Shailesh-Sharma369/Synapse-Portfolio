@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+redis
+celery
+agno
+pydantic
+pydantic-settings
+python-dotenv
+pandas
+jinja2
+sendgrid
+Faker

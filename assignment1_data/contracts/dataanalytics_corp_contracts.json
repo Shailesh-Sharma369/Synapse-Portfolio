@@ -1,0 +1,552 @@
+[
+  {
+    "contract_id": "CNTR-2025-DATA-001",
+    "customer": "Booker Inc",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-08-17",
+    "end_date": "2028-08-16",
+    "total_contract_value": 219909.46,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 131945.68
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 87963.78,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-002",
+    "customer": "Compton LLC",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-02-09",
+    "end_date": "2027-02-08",
+    "total_contract_value": 322106.98,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 193264.19
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 128842.79,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-003",
+    "customer": "Martinez-Gonzales",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-10-04",
+    "end_date": "2027-10-04",
+    "total_contract_value": 1087937.84,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 652762.7
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 435175.14,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-004",
+    "customer": "Hall and Sons",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-01-22",
+    "end_date": "2026-01-22",
+    "total_contract_value": 825468.95,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 495281.37
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 330187.58,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-005",
+    "customer": "Snyder LLC",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-06-27",
+    "end_date": "2027-06-27",
+    "total_contract_value": 1214621.59,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 728772.95
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 485848.64,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-006",
+    "customer": "Collins-Lloyd",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-12-11",
+    "end_date": "2025-12-11",
+    "total_contract_value": 1239838.97,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 743903.38
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 495935.59,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-007",
+    "customer": "Ford-Moody",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-03-17",
+    "end_date": "2027-03-17",
+    "total_contract_value": 434851.7,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 260911.02
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 173940.68,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-008",
+    "customer": "Miller-Christensen",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-12-23",
+    "end_date": "2025-12-23",
+    "total_contract_value": 858553.31,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 515131.99
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 343421.32,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-009",
+    "customer": "Brown Group",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-04-15",
+    "end_date": "2028-04-14",
+    "total_contract_value": 167083.15,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 100249.89
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 66833.26,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-010",
+    "customer": "Daniels and Sons",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-09-03",
+    "end_date": "2026-09-03",
+    "total_contract_value": 942249.76,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 565349.86
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 376899.9,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-011",
+    "customer": "Huang LLC",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-02-11",
+    "end_date": "2027-02-11",
+    "total_contract_value": 1060485.78,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 636291.47
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 424194.31,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-012",
+    "customer": "Clayton-Martinez",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-10-11",
+    "end_date": "2026-10-11",
+    "total_contract_value": 1176784.03,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 706070.42
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 470713.61,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-013",
+    "customer": "Wright, Wise and Ramos",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-08-19",
+    "end_date": "2027-08-19",
+    "total_contract_value": 1242578.38,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 745547.03
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 497031.35,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-014",
+    "customer": "Vang, Gonzalez and Moss",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-04-30",
+    "end_date": "2028-04-29",
+    "total_contract_value": 1124514.6,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 674708.76
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 449805.84,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-015",
+    "customer": "Boyd and Sons",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-07-10",
+    "end_date": "2027-07-10",
+    "total_contract_value": 786660.43,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 471996.26
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 314664.17,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-016",
+    "customer": "Price-Ali",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-12-24",
+    "end_date": "2025-12-24",
+    "total_contract_value": 1101313.47,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 660788.08
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 440525.39,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-017",
+    "customer": "Moore-Chandler",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-05-31",
+    "end_date": "2027-05-31",
+    "total_contract_value": 1024805.3,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 614883.18
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 409922.12,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-018",
+    "customer": "Pineda, Meyer and King",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-10-11",
+    "end_date": "2027-10-11",
+    "total_contract_value": 272805.73,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 163683.44
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 109122.29,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-019",
+    "customer": "Evans, Ward and Williams",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-07-20",
+    "end_date": "2027-07-20",
+    "total_contract_value": 893812.02,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 536287.21
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 357524.81,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-020",
+    "customer": "Robinson, Rodriguez and Chen",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-02-09",
+    "end_date": "2027-02-08",
+    "total_contract_value": 1100784.59,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 660470.75
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 440313.84,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-021",
+    "customer": "Smith-Bauer",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-10-11",
+    "end_date": "2027-10-11",
+    "total_contract_value": 848584.59,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 509150.75
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 339433.84,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-022",
+    "customer": "Wilson, Mccormick and Smith",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-05-06",
+    "end_date": "2028-05-05",
+    "total_contract_value": 174302.6,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 104581.56
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 69721.04,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-023",
+    "customer": "Perkins Ltd",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-02-01",
+    "end_date": "2027-01-31",
+    "total_contract_value": 750914.54,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 450548.72
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 300365.82,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DATA-024",
+    "customer": "Barker-Moore",
+    "company": "dataanalytics_corp",
+    "start_date": "2025-01-02",
+    "end_date": "2027-01-02",
+    "total_contract_value": 600910.73,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 360546.44
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 240364.29,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DATA-025",
+    "customer": "Wright Group",
+    "company": "dataanalytics_corp",
+    "start_date": "2024-01-02",
+    "end_date": "2025-01-01",
+    "total_contract_value": 304362.51,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 147728.82
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 98485.88,
+        "completion_percentage": 50
+      }
+    ]
+  }
+]

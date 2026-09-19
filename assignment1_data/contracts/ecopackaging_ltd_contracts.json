@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2024-ECOP-001",
+    "customer": "Parks LLC",
+    "company": "ecopackaging_ltd",
+    "start_date": "2024-08-08",
+    "end_date": "2027-08-08",
+    "total_contract_value": 1742546.97,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1394037.58
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 348509.39
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-002",
+    "customer": "Brown, Kelly and Moore",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-01-08",
+    "end_date": "2028-01-08",
+    "total_contract_value": 816594.01,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 653275.21
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 163318.8
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-003",
+    "customer": "Moody, Martinez and Hall",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-08-15",
+    "end_date": "2027-08-15",
+    "total_contract_value": 1229452.14,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 899589.33
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 224897.33
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ECOP-004",
+    "customer": "Kramer, Sherman and Trujillo",
+    "company": "ecopackaging_ltd",
+    "start_date": "2024-02-11",
+    "end_date": "2027-02-10",
+    "total_contract_value": 1267973.45,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1014378.76
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 253594.69
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ECOP-005",
+    "customer": "Quinn-Smith",
+    "company": "ecopackaging_ltd",
+    "start_date": "2024-10-23",
+    "end_date": "2027-10-23",
+    "total_contract_value": 1753028.54,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1402422.83
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 350605.71
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-006",
+    "customer": "Howard-Taylor",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-05-23",
+    "end_date": "2027-05-23",
+    "total_contract_value": 2052837.02,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1642269.62
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 410567.4
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-007",
+    "customer": "Washington Group",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-03-26",
+    "end_date": "2028-03-25",
+    "total_contract_value": 2304707.34,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1843765.87
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 460941.47
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ECOP-008",
+    "customer": "Phillips, Terry and Lopez",
+    "company": "ecopackaging_ltd",
+    "start_date": "2024-10-05",
+    "end_date": "2026-10-05",
+    "total_contract_value": 1197066.43,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 815837.76
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 203959.44
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-009",
+    "customer": "Stephens LLC",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-09-05",
+    "end_date": "2027-09-05",
+    "total_contract_value": 2024750.0,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1619800.0
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 404950.0
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ECOP-010",
+    "customer": "Mcdonald, Dillon and George",
+    "company": "ecopackaging_ltd",
+    "start_date": "2024-11-13",
+    "end_date": "2025-11-13",
+    "total_contract_value": 2717536.01,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2174028.81
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 543507.2
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-011",
+    "customer": "Martin, Schmidt and Cole",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-08-15",
+    "end_date": "2026-08-15",
+    "total_contract_value": 1876373.43,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1501098.74
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 375274.69
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-012",
+    "customer": "Weaver-Gibson",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-11-21",
+    "end_date": "2026-11-21",
+    "total_contract_value": 2230340.6,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1784272.48
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 446068.12
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-013",
+    "customer": "Hunter, Gross and Andrade",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-05-29",
+    "end_date": "2027-05-29",
+    "total_contract_value": 1726922.46,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1381537.97
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 345384.49
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ECOP-014",
+    "customer": "Vincent, Parsons and Allen",
+    "company": "ecopackaging_ltd",
+    "start_date": "2024-11-06",
+    "end_date": "2026-11-06",
+    "total_contract_value": 428477.26,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 342781.81
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 85695.45
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-015",
+    "customer": "Brown, Coffey and Fuentes",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-10-31",
+    "end_date": "2028-10-30",
+    "total_contract_value": 2438576.02,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1950860.82
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 487715.2
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-016",
+    "customer": "Warren Group",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-08-24",
+    "end_date": "2026-08-24",
+    "total_contract_value": 1335040.17,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1068032.14
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 267008.03
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-017",
+    "customer": "Moore, Campbell and Ortiz",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-11-27",
+    "end_date": "2028-11-26",
+    "total_contract_value": 720582.83,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 576466.26
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 144116.57
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ECOP-018",
+    "customer": "Rodriguez-Mills",
+    "company": "ecopackaging_ltd",
+    "start_date": "2024-04-27",
+    "end_date": "2026-04-27",
+    "total_contract_value": 883654.24,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 706923.39
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 176730.85
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ECOP-019",
+    "customer": "Williams and Sons",
+    "company": "ecopackaging_ltd",
+    "start_date": "2024-06-10",
+    "end_date": "2026-06-10",
+    "total_contract_value": 785449.29,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 628359.43
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 157089.86
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-020",
+    "customer": "Russo and Sons",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-07-07",
+    "end_date": "2026-07-07",
+    "total_contract_value": 2616058.01,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1764012.59
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 441003.15
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-021",
+    "customer": "Washington Inc",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-01-12",
+    "end_date": "2026-01-12",
+    "total_contract_value": 1862765.76,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1490212.61
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 372553.15
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-022",
+    "customer": "Duncan Group",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-03-30",
+    "end_date": "2026-03-30",
+    "total_contract_value": 978178.87,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 782543.1
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 195635.77
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-023",
+    "customer": "Burns, Hanson and Garza",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-08-20",
+    "end_date": "2026-08-20",
+    "total_contract_value": 2797415.63,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2237932.5
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 559483.13
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-024",
+    "customer": "Diaz PLC",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-08-25",
+    "end_date": "2026-08-25",
+    "total_contract_value": 1459616.48,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1167693.18
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 291923.3
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ECOP-025",
+    "customer": "Jones, Conrad and Clark",
+    "company": "ecopackaging_ltd",
+    "start_date": "2025-03-03",
+    "end_date": "2027-03-03",
+    "total_contract_value": 1179483.1,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 943586.48
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 235896.62
+      }
+    ]
+  }
+]

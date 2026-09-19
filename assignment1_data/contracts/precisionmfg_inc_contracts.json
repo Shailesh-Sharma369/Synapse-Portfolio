@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2025-PREC-001",
+    "customer": "Ortiz-Rodriguez",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-01-18",
+    "end_date": "2026-01-18",
+    "total_contract_value": 3463778.17,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2771022.54
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 692755.63
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-002",
+    "customer": "Pearson-King",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-03-03",
+    "end_date": "2026-03-03",
+    "total_contract_value": 1057370.46,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 845896.37
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 211474.09
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-003",
+    "customer": "Henderson, Diaz and Hill",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-06-11",
+    "end_date": "2027-06-11",
+    "total_contract_value": 4969569.98,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3975655.98
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 993914.0
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-004",
+    "customer": "Sanders, Harris and Arnold",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-04-26",
+    "end_date": "2026-04-26",
+    "total_contract_value": 2740475.58,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2192380.46
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 548095.12
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-005",
+    "customer": "Olson, Wood and Peters",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-07-28",
+    "end_date": "2027-07-28",
+    "total_contract_value": 1429838.48,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1143870.78
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 285967.7
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-006",
+    "customer": "Hinton-Lane",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-04-28",
+    "end_date": "2026-04-28",
+    "total_contract_value": 5404936.98,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3963581.52
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 990895.38
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-007",
+    "customer": "Sanders, Taylor and Shields",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-11-10",
+    "end_date": "2026-11-10",
+    "total_contract_value": 3613690.81,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2890952.65
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 722738.16
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-008",
+    "customer": "Adkins Group",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-02-25",
+    "end_date": "2025-02-24",
+    "total_contract_value": 2822455.62,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2257964.5
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 564491.12
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-009",
+    "customer": "Avery, Garcia and Romero",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-07-28",
+    "end_date": "2026-07-28",
+    "total_contract_value": 1304210.08,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1043368.06
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 260842.02
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-010",
+    "customer": "Owen-Mendez",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-08-24",
+    "end_date": "2028-08-23",
+    "total_contract_value": 5270986.32,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4216789.06
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1054197.26
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-011",
+    "customer": "Mann, Martin and Oconnell",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-04-08",
+    "end_date": "2028-04-07",
+    "total_contract_value": 5051711.15,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4041368.92
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1010342.23
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-012",
+    "customer": "Brock and Sons",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-06-17",
+    "end_date": "2025-06-17",
+    "total_contract_value": 2890398.47,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2312318.78
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 578079.69
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-013",
+    "customer": "Frost-Graham",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-12-05",
+    "end_date": "2027-12-05",
+    "total_contract_value": 2400217.84,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1920174.27
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 480043.57
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-014",
+    "customer": "Baker LLC",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-02-04",
+    "end_date": "2028-02-04",
+    "total_contract_value": 1578814.54,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1263051.63
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 315762.91
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-015",
+    "customer": "Lynch Ltd",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-09-05",
+    "end_date": "2028-09-04",
+    "total_contract_value": 3870935.21,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3096748.17
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 774187.04
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-016",
+    "customer": "Arias-Morales",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-07-08",
+    "end_date": "2027-07-08",
+    "total_contract_value": 4245981.21,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3396784.97
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 849196.24
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-017",
+    "customer": "Meyer, Dawson and Harper",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-04-15",
+    "end_date": "2025-04-15",
+    "total_contract_value": 4679179.98,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3743343.98
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 935836.0
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-018",
+    "customer": "Bowman Group",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-11-26",
+    "end_date": "2026-11-26",
+    "total_contract_value": 1196932.26,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 957545.81
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 239386.45
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-PREC-019",
+    "customer": "Harris Ltd",
+    "company": "precisionmfg_inc",
+    "start_date": "2025-12-07",
+    "end_date": "2027-12-07",
+    "total_contract_value": 819987.89,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 655990.31
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 163997.58
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-020",
+    "customer": "Mitchell, Johnson and Greene",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-10-23",
+    "end_date": "2027-10-23",
+    "total_contract_value": 1238523.44,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 990818.75
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 247704.69
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-021",
+    "customer": "Hale, Gilbert and Craig",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-09-14",
+    "end_date": "2026-09-14",
+    "total_contract_value": 3722520.73,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2978016.58
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 744504.15
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-022",
+    "customer": "Allen-Smith",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-08-31",
+    "end_date": "2027-08-31",
+    "total_contract_value": 5094299.36,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4075439.49
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1018859.87
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-023",
+    "customer": "Miller LLC",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-09-25",
+    "end_date": "2025-09-25",
+    "total_contract_value": 5102553.13,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4082042.5
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1020510.63
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-024",
+    "customer": "Gomez-Foster",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-04-29",
+    "end_date": "2026-04-29",
+    "total_contract_value": 3937988.63,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3150390.9
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 787597.73
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-PREC-025",
+    "customer": "Gonzalez, Smith and Padilla",
+    "company": "precisionmfg_inc",
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "total_contract_value": 4592138.5,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3673710.8
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 918427.7
+      }
+    ]
+  }
+]

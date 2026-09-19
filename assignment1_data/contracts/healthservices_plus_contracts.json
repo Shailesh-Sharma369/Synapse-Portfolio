@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2024-HEAL-001",
+    "customer": "Rubio, Charles and Watson",
+    "company": "healthservices_plus",
+    "start_date": "2024-05-22",
+    "end_date": "2025-05-22",
+    "total_contract_value": 232692.33,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 186153.86
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 46538.47
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-002",
+    "customer": "Vasquez-Galloway",
+    "company": "healthservices_plus",
+    "start_date": "2024-05-25",
+    "end_date": "2026-05-25",
+    "total_contract_value": 978104.96,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 782483.97
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 195620.99
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-003",
+    "customer": "Melton, Henry and Joyce",
+    "company": "healthservices_plus",
+    "start_date": "2025-10-29",
+    "end_date": "2028-10-28",
+    "total_contract_value": 432122.97,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 345698.38
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 86424.59
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-004",
+    "customer": "Ramirez, Walker and Ray",
+    "company": "healthservices_plus",
+    "start_date": "2025-10-21",
+    "end_date": "2028-10-20",
+    "total_contract_value": 975457.63,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 780366.1
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 195091.53
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-005",
+    "customer": "Fox Group",
+    "company": "healthservices_plus",
+    "start_date": "2024-06-26",
+    "end_date": "2025-06-26",
+    "total_contract_value": 1667346.68,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1333877.34
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 333469.34
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-006",
+    "customer": "Ayers-Johnson",
+    "company": "healthservices_plus",
+    "start_date": "2024-02-04",
+    "end_date": "2025-02-03",
+    "total_contract_value": 772829.37,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 618263.5
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 154565.87
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-007",
+    "customer": "Long-Parks",
+    "company": "healthservices_plus",
+    "start_date": "2024-02-08",
+    "end_date": "2027-02-07",
+    "total_contract_value": 484608.73,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 387686.98
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 96921.75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-008",
+    "customer": "Bryant Inc",
+    "company": "healthservices_plus",
+    "start_date": "2025-08-23",
+    "end_date": "2026-08-23",
+    "total_contract_value": 412028.81,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 329623.05
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 82405.76
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-009",
+    "customer": "Holmes, Stewart and Smith",
+    "company": "healthservices_plus",
+    "start_date": "2024-04-22",
+    "end_date": "2027-04-22",
+    "total_contract_value": 391506.7,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 270567.9
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 67641.98
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-010",
+    "customer": "Clark, Carpenter and Nguyen",
+    "company": "healthservices_plus",
+    "start_date": "2025-06-19",
+    "end_date": "2027-06-19",
+    "total_contract_value": 1438769.42,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1151015.54
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 287753.88
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-011",
+    "customer": "Hensley, Lopez and Baker",
+    "company": "healthservices_plus",
+    "start_date": "2025-05-03",
+    "end_date": "2026-05-03",
+    "total_contract_value": 766064.45,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 612851.56
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 153212.89
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-012",
+    "customer": "Ruiz-Austin",
+    "company": "healthservices_plus",
+    "start_date": "2025-09-22",
+    "end_date": "2026-09-22",
+    "total_contract_value": 288475.9,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 230780.72
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 57695.18
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-013",
+    "customer": "White-Coleman",
+    "company": "healthservices_plus",
+    "start_date": "2024-03-22",
+    "end_date": "2026-03-22",
+    "total_contract_value": 444641.67,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 355713.34
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 88928.33
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-014",
+    "customer": "Haynes-Watson",
+    "company": "healthservices_plus",
+    "start_date": "2025-11-25",
+    "end_date": "2027-11-25",
+    "total_contract_value": 1069461.74,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 855569.39
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 213892.35
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-015",
+    "customer": "Ramirez-White",
+    "company": "healthservices_plus",
+    "start_date": "2024-11-21",
+    "end_date": "2026-11-21",
+    "total_contract_value": 387436.76,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 309949.41
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 77487.35
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-016",
+    "customer": "Krause Ltd",
+    "company": "healthservices_plus",
+    "start_date": "2025-01-19",
+    "end_date": "2026-01-19",
+    "total_contract_value": 679827.59,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 543862.07
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 135965.52
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-017",
+    "customer": "Olsen Ltd",
+    "company": "healthservices_plus",
+    "start_date": "2025-07-01",
+    "end_date": "2027-07-01",
+    "total_contract_value": 347409.58,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 277927.66
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 69481.92
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-018",
+    "customer": "Brock-Peters",
+    "company": "healthservices_plus",
+    "start_date": "2025-02-13",
+    "end_date": "2028-02-13",
+    "total_contract_value": 727716.65,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 582173.32
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 145543.33
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-019",
+    "customer": "Gonzalez-Marsh",
+    "company": "healthservices_plus",
+    "start_date": "2024-09-18",
+    "end_date": "2026-09-18",
+    "total_contract_value": 1090904.86,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 872723.89
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 218180.97
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-020",
+    "customer": "Hernandez, Shaffer and Thompson",
+    "company": "healthservices_plus",
+    "start_date": "2024-04-17",
+    "end_date": "2025-04-17",
+    "total_contract_value": 985773.86,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 788619.09
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 197154.77
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-021",
+    "customer": "Taylor-Barry",
+    "company": "healthservices_plus",
+    "start_date": "2025-12-13",
+    "end_date": "2027-12-13",
+    "total_contract_value": 819904.55,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 655923.64
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 163980.91
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-022",
+    "customer": "Holmes, Le and Floyd",
+    "company": "healthservices_plus",
+    "start_date": "2025-11-28",
+    "end_date": "2027-11-28",
+    "total_contract_value": 1217259.22,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 973807.38
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 243451.84
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-023",
+    "customer": "King-Garrison",
+    "company": "healthservices_plus",
+    "start_date": "2024-04-17",
+    "end_date": "2027-04-17",
+    "total_contract_value": 1120688.96,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 896551.17
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 224137.79
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-HEAL-024",
+    "customer": "Ross Ltd",
+    "company": "healthservices_plus",
+    "start_date": "2025-11-22",
+    "end_date": "2026-11-22",
+    "total_contract_value": 1129953.9,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 751185.14
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 187796.28
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-HEAL-025",
+    "customer": "Brown LLC",
+    "company": "healthservices_plus",
+    "start_date": "2024-09-26",
+    "end_date": "2025-09-26",
+    "total_contract_value": 556623.95,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 445299.16
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 111324.79
+      }
+    ]
+  }
+]

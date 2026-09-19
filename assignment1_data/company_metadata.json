@@ -1,0 +1,82 @@
+[
+  {
+    "id":"techforge_saas",
+    "name":"TechForge SaaS",
+    "revenue_annual":45000000,
+    "industry":"SaaS",
+    "employees":180,
+    "has_inventory":false,
+    "gross_margin":0.72,
+    "growth_rate":0.35
+  },
+  {
+    "id":"precisionmfg_inc",
+    "name":"PrecisionMfg Inc",
+    "revenue_annual":120000000,
+    "industry":"Manufacturing",
+    "employees":450,
+    "has_inventory":true,
+    "gross_margin":0.32,
+    "growth_rate":0.08
+  },
+  {
+    "id":"retailco",
+    "name":"RetailCo",
+    "revenue_annual":200000000,
+    "industry":"Retail",
+    "employees":1200,
+    "has_inventory":true,
+    "gross_margin":0.38,
+    "growth_rate":0.12
+  },
+  {
+    "id":"healthservices_plus",
+    "name":"HealthServices Plus",
+    "revenue_annual":35000000,
+    "industry":"Healthcare Services",
+    "employees":220,
+    "has_inventory":false,
+    "gross_margin":0.55,
+    "growth_rate":0.18
+  },
+  {
+    "id":"logisticspro",
+    "name":"LogisticsPro",
+    "revenue_annual":80000000,
+    "industry":"Transportation",
+    "employees":350,
+    "has_inventory":false,
+    "gross_margin":0.22,
+    "growth_rate":0.15
+  },
+  {
+    "id":"industrialsupply_co",
+    "name":"IndustrialSupply Co",
+    "revenue_annual":150000000,
+    "industry":"Distribution",
+    "employees":280,
+    "has_inventory":true,
+    "gross_margin":0.18,
+    "growth_rate":0.06
+  },
+  {
+    "id":"dataanalytics_corp",
+    "name":"DataAnalytics Corp",
+    "revenue_annual":25000000,
+    "industry":"Professional Services",
+    "employees":95,
+    "has_inventory":false,
+    "gross_margin":0.65,
+    "growth_rate":0.22
+  },
+  {
+    "id":"ecopackaging_ltd",
+    "name":"EcoPackaging Ltd",
+    "revenue_annual":60000000,
+    "industry":"Manufacturing",
+    "employees":310,
+    "has_inventory":true,
+    "gross_margin":0.28,
+    "growth_rate":0.25
+  }
+]
