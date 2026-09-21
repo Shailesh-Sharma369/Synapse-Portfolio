@@ -13,6 +13,13 @@ from app.db.models import Company
 from app.agents.validator import validate_trial_balance
 from app.agents.variance import run_variance_analysis
 from app.agents.cash_flow import run_cash_flow_reconciliation
+from app.agents.accrual_verification import run_accrual_verification
+from app.agents.revenue_recognition import run_revenue_recognition
+from app.agents.expense_categorization import run_expense_categorization
+
+import logging
+
+logger = logging.getLogger(__name__)
 
 redis_client: redis.Redis = redis.from_url(settings.redis_url, decode_responses=True)
 
@@ -60,21 +67,32 @@ def run_cash_flow_agent(run_id: str, company_id: str) -> dict[str, Any]:
 # ---------------------------------------------------------------------------
 @celery_app.task(name="agents.accruals")
 def run_accruals_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    time.sleep(2)
-    return {"run_id": run_id, "company_id": company_id, "agent": "accruals", "status": "success"}
+    """Phase 2 Step 1 — Accrual Verification (sequential)."""
+    result = run_accrual_verification(company_id=company_id, period=None)
+    payload = result.model_dump()
+    payload["run_id"] = run_id
+    payload["agent"] = "accruals"
+    return payload
 
 
 @celery_app.task(name="agents.revenue")
 def run_revenue_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    time.sleep(2)
-    return {"run_id": run_id, "company_id": company_id, "agent": "revenue", "status": "success"}
+    """Phase 2 Step 2 — Revenue Recognition (runs after accruals)."""
+    result = run_revenue_recognition(company_id=company_id, period=None)
+    payload = result.model_dump()
+    payload["run_id"] = run_id
+    payload["agent"] = "revenue"
+    return payload
 
 
 @celery_app.task(name="agents.expenses")
 def run_expenses_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    time.sleep(2)
-    return {"run_id": run_id, "company_id": company_id, "agent": "expenses", "status": "success"}
-
+    """Phase 2 Step 3 — Expense Categorization (runs after revenue)."""
+    result = run_expense_categorization(company_id=company_id, period=None)
+    payload = result.model_dump()
+    payload["run_id"] = run_id
+    payload["agent"] = "expenses"
+    return payload
 
 # ---------------------------------------------------------------------------
 # Master orchestration
@@ -112,8 +130,36 @@ def run_month_end_close(run_id: str | None = None) -> dict[str, Any]:
 
 
 @celery_app.task(name="orchestrator.phase1_complete")
-def phase1_complete(_results: list[Any], run_id: str, company_id: str) -> dict[str, Any]:
+def phase1_complete(results: list[Any], run_id: str, company_id: str) -> dict[str, Any]:
+    """
+    Fires when all 3 Phase-1 agents for one company finish.
+
+    Transition guard: if any Phase-1 agent returned a non-PASSED status, we
+    record the failure in Redis but STILL proceed to Phase 2. Rationale: the
+    controller needs the full picture across all phases, not a partial run.
+    Phase 3 consolidation reads these failure keys to annotate the final report.
+    """
     redis_client.set(f"close:{run_id}:phase1:{company_id}", "done", ex=PHASE_TIMEOUT)
+
+    # Audit: which Phase-1 agents failed for this company?
+    phase1_failures: list[str] = []
+    for r in results or []:
+        if isinstance(r, dict):
+            agent = r.get("agent", "unknown")
+            status = str(r.get("status", "")).upper()
+            if status in ("FAILED", "UNRECONCILED"):
+                phase1_failures.append(agent)
+
+    if phase1_failures:
+        redis_client.set(
+            f"close:{run_id}:phase1_failures:{company_id}",
+            ",".join(phase1_failures),
+            ex=PHASE_TIMEOUT,
+        )
+        logger.warning(
+            "Phase 1 for %s had non-PASSED status in: %s — proceeding to Phase 2.",
+            company_id, phase1_failures,
+        )
 
     # Phase 2: sequential chain per company → on completion, bump counter
     chain(
@@ -123,8 +169,11 @@ def phase1_complete(_results: list[Any], run_id: str, company_id: str) -> dict[s
         phase2_complete.si(run_id, company_id),
     ).apply_async()
 
-    return {"run_id": run_id, "company_id": company_id, "phase": 1, "status": "done"}
-
+    return {
+        "run_id": run_id, "company_id": company_id,
+        "phase": 1, "status": "done",
+        "phase1_failures": phase1_failures,
+    }
 
 @celery_app.task(name="orchestrator.phase2_complete")
 def phase2_complete(run_id: str, company_id: str) -> dict[str, Any]:

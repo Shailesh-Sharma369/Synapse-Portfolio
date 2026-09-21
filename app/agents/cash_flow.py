@@ -1,10 +1,13 @@
-# Cash Flow Reconciliation Agent — Phase 1, Parallel Group.
+"""
+Cash Flow Reconciliation Agent — Phase 1, Parallel Group.
+"""
 
 from __future__ import annotations
 
 import json
 import logging
-from datetime import date
+import time
+from datetime import date, timedelta
 from decimal import Decimal
 from typing import Any
 
@@ -18,87 +21,58 @@ from app.db.models import BankStatement, TrialBalance
 
 logger = logging.getLogger(__name__)
 
-
-# Cash-tolerance: any gap under this is treated as reconciled noise.
 CASH_RECON_TOLERANCE_USD = Decimal("1000")
-
-# Number of largest bank transactions to surface per reconciliation.
 TOP_N_TRANSACTIONS = 5
+CASH_ACCOUNT_PREFIXES = ("1000", "1010", "1020")
 
-# Accounts we treat as "cash" for GL purposes. Extend as your COA grows.
-CASH_ACCOUNT_PREFIXES = ("1000", "1010", "1020")  # Cash & equivalents family
-
-
-# =============================================================================
-# 1. STRUCTURED OUTPUT SCHEMA
-# =============================================================================
 
 class BankTransactionSummary(BaseModel):
-    """One notable bank transaction, surfaced for human / LLM review."""
-
     date: str
     description: str
-    amount: float = Field(..., description="Signed amount: + for credits (money in), - for debits (money out).")
+    amount: float
 
 
 class CashFlowReconciliationResult(BaseModel):
-    """Final structured verdict returned by the agent for one company+period."""
-
     company_id: str
     period: str
     status: str = Field(..., description="'RECONCILED' if |gap| <= tolerance, else 'UNRECONCILED'.")
     gl_opening_balance: float
     gl_closing_balance: float
-    gl_movement: float = Field(..., description="closing - opening from the GL side.")
+    gl_movement: float
     bank_opening_balance: float
     bank_closing_balance: float
-    bank_movement: float = Field(..., description="bank closing - bank opening.")
-    gap: float = Field(..., description="gl_movement - bank_movement. Non-zero = unreconciled amount.")
+    bank_movement: float
+    gap: float
     tolerance_usd: float
     top_transactions: list[BankTransactionSummary] = Field(default_factory=list)
-    summary: str = Field(..., description="Controller-friendly narrative of the reconciliation result.")
+    summary: str
 
-
-# =============================================================================
-# 2. DETERMINISTIC ANALYSIS TOOL
-# =============================================================================
 
 def _parse_period(period: str) -> tuple[int, int]:
-    """Split 'YYYY-MM' into (year, month)."""
     y, m = period.split("-")
     return int(y), int(m)
 
 
 def _previous_period(period: str) -> str:
-    """
-    Return the immediately preceding 'YYYY-MM'. Used to derive the GL opening
-    balance (opening = prior period's closing balance).
-
-    Handles the year rollover: '2026-01' → '2025-12'.
-    """
     year, month = _parse_period(period)
     if month == 1:
         return f"{year - 1}-12"
     return f"{year}-{month - 1:02d}"
 
-def reconcile_cash_flow(company_id: str, period: str) -> dict[str, Any]:
-    """
-    Reconcile GL cash movement against bank statement movement for one company.
 
-    This is the deterministic core of the Cash Flow agent. The Agno LLM calls
-    it and interprets the output — it never sees the DB and never does math.
-    """
+def reconcile_cash_flow(company_id: str, period: str) -> dict[str, Any]:
+    """Deterministic GL-vs-bank cash reconciliation. Never raises."""
     db = SessionLocal()
     try:
         prior_period = _previous_period(period)
 
-        # ---- GL side: closing + opening ------------------------------------
         def gl_cash_balance(p: str) -> Decimal | None:
-            stmt = select(TrialBalance).where(
-                TrialBalance.company_id == company_id,
-                TrialBalance.period == p,
-            )
-            rows = db.scalars(stmt).all()
+            rows = db.scalars(
+                select(TrialBalance).where(
+                    TrialBalance.company_id == company_id,
+                    TrialBalance.period == p,
+                )
+            ).all()
             if not rows:
                 return None
             cash_rows = [
@@ -114,43 +88,30 @@ def reconcile_cash_flow(company_id: str, period: str) -> dict[str, Any]:
         gl_opening_available = gl_opening is not None
 
         if gl_closing is None:
-            return {
-                "company_id": company_id, "period": period, "found": False,
-                "error": "No trial balance rows for this period.",
-                "status": "UNRECONCILED",
-            }
+            return {"company_id": company_id, "period": period, "found": False,
+                    "error": "No trial balance rows for this period.", "status": "UNRECONCILED"}
 
         if gl_opening is None:
-            gl_opening = Decimal("0")  # fallback; flagged via gl_opening_available
+            gl_opening = Decimal("0")
 
-        # ---- Bank side: rows for the period --------------------------------
         bank_rows = db.scalars(
             select(BankStatement)
-            .where(
-                BankStatement.company_id == company_id,
-                BankStatement.period == period,
-            )
+            .where(BankStatement.company_id == company_id, BankStatement.period == period)
             .order_by(BankStatement.date.asc())
         ).all()
 
         if not bank_rows:
-            return {
-                "company_id": company_id, "period": period, "found": False,
-                "error": "No bank statement rows for this period.",
-                "status": "UNRECONCILED",
-            }
+            return {"company_id": company_id, "period": period, "found": False,
+                    "error": "No bank statement rows for this period.", "status": "UNRECONCILED"}
 
         bank_opening = bank_rows[0].balance or Decimal("0")
         bank_closing = bank_rows[-1].balance or Decimal("0")
         bank_movement = bank_closing - bank_opening
 
-        # ---- Movement reconciliation ---------------------------------------
         gl_movement = gl_closing - gl_opening
         gap = gl_movement - bank_movement
         within_tolerance = abs(gap) <= CASH_RECON_TOLERANCE_USD
 
-        # ---- Top-N bank transactions ---------------------------------------
-        # Signed amount: credit = money into the bank (positive), debit = out.
         def signed_amount(row: BankStatement) -> Decimal:
             return (row.credit or Decimal("0")) - (row.debit or Decimal("0"))
 
@@ -165,21 +126,14 @@ def reconcile_cash_flow(company_id: str, period: str) -> dict[str, Any]:
         ]
 
         return {
-            "company_id": company_id,
-            "period": period,
-            "found": True,
-            "gl_opening_balance": float(gl_opening),
-            "gl_closing_balance": float(gl_closing),
-            "gl_movement": float(gl_movement),
-            "gl_opening_available": gl_opening_available,
-            "bank_opening_balance": float(bank_opening),
-            "bank_closing_balance": float(bank_closing),
-            "bank_movement": float(bank_movement),
-            "gap": float(gap),
+            "company_id": company_id, "period": period, "found": True,
+            "gl_opening_balance": float(gl_opening), "gl_closing_balance": float(gl_closing),
+            "gl_movement": float(gl_movement), "gl_opening_available": gl_opening_available,
+            "bank_opening_balance": float(bank_opening), "bank_closing_balance": float(bank_closing),
+            "bank_movement": float(bank_movement), "gap": float(gap),
             "within_tolerance": within_tolerance,
             "tolerance_usd": float(CASH_RECON_TOLERANCE_USD),
-            "bank_row_count": len(bank_rows),
-            "top_transactions": top_txns,
+            "bank_row_count": len(bank_rows), "top_transactions": top_txns,
             "note": (
                 "GL and bank movements agree within tolerance."
                 if within_tolerance
@@ -189,16 +143,13 @@ def reconcile_cash_flow(company_id: str, period: str) -> dict[str, Any]:
 
     except Exception as exc:  # noqa: BLE001
         logger.exception("reconcile_cash_flow failed for %s@%s", company_id, period)
-        return {
-            "company_id": company_id, "period": period, "found": False,
-            "error": str(exc), "status": "UNRECONCILED",
-        }
+        return {"company_id": company_id, "period": period, "found": False,
+                "error": str(exc), "status": "UNRECONCILED"}
     finally:
         db.close()
 
 
 def _latest_period_for(company_id: str) -> str | None:
-    """Latest period present in bank statements for this company."""
     db = SessionLocal()
     try:
         return db.scalar(
@@ -211,65 +162,54 @@ def _latest_period_for(company_id: str) -> str | None:
         db.close()
 
 
-# =============================================================================
-# 3. AGNO AGENT DEFINITION
-# =============================================================================
-
 AGENT_INSTRUCTIONS = [
     "You are a Cash Flow Reconciliation Agent for a Private Equity month-end close system.",
     "",
     "STRICT RULES:",
-    "1. ALWAYS call the `reconcile_cash_flow` tool first. Never invent numbers.",
-    "2. NEVER recalculate sums, movements, or gaps. Cite the tool output verbatim.",
-    "3. Set status = 'RECONCILED' if and only if the tool returned within_tolerance=true.",
-    "   Otherwise set status = 'UNRECONCILED'.",
-    "4. Include every item from `top_transactions` in your output. Do not reorder or filter.",
-    "5. `summary` must be 2–3 sentences for a controller. State the gap amount and direction.",
-    "   If gl_opening_available=false, explicitly warn that the GL opening balance was not "
-    "   found and the movement figure should be treated as approximate.",
-    "6. If found=false, set status='UNRECONCILED' and explain the missing-data reason.",
+    "1. ALWAYS call `reconcile_cash_flow` first. Never invent numbers.",
+    "2. NEVER recalculate. Cite tool output verbatim.",
+    "3. status='RECONCILED' iff within_tolerance=true. Else 'UNRECONCILED'.",
+    "4. Include every item from `top_transactions`.",
+    "5. `summary` is 2-3 sentences. State gap amount and direction.",
+    "6. If found=false, set status='UNRECONCILED' and explain.",
     "",
-    "You output ONLY the structured JSON schema. No prose outside the schema.",
+    "Output ONLY the structured JSON schema.",
 ]
 
 
 def _build_agent() -> Agent:
-    """Build a fresh Agent per call — no shared state across Celery workers."""
     if not settings.gemini_api_key:
-        raise RuntimeError("GEMINI_API_KEY is not set — cannot initialise LLM.")
-
+        raise RuntimeError("GEMINI_API_KEY is not set.")
     return Agent(
         name="Cash Flow Reconciliation Agent",
         model=Gemini(id="gemini-3.5-flash", api_key=settings.gemini_api_key),
         tools=[reconcile_cash_flow],
-        description=(
-            "Reconciles GL cash movements against bank statement movements, "
-            "identifies unexplained gaps, and surfaces the largest transactions."
-        ),
+        description="Reconciles GL cash vs bank statement movements.",
         instructions=AGENT_INSTRUCTIONS,
         output_schema=CashFlowReconciliationResult,
         markdown=False,
     )
 
-# =============================================================================
-# 4. PUBLIC ENTRYPOINT
-# =============================================================================
 
-def run_cash_flow_reconciliation(
-    company_id: str,
-    period: str | None = None,
-) -> CashFlowReconciliationResult:
-    """
-    Run the Cash Flow Reconciliation agent for one company.
+def _safe_parse(content: Any) -> CashFlowReconciliationResult:
+    if isinstance(content, CashFlowReconciliationResult):
+        return content
+    if isinstance(content, dict):
+        if "error" in content:
+            raise RuntimeError(f"Gemini API error: {content['error']}")
+        return CashFlowReconciliationResult(**content)
+    if isinstance(content, str):
+        stripped = content.strip()
+        if stripped.startswith("{"):
+            parsed = json.loads(stripped)
+            if isinstance(parsed, dict) and "error" in parsed:
+                raise RuntimeError(f"Gemini API error: {parsed['error']}")
+            return CashFlowReconciliationResult(**parsed)
+        raise ValueError(f"Non-JSON agent response: {stripped[:200]}")
+    raise ValueError(f"Unexpected agent response type: {type(content)}")
 
-    Args:
-        company_id: Portfolio company slug.
-        period:     'YYYY-MM'. If None, uses the latest period available.
 
-    Returns:
-        CashFlowReconciliationResult. Falls back to a Python-only verdict if
-        the LLM is unreachable — the orchestrator never blocks on a rate-limit.
-    """
+def run_cash_flow_reconciliation(company_id: str, period: str | None = None) -> CashFlowReconciliationResult:
     if period is None:
         period = _latest_period_for(company_id)
         if period is None:
@@ -278,8 +218,7 @@ def run_cash_flow_reconciliation(
                 gl_opening_balance=0.0, gl_closing_balance=0.0, gl_movement=0.0,
                 bank_opening_balance=0.0, bank_closing_balance=0.0, bank_movement=0.0,
                 gap=0.0, tolerance_usd=float(CASH_RECON_TOLERANCE_USD),
-                top_transactions=[],
-                summary=f"No bank data found for company '{company_id}'.",
+                top_transactions=[], summary=f"No bank data found for '{company_id}'.",
             )
 
     prompt = (
@@ -287,52 +226,44 @@ def run_cash_flow_reconciliation(
         f"Call reconcile_cash_flow with these exact arguments."
     )
 
-    try:
-        agent = _build_agent()
-        response = agent.run(prompt)
-        content = response.content
+    last_exc: Exception | None = None
+    for attempt in range(3):
+        try:
+            agent = _build_agent()
+            response = agent.run(prompt)
+            return _safe_parse(response.content)
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            msg = str(exc).lower()
+            if any(k in msg for k in ("503", "unavailable", "429", "quota", "timeout", "deadline")) and attempt < 2:
+                time.sleep(2 * (attempt + 1))
+                continue
+            break
 
-        if isinstance(content, CashFlowReconciliationResult):
-            return content
-        if isinstance(content, dict):
-            return CashFlowReconciliationResult(**content)
-        if isinstance(content, str):
-            return CashFlowReconciliationResult(**json.loads(content))
-        raise ValueError(f"Unexpected agent response type: {type(content)}")
+    logger.warning("LLM path failed for cash flow %s@%s (%s) — falling back.", company_id, period, type(last_exc).__name__)
+    facts = reconcile_cash_flow(company_id, period)
 
-    except Exception as exc:  # noqa: BLE001
-        logger.exception("LLM path failed for cash flow %s@%s — falling back.", company_id, period)
-        facts = reconcile_cash_flow(company_id, period)
-
-        if not facts.get("found"):
-            return CashFlowReconciliationResult(
-                company_id=company_id, period=period, status="UNRECONCILED",
-                gl_opening_balance=0.0, gl_closing_balance=0.0, gl_movement=0.0,
-                bank_opening_balance=0.0, bank_closing_balance=0.0, bank_movement=0.0,
-                gap=0.0, tolerance_usd=float(CASH_RECON_TOLERANCE_USD),
-                top_transactions=[],
-                summary=f"LLM unavailable ({type(exc).__name__}). {facts.get('error', 'No data.')}",
-            )
-
-        txns = [
-            BankTransactionSummary(**t) for t in facts.get("top_transactions", [])
-        ]
-
+    if not facts.get("found"):
         return CashFlowReconciliationResult(
-            company_id=company_id, period=period,
-            status="RECONCILED" if facts.get("within_tolerance") else "UNRECONCILED",
-            gl_opening_balance=facts["gl_opening_balance"],
-            gl_closing_balance=facts["gl_closing_balance"],
-            gl_movement=facts["gl_movement"],
-            bank_opening_balance=facts["bank_opening_balance"],
-            bank_closing_balance=facts["bank_closing_balance"],
-            bank_movement=facts["bank_movement"],
-            gap=facts["gap"],
-            tolerance_usd=facts["tolerance_usd"],
-            top_transactions=txns,
-            summary=(
-                f"LLM unavailable ({type(exc).__name__}). "
-                f"Deterministic result: gap = {facts['gap']:.2f} USD "
-                f"({'within' if facts.get('within_tolerance') else 'outside'} tolerance)."
-            ),
+            company_id=company_id, period=period, status="UNRECONCILED",
+            gl_opening_balance=0.0, gl_closing_balance=0.0, gl_movement=0.0,
+            bank_opening_balance=0.0, bank_closing_balance=0.0, bank_movement=0.0,
+            gap=0.0, tolerance_usd=float(CASH_RECON_TOLERANCE_USD),
+            top_transactions=[],
+            summary=f"LLM unavailable ({type(last_exc).__name__}). {facts.get('error', 'No data.')}",
         )
+
+    txns = [BankTransactionSummary(**t) for t in facts.get("top_transactions", [])]
+    return CashFlowReconciliationResult(
+        company_id=company_id, period=period,
+        status="RECONCILED" if facts.get("within_tolerance") else "UNRECONCILED",
+        gl_opening_balance=facts["gl_opening_balance"], gl_closing_balance=facts["gl_closing_balance"],
+        gl_movement=facts["gl_movement"], bank_opening_balance=facts["bank_opening_balance"],
+        bank_closing_balance=facts["bank_closing_balance"], bank_movement=facts["bank_movement"],
+        gap=facts["gap"], tolerance_usd=facts["tolerance_usd"], top_transactions=txns,
+        summary=(
+            f"LLM unavailable ({type(last_exc).__name__}). "
+            f"Deterministic result: gap = {facts['gap']:.2f} USD "
+            f"({'within' if facts.get('within_tolerance') else 'outside'} tolerance)."
+        ),
+    )
