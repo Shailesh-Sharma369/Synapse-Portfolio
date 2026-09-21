@@ -1,3 +1,5 @@
+# app/main.py (replace top imports + endpoint)
+
 from __future__ import annotations
 
 import uuid
@@ -7,7 +9,7 @@ import redis
 from fastapi import FastAPI
 from sqlalchemy import text
 
-from app.agents.orchestrator import run_month_end_close
+from app.core.celery_app import celery_app   
 from app.db.database import engine, settings
 
 app = FastAPI(title="Month-End Close Orchestrator", version="0.1.0")
@@ -42,5 +44,5 @@ def health() -> dict[str, Any]:
 @app.post("/api/v1/trigger-close")
 def trigger_close() -> dict[str, Any]:
     run_id = str(uuid.uuid4())
-    run_month_end_close.delay(run_id)
+    celery_app.send_task("orchestrator.run_month_end_close", args=[run_id])
     return {"run_id": run_id, "status": "queued"}
