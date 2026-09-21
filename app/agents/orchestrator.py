@@ -10,6 +10,9 @@ from celery import chain, chord, group
 from app.core.celery_app import celery_app
 from app.db.database import SessionLocal, settings
 from app.db.models import Company
+from app.agents.validator import validate_trial_balance
+from app.agents.variance import run_variance_analysis
+from app.agents.cash_flow import run_cash_flow_reconciliation
 
 redis_client: redis.Redis = redis.from_url(settings.redis_url, decode_responses=True)
 
@@ -21,21 +24,36 @@ PHASE_TIMEOUT = 60 * 30  # 30 min safety expiry on state keys
 # ---------------------------------------------------------------------------
 @celery_app.task(name="agents.trial_balance")
 def run_trial_balance_agent(run_id: str, company_id: str) -> dict[str, Any]:
+    """Phase 1 — Trial Balance Validator.
+
+    Runs the Agno-powered validator for one company. Returns a JSON-safe dict
+    so Celery's JSON serializer can carry it into the chord callback.
+    """
+    result=validate_trial_balance(company_id,period=None)# None → latest period
+    payload=result.model_dump()
+    payload["run_id"]=run_id
+    payload["agent"]="trial_balance"
     time.sleep(2)
-    return {"run_id": run_id, "company_id": company_id, "agent": "trial_balance", "status": "success"}
+    return payload
 
 
 @celery_app.task(name="agents.variance")
 def run_variance_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    time.sleep(2)
-    return {"run_id": run_id, "company_id": company_id, "agent": "variance", "status": "success"}
-
+    """Phase 1 — Variance Analysis. Runs in parallel with TB Validator and Cash Flow."""
+    result = run_variance_analysis(company_id=company_id, period=None)
+    payload = result.model_dump()
+    payload["run_id"] = run_id
+    payload["agent"] = "variance"
+    return payload
 
 @celery_app.task(name="agents.cash_flow")
 def run_cash_flow_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    time.sleep(2)
-    return {"run_id": run_id, "company_id": company_id, "agent": "cash_flow", "status": "success"}
-
+    """Phase 1 — Cash Flow Reconciliation. Runs in parallel with TB and Variance."""
+    result = run_cash_flow_reconciliation(company_id=company_id, period=None)
+    payload = result.model_dump()
+    payload["run_id"] = run_id
+    payload["agent"] = "cash_flow"
+    return payload
 
 # ---------------------------------------------------------------------------
 # Dummy agent tasks (Phase 2 - run sequentially per company)
