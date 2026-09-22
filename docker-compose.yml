@@ -50,7 +50,7 @@ services:
 
   worker:
     build: .
-    command: celery -A app.core.celery_app worker -Q orchestrator,agents --loglevel=info --concurrency=4
+    command: celery -A app.core.celery_app worker -Q orchestrator,agents --loglevel=info --concurrency=1
     env_file: .env
     environment:
       DATABASE_URL: postgresql://admin:password123@db:5432/month_end_close

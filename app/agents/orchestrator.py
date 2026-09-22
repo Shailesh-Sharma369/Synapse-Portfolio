@@ -3,6 +3,7 @@ from __future__ import annotations
 import time
 import uuid
 from typing import Any
+import json
 
 import redis
 from celery import chain, chord, group
@@ -16,6 +17,7 @@ from app.agents.cash_flow import run_cash_flow_reconciliation
 from app.agents.accrual_verification import run_accrual_verification
 from app.agents.revenue_recognition import run_revenue_recognition
 from app.agents.expense_categorization import run_expense_categorization
+from app.agents.elimination import run_elimination
 
 import logging
 
@@ -193,7 +195,75 @@ def phase2_complete(run_id: str, company_id: str) -> dict[str, Any]:
 
 @celery_app.task(name="orchestrator.run_cross_company_elimination")
 def run_cross_company_elimination(run_id: str) -> dict[str, Any]:
-    time.sleep(2)  # Replace with real elimination logic in Phase 3
-    redis_client.set(f"close:{run_id}:phase3", "done", ex=PHASE_TIMEOUT)
-    redis_client.set(f"close:{run_id}:status", "completed", ex=PHASE_TIMEOUT)
-    return {"run_id": run_id, "phase": 3, "status": "success"}
+    """
+    Phase 3 — Cross-Company Group.
+
+    Fires exactly ONCE per month-end close run, after ALL 8 companies have
+    completed their Phase 2 chains. The atomic Redis lock set by
+    `phase2_complete` guarantees a single invocation even if 8 workers race
+    to increment the counter simultaneously.
+
+    Responsibilities:
+        - Reconcile intercompany flows across the whole portfolio
+        - Persist the EliminationResult to Redis for downstream Phase 4
+          (consolidation + reporting) to consume
+        - Stamp the overall run status to 'completed'
+
+    Error handling: any exception inside `run_elimination` is caught by that
+    function (it has its own deterministic fallback). Here we only guard
+    against Redis write failures, which would leave the run in a 'running'
+    state forever.
+    """
+    logger.info("[Phase 3] Starting cross-company intercompany elimination for run %s", run_id)
+
+    try:
+        result = run_elimination(period=None)
+        payload = result.model_dump()
+
+        # Persist full structured result for Phase 4 to read
+        redis_client.set(
+            f"close:{run_id}:phase3:result",
+            json.dumps(payload, default=str),
+            ex=PHASE_TIMEOUT,
+        )
+
+        # Summarise outcome for quick inspection
+        redis_client.set(
+            f"close:{run_id}:phase3:mismatch_count",
+            payload["mismatch_count"],
+            ex=PHASE_TIMEOUT,
+        )
+        redis_client.set(
+            f"close:{run_id}:phase3:status",
+            payload["status"],
+            ex=PHASE_TIMEOUT,
+        )
+
+        # Mark phase 3 done and the overall run complete
+        redis_client.set(f"close:{run_id}:phase3", "done", ex=PHASE_TIMEOUT)
+        redis_client.set(f"close:{run_id}:phase3_status", payload["status"], ex=PHASE_TIMEOUT)
+
+        logger.info(
+            "[Phase 3] Elimination complete — status=%s, mismatches=%d, asymmetry=$%.2f",
+            payload["status"], payload["mismatch_count"], payload["total_asymmetry_usd"],
+        )
+
+        return {
+            "run_id": run_id,
+            "phase": 3,
+            "status": "success",
+            "elimination_status": payload["status"],
+            "mismatch_count": payload["mismatch_count"],
+            "total_asymmetry_usd": payload["total_asymmetry_usd"],
+        }
+
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("[Phase 3] Elimination failed for run %s: %s", run_id, exc)
+        redis_client.set(f"close:{run_id}:phase3", "failed", ex=PHASE_TIMEOUT)
+        redis_client.set(f"close:{run_id}:status", "failed", ex=PHASE_TIMEOUT)
+        return {
+            "run_id": run_id,
+            "phase": 3,
+            "status": "failed",
+            "error": str(exc),
+        }

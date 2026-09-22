@@ -14,3 +14,5 @@ jinja2
 sendgrid
 Faker
 requests
+streamlit
+streamlit-autorefresh
