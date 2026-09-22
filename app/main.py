@@ -9,6 +9,7 @@ import redis
 from fastapi import FastAPI
 from sqlalchemy import text
 
+from app.agents.orchestrator import run_month_end_close
 from app.core.celery_app import celery_app   
 from app.db.database import engine, settings
 
@@ -44,5 +45,11 @@ def health() -> dict[str, Any]:
 @app.post("/api/v1/trigger-close")
 def trigger_close() -> dict[str, Any]:
     run_id = str(uuid.uuid4())
-    celery_app.send_task("orchestrator.run_month_end_close", args=[run_id])
+    run_month_end_close.delay(run_id)
+    # ✅ NEW: publish latest run pointer for the zero-click dashboard
+    try:
+        r = redis.from_url(settings.redis_url, decode_responses=True)
+        r.set("close:latest_run_id", run_id, ex=86400)  # 24h TTL
+    except Exception:
+        pass
     return {"run_id": run_id, "status": "queued"}

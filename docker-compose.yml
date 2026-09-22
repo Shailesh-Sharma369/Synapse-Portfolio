@@ -27,7 +27,6 @@ services:
 
   api:
     build: .
-    # --reload watches /app/app for file changes and auto-restarts uvicorn
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     ports:
       - "8000:8000"
@@ -38,7 +37,6 @@ services:
       CELERY_BROKER_URL: redis://redis:6379/1
       CELERY_RESULT_BACKEND: redis://redis:6379/2
     volumes:
-      # Dev bind mounts: code changes reflect instantly, no rebuild needed
       - ./app:/app/app
       - ./scripts:/app/scripts
       - ./assignment1_data:/app/assignment1_data
@@ -83,6 +81,25 @@ services:
     depends_on:
       db:
         condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  ui:
+    build: .
+    command: streamlit run app/ui/dashboard.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true
+    ports:
+      - "8501:8501"
+    env_file: .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      DATABASE_URL: postgresql://admin:password123@db:5432/month_end_close
+      STREAMLIT_SERVER_HEADLESS: "true"
+      STREAMLIT_BROWSER_GATHER_USAGE_STATS: "false"
+    volumes:
+      - ./app:/app/app
+      - ./scripts:/app/scripts
+      - ./assignment1_data:/app/assignment1_data
+    depends_on:
       redis:
         condition: service_healthy
 
