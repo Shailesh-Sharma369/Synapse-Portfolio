@@ -1,0 +1,554 @@
+"""
+Intercompany Elimination Agent — Phase 3, Cross-Company Group.
+
+================================================================================
+BUSINESS PROBLEM (GAAP CONSOLIDATION)
+================================================================================
+When the PE fund consolidates its 8 portfolio companies into a single set of
+financial statements, any transaction BETWEEN two portfolio companies must be
+ELIMINATED. Otherwise, group revenue and group expenses are both inflated by
+the intercompany markup — the classic "internal sales double-count" problem.
+    
+Example (why this matters):
+    Company A sells $500K of services to Company B.
+        - In Company A's books: Revenue += $500K
+        - In Company B's books: Expense += $500K (or Inventory += $500K)
+    At group level, this nets to zero economic activity (money never left the
+    group). If A and B both book their side but the amounts don't MATCH (e.g.
+    A booked $500K, B booked $480K), the group financials are mis-stated.
+
+An intercompany reconciliation finds these asymmetries BEFORE consolidation.
+
+TYPES OF ASYMMETRIES THIS AGENT DETECTS
+---------------------------------------
+    R1. DIRECTIONAL_ASYMMETRY
+        Pair (A, B) has A→B flow of $500K but B→A flow of $0.
+        In a mirrored-ledger world, B should have recorded its side of the
+        SAME transaction (as a payable/purchase). Missing mirror = red flag.
+
+    R2. AMOUNT_MISMATCH
+        A→B = $500K, B→A = $480K on mirror pairs. The $20K difference is the
+        unreconciled amount. Common cause: FX, cut-off timing, data entry.
+
+    R3. DUPLICATE_TRANSACTION
+        Same (seller, buyer, amount, date) appears more than once. Almost
+        always a data-load bug that inflates both sides.
+
+    R4. ORPHAN_ENTITY
+        A transaction references a company_id that doesn't exist in the
+        companies table. Would crash a naive consolidation.
+
+    R5. HIGH_SINGLE_DIRECTION_VOLUME
+        A single-direction flow (only A→B, no reverse) exceeds materiality.
+        Escalated severity vs a small one-sided flow.
+
+================================================================================
+HYBRID DESIGN (Python Math + LLM Reasoning)
+================================================================================
+- Python does ALL of:
+    - grouping, summing, pair matrix construction
+    - asymmetry math, duplicate detection, orphan detection
+    - materiality threshold checks
+- Gemini does ONLY:
+    - prioritizing which asymmetries matter
+    - writing a controller-ready narrative
+    - structuring output via Pydantic schema
+- The LLM NEVER sees the raw transaction table and NEVER recalculates.
+================================================================================
+"""
+
+from __future__ import annotations
+
+import json
+import logging
+import time
+from collections import defaultdict
+from datetime import date, timedelta
+from decimal import Decimal
+from typing import Any
+
+from agno.agent import Agent
+from agno.models.google import Gemini
+from pydantic import BaseModel, Field
+from sqlalchemy import select
+
+from app.db.database import SessionLocal, settings
+from app.db.models import Company, IntercompanyTransaction
+
+logger = logging.getLogger(__name__)
+
+
+# ---------------------------------------------------------------------------
+# Materiality constants — tune per PE firm's consolidation policy.
+# ---------------------------------------------------------------------------
+# Any asymmetry (|flow_AB - flow_BA|) above this is flagged.
+ASYMMETRY_MATERIALITY_USD = Decimal("10000")
+
+# Any single-direction flow above this with no mirror is escalated to HIGH.
+SINGLE_DIRECTION_MATERIALITY_USD = Decimal("100000")
+
+
+# =============================================================================
+# 1. STRUCTURED OUTPUT SCHEMA
+# =============================================================================
+
+class IntercompanyPair(BaseModel):
+    """One directional pair of entities (A→B and B→A flows summarised together)."""
+
+    seller_id: str
+    buyer_id: str
+    flow_ab: float = Field(..., description="Total A→B amount for the period.")
+    flow_ba: float = Field(..., description="Total B→A amount for the period.")
+    asymmetry: float = Field(..., description="abs(flow_ab - flow_ba). Zero means perfect mirror.")
+    direction: str = Field(
+        ..., description="'MIRRORED' if both directions have flow, 'ONE_WAY' otherwise."
+    )
+    severity: str = Field(..., description="'HIGH', 'MEDIUM', or 'LOW'.")
+
+
+class EliminationMismatch(BaseModel):
+    """A specific rule violation for one entity pair."""
+
+    seller_id: str
+    buyer_id: str
+    rule: str = Field(
+        ...,
+        description="One of: DIRECTIONAL_ASYMMETRY, AMOUNT_MISMATCH, DUPLICATE_TRANSACTION, "
+                    "ORPHAN_ENTITY, HIGH_SINGLE_DIRECTION_VOLUME.",
+    )
+    amount: float = Field(..., description="Dollar amount implicated in this mismatch.")
+    detail: str = Field(..., description="One-sentence explanation for the controller.")
+
+
+class EliminationResult(BaseModel):
+    """Final structured verdict returned by the agent for one period."""
+
+    period: str
+    status: str = Field(..., description="'CLEAN' if no mismatches, else 'MISMATCHES_FOUND'.")
+    total_transactions: int
+    unique_pairs: int
+    mismatch_count: int
+    total_asymmetry_usd: float = Field(
+        ..., description="Sum of |flow_ab - flow_ba| across all mirrored pairs."
+    )
+    top_asymmetric_pairs: list[IntercompanyPair] = Field(
+        default_factory=list,
+        description="Top asymmetric pairs sorted by absolute asymmetry, descending.",
+    )
+    mismatches: list[EliminationMismatch] = Field(default_factory=list)
+    summary: str
+
+
+# =============================================================================
+# 2. DETERMINISTIC ANALYSIS TOOL  (Python owns all math)
+# =============================================================================
+
+def _period_bounds(period: str) -> tuple[date, date]:
+    """
+    Return (first_day, last_day) for 'YYYY-MM'.
+
+    We filter on the IC transactions' `date` column rather than a separate
+    period column because our schema stores only the date.
+    """
+    y, m = (int(x) for x in period.split("-"))
+    start = date(y, m, 1)
+    if m == 12:
+        end = date(y, 12, 31)
+    else:
+        end = date(y, m + 1, 1) - timedelta(days=1)
+    return start, end
+
+
+def verify_intercompany_eliminations(period: str) -> dict[str, Any]:
+    """
+    Deterministic intercompany reconciliation across ALL portfolio companies.
+
+    This is the cross-company tool — unlike Phase 1/2 tools, it doesn't
+    scope to a single company_id. It reads the full IC transaction ledger
+    for the period and produces a pair-by-pair analysis.
+
+    ALGORITHM
+    ---------
+    1. Load all IC transactions whose `date` falls within `period`.
+    2. Detect orphan entities: transactions referencing company IDs not in
+       the companies table. These are excluded from pair analysis (they can't
+       be paired) but reported separately.
+    3. Group transactions by directional pair (seller_id, buyer_id). For each
+       pair, compute:
+           flow_ab = sum of amounts where seller=A, buyer=B
+           flow_ba = sum of amounts where seller=B, buyer=A
+       Canonicalize (A,B) and (B,A) into a single record keyed by sorted IDs.
+    4. For each canonical pair:
+         - asymmetry = |flow_ab - flow_ba|
+         - direction = MIRRORED if both > 0, else ONE_WAY
+         - flag DIRECTIONAL_ASYMMETRY if asymmetry > materiality
+         - flag HIGH_SINGLE_DIRECTION_VOLUME if ONE_WAY and max_flow > $100K
+    5. Detect DUPLICATE_TRANSACTION: identical (seller, buyer, amount, date)
+       appearing more than once.
+    6. Sort mismatches by absolute amount descending.
+
+    Returns:
+        JSON-serialisable dict. Never raises.
+    """
+    db = SessionLocal()
+    try:
+        start, end = _period_bounds(period)
+
+        # ---- 1. Load IC transactions for the period ----------------------
+        txns = db.scalars(
+            select(IntercompanyTransaction).where(
+                IntercompanyTransaction.date >= start,
+                IntercompanyTransaction.date <= end,
+            )
+        ).all()
+
+        if not txns:
+            return {
+                "period": period, "found": False,
+                "error": f"No intercompany transactions found for period {period}.",
+                "total_transactions": 0, "unique_pairs": 0,
+                "mismatches": [], "pairs": [],
+                "total_asymmetry_usd": 0.0,
+            }
+
+        # ---- 2. Load valid company IDs (for orphan detection) ------------
+        valid_company_ids = {
+            cid for (cid,) in db.execute(select(Company.id)).all()
+        }
+
+        # ---- 3. Directional flow accumulator -----------------------------
+        # Key: (seller, buyer) as ordered tuple → total amount
+        flows: dict[tuple[str, str], Decimal] = defaultdict(lambda: Decimal("0"))
+        # Key: (seller, buyer, amount_str, date_str) → occurrence count (duplicates)
+        txn_signatures: dict[tuple[str, str, str, str], int] = defaultdict(int)
+
+        orphan_txns: list[IntercompanyTransaction] = []
+
+        for t in txns:
+            seller = t.selling_entity_id
+            buyer = t.buying_entity_id
+
+            # Orphan check: either endpoint not in companies table
+            if seller not in valid_company_ids or buyer not in valid_company_ids:
+                orphan_txns.append(t)
+                continue
+
+            amount = t.amount or Decimal("0")
+            flows[(seller, buyer)] += amount
+
+            # Duplicate signature (excludes txn_id by design — identical
+            # business facts with different IDs is the pattern we hunt)
+            sig = (
+                seller,
+                buyer,
+                str(amount),
+                t.date.isoformat() if t.date else "",
+            )
+            txn_signatures[sig] += 1
+
+        # ---- 4. Build canonical pairs (A,B) and (B,A) merged --------------
+        # We canonicalize on sorted IDs so (A→B) and (B→A) collide cleanly.
+        canonical: dict[tuple[str, str], dict[str, Decimal]] = {}
+        for (a, b), amt in flows.items():
+            key = tuple(sorted([a, b]))
+            if key not in canonical:
+                canonical[key] = {"ab": Decimal("0"), "ba": Decimal("0")}
+            # Determine which original direction this amount belongs to
+            if (a, b) == (key[0], key[1]):
+                canonical[key]["ab"] += amt
+            else:
+                canonical[key]["ba"] += amt
+
+        # ---- 5. Score each pair ------------------------------------------
+        pairs: list[dict[str, Any]] = []
+        mismatches: list[dict[str, Any]] = []
+        total_asymmetry = Decimal("0")
+
+        for (lo, hi), agg in canonical.items():
+            flow_ab = agg["ab"]
+            flow_ba = agg["ba"]
+            asymmetry = abs(flow_ab - flow_ba)
+            total_asymmetry += asymmetry
+
+            has_ab = flow_ab > 0
+            has_ba = flow_ba > 0
+            direction = "MIRRORED" if (has_ab and has_ba) else "ONE_WAY"
+
+            # Severity grading:
+            #   HIGH   = asymmetry > single_direction_materiality (100K)
+            #   MEDIUM = asymmetry > asymmetry_materiality (10K)
+            #   LOW    = below threshold
+            if asymmetry > SINGLE_DIRECTION_MATERIALITY_USD:
+                severity = "HIGH"
+            elif asymmetry > ASYMMETRY_MATERIALITY_USD:
+                severity = "MEDIUM"
+            else:
+                severity = "LOW"
+
+            pairs.append({
+                "seller_id": lo,
+                "buyer_id": hi,
+                "flow_ab": float(flow_ab),
+                "flow_ba": float(flow_ba),
+                "asymmetry": float(asymmetry),
+                "direction": direction,
+                "severity": severity,
+            })
+
+            # R1 / R5: DIRECTIONAL_ASYMMETRY
+            if direction == "MIRRORED" and asymmetry > ASYMMETRY_MATERIALITY_USD:
+                mismatches.append({
+                    "seller_id": lo, "buyer_id": hi,
+                    "rule": "DIRECTIONAL_ASYMMETRY",
+                    "amount": float(asymmetry),
+                    "detail": (
+                        f"Mirrored flows disagree by ${asymmetry}: "
+                        f"{lo}→{hi}=${flow_ab}, {hi}→{lo}=${flow_ba}."
+                    ),
+                })
+            elif direction == "ONE_WAY" and max(flow_ab, flow_ba) > SINGLE_DIRECTION_MATERIALITY_USD:
+                mismatches.append({
+                    "seller_id": lo, "buyer_id": hi,
+                    "rule": "HIGH_SINGLE_DIRECTION_VOLUME",
+                    "amount": float(max(flow_ab, flow_ba)),
+                    "detail": (
+                        f"One-way flow of ${max(flow_ab, flow_ba)} between {lo} and {hi} "
+                        f"with no reverse entries — likely a missing mirror booking."
+                    ),
+                })
+
+        # ---- 6. Duplicate detection --------------------------------------
+        for (seller, buyer, amount_str, date_str), count in txn_signatures.items():
+            if count > 1:
+                mismatches.append({
+                    "seller_id": seller, "buyer_id": buyer,
+                    "rule": "DUPLICATE_TRANSACTION",
+                    "amount": float(Decimal(amount_str)),
+                    "detail": (
+                        f"Identical transaction (seller={seller}, buyer={buyer}, "
+                        f"amount={amount_str}, date={date_str}) appears {count} times."
+                    ),
+                })
+
+        # ---- 7. Orphan entities ------------------------------------------
+        for t in orphan_txns:
+            mismatches.append({
+                "seller_id": t.selling_entity_id or "UNKNOWN",
+                "buyer_id": t.buying_entity_id or "UNKNOWN",
+                "rule": "ORPHAN_ENTITY",
+                "amount": float(t.amount or Decimal("0")),
+                "detail": (
+                    f"Transaction {t.transaction_id} references an entity not in the "
+                    f"companies table — cannot be consolidated."
+                ),
+            })
+
+        # Sort all mismatches by absolute amount, biggest first
+        mismatches.sort(key=lambda x: abs(x["amount"]), reverse=True)
+        # Sort pairs the same way — LLM narrative picks the top off this list
+        pairs.sort(key=lambda x: abs(x["asymmetry"]), reverse=True)
+
+        return {
+            "period": period,
+            "found": True,
+            "total_transactions": len(txns),
+            "unique_pairs": len(canonical),
+            "mismatch_count": len(mismatches),
+            "total_asymmetry_usd": float(total_asymmetry),
+            "top_asymmetric_pairs": pairs[:10],  # top 10 for the LLM
+            "mismatches": mismatches,
+            "orphan_count": len(orphan_txns),
+            "note": (
+                f"{len(mismatches)} elimination mismatches detected across "
+                f"{len(canonical)} pairs."
+                if mismatches else "All intercompany flows reconcile cleanly."
+            ),
+        }
+
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("verify_intercompany_eliminations failed for %s", period)
+        return {
+            "period": period, "found": False,
+            "error": str(exc),
+            "total_transactions": 0, "unique_pairs": 0,
+            "mismatches": [], "pairs": [],
+            "total_asymmetry_usd": 0.0,
+        }
+    finally:
+        db.close()
+
+
+def _latest_period_globally() -> str | None:
+    """
+    Find the latest month for which ANY intercompany transaction exists.
+
+    Phase 3 is company-agnostic, so we can't use the per-company helper from
+    Phase 1/2. This scans the IC ledger directly.
+    """
+    db = SessionLocal()
+    try:
+        latest_date = db.scalar(
+            select(IntercompanyTransaction.date)
+            .order_by(IntercompanyTransaction.date.desc())
+            .limit(1)
+        )
+        if not latest_date:
+            return None
+        return latest_date.strftime("%Y-%m")
+    finally:
+        db.close()
+
+
+# =============================================================================
+# 3. AGNO AGENT DEFINITION
+# =============================================================================
+
+AGENT_INSTRUCTIONS = [
+    "You are an Intercompany Elimination Agent for a Private Equity month-end close system.",
+    "",
+    "STRICT RULES — violating these is a critical failure:",
+    "1. ALWAYS call `verify_intercompany_eliminations` FIRST. Never invent numbers.",
+    "2. NEVER compute, re-sum, or modify any numeric value yourself. The tool is "
+    "   the single source of truth for every dollar amount you cite.",
+    "3. Set status = 'CLEAN' iff mismatch_count == 0. Otherwise status = 'MISMATCHES_FOUND'.",
+    "4. Include EVERY mismatch from the tool's `mismatches` array in your output. "
+    "   Do not add, remove, reorder, or merge entries.",
+    "5. Include AT LEAST the top 5 pairs from `top_asymmetric_pairs` in your output. "
+    "   Copy them verbatim.",
+    "6. Write `summary` as 2-4 sentences for a controller. Lead with the largest-amount "
+    "   mismatch. Mention the total number of pairs and the aggregate asymmetry if "
+    "   material. Recommend a next action (e.g., 'post the missing mirror entry for "
+    "   pair X' or 'investigate duplicate load for transaction Y').",
+    "7. If the tool returns found=false, set status='MISMATCHES_FOUND' and explain in "
+    "   the summary that no IC data was available for the requested period.",
+    "",
+    "Output ONLY the structured JSON schema. No prose outside the schema.",
+]
+
+
+def _build_agent() -> Agent:
+    """Build a fresh Agent per call — no shared state across Celery workers."""
+    if not settings.gemini_api_key:
+        raise RuntimeError("GEMINI_API_KEY is not set — cannot initialise LLM.")
+
+    return Agent(
+        name="Intercompany Elimination Agent",
+        model=Gemini(id="gemini-3.5-flash", api_key=settings.gemini_api_key),
+        tools=[verify_intercompany_eliminations],
+        description=(
+            "Reconciles intercompany transactions across all portfolio companies "
+            "for a period, flags elimination asymmetries, and produces a "
+            "controller-ready consolidation narrative."
+        ),
+        instructions=AGENT_INSTRUCTIONS,
+        output_schema=EliminationResult,
+        markdown=False,
+    )
+
+
+# =============================================================================
+# 4. PUBLIC ENTRYPOINT
+# =============================================================================
+
+def _safe_parse(content: Any) -> EliminationResult:
+    """
+    Parse the agent response into EliminationResult.
+
+    Detects Gemini error payloads (which arrive as dicts/JSON strings with an
+    'error' key on 429/503) and raises cleanly so the retry/fallback layer
+    can do its job.
+    """
+    if isinstance(content, EliminationResult):
+        return content
+    if isinstance(content, dict):
+        if "error" in content:
+            raise RuntimeError(f"Gemini API error: {content['error']}")
+        return EliminationResult(**content)
+    if isinstance(content, str):
+        stripped = content.strip()
+        if stripped.startswith("{"):
+            parsed = json.loads(stripped)
+            if isinstance(parsed, dict) and "error" in parsed:
+                raise RuntimeError(f"Gemini API error: {parsed['error']}")
+            return EliminationResult(**parsed)
+        raise ValueError(f"Non-JSON agent response: {stripped[:200]}")
+    raise ValueError(f"Unexpected agent response type: {type(content)}")
+
+
+def run_elimination(period: str | None = None) -> EliminationResult:
+    """
+    Run the Intercompany Elimination Agent for one period.
+
+    Args:
+        period: 'YYYY-MM'. If None, resolves to the latest period present in
+                the intercompany ledger.
+
+    Returns:
+        EliminationResult. Falls back to a Python-only verdict if the LLM is
+        unreachable — the orchestrator never blocks on a Gemini rate-limit.
+    """
+    if period is None:
+        period = _latest_period_globally()
+        if period is None:
+            return EliminationResult(
+                period="UNKNOWN", status="MISMATCHES_FOUND",
+                total_transactions=0, unique_pairs=0, mismatch_count=0,
+                total_asymmetry_usd=0.0,
+                top_asymmetric_pairs=[], mismatches=[],
+                summary="No intercompany transactions exist in the ledger.",
+            )
+
+    prompt = (
+        f"Reconcile intercompany eliminations for period={period!r}. "
+        f"Call verify_intercompany_eliminations with this exact argument and "
+        f"produce the structured result."
+    )
+
+    # ---- Try LLM path up to 3 times on transient errors ------------------
+    last_exc: Exception | None = None
+    for attempt in range(3):
+        try:
+            agent = _build_agent()
+            response = agent.run(prompt)
+            return _safe_parse(response.content)
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            msg = str(exc).lower()
+            if any(k in msg for k in ("503", "unavailable", "429", "quota", "timeout", "deadline")) and attempt < 2:
+                time.sleep(2 * (attempt + 1))  # 2s, 4s
+                logger.warning("Transient error on elimination attempt %d — retrying.", attempt + 1)
+                continue
+            break
+
+    # ---- Deterministic fallback ------------------------------------------
+    logger.warning(
+        "LLM path failed for elimination %s (%s) — falling back to deterministic result.",
+        period, type(last_exc).__name__,
+    )
+    facts = verify_intercompany_eliminations(period)
+
+    pairs = [IntercompanyPair(**p) for p in facts.get("top_asymmetric_pairs", [])]
+    mismatches = [
+        EliminationMismatch(
+            seller_id=m["seller_id"], buyer_id=m["buyer_id"],
+            rule=m["rule"], amount=m["amount"], detail=m["detail"],
+        )
+        for m in facts.get("mismatches", [])
+    ]
+
+    return EliminationResult(
+        period=period,
+        status="CLEAN" if not mismatches else "MISMATCHES_FOUND",
+        total_transactions=facts.get("total_transactions", 0),
+        unique_pairs=facts.get("unique_pairs", 0),
+        mismatch_count=len(mismatches),
+        total_asymmetry_usd=facts.get("total_asymmetry_usd", 0.0),
+        top_asymmetric_pairs=pairs,
+        mismatches=mismatches,
+        summary=(
+            f"LLM unavailable ({type(last_exc).__name__}). "
+            f"Deterministic result: {len(mismatches)} intercompany mismatches "
+            f"across {facts.get('unique_pairs', 0)} pairs, "
+            f"aggregate asymmetry ${facts.get('total_asymmetry_usd', 0.0):,.2f}."
+        ),
+    )
