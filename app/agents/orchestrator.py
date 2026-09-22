@@ -18,6 +18,7 @@ from app.agents.accrual_verification import run_accrual_verification
 from app.agents.revenue_recognition import run_revenue_recognition
 from app.agents.expense_categorization import run_expense_categorization
 from app.agents.elimination import run_elimination
+from app.agents.consolidation import run_consolidation
 
 import logging
 
@@ -117,6 +118,8 @@ def run_month_end_close(run_id: str | None = None) -> dict[str, Any]:
         return {"run_id": run_id, "status": "failed", "reason": "no companies found"}
 
     redis_client.set(f"close:{run_id}:total_companies", len(company_ids), ex=PHASE_TIMEOUT)
+    redis_client.lpush("close:runs:recent", run_id)
+    redis_client.ltrim("close:runs:recent", 0, 49)
 
     # Phase 1: parallel chord per company → on completion, kick Phase 2 chain
     for company_id in company_ids:
@@ -196,74 +199,88 @@ def phase2_complete(run_id: str, company_id: str) -> dict[str, Any]:
 @celery_app.task(name="orchestrator.run_cross_company_elimination")
 def run_cross_company_elimination(run_id: str) -> dict[str, Any]:
     """
-    Phase 3 — Cross-Company Group.
+    Phase 3 — Cross-Company Intercompany Elimination.
 
     Fires exactly ONCE per month-end close run, after ALL 8 companies have
-    completed their Phase 2 chains. The atomic Redis lock set by
-    `phase2_complete` guarantees a single invocation even if 8 workers race
-    to increment the counter simultaneously.
-
-    Responsibilities:
-        - Reconcile intercompany flows across the whole portfolio
-        - Persist the EliminationResult to Redis for downstream Phase 4
-          (consolidation + reporting) to consume
-        - Stamp the overall run status to 'completed'
-
-    Error handling: any exception inside `run_elimination` is caught by that
-    function (it has its own deterministic fallback). Here we only guard
-    against Redis write failures, which would leave the run in a 'running'
-    state forever.
+    completed their Phase 2 chains. Does the elimination reconciliation and
+    then HANDS OFF to Phase 4 (consolidation) instead of marking the run
+    complete itself — Phase 4 owns the final status stamp.
     """
-    logger.info("[Phase 3] Starting cross-company intercompany elimination for run %s", run_id)
+    logger.info("[Phase 3] Intercompany elimination started for run %s", run_id)
 
     try:
         result = run_elimination(period=None)
         payload = result.model_dump()
+        payload["run_id"] = run_id
+        payload["phase"] = 3
 
-        # Persist full structured result for Phase 4 to read
+        # Persist full structured result for Phase 4 and the UI
         redis_client.set(
             f"close:{run_id}:phase3:result",
             json.dumps(payload, default=str),
             ex=PHASE_TIMEOUT,
         )
-
-        # Summarise outcome for quick inspection
-        redis_client.set(
-            f"close:{run_id}:phase3:mismatch_count",
-            payload["mismatch_count"],
-            ex=PHASE_TIMEOUT,
-        )
-        redis_client.set(
-            f"close:{run_id}:phase3:status",
-            payload["status"],
-            ex=PHASE_TIMEOUT,
-        )
-
-        # Mark phase 3 done and the overall run complete
         redis_client.set(f"close:{run_id}:phase3", "done", ex=PHASE_TIMEOUT)
-        redis_client.set(f"close:{run_id}:phase3_status", payload["status"], ex=PHASE_TIMEOUT)
+        redis_client.set(
+            f"close:{run_id}:phase3_status", payload["status"], ex=PHASE_TIMEOUT
+        )
+        # NOTE: we do NOT set `status=completed` here — Phase 4 owns that.
 
         logger.info(
             "[Phase 3] Elimination complete — status=%s, mismatches=%d, asymmetry=$%.2f",
-            payload["status"], payload["mismatch_count"], payload["total_asymmetry_usd"],
+            payload["status"], payload.get("mismatch_count", 0),
+            payload.get("total_asymmetry_usd", 0.0),
         )
 
-        return {
-            "run_id": run_id,
-            "phase": 3,
-            "status": "success",
-            "elimination_status": payload["status"],
-            "mismatch_count": payload["mismatch_count"],
-            "total_asymmetry_usd": payload["total_asymmetry_usd"],
-        }
+        # ---- Hand off to Phase 4 ----------------------------------------
+        run_consolidation_task.delay(run_id)
+        return payload
 
     except Exception as exc:  # noqa: BLE001
         logger.exception("[Phase 3] Elimination failed for run %s: %s", run_id, exc)
         redis_client.set(f"close:{run_id}:phase3", "failed", ex=PHASE_TIMEOUT)
         redis_client.set(f"close:{run_id}:status", "failed", ex=PHASE_TIMEOUT)
-        return {
-            "run_id": run_id,
-            "phase": 3,
-            "status": "failed",
-            "error": str(exc),
-        }
+        return {"run_id": run_id, "phase": 3, "status": "failed", "error": str(exc)}
+
+
+@celery_app.task(name="orchestrator.run_consolidation_task")
+def run_consolidation_task(run_id: str) -> dict[str, Any]:
+    """
+    Phase 4 — Final Consolidation.
+
+    Produces group-level financials (revenue, COGS, OpEx, EBITDA) adjusted for
+    the Phase 3 intercompany asymmetries. This is the LAST step of the close
+    pipeline; on success it stamps `close:{run_id}:status = 'completed'` and
+    persists the full result under `close:{run_id}:final_result` for the UI.
+    """
+    logger.info("[Phase 4] Consolidation started for run %s", run_id)
+
+    try:
+        result = run_consolidation(period=None, run_id=run_id)
+        payload = result.model_dump()
+        payload["run_id"] = run_id
+        payload["phase"] = 4
+
+        # Persist final result for downstream consumers (UI, reporting)
+        redis_client.set(
+            f"close:{run_id}:final_result",
+            json.dumps(payload, default=str),
+            ex=PHASE_TIMEOUT,
+        )
+        redis_client.set(f"close:{run_id}:phase4", "done", ex=PHASE_TIMEOUT)
+        redis_client.set(
+            f"close:{run_id}:phase4_status", payload["status"], ex=PHASE_TIMEOUT
+        )
+        redis_client.set(f"close:{run_id}:status", "completed", ex=PHASE_TIMEOUT)
+
+        logger.info(
+            "[Phase 4] Consolidation complete — adjusted EBITDA $%.2f across %d entities",
+            payload.get("adjusted_group_ebitda", 0.0), payload.get("entity_count", 0),
+        )
+        return payload
+
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("[Phase 4] Consolidation failed for run %s: %s", run_id, exc)
+        redis_client.set(f"close:{run_id}:phase4", "failed", ex=PHASE_TIMEOUT)
+        redis_client.set(f"close:{run_id}:status", "failed", ex=PHASE_TIMEOUT)
+        return {"run_id": run_id, "phase": 4, "status": "failed", "error": str(exc)}
