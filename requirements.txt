@@ -16,3 +16,5 @@ Faker
 requests
 streamlit
 streamlit-autorefresh
+jinja2
+resend

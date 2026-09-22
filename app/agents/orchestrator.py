@@ -19,6 +19,7 @@ from app.agents.revenue_recognition import run_revenue_recognition
 from app.agents.expense_categorization import run_expense_categorization
 from app.agents.elimination import run_elimination
 from app.agents.consolidation import run_consolidation
+from app.agents.reporting import send_executive_summary_email
 
 import logging
 
@@ -245,14 +246,7 @@ def run_cross_company_elimination(run_id: str) -> dict[str, Any]:
 
 @celery_app.task(name="orchestrator.run_consolidation_task")
 def run_consolidation_task(run_id: str) -> dict[str, Any]:
-    """
-    Phase 4 — Final Consolidation.
-
-    Produces group-level financials (revenue, COGS, OpEx, EBITDA) adjusted for
-    the Phase 3 intercompany asymmetries. This is the LAST step of the close
-    pipeline; on success it stamps `close:{run_id}:status = 'completed'` and
-    persists the full result under `close:{run_id}:final_result` for the UI.
-    """
+    """Phase 4 — Final Consolidation."""
     logger.info("[Phase 4] Consolidation started for run %s", run_id)
 
     try:
@@ -261,17 +255,17 @@ def run_consolidation_task(run_id: str) -> dict[str, Any]:
         payload["run_id"] = run_id
         payload["phase"] = 4
 
-        # Persist final result for downstream consumers (UI, reporting)
         redis_client.set(
             f"close:{run_id}:final_result",
             json.dumps(payload, default=str),
             ex=PHASE_TIMEOUT,
         )
         redis_client.set(f"close:{run_id}:phase4", "done", ex=PHASE_TIMEOUT)
-        redis_client.set(
-            f"close:{run_id}:phase4_status", payload["status"], ex=PHASE_TIMEOUT
-        )
+        redis_client.set(f"close:{run_id}:phase4_status", payload["status"], ex=PHASE_TIMEOUT)
         redis_client.set(f"close:{run_id}:status", "completed", ex=PHASE_TIMEOUT)
+
+        # ---- Hand off to Phase 5 (Reporting) -----------------------------
+        run_reporting_task.delay(run_id)
 
         logger.info(
             "[Phase 4] Consolidation complete — adjusted EBITDA $%.2f across %d entities",
@@ -284,3 +278,36 @@ def run_consolidation_task(run_id: str) -> dict[str, Any]:
         redis_client.set(f"close:{run_id}:phase4", "failed", ex=PHASE_TIMEOUT)
         redis_client.set(f"close:{run_id}:status", "failed", ex=PHASE_TIMEOUT)
         return {"run_id": run_id, "phase": 4, "status": "failed", "error": str(exc)}
+
+@celery_app.task(name="orchestrator.run_reporting_task")
+def run_reporting_task(run_id: str) -> dict[str, Any]:
+    """
+    Phase 5 — Reporting & Communication.
+
+    Sends the executive summary email to stakeholders. Runs AFTER the close
+    is marked 'completed' — a failure here does NOT roll back the pipeline.
+
+    State keys:
+        close:{run_id}:reporting       → 'done' | 'failed'
+        close:{run_id}:reporting_email → recipient (for audit)
+    """
+    logger.info("[Phase 5] Reporting started for run %s", run_id)
+
+    try:
+        ok = send_executive_summary_email(run_id)
+        status = "done" if ok else "failed"
+
+        redis_client.set(f"close:{run_id}:reporting", status, ex=PHASE_TIMEOUT)
+        redis_client.set(
+            f"close:{run_id}:reporting_email",
+            settings.to_email if hasattr(settings, "to_email") else "",
+            ex=PHASE_TIMEOUT,
+        )
+
+        logger.info("[Phase 5] Reporting %s for run %s", status, run_id)
+        return {"run_id": run_id, "phase": 5, "status": status}
+
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("[Phase 5] Reporting crashed for run %s: %s", run_id, exc)
+        redis_client.set(f"close:{run_id}:reporting", "failed", ex=PHASE_TIMEOUT)
+        return {"run_id": run_id, "phase": 5, "status": "failed", "error": str(exc)}
