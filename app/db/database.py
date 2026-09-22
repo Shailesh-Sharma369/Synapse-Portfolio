@@ -16,6 +16,9 @@ class Settings(BaseSettings):
     celery_result_backend: str = "redis://localhost:6379/2"
     gemini_api_key: str = ""
     sendgrid_api_key: str = ""
+    resend_api_key: str | None = None
+    from_email: str = "onboarding@resend.dev"
+    to_email: str = "shaileshmsharma1@gmail.com"
 
 
 settings = Settings()
