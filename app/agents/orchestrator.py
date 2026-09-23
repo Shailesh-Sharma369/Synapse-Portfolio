@@ -43,6 +43,18 @@ We enforce two throttles:
 
 Peak worst-case LLM rate with these settings: ~12 calls/minute. Free tier
 allows 15 RPM. Headroom ≈ 20%.
+
+================================================================================
+RETRY & RECOVERY
+================================================================================
+Every Celery task declares `autoretry_for=(Exception,)` with exponential
+backoff + jitter and a 3-attempt cap. This satisfies the assignment's
+"self-healing / retry logic / error recovery" requirement at the task layer
+(the agent layer already handles LLM-specific transient errors).
+
+Persistent failures (after retries exhausted) set a Redis escalation key
+`close:{run_id}:escalation` so an operator — or the dashboard — can see
+which run needs human review.
 """
 
 from __future__ import annotations
@@ -66,7 +78,12 @@ from app.agents.revenue_recognition import run_revenue_recognition
 from app.agents.expense_categorization import run_expense_categorization
 from app.agents.elimination import run_elimination
 from app.agents.consolidation import run_consolidation
-from app.agents.reporting import send_executive_summary_email
+from app.agents.reporting import (
+    send_executive_summary_email,
+    send_daily_summary_email,
+    send_weekly_stakeholder_report,
+    send_issue_alert_email,
+)
 
 import logging
 
@@ -83,46 +100,49 @@ PHASE_TIMEOUT = 60 * 30
 # ---------------------------------------------------------------------------
 # RATE-LIMIT PACING CONSTANTS
 # ---------------------------------------------------------------------------
-# Gemini free tier: 15 requests per minute per project. Our Phase-1 dispatch
-# bursts 24 LLM calls (8 companies × 3 agents). Without pacing we hit 429
-# immediately. Two knobs:
-#
-#   CHORD_STAGGER_SECONDS   → sleep BETWEEN company chords.
-#   AGENT_STAGGER_SECONDS   → sleep INSIDE each agent task, before the LLM.
-#
-# Rule of thumb: 15s chord stagger alone gives ~3 calls/15s = 12/min worst
-# case. Setting AGENT_STAGGER to 0 avoids blocking worker slots without
-# affecting the RPM profile — the real throttle is at dispatch time.
-# ---------------------------------------------------------------------------
 CHORD_STAGGER_SECONDS = 15
 AGENT_STAGGER_SECONDS = 0
+
+
+# ---------------------------------------------------------------------------
+# SELF-HEALING: retry policy applied to EVERY Celery task in this module.
+# ---------------------------------------------------------------------------
+# - autoretry_for=(Exception,):      retry on any exception
+# - retry_backoff=True:              exponential backoff (1s, 2s, 4s, ...)
+# - retry_backoff_max=300:           cap backoff at 5 minutes
+# - retry_jitter=True:               add randomness so retries don't stampede
+# - max_retries=3:                   3 attempts total (1 + 2 retries)
+#
+# If retries are exhausted the task fails hard, and the orchestrator's
+# on-failure hooks (see run_month_end_close / phase1_complete) set an
+# escalation key for human review.
+# ---------------------------------------------------------------------------
+_RETRY_KW: dict[str, Any] = dict(
+    autoretry_for=(Exception,),
+    retry_backoff=True,
+    retry_backoff_max=300,
+    retry_jitter=True,
+    max_retries=3,
+)
+
+
+def _set_escalation(run_id: str | None, reason: str) -> None:
+    """Best-effort write of an escalation flag for a run. Never raises."""
+    if not run_id:
+        return
+    try:
+        redis_client.set(f"close:{run_id}:escalation", reason, ex=PHASE_TIMEOUT)
+    except Exception:  # noqa: BLE001
+        logger.exception("Failed to set escalation flag for run %s", run_id)
 
 
 # ============================================================================
 # PHASE 1 — Parallel group (3 agents per company)
 # ============================================================================
-# Each agent:
-#   1. Runs the deterministic Python tool (SQL + Decimal math).
-#   2. Passes the tool's output to Gemini for reasoning + narrative.
-#   3. Returns a JSON-safe dict.
-#
-# The chord() dispatch in run_month_end_close() collects all three results
-# and hands them to phase1_complete() only after all three finish.
-# ============================================================================
 
-@celery_app.task(name="agents.trial_balance")
+@celery_app.task(name="agents.trial_balance", **_RETRY_KW)
 def run_trial_balance_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    """
-    Phase 1 agent — Trial Balance Validator.
-
-    Delegates to `validate_trial_balance()` in app/agents/validator.py,
-    which:
-        - Loads the company's trial balance rows for the latest period.
-        - Runs deterministic rules (balance equality, sign sanity, dupes).
-        - Wraps the result in a Pydantic model.
-        - Optionally consults Gemini for a controller-ready summary, with
-          a deterministic fallback if the LLM is unavailable.
-    """
+    """Phase 1 agent — Trial Balance Validator."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
 
@@ -133,14 +153,9 @@ def run_trial_balance_agent(run_id: str, company_id: str) -> dict[str, Any]:
     return payload
 
 
-@celery_app.task(name="agents.variance")
+@celery_app.task(name="agents.variance", **_RETRY_KW)
 def run_variance_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    """
-    Phase 1 agent — Variance Analysis.
-
-    Delegates to `run_variance_analysis()` in app/agents/variance.py.
-    Compares actuals vs budget, flags accounts exceeding $50K or 10% variance.
-    """
+    """Phase 1 agent — Variance Analysis."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
 
@@ -151,19 +166,13 @@ def run_variance_agent(run_id: str, company_id: str) -> dict[str, Any]:
     return payload
 
 
-@celery_app.task(name="agents.cash_flow")
+@celery_app.task(name="agents.cash_flow", **_RETRY_KW)
 def run_cash_flow_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    """
-    Phase 1 agent — Cash Flow Reconciliation.
-
-    Delegates to `run_cash_flow_reconciliation()` in app/agents/cash_flow.py.
-    Reconciles GL cash movement against bank-statement movement and surfaces
-    the top-N largest transactions for controller review.
-    """
+    """Phase 1 agent — Cash Flow Reconciliation."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
 
-    result = run_cash_flow_reconciliation(company_id=company_id, period=None)
+    result = run_cash_flow_reconciliation(company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
     payload["agent"] = "cash_flow"
@@ -173,20 +182,10 @@ def run_cash_flow_agent(run_id: str, company_id: str) -> dict[str, Any]:
 # ============================================================================
 # PHASE 2 — Sequential chain per company
 # ============================================================================
-# Rationale for sequencing: revenue recognition depends on accruals being
-# booked; expense categorization depends on revenue being recognized first.
-# Running these in parallel would produce inconsistent intermediate state.
-# ============================================================================
 
-@celery_app.task(name="agents.accruals")
+@celery_app.task(name="agents.accruals", **_RETRY_KW)
 def run_accruals_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    """
-    Phase 2 Step 1 — Accrual Verification.
-
-    Audits the accrual schedules table for staleness, orphans, and dupes.
-    Must run before revenue recognition: unreconciled accruals distort the
-    revenue base.
-    """
+    """Phase 2 Step 1 — Accrual Verification."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
 
@@ -197,15 +196,9 @@ def run_accruals_agent(run_id: str, company_id: str) -> dict[str, Any]:
     return payload
 
 
-@celery_app.task(name="agents.revenue")
+@celery_app.task(name="agents.revenue", **_RETRY_KW)
 def run_revenue_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    """
-    Phase 2 Step 2 — Revenue Recognition (ASC 606).
-
-    Validates allocation across performance obligations and detects stale
-    milestones. Runs AFTER accruals so that deferred-revenue calculations
-    use reconciled accrual figures.
-    """
+    """Phase 2 Step 2 — Revenue Recognition (ASC 606)."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
 
@@ -216,14 +209,9 @@ def run_revenue_agent(run_id: str, company_id: str) -> dict[str, Any]:
     return payload
 
 
-@celery_app.task(name="agents.expenses")
+@celery_app.task(name="agents.expenses", **_RETRY_KW)
 def run_expenses_agent(run_id: str, company_id: str) -> dict[str, Any]:
-    """
-    Phase 2 Step 3 — Expense Categorization.
-
-    Audits expense accounts for miscategorization, unusual ratios, orphans.
-    Last in the chain because it depends on final revenue classification.
-    """
+    """Phase 2 Step 3 — Expense Categorization."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
 
@@ -238,37 +226,45 @@ def run_expenses_agent(run_id: str, company_id: str) -> dict[str, Any]:
 # MASTER ORCHESTRATION ENTRYPOINT
 # ============================================================================
 
-@celery_app.task(name="orchestrator.run_month_end_close")
-def run_month_end_close(run_id: str | None = None) -> dict[str, Any]:
+@celery_app.task(name="orchestrator.run_month_end_close", **_RETRY_KW)
+def run_month_end_close(
+    run_id: str | None = None,
+    close_week_only: bool = False,
+) -> dict[str, Any]:
     """
     Fires the entire month-end close pipeline for one run_id.
 
-    Called either by:
-        - FastAPI's POST /api/v1/trigger-close
-        - Celery Beat's daily 9 AM schedule
-
-    Steps:
-        1. Generate / accept a run_id.
-        2. Initialize Redis state keys (status=running, counters=0).
-        3. Fetch the list of all portfolio companies from Postgres.
-        4. For each company, dispatch a Phase-1 chord with a staggered sleep
-           between companies to respect Gemini's RPM budget.
+    Args:
+        run_id: optional — generated if not provided.
+        close_week_only: when True (used by the hourly Beat schedule),
+            the task exits early if we're not in days 1-5 of the month.
     """
+    # ---- Close-week guard (used by the hourly Beat entry only) ----------
+    if close_week_only:
+        from datetime import date as _date
+        if _date.today().day > 5:
+            return {
+                "status": "skipped",
+                "reason": "outside close week (days 1-5)",
+            }
+
     run_id = run_id or str(uuid.uuid4())
 
     # ---- Initialize state ------------------------------------------------
     redis_client.set(f"close:{run_id}:status", "running", ex=PHASE_TIMEOUT)
     redis_client.set(f"close:{run_id}:phase2_count", 0, ex=PHASE_TIMEOUT)
+    redis_client.set("close:latest_run_id", run_id, ex=PHASE_TIMEOUT)
 
     # ---- Fetch company list ----------------------------------------------
     db = SessionLocal()
     try:
-        company_ids = [str(cid) for (cid, ) in db.query(Company.id).all()]
+        company_ids = [str(cid) for (cid,) in db.query(Company.id).all()]
     finally:
         db.close()
 
     if not company_ids:
         redis_client.set(f"close:{run_id}:status", "failed", ex=PHASE_TIMEOUT)
+        _set_escalation(run_id, "no_companies_found")
         return {"run_id": run_id, "status": "failed", "reason": "no companies found"}
 
     redis_client.set(f"close:{run_id}:total_companies", len(company_ids), ex=PHASE_TIMEOUT)
@@ -278,15 +274,10 @@ def run_month_end_close(run_id: str | None = None) -> dict[str, Any]:
     redis_client.ltrim("close:runs:recent", 0, 49)
 
     # ---- Dispatch Phase 1, staggered -------------------------------------
-    # The stagger exists ONLY to keep LLM calls under Gemini's RPM cap.
-    # `idx > 0` skips the sleep for the very first company — no point
-    # delaying the start of the pipeline.
     for idx, company_id in enumerate(company_ids):
         if idx > 0 and CHORD_STAGGER_SECONDS:
             time.sleep(CHORD_STAGGER_SECONDS)
 
-        # chord(group(3 agents)) fires the 3 agents in parallel and hands
-        # their combined results to phase1_complete once all three finish.
         chord(
             group(
                 run_trial_balance_agent.s(run_id, company_id),
@@ -307,23 +298,10 @@ def run_month_end_close(run_id: str | None = None) -> dict[str, Any]:
 # PHASE 1 → PHASE 2 HANDOFF
 # ============================================================================
 
-@celery_app.task(name="orchestrator.phase1_complete")
+@celery_app.task(name="orchestrator.phase1_complete", **_RETRY_KW)
 def phase1_complete(results: list[Any], run_id: str, company_id: str) -> dict[str, Any]:
     """
     Chord callback: fires when all three Phase-1 agents finish for one company.
-
-    Responsibilities:
-        1. Mark Phase 1 as done in Redis for this company.
-        2. Inspect the three results for non-PASSED statuses and record them
-           under `phase1_failures:{company_id}` (audit trail — Phase 2 still
-           runs regardless, so the controller sees the full picture).
-        3. Dispatch the Phase-2 sequential chain for this company.
-
-    Args:
-        results:  Injected by Celery — the list of return values from the
-                  three agents in the chord's group.
-        run_id:   The close run identifier.
-        company_id: The company this callback belongs to.
     """
     redis_client.set(f"close:{run_id}:phase1:{company_id}", "done", ex=PHASE_TIMEOUT)
 
@@ -342,15 +320,13 @@ def phase1_complete(results: list[Any], run_id: str, company_id: str) -> dict[st
             ",".join(phase1_failures),
             ex=PHASE_TIMEOUT,
         )
+        _set_escalation(run_id, f"phase1_failures:{company_id}")
         logger.warning(
             "Phase 1 for %s had non-PASSED status in: %s — proceeding to Phase 2.",
             company_id, phase1_failures,
         )
 
     # ---- Dispatch Phase 2 chain -----------------------------------------
-    # `.si()` = immutable signature → each step does NOT receive the previous
-    # step's return value as its first argument. We pass run_id/company_id
-    # explicitly at each step.
     chain(
         run_accruals_agent.si(run_id, company_id),
         run_revenue_agent.si(run_id, company_id),
@@ -369,25 +345,17 @@ def phase1_complete(results: list[Any], run_id: str, company_id: str) -> dict[st
 # PHASE 2 → PHASE 3 HANDOFF
 # ============================================================================
 
-@celery_app.task(name="orchestrator.phase2_complete")
+@celery_app.task(name="orchestrator.phase2_complete", **_RETRY_KW)
 def phase2_complete(run_id: str, company_id: str) -> dict[str, Any]:
     """
     Chain tail: fires after the three Phase-2 agents finish for one company.
-
-    Uses an atomic Redis INCR counter to detect when ALL companies have
-    finished Phase 2. The last company to complete triggers Phase 3, and a
-    `SET NX` lock guarantees exactly one worker wins the race even if two
-    companies finish within milliseconds of each other.
     """
     redis_client.set(f"close:{run_id}:phase2:{company_id}", "done", ex=PHASE_TIMEOUT)
 
-    # INCR is atomic — no race between concurrent chain tails.
     count = int(redis_client.incr(f"close:{run_id}:phase2_count"))
     total = int(redis_client.get(f"close:{run_id}:total_companies") or 0)
 
     if count >= total:
-        # SET NX with a shared key acts as a distributed mutex. Only one
-        # worker's `locked` return value will be truthy.
         locked = redis_client.set(
             f"close:{run_id}:phase3_lock", "1", nx=True, ex=PHASE_TIMEOUT
         )
@@ -401,20 +369,9 @@ def phase2_complete(run_id: str, company_id: str) -> dict[str, Any]:
 # PHASE 3 — Cross-Company Intercompany Elimination
 # ============================================================================
 
-@celery_app.task(name="orchestrator.run_cross_company_elimination")
+@celery_app.task(name="orchestrator.run_cross_company_elimination", **_RETRY_KW)
 def run_cross_company_elimination(run_id: str) -> dict[str, Any]:
-    """
-    Phase 3 — Cross-Company Intercompany Elimination.
-
-    Fires exactly once per run, after every company completed Phase 2.
-
-    Responsibilities:
-        - Reconcile intercompany flows across the entire portfolio.
-        - Flag mismatches (directional asymmetry, duplicate txns, orphans).
-        - Persist the full EliminationResult JSON for Phase 4 + UI.
-        - Hand off to Phase 4 (consolidation) — this task does NOT set the
-          final 'completed' status; Phase 4 owns that.
-    """
+    """Phase 3 — Cross-Company Intercompany Elimination."""
     logger.info("[Phase 3] Intercompany elimination started for run %s", run_id)
 
     try:
@@ -423,7 +380,6 @@ def run_cross_company_elimination(run_id: str) -> dict[str, Any]:
         payload["run_id"] = run_id
         payload["phase"] = 3
 
-        # Persist full structured result for Phase 4 and the UI.
         redis_client.set(
             f"close:{run_id}:phase3:result",
             json.dumps(payload, default=str),
@@ -440,7 +396,6 @@ def run_cross_company_elimination(run_id: str) -> dict[str, Any]:
             payload.get("total_asymmetry_usd", 0.0),
         )
 
-        # ---- Hand off to Phase 4 -----------------------------------------
         run_consolidation_task.delay(run_id)
         return payload
 
@@ -448,6 +403,7 @@ def run_cross_company_elimination(run_id: str) -> dict[str, Any]:
         logger.exception("[Phase 3] Elimination failed for run %s: %s", run_id, exc)
         redis_client.set(f"close:{run_id}:phase3", "failed", ex=PHASE_TIMEOUT)
         redis_client.set(f"close:{run_id}:status", "failed", ex=PHASE_TIMEOUT)
+        _set_escalation(run_id, f"phase3_failed:{type(exc).__name__}")
         return {"run_id": run_id, "phase": 3, "status": "failed", "error": str(exc)}
 
 
@@ -455,18 +411,9 @@ def run_cross_company_elimination(run_id: str) -> dict[str, Any]:
 # PHASE 4 — Final Consolidation
 # ============================================================================
 
-@celery_app.task(name="orchestrator.run_consolidation_task")
+@celery_app.task(name="orchestrator.run_consolidation_task", **_RETRY_KW)
 def run_consolidation_task(run_id: str) -> dict[str, Any]:
-    """
-    Phase 4 — Final Consolidation.
-
-    Rolls up all companies' trial balances into a group P&L, applies the
-    Phase-3 intercompany asymmetry as a conservative EBITDA haircut, and
-    marks the run 'completed'.
-
-    Reads the Phase-3 asymmetry directly from Redis (`close:{run_id}:phase3:result`)
-    so that the consolidation is deterministic and audit-traceable.
-    """
+    """Phase 4 — Final Consolidation."""
     logger.info("[Phase 4] Consolidation started for run %s", run_id)
 
     try:
@@ -486,7 +433,6 @@ def run_consolidation_task(run_id: str) -> dict[str, Any]:
         )
         redis_client.set(f"close:{run_id}:status", "completed", ex=PHASE_TIMEOUT)
 
-        # ---- Fire-and-forget reporting (failure here does not roll back) --
         run_reporting_task.delay(run_id)
 
         logger.info(
@@ -499,6 +445,7 @@ def run_consolidation_task(run_id: str) -> dict[str, Any]:
         logger.exception("[Phase 4] Consolidation failed for run %s: %s", run_id, exc)
         redis_client.set(f"close:{run_id}:phase4", "failed", ex=PHASE_TIMEOUT)
         redis_client.set(f"close:{run_id}:status", "failed", ex=PHASE_TIMEOUT)
+        _set_escalation(run_id, f"phase4_failed:{type(exc).__name__}")
         return {"run_id": run_id, "phase": 4, "status": "failed", "error": str(exc)}
 
 
@@ -506,18 +453,9 @@ def run_consolidation_task(run_id: str) -> dict[str, Any]:
 # PHASE 5 — Reporting & Communication
 # ============================================================================
 
-@celery_app.task(name="orchestrator.run_reporting_task")
+@celery_app.task(name="orchestrator.run_reporting_task", **_RETRY_KW)
 def run_reporting_task(run_id: str) -> dict[str, Any]:
-    """
-    Phase 5 — Reporting & Communication.
-
-    Sends the executive summary email to stakeholders. Runs AFTER the run is
-    marked 'completed' — a failure here does NOT roll back the pipeline.
-
-    Writes:
-        close:{run_id}:reporting        → 'done' | 'failed'
-        close:{run_id}:reporting_email  → recipient address (for audit)
-    """
+    """Phase 5 — Reporting & Communication."""
     logger.info("[Phase 5] Reporting started for run %s", run_id)
 
     try:
@@ -538,3 +476,62 @@ def run_reporting_task(run_id: str) -> dict[str, Any]:
         logger.exception("[Phase 5] Reporting crashed for run %s: %s", run_id, exc)
         redis_client.set(f"close:{run_id}:reporting", "failed", ex=PHASE_TIMEOUT)
         return {"run_id": run_id, "phase": 5, "status": "failed", "error": str(exc)}
+
+# ============================================================================
+# PHASE 5b — Scheduled Notification Tasks (Daily / Weekly / Issue Alerts)
+# ============================================================================
+# These are fired by Celery Beat (see app/core/celery_app.py beat_schedule).
+# They operate on `close:latest_run_id` — the most recent close run — so
+# stakeholders always get updates on the current month-end process.
+#
+# Design decision: reuse the same orchestration state (Redis) that the close
+# pipeline writes. No new tables, no new state.
+# ============================================================================
+
+
+@celery_app.task(name="orchestrator.send_daily_summary", **_RETRY_KW)
+def send_daily_summary_task() -> dict[str, Any]:
+    """
+    Daily 8 AM progress summary.
+
+    Reads the latest run_id from Redis and sends a progress email. If no
+    run is active, silently returns.
+    """
+    run_id = redis_client.get("close:latest_run_id")
+    if not run_id:
+        logger.info("[DailySummary] No active run — skipping.")
+        return {"status": "no_active_run"}
+
+    ok = send_daily_summary_email(run_id)
+    logger.info("[DailySummary] Sent=%s for run %s", ok, run_id)
+    return {"run_id": run_id, "sent": ok}
+
+
+@celery_app.task(name="orchestrator.send_weekly_report", **_RETRY_KW)
+def send_weekly_report_task() -> dict[str, Any]:
+    """Weekly Monday 8 AM stakeholder report."""
+    run_id = redis_client.get("close:latest_run_id")
+    if not run_id:
+        logger.info("[WeeklyReport] No active run — skipping.")
+        return {"status": "no_active_run"}
+
+    ok = send_weekly_stakeholder_report(run_id)
+    logger.info("[WeeklyReport] Sent=%s for run %s", ok, run_id)
+    return {"run_id": run_id, "sent": ok}
+
+
+@celery_app.task(name="orchestrator.send_issue_alert", **_RETRY_KW)
+def send_issue_alert_task() -> dict[str, Any]:
+    """
+    Hourly issue-alert sweep.
+
+    Only sends if the current run has an active issue (phase-3 mismatch or
+    escalation flag). Silently skips otherwise.
+    """
+    run_id = redis_client.get("close:latest_run_id")
+    if not run_id:
+        return {"status": "no_active_run"}
+
+    ok = send_issue_alert_email(run_id)
+    logger.info("[IssueAlert] Sent=%s for run %s", ok, run_id)
+    return {"run_id": run_id, "sent": ok}

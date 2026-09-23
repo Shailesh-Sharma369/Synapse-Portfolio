@@ -269,3 +269,168 @@ def send_executive_summary_email(run_id: str) -> bool:
     except Exception as exc:  # noqa: BLE001
         logger.exception("Reporting: Resend send failed for %s: %s", run_id, exc)
         return False
+
+# =============================================================================
+# ADDITIONAL EMAIL TYPES (daily / weekly / issue alert)
+# =============================================================================
+# Assignment requires 4 email types:
+#   1. Daily progress summary     — scheduled 8 AM
+#   2. Weekly stakeholder report  — scheduled Monday 8 AM
+#   3. Issue alert                — condition-triggered (hourly sweep)
+#   4. Completion notice          — already implemented above
+#
+# All three new types reuse EMAIL_TEMPLATE with a different status strip
+# label so the branding stays consistent and the code stays small.
+# =============================================================================
+
+
+def _send_with_template(run_id: str, header_text: str, subject: str) -> bool:
+    """
+    Shared sender for daily / weekly / issue-alert emails.
+
+    - Reads `close:{run_id}:final_result` from Redis.
+    - If no final_result yet, uses whatever partial data is available
+      (for daily summaries, the run may still be in progress).
+    - Reuses EMAIL_TEMPLATE with the status strip text replaced.
+    - Mock mode if RESEND_API_KEY is unset.
+
+    Returns True if the email was "sent" (real or mocked), False otherwise.
+    Never raises.
+    """
+    try:
+        r = redis.from_url(settings.redis_url, decode_responses=True)
+    except Exception as exc:  # noqa: BLE001
+        logger.error("Reporting[%s]: Redis connect failed: %s", header_text, exc)
+        return False
+
+    # ---- Try final_result first (used by weekly / completion) -----------
+    raw = None
+    try:
+        raw = r.get(f"close:{run_id}:final_result")
+    except Exception as exc:  # noqa: BLE001
+        logger.error("Reporting[%s]: Redis GET failed: %s", header_text, exc)
+        return False
+
+    # ---- Fall back to phase3 result (used by early daily summaries) ----
+    if not raw:
+        try:
+            raw = r.get(f"close:{run_id}:phase3:result")
+        except Exception:
+            raw = None
+
+    if not raw:
+        logger.warning(
+            "Reporting[%s]: no data available for run %s — skipping.",
+            header_text, run_id,
+        )
+        return False
+
+    try:
+        final = json.loads(raw)
+    except Exception as exc:  # noqa: BLE001
+        logger.error("Reporting[%s]: JSON parse failed: %s", header_text, exc)
+        return False
+
+    # ---- Render the shared template -------------------------------------
+    try:
+        adjusted = float(final.get("adjusted_group_ebitda", 0.0) or 0.0)
+        if adjusted >= 0:
+            adj_bg, adj_border = "#ecfdf5", "#a7f3d0"
+            adj_label, adj_value = "#047857", "#065f46"
+        else:
+            adj_bg, adj_border = "#fef2f2", "#fecaca"
+            adj_label, adj_value = "#b91c1c", "#991b1b"
+
+        html = Template(EMAIL_TEMPLATE).render(
+            run_id=run_id,
+            period=final.get("period", "—"),
+            gross_revenue=_fmt_usd(final.get("gross_revenue")),
+            raw_ebitda=_fmt_usd(final.get("raw_ebitda")),
+            adjusted_group_ebitda=_fmt_usd(adjusted),
+            total_cogs=_fmt_usd(final.get("total_cogs")),
+            gross_profit=_fmt_usd(final.get("gross_profit")),
+            total_opex=_fmt_usd(final.get("total_opex")),
+            elimination_asymmetry=_fmt_usd(final.get("elimination_asymmetry")),
+            entity_count=final.get("entity_count", 0),
+            executive_summary=final.get(
+                "executive_summary",
+                final.get("summary", "No summary available yet."),
+            ),
+            adj_bg=adj_bg, adj_border=adj_border,
+            adj_label=adj_label, adj_value=adj_value,
+        )
+        # Swap the status strip text so each email type is visually distinct
+        html = html.replace("CLOSE COMPLETED", header_text)
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("Reporting[%s]: render failed: %s", header_text, exc)
+        return False
+
+    # ---- Mock mode ------------------------------------------------------
+    if not settings.resend_api_key:
+        logger.info(
+            "MOCK EMAIL [%s]\n  To:      %s\n  Subject: %s\n  HTML length: %d",
+            header_text, settings.to_email, subject, len(html),
+        )
+        return True
+
+    # ---- Real send ------------------------------------------------------
+    try:
+        import resend
+        resend.api_key = settings.resend_api_key
+        resend.Emails.send({
+            "from": settings.from_email,
+            "to": [settings.to_email],
+            "subject": subject,
+            "html": html,
+        })
+        logger.info("Reporting[%s]: sent for run %s", header_text, run_id)
+        return True
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("Reporting[%s]: Resend failed: %s", header_text, exc)
+        return False
+
+
+def send_daily_summary_email(run_id: str) -> bool:
+    """Daily progress summary (scheduled 8 AM)."""
+    return _send_with_template(
+        run_id,
+        header_text="DAILY PROGRESS",
+        subject="Daily Progress — Month-End Close",
+    )
+
+
+def send_weekly_stakeholder_report(run_id: str) -> bool:
+    """Weekly stakeholder report (scheduled Monday 8 AM)."""
+    return _send_with_template(
+        run_id,
+        header_text="WEEKLY REPORT",
+        subject="Weekly Stakeholder Report — Apex Capital",
+    )
+
+
+def send_issue_alert_email(run_id: str) -> bool:
+    """
+    Condition-triggered issue alert.
+
+    Only fires if the run has an active issue:
+      - Phase 3 status is MISMATCHES_FOUND, OR
+      - An escalation key is set (phase failures).
+    """
+    try:
+        r = redis.from_url(settings.redis_url, decode_responses=True)
+        phase3_status = r.get(f"close:{run_id}:phase3_status")
+        escalation = r.get(f"close:{run_id}:escalation")
+    except Exception:  # noqa: BLE001
+        return False
+
+    has_issue = (phase3_status == "MISMATCHES_FOUND") or (escalation is not None)
+    if not has_issue:
+        logger.info("Issue alert skipped for run %s — no active issues.", run_id)
+        return False
+
+    reason = escalation or phase3_status or "unknown"
+    return _send_with_template(
+        run_id,
+        header_text=f"ISSUES DETECTED — {reason}",
+        subject="⚠️ Close Issues Detected — Action Required",
+    )

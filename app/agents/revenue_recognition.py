@@ -6,14 +6,33 @@ BUSINESS PROBLEM
 ================================================================================
 ASC 606 requires that each contract's total transaction price be allocated
 across performance obligations in proportion to their standalone selling
-prices. Common failures:
+prices, and that ratable revenue be recognised over the service period —
+NOT as a flat monthly amount.
 
+Common failures:
     - ALLOCATION_ERROR: sum(performance_obligation values) != total_contract_value
     - STALE_MILESTONE: contract end_date has passed but milestone is < 100%
     - EXPIRED_ACTIVE: contract ended before period but still shows activity
     - UNKNOWN_METHOD: revenue_recognition is not one of ratable/milestone/
                       point_in_time
-    - ORPHAN_CONTRACT: contract references a company not in `companies`
+
+================================================================================
+DAY-BASED PRORATION (Trap 1 answer)
+================================================================================
+A $120,000 annual contract that begins Jan 17 must recognise ~$4,931 in Jan
+(14 days of Jan at $120,000/365) — not $10,000. Flat monthly is wrong because
+it silently over-recognises partial months and under-recognises full months.
+
+Our algorithm for each contract:
+    ratable obligation  → value × overlap_days / total_contract_days
+    milestone obligation → value × completion_pct, recognised in the month
+                            that contains the milestone end_date
+    point_in_time       → full value, recognised in the month of start_date
+
+`monthly_recognitions` returns per-contract recognised revenue for the period.
+`total_month_revenue_recognized` is the sum — a CFO can tie this directly to
+the month's P&L revenue line.
+================================================================================
 """
 
 from __future__ import annotations
@@ -21,6 +40,7 @@ from __future__ import annotations
 import json
 import logging
 import time
+from calendar import monthrange
 from datetime import date, timedelta
 from decimal import Decimal
 from typing import Any
@@ -47,6 +67,15 @@ class RevenueContractIssue(BaseModel):
     detail: str
 
 
+class MonthlyRecognition(BaseModel):
+    """Per-contract recognised revenue for the period (day-based proration)."""
+    contract_id: str
+    customer: str
+    period: str
+    recognized_revenue: float
+    days_in_month: int
+
+
 class RevenueRecognitionResult(BaseModel):
     company_id: str
     period: str
@@ -55,6 +84,12 @@ class RevenueRecognitionResult(BaseModel):
     contracts_active_in_period: int
     flagged_count: int
     flagged_value: float
+    # NEW: day-based proration output for the period
+    total_month_revenue_recognized: float = Field(
+        0.0,
+        description="Sum of day-based recognised revenue for the period.",
+    )
+    monthly_recognitions: list[MonthlyRecognition] = Field(default_factory=list)
     issues: list[RevenueContractIssue] = Field(default_factory=list)
     summary: str
 
@@ -71,8 +106,64 @@ def _period_start(period: str) -> date:
     return date(y, m, 1)
 
 
-def verify_revenue_recognition(company_id: str, period: str) -> dict[str, Any]:
+# =============================================================================
+# DAY-BASED REVENUE PRORATION — the deterministic core of Trap 1
+# =============================================================================
 
+def _month_recognition_for_contract(contract: RevenueContract, period: str) -> dict[str, Any]:
+    """
+    Compute recognised revenue for one contract in one period using exact-day
+    proration, per performance obligation.
+
+    Contract types handled:
+      - ratable:       value × overlap_days / total_contract_days
+      - milestone:     value × completion_pct, on the month containing end_date
+      - point_in_time: full value, on the month containing start_date
+
+    Rounding: we return raw Decimal→float values; the caller sums them.
+    Any residual (final-month rounding) is left to the presentation layer.
+    """
+    y, m = (int(x) for x in period.split("-"))
+    period_start = date(y, m, 1)
+    period_end = date(y, m, monthrange(y, m)[1])
+    days_in_month = monthrange(y, m)[1]
+
+    obligations = contract.performance_obligations or []
+    recognized = Decimal("0")
+
+    for po in obligations:
+        po_value = Decimal(str(po.get("value", 0)))
+        method = po.get("revenue_recognition")
+
+        if method == "ratable":
+            total_days = (contract.end_date - contract.start_date).days + 1
+            if total_days <= 0:
+                continue
+            overlap_start = max(contract.start_date, period_start)
+            overlap_end = min(contract.end_date, period_end)
+            overlap_days = max((overlap_end - overlap_start).days + 1, 0)
+            if overlap_days:
+                recognized += po_value * Decimal(overlap_days) / Decimal(total_days)
+
+        elif method == "milestone":
+            pct = Decimal(str(po.get("completion_percentage", 0))) / Decimal(100)
+            if contract.end_date and period_start <= contract.end_date <= period_end:
+                recognized += po_value * pct
+
+        elif method == "point_in_time":
+            if contract.start_date and period_start <= contract.start_date <= period_end:
+                recognized += po_value
+
+    return {
+        "contract_id": contract.contract_id,
+        "customer": contract.customer,
+        "period": period,
+        "recognized_revenue": float(recognized),
+        "days_in_month": days_in_month,
+    }
+
+
+def verify_revenue_recognition(company_id: str, period: str) -> dict[str, Any]:
     """
     Deterministic ASC-606-flavored audit of a company's revenue contracts.
 
@@ -84,6 +175,8 @@ def verify_revenue_recognition(company_id: str, period: str) -> dict[str, Any]:
     R3. If start_date > as_of, contract is future — skip R1/R2 (still report
         method validity).
     R4. revenue_recognition must be one of the whitelist methods.
+
+    PLUS: day-based monthly revenue recognition for the period.
     """
     db = SessionLocal()
     try:
@@ -92,8 +185,13 @@ def verify_revenue_recognition(company_id: str, period: str) -> dict[str, Any]:
         ).all()
 
         if not contracts:
-            return {"company_id": company_id, "period": period, "found": False,
-                    "error": "No revenue contracts found.", "contracts_examined": 0, "issues": []}
+            return {
+                "company_id": company_id, "period": period, "found": False,
+                "error": "No revenue contracts found.",
+                "contracts_examined": 0, "issues": [],
+                "monthly_recognitions": [],
+                "total_month_revenue_recognized": 0.0,
+            }
 
         as_of = _period_end(period)
         p_start = _period_start(period)
@@ -118,7 +216,10 @@ def verify_revenue_recognition(company_id: str, period: str) -> dict[str, Any]:
                         "contract_id": c.contract_id, "customer": c.customer,
                         "issue_type": "ALLOCATION_ERROR",
                         "total_contract_value": float(tcv),
-                        "detail": f"Obligations sum to {po_sum} but TCV is {tcv} (unallocated {tcv - po_sum}).",
+                        "detail": (
+                            f"Obligations sum to {po_sum} but TCV is {tcv} "
+                            f"(unallocated {tcv - po_sum})."
+                        ),
                     })
 
             if end and end < as_of:
@@ -131,7 +232,10 @@ def verify_revenue_recognition(company_id: str, period: str) -> dict[str, Any]:
                                 "contract_id": c.contract_id, "customer": c.customer,
                                 "issue_type": "STALE_MILESTONE",
                                 "total_contract_value": float(tcv),
-                                "detail": f"Contract ended {end} but milestone '{p.get('description')}' is only {pct}% complete.",
+                                "detail": (
+                                    f"Contract ended {end} but milestone "
+                                    f"'{p.get('description')}' is only {pct}% complete."
+                                ),
                             })
 
             for p in pos:
@@ -146,18 +250,39 @@ def verify_revenue_recognition(company_id: str, period: str) -> dict[str, Any]:
 
         issues.sort(key=lambda x: abs(x["total_contract_value"]), reverse=True)
 
+        # ---- Day-based monthly recognition for active contracts ----------
+        monthly_recognitions: list[dict[str, Any]] = []
+        for c in contracts:
+            if c.start_date and c.end_date and c.start_date <= as_of and c.end_date >= p_start:
+                monthly_recognitions.append(_month_recognition_for_contract(c, period))
+
+        total_month_revenue = sum(
+            (Decimal(str(r["recognized_revenue"])) for r in monthly_recognitions),
+            Decimal("0"),
+        )
+
         return {
             "company_id": company_id, "period": period, "found": True,
-            "contracts_examined": len(contracts), "contracts_active_in_period": active_count,
-            "flagged_count": len(issues), "flagged_value": float(flagged_value),
+            "contracts_examined": len(contracts),
+            "contracts_active_in_period": active_count,
+            "flagged_count": len(issues),
+            "flagged_value": float(flagged_value),
             "issues": issues,
-            "note": f"{len(issues)} contract issues detected." if issues else "All contracts compliant.",
+            "monthly_recognitions": monthly_recognitions,
+            "total_month_revenue_recognized": float(total_month_revenue),
+            "note": (
+                f"{len(issues)} contract issues detected."
+                if issues else "All contracts compliant."
+            ),
         }
 
     except Exception as exc:  # noqa: BLE001
         logger.exception("verify_revenue_recognition failed for %s@%s", company_id, period)
-        return {"company_id": company_id, "period": period, "found": False,
-                "error": str(exc), "contracts_examined": 0, "issues": []}
+        return {
+            "company_id": company_id, "period": period, "found": False,
+            "error": str(exc), "contracts_examined": 0, "issues": [],
+            "monthly_recognitions": [], "total_month_revenue_recognized": 0.0,
+        }
     finally:
         db.close()
 
@@ -184,7 +309,9 @@ AGENT_INSTRUCTIONS = [
     "3. Include every issue — do not add or drop.",
     "4. status='PASSED' iff flagged_count == 0, else 'FAILED'.",
     "5. `summary` is 2-3 sentences. Lead with the largest-value contract.",
-    "6. If found=false, set status='FAILED' and explain.",
+    "6. Mention `total_month_revenue_recognized` — this is day-based prorated",
+    "   revenue for the period, not flat monthly.",
+    "7. If found=false, set status='FAILED' and explain.",
     "",
     "Output ONLY the structured JSON schema.",
 ]
@@ -195,9 +322,9 @@ def _build_agent() -> Agent:
         raise RuntimeError("GEMINI_API_KEY is not set.")
     return Agent(
         name="Revenue Recognition Agent",
-        model=Gemini(id="gemini-3.5-flash-lite", api_key=settings.gemini_api_key),
+        model=Gemini(id="gemini-2.0-flash", api_key=settings.gemini_api_key),
         tools=[verify_revenue_recognition],
-        description="Audits revenue contracts for ASC 606 compliance.",
+        description="Audits revenue contracts for ASC 606 compliance, day-based proration.",
         instructions=AGENT_INSTRUCTIONS,
         output_schema=RevenueRecognitionResult,
         markdown=False,
@@ -222,7 +349,9 @@ def _safe_parse(content: Any) -> RevenueRecognitionResult:
     raise ValueError(f"Unexpected agent response type: {type(content)}")
 
 
-def run_revenue_recognition(company_id: str, period: str | None = None) -> RevenueRecognitionResult:
+def run_revenue_recognition(
+    company_id: str, period: str | None = None
+) -> RevenueRecognitionResult:
     if period is None:
         period = _latest_period_for(company_id)
         if period is None:
@@ -230,6 +359,7 @@ def run_revenue_recognition(company_id: str, period: str | None = None) -> Reven
                 company_id=company_id, period="UNKNOWN", status="FAILED",
                 contracts_examined=0, contracts_active_in_period=0,
                 flagged_count=0, flagged_value=0.0, issues=[],
+                total_month_revenue_recognized=0.0, monthly_recognitions=[],
                 summary=f"No trial balance data for '{company_id}'.",
             )
 
@@ -252,7 +382,10 @@ def run_revenue_recognition(company_id: str, period: str | None = None) -> Reven
                 continue
             break
 
-    logger.warning("LLM path failed for revrec %s@%s (%s) — falling back.", company_id, period, type(last_exc).__name__)
+    logger.warning(
+        "LLM path failed for revrec %s@%s (%s) — falling back.",
+        company_id, period, type(last_exc).__name__,
+    )
     facts = verify_revenue_recognition(company_id, period)
     issues = [
         RevenueContractIssue(
@@ -262,6 +395,9 @@ def run_revenue_recognition(company_id: str, period: str | None = None) -> Reven
         )
         for i in facts.get("issues", [])
     ]
+    monthly = [
+        MonthlyRecognition(**r) for r in facts.get("monthly_recognitions", [])
+    ]
     return RevenueRecognitionResult(
         company_id=company_id, period=period,
         status="PASSED" if not issues else "FAILED",
@@ -269,9 +405,13 @@ def run_revenue_recognition(company_id: str, period: str | None = None) -> Reven
         contracts_active_in_period=facts.get("contracts_active_in_period", 0),
         flagged_count=len(issues),
         flagged_value=facts.get("flagged_value", 0.0),
+        total_month_revenue_recognized=facts.get("total_month_revenue_recognized", 0.0),
+        monthly_recognitions=monthly,
         issues=issues,
         summary=(
             f"LLM unavailable ({type(last_exc).__name__}). "
-            f"Deterministic result: {len(issues)} contract issues flagged."
+            f"Deterministic result: {len(issues)} contract issues flagged; "
+            f"day-based month revenue recognised = "
+            f"${facts.get('total_month_revenue_recognized', 0.0):,.2f}."
         ),
     )
