@@ -205,7 +205,7 @@ def _build_agent() -> Agent:
         raise RuntimeError("GEMINI_API_KEY is not set.")
     return Agent(
         name="Variance Analysis Agent",
-        model=Gemini(id="gemini-3.5-flash", api_key=settings.gemini_api_key),
+        model=Gemini(id="gemini-3.5-flash-lite", api_key=settings.gemini_api_key),
         tools=[analyze_variances],
         description="Compares actuals vs budget, flags material variances.",
         instructions=AGENT_INSTRUCTIONS,
