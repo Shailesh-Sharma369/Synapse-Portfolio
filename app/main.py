@@ -14,6 +14,8 @@ from app.core.celery_app import celery_app
 from app.db.database import engine, settings
 
 app = FastAPI(title="Month-End Close Orchestrator", version="0.1.0")
+from app.core.rate_limit import install_rate_limiter
+install_rate_limiter()
 
 
 @app.get("/health")

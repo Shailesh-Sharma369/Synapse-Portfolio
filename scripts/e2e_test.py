@@ -14,7 +14,7 @@ import requests
 
 from app.db.database import settings
 
-API_URL = "http://localhost:8000/api/v1/trigger-close"
+API_URL = "http://api:8000/api/v1/trigger-close"
 POLL_INTERVAL = 10          # seconds between polls
 MAX_WAIT = 30 * 60          # 30 min hard cap
 

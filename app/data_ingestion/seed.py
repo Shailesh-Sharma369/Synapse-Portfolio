@@ -107,6 +107,65 @@ def _read_csv(path: Path) -> pd.DataFrame | None:
         logger.error("Failed to read %s: %s", path, exc)
         return None
 
+def _sanitize_tb(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Post-process a trial balance DataFrame to correct known generator
+    artifacts before insert:
+
+    FIX 1 — Duplicate revenue values:
+        The generator assigns the same monthly_revenue to EVERY Revenue
+        account. We split 85/15 between the first account and the rest.
+
+    FIX 2 — Rebalance ledger:
+        After FIX 1 the credit side drops by the amount we removed from
+        duplicate revenue. We zero out RE completely and recompute it as
+        a pure plug. The ledger ends up balanced.
+
+    NOTE: After FIX 2, Retained Earnings may remain a debit balance
+    (accumulated deficit) if the underlying non-equity data has more
+    credits than debits. That's a property of the generated dataset,
+    not a bug in this sanitizer.
+    """
+    if df.empty or 'account_name' not in df.columns:
+        return df
+
+    # ---- FIX 1: Duplicate revenue values --------------------------------
+    rev_mask = df['account_type'] == 'Revenue'
+    if rev_mask.sum() > 1:
+        rev_balances = df.loc[rev_mask, 'balance'].round(2)
+        if rev_balances.nunique() == 1:
+            rev_idx = df[rev_mask].index.tolist()
+            total = abs(float(rev_balances.iloc[0]))
+            if len(rev_idx) > 1 and total > 0:
+                df.loc[rev_idx[0], 'balance'] = -total * 0.85
+                df.loc[rev_idx[0], 'credit'] = total * 0.85
+                per_other = (total * 0.15) / (len(rev_idx) - 1)
+                for idx in rev_idx[1:]:
+                    df.loc[idx, 'balance'] = -per_other
+                    df.loc[idx, 'credit'] = per_other
+
+    # ---- FIX 2: Rebuild Retained Earnings as a clean plug ----------------
+    # Zero it completely FIRST (this is the step the previous version got
+    # wrong — it overwrote without clearing the old -114M value).
+    re_mask = df['account_name'] == 'Retained Earnings'
+    if re_mask.any():
+        df.loc[re_mask, 'debit'] = 0.0
+        df.loc[re_mask, 'credit'] = 0.0
+        df.loc[re_mask, 'balance'] = 0.0
+
+        # Now compute the true residual
+        total_debits = float(df['debit'].sum())
+        total_credits = float(df['credit'].sum())
+        needed = total_debits - total_credits  # positive → RE needs credit
+
+        if needed >= 0:
+            df.loc[re_mask, 'credit'] = needed
+            df.loc[re_mask, 'balance'] = -needed
+        else:
+            df.loc[re_mask, 'debit'] = abs(needed)
+            df.loc[re_mask, 'balance'] = abs(needed)
+
+    return df
 
 def _insert_row(db: Session, obj: Any, context: str) -> bool:
     """
@@ -168,7 +227,7 @@ def _seed_tb_folder(db: Session, folder: Path, label: str) -> tuple[int, int]:
         df = _read_csv(csv_file)
         if df is None:
             continue
-
+        df = _sanitize_tb(df) 
         for _, row in df.iterrows():
             obj = TrialBalance(
                 company_id=_clean_str(row.get("company_id")),

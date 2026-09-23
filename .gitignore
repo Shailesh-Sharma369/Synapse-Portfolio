@@ -1,28 +1,105 @@
-*.md
-*.env
-*.pyc
-*.DS_Store
-__pycache__/
-*.local.env
-# Environments
+# ============================================================
+# Synapse Portfolio — .gitignore
+# ============================================================
+# IMPORTANT: This file must NOT ignore:
+#   - README.md (submission requirement)
+#   - .env.example (setup requirement)
+#   - assignment1_data/ (seed dataset — required to run)
+#   - docs/ (architecture diagrams)
+# ============================================================
+
+# ---- Environment files (secrets) ---------------------------
 .env
-.venv
-env/
+.env.local
+*.local.env
+.env.*.local
+!.env.example
+
+# ---- Python ------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ---- Virtual environments ----------------------------------
+.venv/
 venv/
 ENV/
 env.bak/
 venv.bak/
-*.xml
-*.csv
 
-# Python cache
-__pycache__/
-*.py[cod]
-*$py.class
+# ---- IDE / OS ----------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
 
-# Database and logs
-*.sqlite3
+# ---- Logs & temp -------------------------------------------
 *.log
+logs/
 
-# Docker
+# ---- Docker / Celery ---------------------------------------
 .docker/
+celerybeat-schedule
+celerybeat.pid
+
+# ---- Database ----------------------------------------------
+*.sqlite3
+*.db
+
+# ---- Repomix / snapshots (should not be committed) ---------
+repomix-output.xml
+*.repomix.xml
+
+# ---- Local scratch / notes ---------------------------------
+notes.md
+scratch/
+tmp/
+todo.txt
+
+# ---- Test artifacts ----------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ============================================================
+# EXPLICIT KEEP — do not ignore these
+# ============================================================
+!README.md
+!README_MASTER.md
+!.env.example
+!docs/**
+!docs/diagrams/**
+!assignment1_data/**
+!assignment1_data/contracts/*.json
+!assignment1_data/budgets/*.csv
+!assignment1_data/trial_balances/*.csv
+!assignment1_data/prior_year/*.csv
+!assignment1_data/intercompany/*.csv
+!assignment1_data/bank_statements/*.csv
+!assignment1_data/accrual_schedules/*.csv
+!assignment1_data/company_metadata.json
+!requirements.txt
+!docker-compose.yml
+!Dockerfile
+!.dockerignore

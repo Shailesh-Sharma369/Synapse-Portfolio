@@ -48,7 +48,7 @@ services:
 
   worker:
     build: .
-    command: celery -A app.core.celery_app worker -Q orchestrator,agents --loglevel=info --concurrency=1
+    command: celery -A app.core.celery_app worker -Q orchestrator,agents --loglevel=info --concurrency=4
     env_file: .env
     environment:
       DATABASE_URL: postgresql://admin:password123@db:5432/month_end_close
@@ -67,7 +67,7 @@ services:
 
   beat:
     build: .
-    command: celery -A app.core.celery_app beat --loglevel=info --schedule=/tmp/celerybeat-schedule
+    command: celery -A app.core.celery_app worker --loglevel=warning --concurrency=4 --queues=agents,orchestrator
     env_file: .env
     environment:
       DATABASE_URL: postgresql://admin:password123@db:5432/month_end_close

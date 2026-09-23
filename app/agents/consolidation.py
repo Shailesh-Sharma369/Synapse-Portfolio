@@ -42,6 +42,7 @@ from __future__ import annotations
 import json
 import logging
 import time
+import os
 from decimal import Decimal
 from typing import Any
 
@@ -52,6 +53,8 @@ from sqlalchemy import select
 
 from app.db.database import SessionLocal, settings
 from app.db.models import Company, TrialBalance
+
+_AGENT_DEBUG = os.getenv("AGENT_DEBUG", "").lower() in ("1", "true", "yes")
 
 logger = logging.getLogger(__name__)
 
@@ -150,6 +153,17 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
             select(TrialBalance).where(TrialBalance.period == period)
         ).all()
 
+        if run_id:
+            try:
+                import redis as _redis
+                _rr = _redis.from_url(settings.redis_url, decode_responses=True)
+                _companies_raw = _rr.get(f"close:{run_id}:companies")
+                if _companies_raw:
+                    _allowed = set(json.loads(_companies_raw))
+                    rows = [r for r in rows if r.company_id in _allowed]
+            except Exception:
+                pass
+
         if not rows:
             return {
                 "period": period, "found": False,
@@ -206,7 +220,20 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
         adjusted_ebitda = raw_ebitda - asymmetry
 
         # ---- Entity coverage check ---------------------------------------
-        total_companies = len(db.scalars(select(Company.id)).all())
+                # Match the run's filter — if we're demoing 4 companies, expect 4.
+        if run_id:
+            try:
+                import redis as _redis
+                _rr = _redis.from_url(settings.redis_url, decode_responses=True)
+                _companies_raw = _rr.get(f"close:{run_id}:companies")
+                if _companies_raw:
+                    total_companies = len(json.loads(_companies_raw))
+                else:
+                    total_companies = len(db.scalars(select(Company.id)).all())
+            except Exception:
+                total_companies = len(db.scalars(select(Company.id)).all())
+        else:
+            total_companies = len(db.scalars(select(Company.id)).all())
         complete = len(entity_ids) == total_companies and total_companies > 0
 
         return {
@@ -245,6 +272,76 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
     finally:
         db.close()
 
+# =============================================================================
+# TOOL 2 — get_entity_breakdown
+# =============================================================================
+
+def get_entity_breakdown(period: str) -> list[dict[str, Any]]:
+    """
+    Return per-entity revenue/COGS/OpEx totals for the period.
+
+    Use this to see which entity contributes most to group revenue or
+    drives the biggest expense lines. Helps explain the group number.
+    """
+    db = SessionLocal()
+    try:
+        rows = db.scalars(
+            select(TrialBalance).where(TrialBalance.period == period)
+        ).all()
+
+        by_entity: dict[str, dict[str, Decimal]] = {}
+        for r in rows:
+            eid = r.company_id
+            if eid not in by_entity:
+                by_entity[eid] = {"revenue": Decimal("0"),
+                                  "cogs": Decimal("0"),
+                                  "opex": Decimal("0")}
+            acct_type = (r.account_type or "").strip().lower()
+            bal = r.balance or Decimal("0")
+            if acct_type == "revenue":
+                by_entity[eid]["revenue"] += -bal
+            elif acct_type == "cogs":
+                by_entity[eid]["cogs"] += bal
+            elif acct_type in ("operating expense", "expense"):
+                by_entity[eid]["opex"] += bal
+
+        out = []
+        for eid, t in by_entity.items():
+            gp = t["revenue"] - t["cogs"]
+            out.append({
+                "entity_id": eid,
+                "gross_revenue": float(t["revenue"]),
+                "total_cogs": float(t["cogs"]),
+                "gross_profit": float(gp),
+                "total_opex": float(t["opex"]),
+                "raw_ebitda": float(gp - t["opex"]),
+            })
+        out.sort(key=lambda x: x["gross_revenue"], reverse=True)
+        return out
+    finally:
+        db.close()
+
+
+# =============================================================================
+# TOOL 3 — get_ic_eliminations
+# =============================================================================
+
+def get_ic_eliminations(period: str, run_id: str | None = None) -> dict[str, Any]:
+    """
+    Return the intercompany amounts that will be netted in consolidation.
+
+    Use this to explain to the LLM what the elimination actually does —
+    the matched IC flow is subtracted from both group revenue and group
+    expense; the asymmetry is booked as an EBITDA haircut.
+    """
+    asymmetry, matched = _get_phase3_totals(period, run_id)
+    return {
+        "matched_intercompany_usd": float(matched),
+        "elimination_asymmetry_usd": float(asymmetry),
+        "note": (f"Consolidation will net ${matched:,.2f} from both group "
+                 f"revenue and group expense, and apply a ${asymmetry:,.2f} "
+                 f"EBITDA haircut for the unmatched asymmetry."),
+    }
 
 def _latest_period_globally() -> str | None:
     """Latest period present in trial_balances across all companies."""
@@ -264,41 +361,49 @@ def _latest_period_globally() -> str | None:
 # =============================================================================
 
 AGENT_INSTRUCTIONS = [
-    "You are a Consolidation Agent for a Private Equity month-end close system.",
-    "You produce the FINAL group-level financials the fund reports to LPs.",
+    "You are a Consolidation Agent for a PE month-end close system.",
+    "You have THREE tools. Reason about which to call.",
     "",
-    "STRICT RULES — violating these is a critical failure:",
-    "1. ALWAYS call `generate_consolidated_financials` FIRST. Never invent numbers.",
-    "2. NEVER compute, re-sum, or adjust any dollar figure. The tool is the source of truth.",
-    "3. Copy every numeric field verbatim from the tool output into your result.",
-    "4. Set status = tool's status ('COMPLETE' or 'INCOMPLETE').",
-    "5. Write `executive_summary` as 2-4 sentences for a board deck:",
-    "     - Lead with adjusted_group_ebitda (the PE-reported number).",
-    "     - Mention gross revenue, gross profit, and raw EBITDA briefly.",
-    "     - Mention the eliminated intercompany flow and the asymmetry haircut.",
-    "     - If status='INCOMPLETE', warn that not all entities contributed.",
-    "6. If the tool returns found=false, set status='INCOMPLETE' and explain.",
+    "TOOLS:",
+    "  1. generate_consolidated_financials(period, run_id) — ALWAYS first.",
+    "  2. get_entity_breakdown(period) — per-entity P&L. Use to explain",
+    "     which entities dominate group revenue.",
+    "  3. get_ic_eliminations(period, run_id) — the IC amounts being netted.",
     "",
-    "Output ONLY the structured JSON schema. No prose outside the schema.",
+    "WORKFLOW:",
+    "  - Step 1: generate_consolidated_financials.",
+    "  - Step 2: get_ic_eliminations to see the netting amounts.",
+    "  - Step 3: Optionally get_entity_breakdown for context.",
+    "  - Step 4: STOP after 2-4 tool calls.",
+    "",
+    "STRICT RULES:",
+    "1. NEVER invent numbers.",
+    "2. Copy every numeric field verbatim from generate_consolidated_financials.",
+    "3. `executive_summary` = 2-4 sentences leading with adjusted_group_ebitda.",
+    "4. Mention the IC netting AND the asymmetry haircut explicitly.",
+    "",
+    "Output ONLY the structured JSON schema.",
 ]
 
 
 def _build_agent() -> Agent:
-    """Build a fresh Agent per call — no shared state across Celery workers."""
     if not settings.gemini_api_key:
-        raise RuntimeError("GEMINI_API_KEY is not set — cannot initialise LLM.")
-
+        raise RuntimeError("GEMINI_API_KEY is not set.")
     return Agent(
         name="Consolidation Agent",
-        model=Gemini(id="gemini-2.0-flash", api_key=settings.gemini_api_key),
-        tools=[generate_consolidated_financials],
-        description=(
-            "Produces consolidated group financials for a period: revenue, COGS, "
-            "OpEx, raw EBITDA, and intercompany-adjusted group EBITDA."
-        ),
+        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
+        tools=[
+            generate_consolidated_financials,
+            get_entity_breakdown,
+            get_ic_eliminations,
+        ],
+        description="Produces consolidated group financials with GAAP IC elimination.",
         instructions=AGENT_INSTRUCTIONS,
         output_schema=ConsolidationResult,
         markdown=False,
+        use_json_mode=True,
+        debug_mode=_AGENT_DEBUG,
+        tool_call_limit=4,
     )
 
 
@@ -347,11 +452,41 @@ def run_consolidation(
                 executive_summary="No trial balance data available for consolidation.",
             )
 
+    # ---- TIER 1: deterministic pre-check --------------------------------
+    precheck = generate_consolidated_financials(period, run_id=run_id)
+    if (
+        precheck.get("found")
+        and precheck.get("status") == "COMPLETE"
+        and precheck.get("elimination_asymmetry", 0) == 0
+    ):
+        logger.info("[Consolidation] %s clean — skipping LLM.", period)
+        return ConsolidationResult(
+            period=period, status="COMPLETE",
+            entity_count=precheck["entity_count"],
+            gross_revenue=precheck["gross_revenue"],
+            total_cogs=precheck["total_cogs"],
+            gross_profit=precheck["gross_profit"],
+            total_opex=precheck["total_opex"],
+            raw_ebitda=precheck["raw_ebitda"],
+            eliminated_intercompany_usd=precheck["eliminated_intercompany_usd"],
+            elimination_asymmetry=precheck["elimination_asymmetry"],
+            adjusted_group_ebitda=precheck["adjusted_group_ebitda"],
+            executive_summary=(
+                f"Group consolidated across {precheck['entity_count']} entities. "
+                f"Gross revenue ${precheck['gross_revenue']:,.2f}, gross profit "
+                f"${precheck['gross_profit']:,.2f}, raw EBITDA "
+                f"${precheck['raw_ebitda']:,.2f}. Eliminated "
+                f"${precheck['eliminated_intercompany_usd']:,.2f} of matched IC. "
+                f"Adjusted group EBITDA ${precheck['adjusted_group_ebitda']:,.2f}. "
+                f"LLM narrative skipped — no issues to explain."
+            ),
+        )
+
     prompt = (
-        f"Generate consolidated group financials for period={period!r}. "
-        f"Call generate_consolidated_financials with period={period!r} and "
-        f"run_id={run_id!r}. Then produce the structured ConsolidationResult."
-    )
+    f"Generate consolidated group financials for period={period!r}. "
+    f"Use the tools to understand the IC elimination being applied, then "
+    f"produce the structured ConsolidationResult."
+)
 
     last_exc: Exception | None = None
     for attempt in range(3):
@@ -363,7 +498,7 @@ def run_consolidation(
             last_exc = exc
             msg = str(exc).lower()
             if any(k in msg for k in ("503", "unavailable", "429", "quota", "timeout", "deadline")) and attempt < 2:
-                time.sleep(2 * (attempt + 1))
+                import random as _rnd; time.sleep((5 + _rnd.random() * 3) * (attempt + 1))
                 logger.warning("Transient error on consolidation attempt %d — retrying.", attempt + 1)
                 continue
             break
@@ -388,7 +523,7 @@ def run_consolidation(
         elimination_asymmetry=facts.get("elimination_asymmetry", 0.0),
         adjusted_group_ebitda=facts.get("adjusted_group_ebitda", 0.0),
         executive_summary=(
-            f"LLM unavailable ({type(last_exc).__name__}). "
+            f"Deterministic result (LLM narrative skipped: {type(last_exc).__name__}). "
             f"Deterministic result: Group revenue ${facts.get('gross_revenue', 0.0):,.2f}, "
             f"gross profit ${facts.get('gross_profit', 0.0):,.2f}, "
             f"raw EBITDA ${facts.get('raw_ebitda', 0.0):,.2f}. "

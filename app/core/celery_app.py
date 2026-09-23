@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import os
+
 from celery import Celery
 from celery.schedules import crontab
 
@@ -26,53 +28,90 @@ celery_app.conf.update(
     broker_connection_retry_on_startup=True,
 )
 
+
 # =============================================================================
-# CELERY BEAT SCHEDULE — Autonomous Operation
+# AUTONOMY TOGGLE
 # =============================================================================
-# The assignment requires:
-#   - Daily 9 AM full close
-#   - Hourly during close week (days 1-5)
-#   - Daily summary email
-#   - Weekly stakeholder report
-#   - Issue alerts (condition-triggered, hourly sweep)
+# ENABLE_AUTONOMOUS_SCHEDULE=0  → Beat does NOT auto-fire the close. Manual
+#                                  trigger via POST /api/v1/trigger-close only.
+#                                  (Default; useful for testing and demos.)
+# ENABLE_AUTONOMOUS_SCHEDULE=1  → Beat fires:
+#                                    - a full close daily at 9:00 AM UTC
+#                                    - a formal month-end close on the 1st
+#                                      of every month at 9:30 AM UTC
+#                                  Notifications always fire regardless.
 #
-# All of the above are wired here. The close-week hourly entry passes
-# close_week_only=True; the task itself exits early if today.day > 5.
+# Why daily + monthly?
+#   - Daily close: continuous-close pattern; validates the pipeline every day.
+#   - Month-end: the formal close that produces the LP-facing package.
+#   Both are idempotent — the UI tracks each run by its own run_id.
 # =============================================================================
-celery_app.conf.beat_schedule = {
-    # ---- Full close, daily 9 AM ------------------------------------------
-    "month-end-close-daily-9am": {
-        "task": "orchestrator.run_month_end_close",
-        "schedule": crontab(hour=9, minute=0),
-    },
+_enable_autonomous = os.getenv("ENABLE_AUTONOMOUS_SCHEDULE", "0").strip() == "1"
 
-    # # ---- Close-week hourly sweep (task self-guards to days 1-5) ----------
-    # "close-week-hourly": {
-    #     "task": "orchestrator.run_month_end_close",
-    #     "schedule": crontab(minute=0),
-    #     "kwargs": {"close_week_only": True},
-    # },
 
-    # ---- Daily progress summary, 8 AM ------------------------------------
+# =============================================================================
+# BEAT SCHEDULE
+# =============================================================================
+_beat_schedule: dict = {
+    # ---- Daily summary email, 8:00 AM UTC --------------------------------
+    # Always active. This is the "Daily Summary" the assignment requires —
+    # a morning progress update to stakeholders.
     "daily-summary-8am": {
         "task": "orchestrator.send_daily_summary",
         "schedule": crontab(hour=8, minute=0),
     },
 
-    # ---- Weekly stakeholder report, Monday 8 AM --------------------------
+    # ---- Weekly stakeholder report, Monday 8:00 AM UTC -------------------
+    # Always active. This is the "Stakeholder Report" the assignment requires.
     "weekly-report-monday-8am": {
         "task": "orchestrator.send_weekly_report",
         "schedule": crontab(day_of_week=1, hour=8, minute=0),
     },
 
-    # ---- Hourly issue alert sweep ----------------------------------------
-    "issue-alert-hourly": {
+    # ---- Issue alert sweep, daily at 12:00 PM UTC ------------------------
+    # Replaces the previous hourly sweep. Fires once mid-day; the task itself
+    # only sends an alert if the current run has an active issue (phase-3
+    # mismatch or escalation flag). No-op otherwise.
+    "issue-alert-daily-noon": {
         "task": "orchestrator.send_issue_alert",
-        "schedule": crontab(minute=15),
+        "schedule": crontab(hour=12, minute=0),
     },
 }
 
+
+if _enable_autonomous:
+    # ---- Full close, daily at 9:00 AM UTC --------------------------------
+    # Continuous-close cadence: one full validation→consolidation cycle per day.
+    _beat_schedule["month-end-close-daily-9am"] = {
+        "task": "orchestrator.run_month_end_close",
+        "schedule": crontab(hour=9, minute=0),
+    }
+
+    # ---- Formal month-end close, 1st of month at 9:30 AM UTC -------------
+    # The stakeholder-facing close that produces the LP package + completion
+    # email. Runs slightly after the daily so the two don't collide.
+    _beat_schedule["month-end-close-day-1"] = {
+        "task": "orchestrator.run_month_end_close",
+        "schedule": crontab(day_of_month=1, hour=9, minute=30),
+    }
+
+
+celery_app.conf.beat_schedule = _beat_schedule
+
+
+# =============================================================================
+# TASK ROUTES
+# =============================================================================
 celery_app.conf.task_routes = {
     "orchestrator.*": {"queue": "orchestrator"},
     "agents.*": {"queue": "agents"},
 }
+
+# =============================================================================
+# GLOBAL LLM RATE LIMITER — installed once per worker process
+# =============================================================================
+# Enforces GEMINI_MAX_RPM (default 12) calls / 60s ACROSS all workers via a
+# shared Redis counter. Prevents 429 quota errors and gives predictable
+# pipeline latency.
+from app.core.rate_limit import install_rate_limiter
+install_rate_limiter()

@@ -6,61 +6,33 @@ ARCHITECTURE OVERVIEW
 ================================================================================
 The pipeline runs 5 phases, each managed by Celery primitives:
 
-    Phase 1  →  8 chords, dispatched with a 15s stagger between companies.
-                Each chord contains 3 parallel agents (TB, Variance, CF).
-                Chord callback = phase1_complete → dispatches Phase 2.
-
-    Phase 2  →  8 chains (one per company), each running 3 agents sequentially
-                (Accruals → Revenue → Expenses). Chain tail = phase2_complete
-                which atomically increments a shared Redis counter.
-
-    Phase 3  →  Single task, fired exactly once when the counter reaches
-                total_companies. Uses Redis SET NX as a race-safe lock so
-                only one worker wins the trigger.
-
-    Phase 4  →  Single task, chained after Phase 3. Consolidates group
-                financials and stamps the run as 'completed'.
-
-    Phase 5  →  Fire-and-forget reporting task. Sends the executive email.
-                Failures here do NOT roll back the run.
+    Phase 0  →  Pre-Flight (Orchestrator Agent decides proceed/skip)
+    Phase 1  →  8 chords, staggered 15s apart. Each chord = 3 parallel agents.
+    Phase 2  →  8 chains, sequential per company (Accruals → RevRec → Expenses).
+    Phase 3  →  Single elimination task (Redis SET NX lock).
+    Phase 4  →  Single consolidation task.
+    Phase 5  →  Reporting Agent decides which emails to send, then executes.
+    Phase 6  →  Post-Flight (Orchestrator Agent decides escalation).
 
 ================================================================================
-RATE LIMITING — GEMINI FREE TIER (15 RPM)
+AGENTIC LAYERS
 ================================================================================
-Every LLM call (Phase 1, 2, 3, 4) counts against the per-minute quota.
+Two Agno agents wrap the deterministic Celery pipeline:
 
-We enforce two throttles:
+    - orchestrator_agent.run_preflight()   → proceed / skip decision
+    - orchestrator_agent.run_postflight()  → escalation decision
+    - reporting_agent.plan_emails()        → which emails to send
 
-    1. CHORD_STAGGER_SECONDS = 15
-       Delay between dispatching each company's Phase-1 chord. 8 chords × 15s
-       = 105 seconds of spread. Guarantees no more than ~3 LLM calls per
-       15-second window at the chord boundary.
-
-    2. AGENT_STAGGER_SECONDS = 0
-       No delay inside agent tasks. Our retry-with-backoff logic in each
-       agent handles transient 429s. Adding a sleep here just makes every
-       agent block a worker slot without improving the RPM profile.
-
-Peak worst-case LLM rate with these settings: ~12 calls/minute. Free tier
-allows 15 RPM. Headroom ≈ 20%.
-
+All three degrade gracefully: if the LLM is unavailable, we fall back to
+safe defaults (proceed=True, escalate=False, send completion email).
 ================================================================================
-RETRY & RECOVERY
-================================================================================
-Every Celery task declares `autoretry_for=(Exception,)` with exponential
-backoff + jitter and a 3-attempt cap. This satisfies the assignment's
-"self-healing / retry logic / error recovery" requirement at the task layer
-(the agent layer already handles LLM-specific transient errors).
-
-Persistent failures (after retries exhausted) set a Redis escalation key
-`close:{run_id}:escalation` so an operator — or the dashboard — can see
-which run needs human review.
 """
 
 from __future__ import annotations
 
 import time
 import uuid
+import os    
 from typing import Any
 import json
 
@@ -89,33 +61,19 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# Single shared Redis client for all orchestrator state writes.
 redis_client: redis.Redis = redis.from_url(settings.redis_url, decode_responses=True)
-
-# All state keys expire after 30 minutes. Even if a run is abandoned, Redis
-# does not accumulate orphaned keys.
 PHASE_TIMEOUT = 60 * 30
 
 
 # ---------------------------------------------------------------------------
-# RATE-LIMIT PACING CONSTANTS
+# RATE-LIMIT PACING
 # ---------------------------------------------------------------------------
 CHORD_STAGGER_SECONDS = 15
 AGENT_STAGGER_SECONDS = 0
 
 
 # ---------------------------------------------------------------------------
-# SELF-HEALING: retry policy applied to EVERY Celery task in this module.
-# ---------------------------------------------------------------------------
-# - autoretry_for=(Exception,):      retry on any exception
-# - retry_backoff=True:              exponential backoff (1s, 2s, 4s, ...)
-# - retry_backoff_max=300:           cap backoff at 5 minutes
-# - retry_jitter=True:               add randomness so retries don't stampede
-# - max_retries=3:                   3 attempts total (1 + 2 retries)
-#
-# If retries are exhausted the task fails hard, and the orchestrator's
-# on-failure hooks (see run_month_end_close / phase1_complete) set an
-# escalation key for human review.
+# SELF-HEALING RETRY POLICY
 # ---------------------------------------------------------------------------
 _RETRY_KW: dict[str, Any] = dict(
     autoretry_for=(Exception,),
@@ -145,7 +103,6 @@ def run_trial_balance_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 1 agent — Trial Balance Validator."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
-
     result = validate_trial_balance(company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -158,7 +115,6 @@ def run_variance_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 1 agent — Variance Analysis."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
-
     result = run_variance_analysis(company_id=company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -171,7 +127,6 @@ def run_cash_flow_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 1 agent — Cash Flow Reconciliation."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
-
     result = run_cash_flow_reconciliation(company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -188,7 +143,6 @@ def run_accruals_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 2 Step 1 — Accrual Verification."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
-
     result = run_accrual_verification(company_id=company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -201,7 +155,6 @@ def run_revenue_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 2 Step 2 — Revenue Recognition (ASC 606)."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
-
     result = run_revenue_recognition(company_id=company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -214,7 +167,6 @@ def run_expenses_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 2 Step 3 — Expense Categorization."""
     if AGENT_STAGGER_SECONDS:
         time.sleep(AGENT_STAGGER_SECONDS)
-
     result = run_expense_categorization(company_id=company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -234,46 +186,75 @@ def run_month_end_close(
     """
     Fires the entire month-end close pipeline for one run_id.
 
-    Args:
-        run_id: optional — generated if not provided.
-        close_week_only: when True (used by the hourly Beat schedule),
-            the task exits early if we're not in days 1-5 of the month.
+    Order of operations (critical for UI responsiveness):
+      1. Set status=running + latest_run_id          (UI shows "running" instantly)
+      2. Fetch companies + apply CLOSE_COMPANIES     (fast DB call)
+      3. Write total_companies + companies to Redis  (UI knows the target)
+      4. Pre-Flight (agentic — LLM, ~30-60s)         (UI already showing progress)
+      5. Dispatch Phase-1 chords (staggered)
     """
-    # ---- Close-week guard (used by the hourly Beat entry only) ----------
+    # ---- Close-week guard ------------------------------------------------
     if close_week_only:
         from datetime import date as _date
         if _date.today().day > 5:
-            return {
-                "status": "skipped",
-                "reason": "outside close week (days 1-5)",
-            }
+            return {"status": "skipped", "reason": "outside close week (days 1-5)"}
 
     run_id = run_id or str(uuid.uuid4())
 
-    # ---- Initialize state ------------------------------------------------
+    # ---- 1. Initialize state FIRST — UI shows "running" immediately ------
     redis_client.set(f"close:{run_id}:status", "running", ex=PHASE_TIMEOUT)
     redis_client.set(f"close:{run_id}:phase2_count", 0, ex=PHASE_TIMEOUT)
     redis_client.set("close:latest_run_id", run_id, ex=PHASE_TIMEOUT)
 
-    # ---- Fetch company list ----------------------------------------------
+    # ---- 2. Fetch company list -------------------------------------------
     db = SessionLocal()
     try:
         company_ids = [str(cid) for (cid,) in db.query(Company.id).all()]
     finally:
         db.close()
 
+    # ---- DEMO FILTER (env-controlled) -----------------------------------
+    _demo_filter = os.getenv("CLOSE_COMPANIES", "").strip()
+    if _demo_filter:
+        allowed = {c.strip() for c in _demo_filter.split(",") if c.strip()}
+        before = len(company_ids)
+        company_ids = [cid for cid in company_ids if cid in allowed]
+        logger.info(
+            "[Orchestrator] DEMO MODE — filtered %d → %d companies (CLOSE_COMPANIES=%s)",
+            before, len(company_ids), _demo_filter,
+        )
+
     if not company_ids:
         redis_client.set(f"close:{run_id}:status", "failed", ex=PHASE_TIMEOUT)
         _set_escalation(run_id, "no_companies_found")
         return {"run_id": run_id, "status": "failed", "reason": "no companies found"}
 
+    # ---- 3. Persist company list + total BEFORE preflight ---------------
     redis_client.set(f"close:{run_id}:total_companies", len(company_ids), ex=PHASE_TIMEOUT)
-
-    # Track this run for the UI's "recent runs" list. Capped at 50 entries.
+    redis_client.set(f"close:{run_id}:companies", json.dumps(company_ids), ex=PHASE_TIMEOUT)
     redis_client.lpush("close:runs:recent", run_id)
     redis_client.ltrim("close:runs:recent", 0, 49)
 
-    # ---- Dispatch Phase 1, staggered -------------------------------------
+    # ---- 4. PHASE 0: Pre-Flight (agentic) -------------------------------
+    try:
+        from app.agents.orchestrator_agent import run_preflight
+        pre = run_preflight(run_id)
+        if not pre.proceed:
+            logger.warning("[Orchestrator] Pre-Flight REJECTED: %s", pre.reason)
+            redis_client.set(f"close:{run_id}:status", "skipped", ex=PHASE_TIMEOUT)
+            return {"run_id": run_id, "status": "skipped", "reason": pre.reason}
+        logger.info("[Orchestrator] Pre-Flight OK: %s", pre.reason)
+        redis_client.set(
+            f"close:{run_id}:preflight",
+            json.dumps(pre.model_dump(), default=str),
+            ex=PHASE_TIMEOUT,
+        )
+        redis_client.set(f"close:{run_id}:phase0_status", "done", ex=PHASE_TIMEOUT)
+    except Exception as exc:  # noqa: BLE001
+        logger.warning("[Orchestrator] Pre-Flight error (%s) — proceeding.",
+                       type(exc).__name__)
+
+    # ---- 5. Dispatch Phase 1, staggered ---------------------------------
     for idx, company_id in enumerate(company_ids):
         if idx > 0 and CHORD_STAGGER_SECONDS:
             time.sleep(CHORD_STAGGER_SECONDS)
@@ -293,19 +274,15 @@ def run_month_end_close(
 
     return {"run_id": run_id, "status": "initiated", "companies": len(company_ids)}
 
-
 # ============================================================================
 # PHASE 1 → PHASE 2 HANDOFF
 # ============================================================================
 
 @celery_app.task(name="orchestrator.phase1_complete", **_RETRY_KW)
 def phase1_complete(results: list[Any], run_id: str, company_id: str) -> dict[str, Any]:
-    """
-    Chord callback: fires when all three Phase-1 agents finish for one company.
-    """
+    """Chord callback: fires when all three Phase-1 agents finish for one company."""
     redis_client.set(f"close:{run_id}:phase1:{company_id}", "done", ex=PHASE_TIMEOUT)
 
-    # ---- Audit: identify any non-PASSED Phase-1 agents -------------------
     phase1_failures: list[str] = []
     for r in results or []:
         if isinstance(r, dict):
@@ -326,7 +303,6 @@ def phase1_complete(results: list[Any], run_id: str, company_id: str) -> dict[st
             company_id, phase1_failures,
         )
 
-    # ---- Dispatch Phase 2 chain -----------------------------------------
     chain(
         run_accruals_agent.si(run_id, company_id),
         run_revenue_agent.si(run_id, company_id),
@@ -347,9 +323,7 @@ def phase1_complete(results: list[Any], run_id: str, company_id: str) -> dict[st
 
 @celery_app.task(name="orchestrator.phase2_complete", **_RETRY_KW)
 def phase2_complete(run_id: str, company_id: str) -> dict[str, Any]:
-    """
-    Chain tail: fires after the three Phase-2 agents finish for one company.
-    """
+    """Chain tail: fires after the three Phase-2 agents finish for one company."""
     redis_client.set(f"close:{run_id}:phase2:{company_id}", "done", ex=PHASE_TIMEOUT)
 
     count = int(redis_client.incr(f"close:{run_id}:phase2_count"))
@@ -413,7 +387,15 @@ def run_cross_company_elimination(run_id: str) -> dict[str, Any]:
 
 @celery_app.task(name="orchestrator.run_consolidation_task", **_RETRY_KW)
 def run_consolidation_task(run_id: str) -> dict[str, Any]:
-    """Phase 4 — Final Consolidation."""
+    """
+    Phase 4 — Final Consolidation.
+
+    On success:
+      1. Persist final_result to Redis.
+      2. Mark run status = 'completed'.
+      3. Call Post-Flight (agentic) to decide escalation.
+      4. Hand off to Phase 5 (reporting).
+    """
     logger.info("[Phase 4] Consolidation started for run %s", run_id)
 
     try:
@@ -433,6 +415,28 @@ def run_consolidation_task(run_id: str) -> dict[str, Any]:
         )
         redis_client.set(f"close:{run_id}:status", "completed", ex=PHASE_TIMEOUT)
 
+        # ---- PHASE 6: Post-Flight (agentic) -----------------------------
+        try:
+            from app.agents.orchestrator_agent import run_postflight
+            post = run_postflight(run_id)
+            logger.info(
+                "[Orchestrator] Post-Flight: %s (escalate=%s)",
+                post.status_summary, post.escalate_to_human,
+            )
+            redis_client.set(
+                f"close:{run_id}:postflight",
+                json.dumps(post.model_dump(), default=str),
+                ex=PHASE_TIMEOUT,
+            )
+            redis_client.set(f"close:{run_id}:postflight_status", "done", ex=PHASE_TIMEOUT)
+            if post.escalate_to_human:
+                _set_escalation(
+                    run_id, post.escalation_reason or "postflight_escalation"
+                )
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("[Orchestrator] Post-Flight error (%s).", type(exc).__name__)
+
+        # ---- Hand off to Phase 5 ----------------------------------------
         run_reporting_task.delay(run_id)
 
         logger.info(
@@ -450,53 +454,93 @@ def run_consolidation_task(run_id: str) -> dict[str, Any]:
 
 
 # ============================================================================
-# PHASE 5 — Reporting & Communication
+# PHASE 5 — Reporting & Communication (agentic)
 # ============================================================================
 
 @celery_app.task(name="orchestrator.run_reporting_task", **_RETRY_KW)
 def run_reporting_task(run_id: str) -> dict[str, Any]:
-    """Phase 5 — Reporting & Communication."""
+    """
+    Phase 5 — Reporting & Communication.
+
+    The Reporting Agent (reporting_agent.plan_emails) DECIDES which email
+    types to send based on run state. The executor functions in
+    app.agents.reporting then send them.
+
+    If the planner LLM fails, we default to sending only the completion email.
+    """
     logger.info("[Phase 5] Reporting started for run %s", run_id)
 
     try:
-        ok = send_executive_summary_email(run_id)
-        status = "done" if ok else "failed"
+        # ---- Decide plan (agentic) --------------------------------------
+        try:
+            from app.agents.reporting_agent import plan_emails
+            plan = plan_emails(run_id)
+            emails_to_send = plan.emails_to_send
+            logger.info(
+                "[Phase 5] Reporting plan: %s (priority=%s) — %s",
+                emails_to_send, plan.priority, plan.reasoning,
+            )
+            redis_client.set(
+                f"close:{run_id}:email_plan",
+                json.dumps(plan.model_dump(), default=str),
+                ex=PHASE_TIMEOUT,
+            )
+        except Exception as exc:  # noqa: BLE001  # noqa: BLE001
+            logger.warning(
+                "[Phase 5] Planner failed (%s) — defaulting to completion email.",
+                type(exc).__name__,
+            )
+            emails_to_send = ["completion"]
 
+        # ---- Execute plan -----------------------------------------------
+        sent: list[str] = []
+        for email_type in emails_to_send:
+            try:
+                if email_type == "completion":
+                    if send_executive_summary_email(run_id):
+                        sent.append("completion")
+                elif email_type == "issue_alert":
+                    if send_issue_alert_email(run_id):
+                        sent.append("issue_alert")
+                elif email_type == "daily_summary":
+                    if send_daily_summary_email(run_id):
+                        sent.append("daily_summary")
+                elif email_type == "weekly_report":
+                    if send_weekly_stakeholder_report(run_id):
+                        sent.append("weekly_report")
+                else:
+                    logger.warning("[Phase 5] Unknown email type: %s", email_type)
+            except Exception as exc:  # noqa: BLE001
+                logger.warning("[Phase 5] Email %s failed: %s", email_type, exc)
+
+        status = "done" if sent else "failed"
         redis_client.set(f"close:{run_id}:reporting", status, ex=PHASE_TIMEOUT)
+        redis_client.set(
+            f"close:{run_id}:reporting_emails_sent",
+            ",".join(sent), ex=PHASE_TIMEOUT,
+        )
         redis_client.set(
             f"close:{run_id}:reporting_email",
             settings.to_email if hasattr(settings, "to_email") else "",
             ex=PHASE_TIMEOUT,
         )
 
-        logger.info("[Phase 5] Reporting %s for run %s", status, run_id)
-        return {"run_id": run_id, "phase": 5, "status": status}
+        logger.info("[Phase 5] Reporting %s — emails sent: %s", status, sent)
+        return {"run_id": run_id, "phase": 5, "status": status, "emails_sent": sent}
 
     except Exception as exc:  # noqa: BLE001
         logger.exception("[Phase 5] Reporting crashed for run %s: %s", run_id, exc)
         redis_client.set(f"close:{run_id}:reporting", "failed", ex=PHASE_TIMEOUT)
         return {"run_id": run_id, "phase": 5, "status": "failed", "error": str(exc)}
 
+
 # ============================================================================
 # PHASE 5b — Scheduled Notification Tasks (Daily / Weekly / Issue Alerts)
 # ============================================================================
-# These are fired by Celery Beat (see app/core/celery_app.py beat_schedule).
-# They operate on `close:latest_run_id` — the most recent close run — so
-# stakeholders always get updates on the current month-end process.
-#
-# Design decision: reuse the same orchestration state (Redis) that the close
-# pipeline writes. No new tables, no new state.
-# ============================================================================
-
 
 @celery_app.task(name="orchestrator.send_daily_summary", **_RETRY_KW)
 def send_daily_summary_task() -> dict[str, Any]:
-    """
-    Daily 8 AM progress summary.
-
-    Reads the latest run_id from Redis and sends a progress email. If no
-    run is active, silently returns.
-    """
+    """Daily 8 AM progress summary."""
     run_id = redis_client.get("close:latest_run_id")
     if not run_id:
         logger.info("[DailySummary] No active run — skipping.")
@@ -522,12 +566,7 @@ def send_weekly_report_task() -> dict[str, Any]:
 
 @celery_app.task(name="orchestrator.send_issue_alert", **_RETRY_KW)
 def send_issue_alert_task() -> dict[str, Any]:
-    """
-    Hourly issue-alert sweep.
-
-    Only sends if the current run has an active issue (phase-3 mismatch or
-    escalation flag). Silently skips otherwise.
-    """
+    """Hourly issue-alert sweep. Fires only if an issue exists."""
     run_id = redis_client.get("close:latest_run_id")
     if not run_id:
         return {"status": "no_active_run"}

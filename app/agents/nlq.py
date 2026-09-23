@@ -191,7 +191,7 @@ def _build_agent() -> Agent:
 
     return Agent(
         name="CFO Assistant",
-        model=Gemini(id="gemini-3.5-flash-lite", api_key=settings.gemini_api_key),
+        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
         tools=[
             list_companies,
             list_accounts_for_company,

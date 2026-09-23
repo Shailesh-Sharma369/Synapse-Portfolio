@@ -62,6 +62,7 @@ from __future__ import annotations
 import json
 import logging
 import time
+import os
 from collections import defaultdict
 from datetime import date, timedelta
 from decimal import Decimal
@@ -76,6 +77,7 @@ from app.db.database import SessionLocal, settings
 from app.db.models import Company, IntercompanyTransaction
 
 logger = logging.getLogger(__name__)
+_AGENT_DEBUG = os.getenv("AGENT_DEBUG", "").lower() in ("1", "true", "yes") 
 
 
 # ---------------------------------------------------------------------------
@@ -383,6 +385,72 @@ def verify_intercompany_eliminations(period: str) -> dict[str, Any]:
     finally:
         db.close()
 
+# =============================================================================
+# TOOL 2 — get_pair_detail
+# =============================================================================
+
+def get_pair_detail(entity_a: str, entity_b: str, period: str) -> dict[str, Any]:
+    """
+    Return the raw IC transactions between two specific entities in a period.
+
+    Use this after `verify_intercompany_eliminations` flags a pair, to see
+    the underlying transactions that caused the asymmetry.
+    """
+    from datetime import date, timedelta
+    y, m = (int(x) for x in period.split("-"))
+    start = date(y, m, 1)
+    end = (date(y, 12, 31) if m == 12 else date(y, m + 1, 1) - timedelta(days=1))
+
+    db = SessionLocal()
+    try:
+        rows = db.scalars(
+            select(IntercompanyTransaction).where(
+                IntercompanyTransaction.date >= start,
+                IntercompanyTransaction.date <= end,
+            )
+        ).all()
+
+        filtered = [
+            {"transaction_id": t.transaction_id,
+             "date": t.date.isoformat(),
+             "seller_id": t.selling_entity_id,
+             "buyer_id": t.buying_entity_id,
+             "amount": float(t.amount or 0),
+             "description": t.description or ""}
+            for t in rows
+            if {t.selling_entity_id, t.buying_entity_id} == {entity_a, entity_b}
+        ]
+        return {"entity_a": entity_a, "entity_b": entity_b, "period": period,
+                "transactions": filtered, "count": len(filtered)}
+    finally:
+        db.close()
+
+
+# =============================================================================
+# TOOL 3 — get_elimination_candidates
+# =============================================================================
+
+def get_elimination_candidates(period: str, min_amount: float = 50000.0) -> list[dict[str, Any]]:
+    """
+    List pairs whose matched IC flow exceeds `min_amount`.
+
+    These are the pairs the consolidation must net. Returns total matched
+    and asymmetry for each so the LLM can reason about which matter.
+    """
+    facts = verify_intercompany_eliminations(period)
+    if not facts.get("found"):
+        return []
+    out = []
+    for p in facts.get("top_asymmetric_pairs", []):
+        matched = min(p["flow_ab"], p["flow_ba"])
+        if matched >= min_amount:
+            out.append({
+                "pair": f"{p['seller_id']} ↔ {p['buyer_id']}",
+                "matched_amount": matched,
+                "asymmetry": p["asymmetry"],
+                "severity": p["severity"],
+            })
+    return out
 
 def _latest_period_globally() -> str | None:
     """
@@ -410,47 +478,51 @@ def _latest_period_globally() -> str | None:
 # =============================================================================
 
 AGENT_INSTRUCTIONS = [
-    "You are an Intercompany Elimination Agent for a Private Equity month-end close system.",
+    "You are an Intercompany Elimination Agent for a PE month-end close system.",
+    "You have THREE tools. Reason about which to call.",
     "",
-    "STRICT RULES — violating these is a critical failure:",
-    "1. ALWAYS call `verify_intercompany_eliminations` FIRST. Never invent numbers.",
-    "2. NEVER compute, re-sum, or modify any numeric value yourself. The tool is "
-    "   the single source of truth for every dollar amount you cite.",
-    "3. Set status = 'CLEAN' iff mismatch_count == 0. Otherwise status = 'MISMATCHES_FOUND'.",
-    "4. Include EVERY mismatch from the tool's `mismatches` array in your output. "
-    "   Do not add, remove, reorder, or merge entries.",
-    "5. Include AT LEAST the top 5 pairs from `top_asymmetric_pairs` in your output. "
-    "   Copy them verbatim.",
-    "6. Write `summary` as 2-4 sentences for a controller. Lead with the largest-amount "
-    "   mismatch. Mention the total number of pairs and the aggregate asymmetry if "
-    "   material. Recommend a next action (e.g., 'post the missing mirror entry for "
-    "   pair X' or 'investigate duplicate load for transaction Y').",
-    "7. If the tool returns found=false, set status='MISMATCHES_FOUND' and explain in "
-    "   the summary that no IC data was available for the requested period.",
+    "TOOLS:",
+    "  1. verify_intercompany_eliminations(period) — baseline. ALWAYS first.",
+    "  2. get_pair_detail(entity_a, entity_b, period) — raw transactions for",
+    "     one pair. Use on the top asymmetric pair to see what caused the gap.",
+    "  3. get_elimination_candidates(period, min_amount) — pairs with material",
+    "     matched IC flow (> $50K default). These MUST be netted at group level.",
     "",
-    "Output ONLY the structured JSON schema. No prose outside the schema.",
+    "WORKFLOW:",
+    "  - Step 1: verify_intercompany_eliminations.",
+    "  - Step 2: get_elimination_candidates to see which pairs need netting.",
+    "  - Step 3: get_pair_detail on the largest asymmetry to see the source.",
+    "  - Step 4: STOP after 3-4 tool calls.",
+    "",
+    "STRICT RULES:",
+    "1. NEVER invent numbers.",
+    "2. Include EVERY mismatch from the tool.",
+    "3. status='CLEAN' iff mismatch_count == 0, else 'MISMATCHES_FOUND'.",
+    "4. `summary` = 3-4 sentences leading with the largest mismatch.",
+    "",
+    "Output ONLY the structured JSON schema.",
 ]
 
 
 def _build_agent() -> Agent:
-    """Build a fresh Agent per call — no shared state across Celery workers."""
     if not settings.gemini_api_key:
-        raise RuntimeError("GEMINI_API_KEY is not set — cannot initialise LLM.")
-
+        raise RuntimeError("GEMINI_API_KEY is not set.")
     return Agent(
         name="Intercompany Elimination Agent",
-        model=Gemini(id="gemini-3.5-flash-lite", api_key=settings.gemini_api_key),
-        tools=[verify_intercompany_eliminations],
-        description=(
-            "Reconciles intercompany transactions across all portfolio companies "
-            "for a period, flags elimination asymmetries, and produces a "
-            "controller-ready consolidation narrative."
-        ),
+        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
+        tools=[
+            verify_intercompany_eliminations,
+            get_pair_detail,
+            get_elimination_candidates,
+        ],
+        description="Reconciles intercompany flows and identifies elimination candidates.",
         instructions=AGENT_INSTRUCTIONS,
         output_schema=EliminationResult,
         markdown=False,
+        use_json_mode=True,
+        debug_mode=_AGENT_DEBUG,
+        tool_call_limit=4,
     )
-
 
 # =============================================================================
 # 4. PUBLIC ENTRYPOINT
@@ -504,11 +576,33 @@ def run_elimination(period: str | None = None) -> EliminationResult:
                 summary="No intercompany transactions exist in the ledger.",
             )
 
+    # ---- TIER 1: deterministic pre-check --------------------------------
+    precheck = verify_intercompany_eliminations(period)
+    if precheck.get("found") and precheck.get("mismatch_count", 0) == 0:
+        logger.info("[Elimination] %s clean — skipping LLM.", period)
+        pairs = [IntercompanyPair(**p) for p in precheck.get("top_asymmetric_pairs", [])]
+        return EliminationResult(
+            period=period, status="CLEAN",
+            total_transactions=precheck.get("total_transactions", 0),
+            unique_pairs=precheck.get("unique_pairs", 0),
+            mismatch_count=0,
+            total_asymmetry_usd=precheck.get("total_asymmetry_usd", 0.0),
+            matched_intercompany_usd=precheck.get("matched_intercompany_usd", 0.0),
+            top_asymmetric_pairs=pairs, mismatches=[],
+            summary=(
+                f"All {precheck.get('unique_pairs', 0)} intercompany pairs "
+                f"reconcile cleanly across {precheck.get('total_transactions', 0)} "
+                f"transactions. Matched IC flow "
+                f"${precheck.get('matched_intercompany_usd', 0.0):,.2f}. "
+                f"LLM reasoning skipped."
+            ),
+        )
+
     prompt = (
-        f"Reconcile intercompany eliminations for period={period!r}. "
-        f"Call verify_intercompany_eliminations with this exact argument and "
-        f"produce the structured result."
-    )
+    f"Reconcile intercompany eliminations for period={period!r}. "
+    f"Use tools to identify elimination candidates and investigate the "
+    f"largest asymmetry. Then produce the structured result."
+)
 
     # ---- Try LLM path up to 3 times on transient errors ------------------
     last_exc: Exception | None = None
@@ -521,7 +615,7 @@ def run_elimination(period: str | None = None) -> EliminationResult:
             last_exc = exc
             msg = str(exc).lower()
             if any(k in msg for k in ("503", "unavailable", "429", "quota", "timeout", "deadline")) and attempt < 2:
-                time.sleep(2 * (attempt + 1))  # 2s, 4s
+                import random as _rnd; time.sleep((5 + _rnd.random() * 3) * (attempt + 1))  # 2s, 4s
                 logger.warning("Transient error on elimination attempt %d — retrying.", attempt + 1)
                 continue
             break
@@ -553,7 +647,7 @@ def run_elimination(period: str | None = None) -> EliminationResult:
         top_asymmetric_pairs=pairs,
         mismatches=mismatches,
         summary=(
-            f"LLM unavailable ({type(last_exc).__name__}). "
+            f"Deterministic result (LLM narrative skipped: {type(last_exc).__name__}). "
             f"Deterministic result: {len(mismatches)} intercompany mismatches "
             f"across {facts.get('unique_pairs', 0)} pairs, "
             f"aggregate asymmetry ${facts.get('total_asymmetry_usd', 0.0):,.2f}."
