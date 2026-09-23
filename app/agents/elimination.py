@@ -131,13 +131,15 @@ class EliminationResult(BaseModel):
     total_asymmetry_usd: float = Field(
         ..., description="Sum of |flow_ab - flow_ba| across all mirrored pairs."
     )
-    top_asymmetric_pairs: list[IntercompanyPair] = Field(
-        default_factory=list,
-        description="Top asymmetric pairs sorted by absolute asymmetry, descending.",
+    # NEW: matched IC flow — the portion that must be eliminated at group level.
+    matched_intercompany_usd: float = Field(
+        0.0,
+        description="Sum of min(flow_ab, flow_ba) across all pairs — the amount "
+                    "that nets to zero at group level.",
     )
+    top_asymmetric_pairs: list[IntercompanyPair] = Field(default_factory=list)
     mismatches: list[EliminationMismatch] = Field(default_factory=list)
     summary: str
-
 
 # =============================================================================
 # 2. DETERMINISTIC ANALYSIS TOOL  (Python owns all math)
@@ -316,6 +318,9 @@ def verify_intercompany_eliminations(period: str) -> dict[str, Any]:
                         f"with no reverse entries — likely a missing mirror booking."
                     ),
                 })
+        matched_intercompany = Decimal("0")
+        for (lo, hi), agg in canonical.items():
+            matched_intercompany += min(agg["ab"], agg["ba"])
 
         # ---- 6. Duplicate detection --------------------------------------
         for (seller, buyer, amount_str, date_str), count in txn_signatures.items():
@@ -356,6 +361,7 @@ def verify_intercompany_eliminations(period: str) -> dict[str, Any]:
             "mismatch_count": len(mismatches),
             "total_asymmetry_usd": float(total_asymmetry),
             "top_asymmetric_pairs": pairs[:10],  # top 10 for the LLM
+            "matched_intercompany_usd": float(matched_intercompany),
             "mismatches": mismatches,
             "orphan_count": len(orphan_txns),
             "note": (
@@ -543,6 +549,7 @@ def run_elimination(period: str | None = None) -> EliminationResult:
         unique_pairs=facts.get("unique_pairs", 0),
         mismatch_count=len(mismatches),
         total_asymmetry_usd=facts.get("total_asymmetry_usd", 0.0),
+        matched_intercompany_usd=facts.get("matched_intercompany_usd", 0.0),
         top_asymmetric_pairs=pairs,
         mismatches=mismatches,
         summary=(

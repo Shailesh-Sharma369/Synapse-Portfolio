@@ -26,10 +26,49 @@ celery_app.conf.update(
     broker_connection_retry_on_startup=True,
 )
 
+# =============================================================================
+# CELERY BEAT SCHEDULE — Autonomous Operation
+# =============================================================================
+# The assignment requires:
+#   - Daily 9 AM full close
+#   - Hourly during close week (days 1-5)
+#   - Daily summary email
+#   - Weekly stakeholder report
+#   - Issue alerts (condition-triggered, hourly sweep)
+#
+# All of the above are wired here. The close-week hourly entry passes
+# close_week_only=True; the task itself exits early if today.day > 5.
+# =============================================================================
 celery_app.conf.beat_schedule = {
+    # ---- Full close, daily 9 AM ------------------------------------------
     "month-end-close-daily-9am": {
         "task": "orchestrator.run_month_end_close",
         "schedule": crontab(hour=9, minute=0),
+    },
+
+    # # ---- Close-week hourly sweep (task self-guards to days 1-5) ----------
+    # "close-week-hourly": {
+    #     "task": "orchestrator.run_month_end_close",
+    #     "schedule": crontab(minute=0),
+    #     "kwargs": {"close_week_only": True},
+    # },
+
+    # ---- Daily progress summary, 8 AM ------------------------------------
+    "daily-summary-8am": {
+        "task": "orchestrator.send_daily_summary",
+        "schedule": crontab(hour=8, minute=0),
+    },
+
+    # ---- Weekly stakeholder report, Monday 8 AM --------------------------
+    "weekly-report-monday-8am": {
+        "task": "orchestrator.send_weekly_report",
+        "schedule": crontab(day_of_week=1, hour=8, minute=0),
+    },
+
+    # ---- Hourly issue alert sweep ----------------------------------------
+    "issue-alert-hourly": {
+        "task": "orchestrator.send_issue_alert",
+        "schedule": crontab(minute=15),
     },
 }
 

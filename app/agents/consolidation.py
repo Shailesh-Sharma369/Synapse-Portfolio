@@ -7,31 +7,33 @@ BUSINESS PROBLEM
 After intercompany elimination (Phase 3), the PE fund needs a SINGLE set of
 group financials that a CFO / LP can read. This agent rolls up the trial
 balances of all 8 portfolio companies into a group P&L, computes EBITDA, and
-adjusts for the intercompany asymmetries surfaced in Phase 3.
+applies GAAP consolidation rules — including NETTING intercompany revenue
+and intercompany expense so they don't double-count at group level.
 
-WHY ADJUSTED EBITDA (the "PE view")
------------------------------------
-Group EBITDA computed by simply summing each company's EBITDA is MISLEADING
-when intercompany activity hasn't reconciled. If Company A booked $500K of
-intercompany revenue but Company B only booked $480K on the mirror side,
-there's a $20K phantom profit that doesn't exist at group level. PE firms
-therefore report:
+================================================================================
+GAAP CONSOLIDATION — the "matched IC" elimination
+================================================================================
+If Company A sells $500K to Company B and B records the mirror $500K, then
+at group level this is ZERO economic activity — money never left the group.
+GAAP requires that BOTH the $500K of intercompany revenue (on A's books) AND
+the $500K of intercompany expense/purchases (on B's books) be eliminated.
 
-    Adjusted Group EBITDA = Raw Group EBITDA - Phase 3 elimination asymmetry
+We compute the matched portion as sum(min(flow_ab, flow_ba)) for each pair.
+This is subtracted from group revenue, and an equivalent amount is subtracted
+from group COGS + OpEx (split proportionally).
 
-This is a conservative haircut that makes the consolidated number defensible
-to auditors and LPs, and directly ties the Phase 3 findings into the group
-financials.
+Unmatched flow (asymmetry) is NOT netted — it represents a real disagreement
+between the two entities' books and is booked as a conservative EBITDA haircut.
 
+================================================================================
 HYBRID DESIGN (Python Math + LLM Reasoning)
--------------------------------------------
+================================================================================
 - Python owns ALL arithmetic:
-    - Account-type-based bucketing (Revenue, COGS, OpEx)
-    - Sign normalization (credit-normal accounts are flipped)
+    - Account-type bucketing
+    - Intercompany netting (matched portion only)
+    - Asymmetry haircut
     - EBITDA math
-    - Asymmetry adjustment
-- Gemini owns ONLY the executive narrative: 2-4 sentences a partner can read
-  in 15 seconds. It cites numbers but never produces them.
+- Gemini owns ONLY the executive narrative.
 ================================================================================
 """
 
@@ -53,7 +55,6 @@ from app.db.models import Company, TrialBalance
 
 logger = logging.getLogger(__name__)
 
-# Account types that map to P&L buckets. Case-insensitive matching.
 REVENUE_TYPES = {"revenue"}
 COGS_TYPES = {"cogs"}
 OPEX_TYPES = {"operating expense", "expense"}
@@ -69,13 +70,18 @@ class ConsolidationResult(BaseModel):
     period: str
     status: str = Field(..., description="'COMPLETE' if all entities contributed, else 'INCOMPLETE'.")
     entity_count: int = Field(..., description="Number of companies included in the rollup.")
-    gross_revenue: float = Field(..., description="Consolidated revenue (sign-normalized, positive).")
-    total_cogs: float = Field(..., description="Consolidated cost of goods sold (positive).")
+    gross_revenue: float = Field(..., description="Consolidated revenue (post-IC elimination, positive).")
+    total_cogs: float = Field(..., description="Consolidated COGS (post-IC elimination, positive).")
     gross_profit: float = Field(..., description="gross_revenue - total_cogs.")
-    total_opex: float = Field(..., description="Consolidated operating expenses (positive).")
-    raw_ebitda: float = Field(..., description="gross_profit - total_opex (pre-elimination haircut).")
+    total_opex: float = Field(..., description="Consolidated OpEx (post-IC elimination, positive).")
+    raw_ebitda: float = Field(..., description="gross_profit - total_opex (pre-asymmetry haircut).")
+    # NEW: matched intercompany flow that was netted from revenue AND expense
+    eliminated_intercompany_usd: float = Field(
+        0.0,
+        description="Matched intercompany flow netted from group revenue and expense.",
+    )
     elimination_asymmetry: float = Field(
-        ..., description="Phase 3 intercompany asymmetry total, used as a conservative EBITDA haircut."
+        ..., description="Unmatched IC asymmetry, used as a conservative EBITDA haircut."
     )
     adjusted_group_ebitda: float = Field(
         ..., description="raw_ebitda - elimination_asymmetry. The number reported to LPs."
@@ -87,13 +93,12 @@ class ConsolidationResult(BaseModel):
 # 2. DETERMINISTIC ANALYSIS TOOL
 # =============================================================================
 
-def _get_elimination_asymmetry(period: str, run_id: str | None) -> Decimal:
+def _get_phase3_totals(period: str, run_id: str | None) -> tuple[Decimal, Decimal]:
     """
-    Return the Phase 3 elimination asymmetry for `period`.
+    Return (asymmetry_usd, matched_intercompany_usd) for the period.
 
-    Prefers the value persisted by Phase 3 under `close:{run_id}:phase3:result`
-    (fast, reflects the actual run). If unavailable, recomputes deterministically
-    from the IC ledger via the Phase 3 tool.
+    Prefers the value persisted by Phase 3 under `close:{run_id}:phase3:result`.
+    Falls back to recomputing from the IC ledger via the Phase 3 tool.
     """
     # ---- Preferred path: read from Redis (fast, exact run result) --------
     if run_id:
@@ -103,14 +108,22 @@ def _get_elimination_asymmetry(period: str, run_id: str | None) -> Decimal:
             raw = r.get(f"close:{run_id}:phase3:result")
             if raw:
                 data = json.loads(raw)
-                return Decimal(str(data.get("total_asymmetry_usd", 0)))
+                return (
+                    Decimal(str(data.get("total_asymmetry_usd", 0))),
+                    Decimal(str(data.get("matched_intercompany_usd", 0))),
+                )
         except Exception:
-            logger.warning("Could not read phase3 result from Redis — recomputing from IC ledger.")
+            logger.warning(
+                "Could not read phase3 result from Redis — recomputing from IC ledger."
+            )
 
     # ---- Fallback: recompute via the Phase 3 tool ------------------------
     from app.agents.elimination import verify_intercompany_eliminations
     facts = verify_intercompany_eliminations(period)
-    return Decimal(str(facts.get("total_asymmetry_usd", 0)))
+    return (
+        Decimal(str(facts.get("total_asymmetry_usd", 0))),
+        Decimal(str(facts.get("matched_intercompany_usd", 0))),
+    )
 
 
 def generate_consolidated_financials(period: str, run_id: str | None = None) -> dict[str, Any]:
@@ -121,25 +134,15 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
     ---------
     1. Load all TrialBalance rows for `period` across ALL companies.
     2. Bucket by account_type:
-         Revenue          → gross_revenue (flip sign; credit-normal → positive)
-         COGS             → total_cogs    (already positive; debit-normal)
-         Operating Expense / Expense → total_opex (already positive)
-       Assets / Liabilities / Equity are ignored — this is a P&L consolidation.
-    3. Compute:
-         gross_profit = gross_revenue - total_cogs
-         raw_ebitda   = gross_profit - total_opex
-    4. Fetch the Phase 3 elimination asymmetry (see _get_elimination_asymmetry).
-    5. adjusted_group_ebitda = raw_ebitda - asymmetry.
-
-    This function is exposed to the Agno agent as a tool. It returns raw
-    facts only — all narrative is left to the LLM layer.
-
-    Args:
-        period: 'YYYY-MM'.
-        run_id: optional — used to fetch the exact Phase 3 result from Redis.
-
-    Returns:
-        JSON-serialisable dict. Never raises for missing data.
+         Revenue                     → gross_revenue (flip sign)
+         COGS                        → total_cogs
+         Operating Expense / Expense → total_opex
+       Assets / Liabilities / Equity are ignored — P&L consolidation only.
+    3. Eliminate matched intercompany flow:
+         gross_revenue -= matched_ic
+         split matched_ic across COGS + OpEx proportionally and subtract.
+    4. Compute gross_profit and raw_ebitda from the post-elimination numbers.
+    5. Fetch the Phase 3 asymmetry and apply as a conservative EBITDA haircut.
     """
     db = SessionLocal()
     try:
@@ -155,6 +158,7 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
                 "entity_count": 0,
                 "gross_revenue": 0.0, "total_cogs": 0.0, "gross_profit": 0.0,
                 "total_opex": 0.0, "raw_ebitda": 0.0,
+                "eliminated_intercompany_usd": 0.0,
                 "elimination_asymmetry": 0.0, "adjusted_group_ebitda": 0.0,
             }
 
@@ -176,17 +180,32 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
                 total_cogs += balance
             elif acct_type in OPEX_TYPES:
                 total_opex += balance
-            # Assets/Liabilities/Equity intentionally ignored — P&L view only.
 
+        # ---- Fetch Phase 3 totals: asymmetry + matched IC -----------------
+        asymmetry, matched_ic = _get_phase3_totals(period, run_id)
+
+        # ---- Apply GAAP intercompany elimination --------------------------
+        # Subtract matched IC flow from revenue, and an equivalent amount
+        # from the expense side (split proportionally between COGS and OpEx).
+        gross_revenue -= matched_ic
+
+        combined_expense = total_cogs + total_opex
+        if combined_expense > 0:
+            cogs_share = matched_ic * (total_cogs / combined_expense)
+            total_cogs -= cogs_share
+            total_opex -= (matched_ic - cogs_share)
+        else:
+            # No expense to offset (rare) — put it all against OpEx
+            total_opex -= matched_ic
+
+        # ---- Compute post-elimination P&L --------------------------------
         gross_profit = gross_revenue - total_cogs
         raw_ebitda = gross_profit - total_opex
 
-        # ---- Phase 3 asymmetry as PE-style EBITDA haircut ----------------
-        asymmetry = _get_elimination_asymmetry(period, run_id)
+        # ---- Apply asymmetry haircut (conservative LP view) --------------
         adjusted_ebitda = raw_ebitda - asymmetry
 
         # ---- Entity coverage check ---------------------------------------
-        all_companies = db.scalar(select(Company.id).limit(1))
         total_companies = len(db.scalars(select(Company.id)).all())
         complete = len(entity_ids) == total_companies and total_companies > 0
 
@@ -201,12 +220,14 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
             "gross_profit": float(gross_profit),
             "total_opex": float(total_opex),
             "raw_ebitda": float(raw_ebitda),
+            "eliminated_intercompany_usd": float(matched_ic),
             "elimination_asymmetry": float(asymmetry),
             "adjusted_group_ebitda": float(adjusted_ebitda),
             "note": (
                 f"Consolidated {len(entity_ids)}/{total_companies} entities. "
-                f"Raw EBITDA ${raw_ebitda:,.2f}, adjusted for "
-                f"${asymmetry:,.2f} in elimination asymmetries."
+                f"Eliminated ${matched_ic:,.2f} of matched intercompany flow; "
+                f"applied ${asymmetry:,.2f} asymmetry haircut. "
+                f"Adjusted group EBITDA ${adjusted_ebitda:,.2f}."
             ),
         }
 
@@ -218,6 +239,7 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
             "entity_count": 0,
             "gross_revenue": 0.0, "total_cogs": 0.0, "gross_profit": 0.0,
             "total_opex": 0.0, "raw_ebitda": 0.0,
+            "eliminated_intercompany_usd": 0.0,
             "elimination_asymmetry": 0.0, "adjusted_group_ebitda": 0.0,
         }
     finally:
@@ -253,11 +275,9 @@ AGENT_INSTRUCTIONS = [
     "5. Write `executive_summary` as 2-4 sentences for a board deck:",
     "     - Lead with adjusted_group_ebitda (the PE-reported number).",
     "     - Mention gross revenue, gross profit, and raw EBITDA briefly.",
-    "     - Explicitly state the elimination asymmetry haircut and why it was applied.",
-    "     - If status='INCOMPLETE', warn that not all entities contributed and the",
-    "       number should be treated as preliminary.",
-    "6. If the tool returns found=false, set status='INCOMPLETE' and explain the",
-    "   missing-data reason in `executive_summary`.",
+    "     - Mention the eliminated intercompany flow and the asymmetry haircut.",
+    "     - If status='INCOMPLETE', warn that not all entities contributed.",
+    "6. If the tool returns found=false, set status='INCOMPLETE' and explain.",
     "",
     "Output ONLY the structured JSON schema. No prose outside the schema.",
 ]
@@ -270,7 +290,7 @@ def _build_agent() -> Agent:
 
     return Agent(
         name="Consolidation Agent",
-        model=Gemini(id="gemini-3.5-flash-lite", api_key=settings.gemini_api_key),
+        model=Gemini(id="gemini-2.0-flash", api_key=settings.gemini_api_key),
         tools=[generate_consolidated_financials],
         description=(
             "Produces consolidated group financials for a period: revenue, COGS, "
@@ -312,13 +332,8 @@ def run_consolidation(
     """
     Run the Consolidation Agent for one period.
 
-    Args:
-        period: 'YYYY-MM'. If None, resolves to the latest period in the ledger.
-        run_id: optional — used to fetch Phase 3's exact asymmetry from Redis.
-
-    Returns:
-        ConsolidationResult. Falls back to a Python-only verdict if the LLM is
-        unreachable — the orchestrator never blocks on a Gemini rate-limit.
+    Falls back to a Python-only verdict if the LLM is unreachable — the
+    orchestrator never blocks on a Gemini rate-limit.
     """
     if period is None:
         period = _latest_period_globally()
@@ -327,6 +342,7 @@ def run_consolidation(
                 period="UNKNOWN", status="INCOMPLETE", entity_count=0,
                 gross_revenue=0.0, total_cogs=0.0, gross_profit=0.0,
                 total_opex=0.0, raw_ebitda=0.0,
+                eliminated_intercompany_usd=0.0,
                 elimination_asymmetry=0.0, adjusted_group_ebitda=0.0,
                 executive_summary="No trial balance data available for consolidation.",
             )
@@ -337,7 +353,6 @@ def run_consolidation(
         f"run_id={run_id!r}. Then produce the structured ConsolidationResult."
     )
 
-    # ---- Try LLM path up to 3 times on transient errors ------------------
     last_exc: Exception | None = None
     for attempt in range(3):
         try:
@@ -369,15 +384,18 @@ def run_consolidation(
         gross_profit=facts.get("gross_profit", 0.0),
         total_opex=facts.get("total_opex", 0.0),
         raw_ebitda=facts.get("raw_ebitda", 0.0),
+        eliminated_intercompany_usd=facts.get("eliminated_intercompany_usd", 0.0),
         elimination_asymmetry=facts.get("elimination_asymmetry", 0.0),
         adjusted_group_ebitda=facts.get("adjusted_group_ebitda", 0.0),
         executive_summary=(
             f"LLM unavailable ({type(last_exc).__name__}). "
             f"Deterministic result: Group revenue ${facts.get('gross_revenue', 0.0):,.2f}, "
             f"gross profit ${facts.get('gross_profit', 0.0):,.2f}, "
-            f"raw EBITDA ${facts.get('raw_ebitda', 0.0):,.2f}, "
-            f"adjusted for ${facts.get('elimination_asymmetry', 0.0):,.2f} in "
-            f"intercompany asymmetries → adjusted group EBITDA "
+            f"raw EBITDA ${facts.get('raw_ebitda', 0.0):,.2f}. "
+            f"Eliminated ${facts.get('eliminated_intercompany_usd', 0.0):,.2f} of "
+            f"matched intercompany flow, plus a "
+            f"${facts.get('elimination_asymmetry', 0.0):,.2f} asymmetry haircut "
+            f"→ adjusted group EBITDA "
             f"${facts.get('adjusted_group_ebitda', 0.0):,.2f}. "
             f"Entities contributing: {facts.get('entity_count', 0)}."
         ),
