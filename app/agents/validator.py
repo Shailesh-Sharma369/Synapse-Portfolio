@@ -191,7 +191,7 @@ def _build_agent() -> Agent:
         raise RuntimeError("GEMINI_API_KEY is not set.")
     return Agent(
         name="Trial Balance Validator",
-        model=Gemini(id="gemini-3.5-flash", api_key=settings.gemini_api_key),
+        model=Gemini(id="gemini-3.5-flash-lite", api_key=settings.gemini_api_key),
         tools=[analyze_trial_balance],
         description="Validates a trial balance via deterministic tool, summarises results.",
         instructions=AGENT_INSTRUCTIONS,
