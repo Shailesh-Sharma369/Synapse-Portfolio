@@ -187,7 +187,6 @@ Celery Beat schedules are configured in `app/core/celery_app.py`. Default mode i
 | **Intercompany** | Matched IC flow (min of both directions) netted from group revenue **AND** group expense — true GAAP elimination, not just an EBITDA adjustment |
 | **Consolidation** | Revenue / COGS / OpEx bucketing; asymmetry haircut applied for unmatched IC |
 | **Expense Reclassification** | Constrained to Master CoA; taxonomy cannot be invented |
-
 ---
 
 ## ⚠️ Known Limitations
@@ -240,7 +239,6 @@ All environment variables are validated on startup via `pydantic-settings`. See 
 | `GEMINI_CALLS_PER_AGENT` | ❌ | `4` | Slots reserved per `agent.run()` for the rate limiter |
 | `PIPELINE_USE_LLM` | ❌ | `0` | `0` = deterministic-only pipeline (fast demo), `1` = full ReAct |
 | `AGENT_DEBUG` | ❌ | `0` | `1` = verbose Agno traces |
-
 ---
 
 ## 🔄 Agent Workflow Diagrams
