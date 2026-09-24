@@ -17,6 +17,7 @@ from typing import Any
 
 from agno.agent import Agent
 from agno.models.google import Gemini
+from app.core.llm import get_model
 from pydantic import BaseModel, Field
 
 from app.db.database import settings
@@ -51,7 +52,7 @@ class EmailPlan(BaseModel):
 def _build_agent() -> Agent:
     return Agent(
         name="Reporting Decision Agent",
-        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
+        model=get_model(),
         tools=[get_run_state],
         instructions=[
             "You decide which emails to send for a PE month-end close run.",
@@ -79,9 +80,6 @@ def _build_agent() -> Agent:
 
 def plan_emails(run_id: str) -> EmailPlan:
     """Decide which emails to send based on run state."""
-    if not settings.gemini_api_key:
-        return EmailPlan(emails_to_send=["completion"], priority="MEDIUM",
-                         reasoning="LLM unavailable; defaulting to completion email.")
     try:
         agent = _build_agent()
         prompt = f"Plan emails for run_id={run_id!r}. Call get_run_state first."
@@ -93,6 +91,24 @@ def plan_emails(run_id: str) -> EmailPlan:
             return EmailPlan(**json.loads(content))
         raise ValueError(f"Unexpected response: {content}")
     except Exception as exc:  # noqa: BLE001
-        logger.warning("Reporting planner failed (%s) — defaulting.", type(exc).__name__)
-        return EmailPlan(emails_to_send=["completion"], priority="MEDIUM",
-                         reasoning=f"LLM unavailable ({type(exc).__name__}).")
+        logger.warning(
+            "Reporting planner failed (%s) — using deterministic fallback.",
+            type(exc).__name__,
+        )
+        # Deterministic fallback that mirrors the LLM's intended rules.
+        # The previous fallback always sent only 'completion', which was
+        # wrong when phase-3 mismatches existed — those demand an issue_alert.
+        state = get_run_state(run_id)
+        emails = ["completion"]
+        priority = "LOW"
+        if state.get("has_escalation") or state.get("phase3_status") == "MISMATCHES_FOUND":
+            emails.append("issue_alert")
+            priority = "HIGH"
+        elif state.get("status") == "running":
+            emails = ["daily_summary"]
+            priority = "MEDIUM"
+        return EmailPlan(
+            emails_to_send=emails,
+            priority=priority,
+            reasoning=f"LLM unavailable ({type(exc).__name__}); deterministic rules applied.",
+        )

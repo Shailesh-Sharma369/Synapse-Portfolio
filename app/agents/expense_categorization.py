@@ -20,6 +20,7 @@ from typing import Any
 
 from agno.agent import Agent
 from agno.models.google import Gemini
+from app.core.llm import get_model
 from pydantic import BaseModel, Field
 from sqlalchemy import func, select
 
@@ -281,11 +282,10 @@ AGENT_INSTRUCTIONS = [
 
 
 def _build_agent() -> Agent:
-    if not settings.gemini_api_key:
-        raise RuntimeError("GEMINI_API_KEY is not set.")
+    """Build the Expense Categorization Agent."""
     return Agent(
         name="Expense Categorization Agent",
-        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
+        model=get_model(),
         tools=[categorize_expenses, get_master_coa, get_expense_trend],
         description="Audits expense accounts and reasons about misclassification patterns.",
         instructions=AGENT_INSTRUCTIONS,

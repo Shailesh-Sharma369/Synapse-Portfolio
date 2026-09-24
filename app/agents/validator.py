@@ -34,6 +34,7 @@ from typing import Any
 
 from agno.agent import Agent
 from agno.models.google import Gemini
+from app.core.llm import get_model
 from pydantic import BaseModel, Field
 from sqlalchemy import select
 
@@ -360,12 +361,9 @@ AGENT_INSTRUCTIONS = [
 
 def _build_agent() -> Agent:
     """Build a fresh Agent per call — no shared state across Celery workers."""
-    if not settings.gemini_api_key:
-        raise RuntimeError("GEMINI_API_KEY is not set — cannot initialise LLM.")
-
     return Agent(
         name="Trial Balance Validator",
-        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
+        model=get_model(),
         tools=[
             analyze_trial_balance,
             list_account_balances_by_type,

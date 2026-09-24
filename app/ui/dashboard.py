@@ -397,7 +397,16 @@ with main_col:
         st.stop()
 
     status = _get(f"close:{run_id}:status", "unknown")
-    total_companies = _get_int(f"close:{run_id}:total_companies", 0) or 0 #/8
+    total_companies = _get_int(f"close:{run_id}:total_companies", 0)
+    if total_companies <= 0:
+        _companies_raw = r.get(f"close:{run_id}:companies")
+        if _companies_raw:
+            try:
+                total_companies = len(json.loads(_companies_raw))
+            except Exception:
+                total_companies = 0
+    if total_companies <= 0:
+        total_companies = len(_discover_company_ids(run_id))
 
     # ---- Header ----
     st.markdown(
@@ -450,24 +459,28 @@ with main_col:
             "failed": "✗ Failed",
         }[state]
 
+        # If the run has reached 'completed', every phase 1–4 must render as
+    # done regardless of whether individual Redis keys are still present.
+    # Redis TTL expiry mid-run should never lie about completion state.
+    run_completed = (status == "completed")
+
     # Phase 1 state
-    p1_state = _phase_state(
-        done_bool=(p1_done >= total_companies and total_companies > 0),
-        running_bool=(status == "running" and p1_done < total_companies),
+    p1_state = "done" if run_completed else _phase_state(
+        done_bool=(total_companies > 0 and p1_done >= total_companies),
+        running_bool=(status == "running" and total_companies > 0 and p1_done < total_companies),
     )
     # Phase 2 state
-        # Phase 2 state — only "running" once Phase 1 has companies
-    p2_state = _phase_state(
-        done_bool=(p2_done >= total_companies and total_companies > 0),
+    p2_state = "done" if run_completed else _phase_state(
+        done_bool=(total_companies > 0 and p2_done >= total_companies),
         running_bool=(
-            total_companies > 0
+            status == "running"
+            and total_companies > 0
             and p1_done >= total_companies
             and p2_done < total_companies
         ),
     )
     # Phase 3 state
-        # Phase 3 state — only "running" once Phase 2 has actually started & finished
-    p3_state = _phase_state(
+    p3_state = "done" if (p3_status == "done" or run_completed) else _phase_state(
         done_bool=(p3_status == "done"),
         running_bool=(
             total_companies > 0
@@ -479,7 +492,7 @@ with main_col:
     )
     # Phase 4 state
     p4_done_bool = (p4_status == "done") and (p5_status in ("done", "failed"))
-    p4_state = _phase_state(
+    p4_state = "done" if (p4_done_bool or run_completed) else _phase_state(
         done_bool=p4_done_bool,
         running_bool=(p3_status == "done" and p4_status == "-"),
         failed=(p4_status == "failed"),

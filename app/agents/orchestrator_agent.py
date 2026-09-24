@@ -23,7 +23,8 @@ import os
 from typing import Any
 
 from agno.agent import Agent
-from agno.models.google import Gemini
+from app.core.llm import get_model  
+from app.core.llm import get_model
 from pydantic import BaseModel, Field
 from sqlalchemy import select
 
@@ -98,7 +99,7 @@ class PostflightDecision(BaseModel):
 def _build_preflight_agent() -> Agent:
     return Agent(
         name="Orchestrator Pre-Flight",
-        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
+        model=get_model(),
         tools=[list_portfolio_companies, get_run_status],
         instructions=[
             "You are the Orchestrator Pre-Flight Agent for a PE month-end close system.",
@@ -123,7 +124,7 @@ def _build_preflight_agent() -> Agent:
 def _build_postflight_agent() -> Agent:
     return Agent(
         name="Orchestrator Post-Flight",
-        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
+        model=get_model(),
         tools=[get_run_status, list_escalations],
         instructions=[
             "You are the Orchestrator Post-Flight Agent for a PE month-end close system.",
@@ -149,12 +150,14 @@ def _build_postflight_agent() -> Agent:
 
 def run_preflight(run_id: str | None = None) -> PreflightDecision:
     """Pre-flight check before dispatching a close run."""
-    if not settings.gemini_api_key:
-        return PreflightDecision(proceed=True, reason="LLM unavailable, defaulting to proceed.",
-                                 companies_to_run=[])
     try:
         agent = _build_preflight_agent()
-        prompt = (f"Pre-flight check. run_id={run_id!r}. Decide if the close should proceed.")
+    except RuntimeError as exc:
+        logger.warning("Pre-flight model init failed (%s) — proceeding.", exc)
+        return PreflightDecision(proceed=True, reason=f"LLM unavailable ({exc}); proceeding.",
+                                 companies_to_run=[])
+    try:
+        prompt = f"Pre-flight check. run_id={run_id!r}. Decide if the close should proceed."
         response = agent.run(prompt)
         content = response.content
         if isinstance(content, dict):
@@ -162,16 +165,17 @@ def run_preflight(run_id: str | None = None) -> PreflightDecision:
         if isinstance(content, str) and content.strip().startswith("{"):
             return PreflightDecision(**json.loads(content))
         raise ValueError(f"Unexpected response: {content}")
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc:
         logger.warning("Pre-flight LLM failed (%s) — defaulting to proceed.", type(exc).__name__)
         return PreflightDecision(proceed=True, reason="Pre-flight LLM unavailable; proceeding.",
                                  companies_to_run=[])
 
-
 def run_postflight(run_id: str) -> PostflightDecision:
-    """Post-flight review after Phase 4."""
-    if not settings.gemini_api_key:
-        return PostflightDecision(status_summary="LLM unavailable.",
+    try:
+        agent = _build_postflight_agent()
+    except RuntimeError as exc:
+        logger.warning("Post-flight model init failed (%s).", exc)
+        return PostflightDecision(status_summary=f"LLM unavailable ({exc}).",
                                   escalate_to_human=False)
     try:
         agent = _build_postflight_agent()

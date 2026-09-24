@@ -18,3 +18,4 @@ streamlit
 streamlit-autorefresh
 jinja2
 resend
+anthropic

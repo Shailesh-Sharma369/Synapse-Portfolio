@@ -62,14 +62,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 redis_client: redis.Redis = redis.from_url(settings.redis_url, decode_responses=True)
-PHASE_TIMEOUT = 60 * 30
-
-
-# ---------------------------------------------------------------------------
-# RATE-LIMIT PACING
-# ---------------------------------------------------------------------------
-CHORD_STAGGER_SECONDS = 15
-AGENT_STAGGER_SECONDS = 0
+PHASE_TIMEOUT = 60 * 60
 
 
 # ---------------------------------------------------------------------------
@@ -101,8 +94,8 @@ def _set_escalation(run_id: str | None, reason: str) -> None:
 @celery_app.task(name="agents.trial_balance", **_RETRY_KW)
 def run_trial_balance_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 1 agent — Trial Balance Validator."""
-    if AGENT_STAGGER_SECONDS:
-        time.sleep(AGENT_STAGGER_SECONDS)
+    if settings.agent_stagger_seconds > 0:
+        time.sleep(settings.agent_stagger_seconds)
     result = validate_trial_balance(company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -113,8 +106,8 @@ def run_trial_balance_agent(run_id: str, company_id: str) -> dict[str, Any]:
 @celery_app.task(name="agents.variance", **_RETRY_KW)
 def run_variance_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 1 agent — Variance Analysis."""
-    if AGENT_STAGGER_SECONDS:
-        time.sleep(AGENT_STAGGER_SECONDS)
+    if settings.agent_stagger_seconds > 0:
+        time.sleep(settings.agent_stagger_seconds)
     result = run_variance_analysis(company_id=company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -125,8 +118,8 @@ def run_variance_agent(run_id: str, company_id: str) -> dict[str, Any]:
 @celery_app.task(name="agents.cash_flow", **_RETRY_KW)
 def run_cash_flow_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 1 agent — Cash Flow Reconciliation."""
-    if AGENT_STAGGER_SECONDS:
-        time.sleep(AGENT_STAGGER_SECONDS)
+    if settings.agent_stagger_seconds > 0:
+        time.sleep(settings.agent_stagger_seconds)
     result = run_cash_flow_reconciliation(company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -141,8 +134,8 @@ def run_cash_flow_agent(run_id: str, company_id: str) -> dict[str, Any]:
 @celery_app.task(name="agents.accruals", **_RETRY_KW)
 def run_accruals_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 2 Step 1 — Accrual Verification."""
-    if AGENT_STAGGER_SECONDS:
-        time.sleep(AGENT_STAGGER_SECONDS)
+    if settings.agent_stagger_seconds > 0:
+        time.sleep(settings.agent_stagger_seconds)
     result = run_accrual_verification(company_id=company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -153,8 +146,8 @@ def run_accruals_agent(run_id: str, company_id: str) -> dict[str, Any]:
 @celery_app.task(name="agents.revenue", **_RETRY_KW)
 def run_revenue_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 2 Step 2 — Revenue Recognition (ASC 606)."""
-    if AGENT_STAGGER_SECONDS:
-        time.sleep(AGENT_STAGGER_SECONDS)
+    if settings.agent_stagger_seconds > 0:
+        time.sleep(settings.agent_stagger_seconds)
     result = run_revenue_recognition(company_id=company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -165,8 +158,8 @@ def run_revenue_agent(run_id: str, company_id: str) -> dict[str, Any]:
 @celery_app.task(name="agents.expenses", **_RETRY_KW)
 def run_expenses_agent(run_id: str, company_id: str) -> dict[str, Any]:
     """Phase 2 Step 3 — Expense Categorization."""
-    if AGENT_STAGGER_SECONDS:
-        time.sleep(AGENT_STAGGER_SECONDS)
+    if settings.agent_stagger_seconds > 0:
+        time.sleep(settings.agent_stagger_seconds)
     result = run_expense_categorization(company_id=company_id, period=None)
     payload = result.model_dump()
     payload["run_id"] = run_id
@@ -255,9 +248,10 @@ def run_month_end_close(
                        type(exc).__name__)
 
     # ---- 5. Dispatch Phase 1, staggered ---------------------------------
+    stagger = settings.chord_stagger_seconds
     for idx, company_id in enumerate(company_ids):
-        if idx > 0 and CHORD_STAGGER_SECONDS:
-            time.sleep(CHORD_STAGGER_SECONDS)
+        if idx > 0 and stagger > 0:
+            time.sleep(stagger)
 
         chord(
             group(
@@ -327,9 +321,29 @@ def phase2_complete(run_id: str, company_id: str) -> dict[str, Any]:
     redis_client.set(f"close:{run_id}:phase2:{company_id}", "done", ex=PHASE_TIMEOUT)
 
     count = int(redis_client.incr(f"close:{run_id}:phase2_count"))
-    total = int(redis_client.get(f"close:{run_id}:total_companies") or 0)
 
-    if count >= total:
+    # Resolve total from the most reliable source available, with fallbacks.
+    total = 0
+    raw = redis_client.get(f"close:{run_id}:total_companies")
+    if raw:
+        try:
+            total = int(raw)
+        except (TypeError, ValueError):
+            total = 0
+    if total == 0:
+        companies_raw = redis_client.get(f"close:{run_id}:companies")
+        if companies_raw:
+            try:
+                total = len(json.loads(companies_raw))
+            except Exception:
+                total = 0
+
+    # CRITICAL GUARD: only fire Phase 3 when we have a non-zero target AND
+    # every company has actually completed Phase 2. Without the `total > 0`
+    # check, `count >= 0` is always True and Phase 3 fires prematurely the
+    # moment any single company finishes — which is what caused the UI to
+    # show "Phase 1/2 pending" while "Phase 3/4 done".
+    if total > 0 and count >= total:
         locked = redis_client.set(
             f"close:{run_id}:phase3_lock", "1", nx=True, ex=PHASE_TIMEOUT
         )
@@ -337,7 +351,6 @@ def phase2_complete(run_id: str, company_id: str) -> dict[str, Any]:
             run_cross_company_elimination.delay(run_id)
 
     return {"run_id": run_id, "company_id": company_id, "phase2_count": count, "total": total}
-
 
 # ============================================================================
 # PHASE 3 — Cross-Company Intercompany Elimination

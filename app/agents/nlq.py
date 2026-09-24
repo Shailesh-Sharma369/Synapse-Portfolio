@@ -39,6 +39,7 @@ from typing import Any
 
 from agno.agent import Agent
 from agno.models.google import Gemini
+from app.core.llm import get_model
 from sqlalchemy import select
 
 from app.db.database import SessionLocal, settings
@@ -186,12 +187,9 @@ AGENT_INSTRUCTIONS = [
 
 def _build_agent() -> Agent:
     """Build a fresh Agent per call — no shared state across concurrent users."""
-    if not settings.gemini_api_key:
-        raise RuntimeError("GEMINI_API_KEY is not set — cannot initialise NLQ agent.")
-
     return Agent(
         name="CFO Assistant",
-        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
+        model=get_model(),
         tools=[
             list_companies,
             list_accounts_for_company,

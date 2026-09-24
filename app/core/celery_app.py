@@ -46,7 +46,7 @@ celery_app.conf.update(
 #   - Month-end: the formal close that produces the LP-facing package.
 #   Both are idempotent — the UI tracks each run by its own run_id.
 # =============================================================================
-_enable_autonomous = os.getenv("ENABLE_AUTONOMOUS_SCHEDULE", "0").strip() == "1"
+
 
 
 # =============================================================================
@@ -77,7 +77,8 @@ _beat_schedule: dict = {
         "schedule": crontab(hour=12, minute=0),
     },
 }
-
+_beat_enabled = os.getenv("BEAT_ENABLED", "0").strip() == "1"
+_enable_autonomous = _beat_enabled and os.getenv("ENABLE_AUTONOMOUS_SCHEDULE", "0").strip() == "1"
 
 if _enable_autonomous:
     # ---- Full close, daily at 9:00 AM UTC --------------------------------
@@ -97,7 +98,13 @@ if _enable_autonomous:
 
 
 celery_app.conf.beat_schedule = _beat_schedule
-
+if not _beat_enabled:
+    # Hard-disable: no task, scheduled or otherwise, will fire from Beat.
+    celery_app.conf.beat_schedule = {}
+    import logging as _logging
+    _logging.getLogger(__name__).info(
+        "[Beat] DISABLED (BEAT_ENABLED=0). Trigger manually via POST /api/v1/trigger-close."
+    )
 
 # =============================================================================
 # TASK ROUTES

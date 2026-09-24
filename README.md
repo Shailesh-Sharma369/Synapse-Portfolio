@@ -141,6 +141,15 @@ The system enforces `GEMINI_MAX_RPM=12` requests per minute **across all Celery 
 | **Trap 2** — IC mismatch | Don't force-book; flag for review | Matched flow is netted from group revenue and expense. Unmatched asymmetry is booked as a **conservative EBITDA haircut** and flagged for human review. |
 | **Trap 3** — CoA hallucination | Never invent codes | Expense agent's `suggest_reclassification()` returns codes **only** from the company's existing Master CoA. If nothing fits, returns `valid=False` and defers to human review. |
 
+### 5. Provider-agnostic LLM layer
+
+A central factory (`app/core/llm.py`) reads `LLM_PROVIDER` and `LLM_MODEL_ID` and returns the appropriate Agno model instance. Swapping Gemini → Claude is a `.env` change:
+
+```bash
+LLM_PROVIDER=claude
+LLM_MODEL_ID=claude-3-5-sonnet-latest
+ANTHROPIC_API_KEY=sk-ant-...
+
 ---
 
 ## ⏰ Autonomous Operation
@@ -216,9 +225,17 @@ All environment variables are validated on startup via `pydantic-settings`. See 
 | `TO_EMAIL` / `FROM_EMAIL` | ❌ | example values | Email recipients |
 | `POSTGRES_*` / `DATABASE_URL` | ✅ | sensible defaults | Database |
 | `REDIS_URL` / `CELERY_*` | ✅ | sensible defaults | Broker + state |
+| `LLM_PROVIDER` | ❌ | `gemini` | `gemini` or `claude` — swap providers without code changes |
+| `LLM_MODEL_ID` | ❌ | `gemini-3.5-flash-lite` | Model name passed to the selected provider |
+| `ANTHROPIC_API_KEY` | ❌ | — | Required only if `LLM_PROVIDER=claude` |
 | `CLOSE_COMPANIES` | ❌ | empty (= all 8) | Comma-separated subset for demos |
-| `ENABLE_AUTONOMOUS_SCHEDULE` | ❌ | `0` | `1` = enable Beat-triggered closes |
-| `GEMINI_MAX_RPM` | ❌ | `12` | Fleet-wide rate cap |
+| `BEAT_ENABLED` | ❌ | `0` | Master switch for Celery Beat. `0` = manual trigger only |
+| `ENABLE_AUTONOMOUS_SCHEDULE` | ❌ | `0` | Requires `BEAT_ENABLED=1`. Enables daily + month-end close |
+| `CHORD_STAGGER_SECONDS` | ❌ | `15` | Delay between per-company Phase-1 chords |
+| `AGENT_STAGGER_SECONDS` | ❌ | `0` | Delay inside each agent task before LLM call |
+| `GEMINI_MAX_RPM` | ❌ | `12` | Fleet-wide rate cap (Redis-coordinated) |
+| `GEMINI_CALLS_PER_AGENT` | ❌ | `4` | Slots reserved per `agent.run()` for the rate limiter |
+| `PIPELINE_USE_LLM` | ❌ | `0` | `0` = deterministic-only pipeline (fast demo), `1` = full ReAct |
 | `AGENT_DEBUG` | ❌ | `0` | `1` = verbose Agno traces |
 
 ---

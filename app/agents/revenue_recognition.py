@@ -33,6 +33,7 @@ import os
 import time
 from calendar import monthrange
 from datetime import date, timedelta
+from app.core.llm import get_model
 from decimal import Decimal
 from typing import Any
 
@@ -407,11 +408,10 @@ AGENT_INSTRUCTIONS = [
 
 
 def _build_agent() -> Agent:
-    if not settings.gemini_api_key:
-        raise RuntimeError("GEMINI_API_KEY is not set.")
+    """Build the Revenue Recognition Agent."""
     return Agent(
         name="Revenue Recognition Agent",
-        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
+        model=get_model(),
         tools=[
             verify_revenue_recognition,
             get_contract_detail,

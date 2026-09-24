@@ -38,6 +38,7 @@ from typing import Any
 
 from agno.agent import Agent
 from agno.models.google import Gemini
+from app.core.llm import get_model
 from pydantic import BaseModel, Field
 from sqlalchemy import select
 
@@ -340,11 +341,9 @@ AGENT_INSTRUCTIONS = [
 
 
 def _build_agent() -> Agent:
-    if not settings.gemini_api_key:
-        raise RuntimeError("GEMINI_API_KEY is not set.")
     return Agent(
         name="Accrual Verification Agent",
-        model=Gemini(id="gemini-3.1-flash-lite", api_key=settings.gemini_api_key),
+        model=get_model(),
         tools=[
             verify_accruals,
             list_accruals_by_cadence,
