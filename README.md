@@ -9,7 +9,10 @@ A multi-agent AI platform that orchestrates the month-end close for a PE fund's 
 
 ## 🎥 Video Demo
 
-[**Watch the 7-minute walkthrough →**](https://youtu.be/YOUR_VIDEO_ID)
+https://drive.google.com/file/d/11rhXTOXRUPtJi30t_ELfhuhl3CmzRSls/view?usp=sharing
+
+# Email Proof 
+https://drive.google.com/file/d/1zVHGXvMIePQVXKRSoEn-ePdsBW03WQzr/view?usp=sharing
 
 *Covers: autonomous operation, live agent activity, entity drill-down, email generation, and the NLQ CFO assistant.*
 
