@@ -1,7 +1,7 @@
 """
 Data ingestion script for the Month-End Close Orchestration System.
 
-Reads CSV/JSON from `assignment1_data/` and inserts into PostgreSQL
+Reads CSV/JSON from `collected_data/` and inserts into PostgreSQL
 via SQLAlchemy models.
 """
 
@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
 
 # app/data_ingestion/seed.py → parents[2] = project root
-DATASET_DIR = Path(__file__).resolve().parents[2] / "assignment1_data"
+DATASET_DIR = Path(__file__).resolve().parents[2] / "collected_data"
 
 
 # ---------------------------------------------------------------------------

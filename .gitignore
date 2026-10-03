@@ -2,9 +2,8 @@
 # Synapse Portfolio — .gitignore
 # ============================================================
 # IMPORTANT: This file must NOT ignore:
-#   - README.md (submission requirement)
-#   - .env.example (setup requirement)
-#   - assignment1_data/ (seed dataset — required to run)
+#   - README.md 
+#   - .env.example 
 #   - docs/ (architecture diagrams)
 # ============================================================
 
@@ -86,19 +85,18 @@ htmlcov/
 # EXPLICIT KEEP — do not ignore these
 # ============================================================
 !README.md
-!README_MASTER.md
 !.env.example
 !docs/**
 !docs/diagrams/**
-!assignment1_data/**
-!assignment1_data/contracts/*.json
-!assignment1_data/budgets/*.csv
-!assignment1_data/trial_balances/*.csv
-!assignment1_data/prior_year/*.csv
-!assignment1_data/intercompany/*.csv
-!assignment1_data/bank_statements/*.csv
-!assignment1_data/accrual_schedules/*.csv
-!assignment1_data/company_metadata.json
+!collected_data/**
+!collected_data/contracts/*.json
+!collected_data/budgets/*.csv
+!collected_data/trial_balances/*.csv
+!collected_data/prior_year/*.csv
+!collected_data/intercompany/*.csv
+!collected_data/bank_statements/*.csv
+!collected_data/accrual_schedules/*.csv
+!collected_data/company_metadata.json
 !requirements.txt
 !docker-compose.yml
 !Dockerfile

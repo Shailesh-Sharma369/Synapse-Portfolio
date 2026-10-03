@@ -4,7 +4,7 @@ Sample Data Generator for Assignment 1: Month-End Close
 Generates realistic financial data for 8 portfolio companies
 
 Usage:
-    python generate_assignment1_data.py --output ./assignment1_data
+    python generate_collected_data.py --output ./collected_data
 
 Requirements:
     pip install pandas numpy faker openpyxl --break-system-packages
@@ -26,8 +26,8 @@ Faker.seed(42)
 # Portfolio company configurations
 COMPANIES = [
     {
-        'id': 'techforge_saas',
-        'name': 'TechForge SaaS',
+        'id': 'SysForge_saas',
+        'name': 'SysForge SaaS',
         'revenue_annual': 45_000_000,
         'industry': 'SaaS',
         'employees': 180,
@@ -647,7 +647,7 @@ def generate_revenue_contracts(company, num_contracts=25):
 
 def main():
     parser = argparse.ArgumentParser(description='Generate sample data for Assignment 1')
-    parser.add_argument('--output', type=str, default='./assignment1_data',
+    parser.add_argument('--output', type=str, default='./collected_data',
                        help='Output directory for generated data')
     args = parser.parse_args()
     
@@ -783,7 +783,7 @@ Total accrual schedules: {len(accruals)}
 import pandas as pd
 
 # Load trial balance
-tb = pd.read_csv('trial_balances/techforge_saas_2026_01.csv')
+tb = pd.read_csv('trial_balances/SysForge_saas_2026_01.csv')
 
 # Validate it balances
 assert abs(tb['debit'].sum() - tb['credit'].sum()) < 0.01

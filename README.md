@@ -1,20 +1,6 @@
-# 📄 Final `README.md` — Complete, Copy-Paste Ready
-
-```markdown
 # Synapse Portfolio — Autonomous Month-End Close
 
-A multi-agent AI platform that orchestrates the month-end close for a PE fund's portfolio of 8 companies. Built with **Agno**, **Gemini**, **Celery**, **FastAPI**, and **Streamlit**.
-
----
-
-## 🎥 Video Demo
-
-https://drive.google.com/file/d/11rhXTOXRUPtJi30t_ELfhuhl3CmzRSls/view?usp=sharing
-
-# Email Proof 
-https://drive.google.com/file/d/1zVHGXvMIePQVXKRSoEn-ePdsBW03WQzr/view?usp=sharing
-
-*Covers: autonomous operation, live agent activity, entity drill-down, email generation, and the NLQ CFO assistant.*
+A multi-agent AI platform that orchestrates the month-end close for a portfolio of companies. Built with **Agno**, **Gemini**, **Celery**, **FastAPI**, and **Streamlit**.
 
 ---
 
@@ -33,7 +19,7 @@ https://drive.google.com/file/d/1zVHGXvMIePQVXKRSoEn-ePdsBW03WQzr/view?usp=shari
 - [API Reference](#-api-reference)
 - [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
-- [Written Summary](#-written-summary)
+- [Design Notes](#-design-notes)
 
 ---
 
@@ -48,14 +34,17 @@ cp .env.example .env
 # 2. Add your Gemini API key (free at https://aistudio.google.com/app/apikey)
 #    Edit .env → set GEMINI_API_KEY=<your-key>
 
-# 3. Start the full stack
+# 3. Generate the sample dataset
+python generate_data.py --output ./collected_data
+
+# 4. Start the full stack
 docker compose up -d --build
 sleep 15
 
-# 4. Seed the database (one-time)
+# 5. Seed the database (one-time)
 docker compose exec api python -m app.data_ingestion.seed
 
-# 5. Trigger a close (or wait for Celery Beat at 9 AM if autonomous mode enabled)
+# 6. Trigger a close (or wait for Celery Beat at 9 AM if autonomous mode enabled)
 docker compose exec api python -c "import requests; requests.post('http://api:8000/api/v1/trigger-close')"
 ```
 
@@ -110,7 +99,7 @@ State transitions are coordinated via Redis atomic operations (`SET NX` lock for
 | 9 | **Consolidation** | `app/agents/consolidation.py` | Group P&L with **GAAP intercompany netting** + conservative asymmetry haircut. |
 | 10 | **Reporting** | `app/agents/reporting.py`<br>`reporting_agent.py` | Decides which emails to send (completion / daily / weekly / issue alert) and dispatches them via Resend. |
 
-> **🎁 Bonus #2 — Natural Language Query** (`app/agents/nlq.py`): CFO can ask *"Why is R&D over budget at TechForge?"* and get an answer grounded in the same deterministic tools the pipeline uses.
+> **Natural Language Query** (`app/agents/nlq.py`): CFO can ask *"Why is R&D over budget at NexaCloud?"* and get an answer grounded in the same deterministic tools the pipeline uses.
 
 ---
 
@@ -136,13 +125,13 @@ Each agent runs a deterministic pre-check first. If the data is clean, the agent
 
 The system enforces `GEMINI_MAX_RPM=12` requests per minute **across all Celery workers**, via a shared Redis counter. Each `agent.run()` reserves 4 slots upfront (accounting for internal ReAct loops). This keeps the real HTTP rate well under Gemini's free-tier ceiling of 15 RPM.
 
-### 4. Three guardrails for traps in the assignment
+### 4. Guardrails for correctness
 
-| Trap | Requirement | Our Solution |
-|------|-------------|--------------|
-| **Trap 1** — Mid-month revenue | Day-based proration | `revenue_recognition.py` uses `overlap_days / total_contract_days` — exact-day proration. A $120K annual contract starting Jan 17 recognizes **~$4,931** in January, not $10,000. |
-| **Trap 2** — IC mismatch | Don't force-book; flag for review | Matched flow is netted from group revenue and expense. Unmatched asymmetry is booked as a **conservative EBITDA haircut** and flagged for human review. |
-| **Trap 3** — CoA hallucination | Never invent codes | Expense agent's `suggest_reclassification()` returns codes **only** from the company's existing Master CoA. If nothing fits, returns `valid=False` and defers to human review. |
+| Risk | Requirement | Solution |
+|------|-------------|----------|
+| **Mid-month revenue** | Day-based proration | `revenue_recognition.py` uses `overlap_days / total_contract_days` — exact-day proration. A $120K annual contract starting Jan 17 recognizes **~$4,931** in January, not $10,000. |
+| **IC mismatch** | Don't force-book; flag for review | Matched flow is netted from group revenue and expense. Unmatched asymmetry is booked as a **conservative EBITDA haircut** and flagged for human review. |
+| **CoA hallucination** | Never invent codes | Expense agent's `suggest_reclassification()` returns codes **only** from the company's existing Master CoA. If nothing fits, returns `valid=False` and defers to human review. |
 
 ### 5. Provider-agnostic LLM layer
 
@@ -152,6 +141,7 @@ A central factory (`app/core/llm.py`) reads `LLM_PROVIDER` and `LLM_MODEL_ID` an
 LLM_PROVIDER=claude
 LLM_MODEL_ID=claude-3-5-sonnet-latest
 ANTHROPIC_API_KEY=sk-ant-...
+```
 
 ---
 
@@ -167,7 +157,7 @@ Celery Beat schedules are configured in `app/core/celery_app.py`. Default mode i
 | Full close (continuous) | 9:00 AM UTC daily | Only if `ENABLE_AUTONOMOUS_SCHEDULE=1` |
 | Formal month-end close | 1st of month, 9:30 AM UTC | Only if `ENABLE_AUTONOMOUS_SCHEDULE=1` |
 
-**Manual trigger:** `POST /api/v1/trigger-close` (used by the demo).
+**Manual trigger:** `POST /api/v1/trigger-close`.
 
 ### Self-Healing
 
@@ -187,6 +177,7 @@ Celery Beat schedules are configured in `app/core/celery_app.py`. Default mode i
 | **Intercompany** | Matched IC flow (min of both directions) netted from group revenue **AND** group expense — true GAAP elimination, not just an EBITDA adjustment |
 | **Consolidation** | Revenue / COGS / OpEx bucketing; asymmetry haircut applied for unmatched IC |
 | **Expense Reclassification** | Constrained to Master CoA; taxonomy cannot be invented |
+
 ---
 
 ## ⚠️ Known Limitations
@@ -200,19 +191,18 @@ The free tier occasionally returns `503 UNAVAILABLE` when Google's servers are o
 1. Agent's retry logic fires (3 attempts with jittered backoff)
 2. If all attempts fail, deterministic fallback preserves all numbers and produces a fixed narrative
 
-**Production fix:** Upgrade to a paid Gemini tier (~$5/month for this workload) OR configure a multi-provider fallback (Claude / OpenAI) — the architecture is provider-agnostic.
+**Production fix:** Upgrade to a paid Gemini tier OR configure a multi-provider fallback (Claude / OpenAI) — the architecture is provider-agnostic.
 
 ### Not Implemented
 
 - Balance Sheet and Cash Flow statement in consolidation (only P&L today)
-- Bonus #1: Predictive Close Timeline
-- Bonus #3: Auto-Generated Journal Entries
-- Bonus #4: Audit Trail Export
-- ✅ Bonus #2: Natural Language Query — **implemented**
+- Predictive close timeline
+- Auto-generated journal entries
+- Audit trail export
 
 ### UI
 
-Polling-based (Streamlit `autorefresh`). No WebSocket/SSE — acceptable per the assignment spec ("polling — your call").
+Polling-based (Streamlit `autorefresh`). No WebSocket/SSE.
 
 ---
 
@@ -230,7 +220,7 @@ All environment variables are validated on startup via `pydantic-settings`. See 
 | `LLM_PROVIDER` | ❌ | `gemini` | `gemini` or `claude` — swap providers without code changes |
 | `LLM_MODEL_ID` | ❌ | `gemini-3.5-flash-lite` | Model name passed to the selected provider |
 | `ANTHROPIC_API_KEY` | ❌ | — | Required only if `LLM_PROVIDER=claude` |
-| `CLOSE_COMPANIES` | ❌ | empty (= all 8) | Comma-separated subset for demos |
+| `CLOSE_COMPANIES` | ❌ | empty (= all) | Comma-separated subset for demos |
 | `BEAT_ENABLED` | ❌ | `0` | Master switch for Celery Beat. `0` = manual trigger only |
 | `ENABLE_AUTONOMOUS_SCHEDULE` | ❌ | `0` | Requires `BEAT_ENABLED=1`. Enables daily + month-end close |
 | `CHORD_STAGGER_SECONDS` | ❌ | `15` | Delay between per-company Phase-1 chords |
@@ -239,6 +229,7 @@ All environment variables are validated on startup via `pydantic-settings`. See 
 | `GEMINI_CALLS_PER_AGENT` | ❌ | `4` | Slots reserved per `agent.run()` for the rate limiter |
 | `PIPELINE_USE_LLM` | ❌ | `0` | `0` = deterministic-only pipeline (fast demo), `1` = full ReAct |
 | `AGENT_DEBUG` | ❌ | `0` | `1` = verbose Agno traces |
+
 ---
 
 ## 🔄 Agent Workflow Diagrams
@@ -265,6 +256,7 @@ The diagrams below show how the 10 agents coordinate across the 5-phase pipeline
 See `docs/diagrams/02-workflow-flow.png` for the full phase-by-phase flow diagram.
 
 ---
+
 ### Entity-Relationship Diagram
 
 ```mermaid
@@ -278,7 +270,7 @@ erDiagram
     COMPANIES ||--o{ INTERCOMPANY_TRANSACTIONS : "buys_from"
 
     COMPANIES {
-        string id PK "slug e.g. techforge_saas"
+        string id PK "slug e.g. nexacloud_saas"
         string name "unique"
         string industry
         numeric revenue_annual
@@ -348,6 +340,9 @@ erDiagram
         string period
     }
 ```
+
+---
+
 ## 🗄 Database Schema
 
 PostgreSQL with 7 tables. All financial amounts use `Numeric(18, 2)` (exact decimals, never floats).
@@ -355,7 +350,7 @@ PostgreSQL with 7 tables. All financial amounts use `Numeric(18, 2)` (exact deci
 ### `companies`
 | Column | Type | Notes |
 |--------|------|-------|
-| `id` | `String(64)` PK | Slug, e.g. `techforge_saas` |
+| `id` | `String(64)` PK | Slug, e.g. `nexacloud_saas` |
 | `name` | `String(255)` UNIQUE | Human-readable |
 | `industry` | `String(120)` | e.g. SaaS, Manufacturing |
 | `revenue_annual` | `Numeric(18,2)` | Annual revenue |
@@ -371,7 +366,7 @@ PostgreSQL with 7 tables. All financial amounts use `Numeric(18, 2)` (exact deci
 | `debit`, `credit`, `balance` | `Numeric(18,2)` | |
 | `account_type` | `String(32)` | Asset, Liability, Revenue, COGS, Expense, … |
 
-**Unique:** `(company_id, period, account_code)`
+**Unique:** `(company_id, period, account_code)`  
 **Index:** `(company_id, period)`
 
 ### `intercompany_transactions`
@@ -422,18 +417,18 @@ PostgreSQL with 7 tables. All financial amounts use `Numeric(18, 2)` (exact deci
 | `account_name` | `String(255)` | |
 | `budget_amount` | `Numeric(18,2)` | |
 
-**Unique:** `(company_id, year, month, account_code)`
+**Unique:** `(company_id, year, month, account_code)`  
 **Index:** `(company_id, year, month)`
 
 ### `bank_statements`
-| Column                        | Type              | Notes     |
-|-------------------------------|-------------------|-----------|
-| `id`                          | `UUID` PK         |           |
-| `company_id`                  | `FK companies.id` |           |
-| `date`                        | `Date`            |           |
-| `description`                 | `String(500)`     |           |
-| `debit`, `credit`, `balance`  | `Numeric(18,2)`   |           |
-| `period`                      | `String(7)`       | `YYYY-MM` |
+| Column | Type | Notes |
+|--------|------|-------|
+| `id` | `UUID` PK | |
+| `company_id` | `FK companies.id` | |
+| `date` | `Date` | |
+| `description` | `String(500)` | |
+| `debit`, `credit`, `balance` | `Numeric(18,2)` | |
+| `period` | `String(7)` | `YYYY-MM` |
 
 **Index:** `(company_id, period)`
 
@@ -492,21 +487,21 @@ POST /api/v1/trigger-close
 
 The pipeline publishes its full state to Redis. Query directly for programmatic access:
 
-| Key                                           | Type          | Purpose                                       |
-|-----------------------------------------------|---------------|-----------------------------------------------|
-| `close:latest_run_id`                         | String        | Most recent run ID (24h TTL)                  |
-| `close:runs:recent`                           | List          | Last 50 run IDs                               |
-| `close:{run_id}:status`                       | String        | `running` / `completed` / `failed` / `skipped`|
-| `close:{run_id}:companies`                    | JSON Array    | Companies included in this run                |
-| `close:{run_id}:total_companies`              | Integer       | Target entity count                           |
-| `close:{run_id}:preflight`                    | JSON          | Pre-flight decision                           |
-| `close:{run_id}:phase1:{company_id}`          | String        | `done` when Phase-1 chord completes           |
-| `close:{run_id}:phase1_failures:{company_id}` | CSV String    | Failed agent names                            |
-| `close:{run_id}:phase2_count`                 | Integer       | Companies that finished Phase 2               |
-| `close:{run_id}:phase3:result`                | JSON          | Intercompany elimination result               |
-| `close:{run_id}:final_result`                 | JSON          | Consolidated financials + summary             |
-| `close:{run_id}:postflight`                   | JSON          | Post-flight escalation decision               |
-| `close:{run_id}:escalation`                   | String        | Reason a run needs human review               |
+| Key | Type | Purpose |
+|-----|------|---------|
+| `close:latest_run_id` | String | Most recent run ID (24h TTL) |
+| `close:runs:recent` | List | Last 50 run IDs |
+| `close:{run_id}:status` | String | `running` / `completed` / `failed` / `skipped` |
+| `close:{run_id}:companies` | JSON Array | Companies included in this run |
+| `close:{run_id}:total_companies` | Integer | Target entity count |
+| `close:{run_id}:preflight` | JSON | Pre-flight decision |
+| `close:{run_id}:phase1:{company_id}` | String | `done` when Phase-1 chord completes |
+| `close:{run_id}:phase1_failures:{company_id}` | CSV String | Failed agent names |
+| `close:{run_id}:phase2_count` | Integer | Companies that finished Phase 2 |
+| `close:{run_id}:phase3:result` | JSON | Intercompany elimination result |
+| `close:{run_id}:final_result` | JSON | Consolidated financials + summary |
+| `close:{run_id}:postflight` | JSON | Post-flight escalation decision |
+| `close:{run_id}:escalation` | String | Reason a run needs human review |
 
 ### OpenAPI / Swagger
 
@@ -520,17 +515,17 @@ Interactive docs auto-generated by FastAPI:
 
 ## 🛠 Tech Stack
 
-| Layer                 | Technology                                                            |
-|-----------------------|-----------------------------------------------------------------------|
-| Multi-agent framework | **Agno 3.x** — ReAct loop, Pydantic output schemas                    |
-| LLM                   | **Gemini 3.1 Flash Lite** (swappable for Claude / OpenAI)             |
-| API                   | **FastAPI + Pydantic** — structured validation                        |
-| Database              | **PostgreSQL + SQLAlchemy** — Decimal columns, unique constraints     |
-| State & Cache         | **Redis** — workflow state, rate limiter, run tracking                |
-| Task Queue            | **Celery + Beat** — task graph, scheduled jobs, exponential backoff   |
-| UI                    | **Streamlit** — live dashboard + NLQ chat                             |
-| Email                 | **Resend** — mock mode if no API key                                  |
-| Deployment            | **Docker Compose** — 6-service stack                                  |
+| Layer | Technology |
+|-------|-----------|
+| Multi-agent framework | **Agno 3.x** — ReAct loop, Pydantic output schemas |
+| LLM | **Gemini 3.1 Flash Lite** (swappable for Claude / OpenAI) |
+| API | **FastAPI + Pydantic** — structured validation |
+| Database | **PostgreSQL + SQLAlchemy** — Decimal columns, unique constraints |
+| State & Cache | **Redis** — workflow state, rate limiter, run tracking |
+| Task Queue | **Celery + Beat** — task graph, scheduled jobs, exponential backoff |
+| UI | **Streamlit** — live dashboard + NLQ chat |
+| Email | **Resend** — mock mode if no API key |
+| Deployment | **Docker Compose** — 6-service stack |
 
 ---
 
@@ -551,12 +546,12 @@ app/
 │   ├── reporting_agent.py     # Decision layer
 │   ├── orchestrator.py        # Celery 5-phase task graph
 │   ├── orchestrator_agent.py  # Pre-flight + Post-flight
-│   └── nlq.py                 # CFO Assistant (bonus)
+│   └── nlq.py                 # CFO Assistant
 ├── core/
 │   ├── celery_app.py          # Celery + Beat config
 │   └── rate_limit.py          # Redis-backed Gemini limiter
 ├── data_ingestion/
-│   └── seed.py                # Loads assignment1_data/
+│   └── seed.py                # Loads collected_data/
 ├── db/
 │   ├── database.py            # SQLAlchemy session + settings
 │   └── models.py              # Company, TB, IC, Accruals, Contracts, Budgets, Bank
@@ -564,27 +559,28 @@ app/
 │   └── dashboard.py           # Streamlit monitor + chat
 └── main.py                    # FastAPI entrypoint
 
-assignment1_data/              # Provided dataset (8 companies)
+collected_data/                # Synthetic portfolio dataset
 docs/
 └── diagrams/                  # Architecture + workflow diagrams
 scripts/
 ├── e2e_test.py                # End-to-end trigger + polling
 ├── trigger.py                 # Quick trigger helper
 └── health.py                  # Health check helper
+generate_data.py               # Synthetic dataset generator
 ```
 
 ---
 
-## 📝 Written Summary
+## 📝 Design Notes
 
 ### Approach
 
-The assignment asks for autonomous multi-agent orchestration over 8 portfolio companies. I chose a **hybrid architecture**: deterministic Python for every financial calculation, and LLM reasoning for narrative, prioritization, and the CFO chat assistant. The Celery task graph encodes the 5-phase orchestration; Agno provides the agent abstraction, ReAct loop, and Pydantic-validated structured output.
+A **hybrid architecture**: deterministic Python for every financial calculation, and LLM reasoning for narrative, prioritization, and the CFO chat assistant. The Celery task graph encodes the 5-phase orchestration; Agno provides the agent abstraction, ReAct loop, and Pydantic-validated structured output.
 
 ### Key Architectural Decisions
 
 **1. Celery for orchestration, Agno for reasoning.**
-Celery's `chord` / `chain` / `group` primitives model the assignment's parallel-group + sequential-group + cross-company + consolidation structure exactly. Agno's job is narrower: given deterministic tool results, produce a validated `*Result` Pydantic model. This separation makes the pipeline **observable** (Redis state), **retryable** (Celery `autoretry_for`), and **testable** (each agent's tool is independently unit-testable).
+Celery's `chord` / `chain` / `group` primitives model the parallel-group + sequential-group + cross-company + consolidation structure exactly. Agno's job is narrower: given deterministic tool results, produce a validated `*Result` Pydantic model. This separation makes the pipeline **observable** (Redis state), **retryable** (Celery `autoretry_for`), and **testable** (each agent's tool is independently unit-testable).
 
 **2. Deterministic-first with LLM escalation.**
 Each agent runs its deterministic pre-check first. Clean companies produce a PASSED result **without any LLM call** — saving quota for the companies that actually need investigation. This is the single largest cost optimization in the system.
@@ -601,7 +597,7 @@ Enforces **12 RPM** across all workers via a Redis `INCRBY` reservation model. E
 
 - **ReAct loops consuming more quota than expected.** A single agent "run" fires multiple Gemini calls (one per ReAct step). Initial rate-limiter design counted `agent.run()` invocations rather than underlying HTTP calls, allowing the actual rate to exceed the cap. Fixed by reserving N slots per `agent.run()` invocation, `N = GEMINI_CALLS_PER_AGENT`.
 
-- **Mid-month contract proration.** ASC 606 requires recognizing revenue over the service period, not on a calendar-month basis. Implemented as `overlap_days / total_contract_days` per obligation. Validated end-to-end on the provided contracts dataset.
+- **Mid-month contract proration.** ASC 606 requires recognizing revenue over the service period, not on a calendar-month basis. Implemented as `overlap_days / total_contract_days` per obligation.
 
 - **CoA hallucination risk.** The Expense agent is architecturally constrained: `suggest_reclassification()` queries the company's existing trial balance and returns only codes that already exist. If nothing fits, it returns `valid=False` and defers to human review — never invents.
 
@@ -610,14 +606,12 @@ Enforces **12 RPM** across all workers via a Redis `INCRBY` reservation model. E
 - Add a full **Balance Sheet and Cash Flow statement** to consolidation output (currently P&L only)
 - **Multi-provider LLM fallback** (Gemini → Claude) to eliminate `503` risk entirely in production
 - **Test suite** — unit tests for each deterministic tool, integration tests for the Celery graph
-- **Auto-generated journal entries** (bonus #3) — agents already *detect* issues; next step is proposing adjusting JEs for controller approval
-- **Predictive close timeline** (bonus #1) — track historical per-agent completion times and forecast when the current run will finish
+- **Auto-generated journal entries** — agents already *detect* issues; next step is proposing adjusting JEs for controller approval
+- **Predictive close timeline** — track historical per-agent completion times and forecast when the current run will finish
 - **Human-in-the-loop console** — a review queue for escalations, currently surfaced only via Redis keys
 
 ---
 
 ## 📬 Contact
 
-Built by **https://github.com/Shailesh-Sharma369** — submitted September 2026.
-
----
+Built by **https://github.com/Shailesh-Sharma369**.

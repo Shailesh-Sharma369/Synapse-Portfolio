@@ -4,7 +4,7 @@ Natural Language Query (NLQ) Agent — Phase 5+, Read-Only CFO Assistant.
 ================================================================================
 PURPOSE
 ================================================================================
-Lets a CFO type plain English ("Why is SG&A up 15% at TechForge?") and get
+Lets a CFO type plain English ("Why is SG&A up 15% at SysForge?") and get
 an answer grounded in the database. Read-only, deterministic tools.
 
 REUSE-FIRST DESIGN (critical)
@@ -18,7 +18,7 @@ exposes those SAME functions as tools. This guarantees:
     - No new math: the LLM can only call what already exists.
 
 Only TWO thin DB-lookup tools are NEW (not duplication):
-    - `list_companies()`             — maps "TechForge" → "techforge_saas"
+    - `list_companies()`             — maps "SysForge" → "SysForge_saas"
     - `list_accounts_for_company()`  — maps "SG&A" → actual account codes
                                        (charts of accounts vary per entity)
 
@@ -60,8 +60,8 @@ def list_companies() -> list[dict[str, Any]]:
     Return the list of portfolio companies as {id, name, industry, revenue_annual}.
 
     The LLM calls this first when a question references a company by name
-    (e.g., "TechForge"), because the DB primary key is a slug like
-    "techforge_saas" — not a human-readable name.
+    (e.g., "SysForge"), because the DB primary key is a slug like
+    "SysForge_saas" — not a human-readable name.
     """
     db = SessionLocal()
     try:
@@ -94,7 +94,7 @@ def list_accounts_for_company(company_id: str, period: str | None = None) -> lis
     tool bridges the gap so the LLM can find the right accounts.
 
     Args:
-        company_id: The company slug (e.g., "techforge_saas").
+        company_id: The company slug (e.g., "sysforge_saas").
         period:     Optional 'YYYY-MM' filter. If None, returns the union
                     across all periods.
     """
@@ -166,8 +166,8 @@ AGENT_INSTRUCTIONS = [
     "1. NEVER invent numbers. Every dollar figure, percentage, or count MUST",
     "   come from a tool return value. If a tool didn't return it, don't say it.",
     "2. ALWAYS resolve the company first: call list_companies() and match the",
-    "   CFO's named entity (e.g., 'TechForge') to the correct company_id slug",
-    "   (e.g., 'techforge_saas'). Never guess the slug.",
+    "   CFO's named entity (e.g., 'SysForge') to the correct company_id slug",
+    "   (e.g., 'sysforge_saas'). Never guess the slug.",
     "3. If the question involves a specific account category (SG&A, R&D,",
     "   COGS, rent, etc.), call list_accounts_for_company() to find the",
     "   matching account codes first. Account naming varies by industry.",
@@ -214,7 +214,7 @@ def ask_financial_question(query: str) -> str:
     Answer a free-form CFO question using the NLQ agent.
 
     Args:
-        query: Plain-English question, e.g. "Why is SG&A up 15% at TechForge?"
+        query: Plain-English question, e.g. "Why is SG&A up 15% at SysForge?"
 
     Returns:
         The agent's answer as plain text (with light markdown). On failure,

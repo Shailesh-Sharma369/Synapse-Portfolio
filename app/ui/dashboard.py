@@ -1,5 +1,5 @@
 """
-Zero-Click Executive Monitor — Apex Capital Month-End Close.
+Zero-Click Executive Monitor — synapse Capital Month-End Close.
 
 Layout:
     ┌─── Sidebar ───┬────── Main ──────┬─── Assistant ───┐
@@ -796,7 +796,7 @@ with assistant_col:
             st.caption("Try one of these:")
             suggestions = [
                 "What's the TB Validator status?",
-                "Why is R&D over budget at TechForge?",
+                "Why is R&D over budget at SysForge?",
                 "Which entity has the biggest variance?",
             ]
             for i, s in enumerate(suggestions):

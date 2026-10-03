@@ -32,14 +32,14 @@ services:
       - "8000:8000"
     env_file: .env
     environment:
-      DATABASE_URL: postgresql://admin:password123@db:5432/month_end_close
+      DATABASE_URL: postgresql+psycopg2://admin:password123@db:5432/month_end_close
       REDIS_URL: redis://redis:6379/0
       CELERY_BROKER_URL: redis://redis:6379/1
       CELERY_RESULT_BACKEND: redis://redis:6379/2
     volumes:
       - ./app:/app/app
       - ./scripts:/app/scripts
-      - ./assignment1_data:/app/assignment1_data
+      - ./collected_data:/app/collected_data
     depends_on:
       db:
         condition: service_healthy
@@ -51,14 +51,14 @@ services:
     command: celery -A app.core.celery_app worker -Q orchestrator,agents --loglevel=info --concurrency=4
     env_file: .env
     environment:
-      DATABASE_URL: postgresql://admin:password123@db:5432/month_end_close
+      DATABASE_URL: postgresql+psycopg2://admin:password123@db:5432/month_end_close
       REDIS_URL: redis://redis:6379/0
       CELERY_BROKER_URL: redis://redis:6379/1
       CELERY_RESULT_BACKEND: redis://redis:6379/2
     volumes:
       - ./app:/app/app
       - ./scripts:/app/scripts
-      - ./assignment1_data:/app/assignment1_data
+      - ./collected_data:/app/collected_data
     depends_on:
       db:
         condition: service_healthy
@@ -67,17 +67,17 @@ services:
 
   beat:
     build: .
-    command: celery -A app.core.celery_app worker --loglevel=warning --concurrency=4 --queues=agents,orchestrator
+    command: celery -A app.core.celery_app beat --loglevel=info
     env_file: .env
     environment:
-      DATABASE_URL: postgresql://admin:password123@db:5432/month_end_close
+      DATABASE_URL: postgresql+psycopg2://admin:password123@db:5432/month_end_close
       REDIS_URL: redis://redis:6379/0
       CELERY_BROKER_URL: redis://redis:6379/1
       CELERY_RESULT_BACKEND: redis://redis:6379/2
     volumes:
       - ./app:/app/app
       - ./scripts:/app/scripts
-      - ./assignment1_data:/app/assignment1_data
+      - ./collected_data:/app/collected_data
     depends_on:
       db:
         condition: service_healthy
@@ -92,13 +92,13 @@ services:
     env_file: .env
     environment:
       REDIS_URL: redis://redis:6379/0
-      DATABASE_URL: postgresql://admin:password123@db:5432/month_end_close
+      DATABASE_URL: postgresql+psycopg2://admin:password123@db:5432/month_end_close
       STREAMLIT_SERVER_HEADLESS: "true"
       STREAMLIT_BROWSER_GATHER_USAGE_STATS: "false"
     volumes:
       - ./app:/app/app
       - ./scripts:/app/scripts
-      - ./assignment1_data:/app/assignment1_data
+      - ./collected_data:/app/collected_data
     depends_on:
       redis:
         condition: service_healthy
