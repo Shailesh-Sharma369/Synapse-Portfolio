@@ -1,0 +1,32 @@
+account_code,account_name,debit,credit,balance,account_type,company_id,company_name,period
+1000,Cash and Cash Equivalents,4503084.99414706,0.0,4503084.99414706,Asset,eta_analytics,Eta Analytics Partners,2024-12
+1100,Accounts Receivable,3302540.2145520314,0.0,3302540.2145520314,Asset,eta_analytics,Eta Analytics Partners,2024-12
+1150,Allowance for Doubtful Accounts,0.0,44560.97969322379,-44560.97969322379,Asset,eta_analytics,Eta Analytics Partners,2024-12
+1300,Prepaid Expenses,508152.0436360533,0.0,508152.0436360533,Asset,eta_analytics,Eta Analytics Partners,2024-12
+1400,"Property, Plant & Equipment",10000000.0,0.0,10000000.0,Asset,eta_analytics,Eta Analytics Partners,2024-12
+1450,Accumulated Depreciation,0.0,3750000.0,-3750000.0,Asset,eta_analytics,Eta Analytics Partners,2024-12
+1500,Intangible Assets,7500000.0,0.0,7500000.0,Asset,eta_analytics,Eta Analytics Partners,2024-12
+1550,Accumulated Amortization,0.0,2000000.0,-2000000.0,Asset,eta_analytics,Eta Analytics Partners,2024-12
+2000,Accounts Payable,0.0,2029467.3363143413,-2029467.3363143413,Liability,eta_analytics,Eta Analytics Partners,2024-12
+2100,Accrued Expenses,0.0,264257.2581429139,-264257.2581429139,Liability,eta_analytics,Eta Analytics Partners,2024-12
+2150,Accrued Payroll,0.0,596498.7431897337,-596498.7431897337,Liability,eta_analytics,Eta Analytics Partners,2024-12
+2200,Deferred Revenue,0.0,0.0,0.0,Liability,eta_analytics,Eta Analytics Partners,2024-12
+2300,Current Portion of Long-term Debt,0.0,24886842.69061056,-24886842.69061056,Liability,eta_analytics,Eta Analytics Partners,2024-12
+2400,Long-term Debt,0.0,47940030.37399112,-47940030.37399112,Liability,eta_analytics,Eta Analytics Partners,2024-12
+3000,Common Stock,0.0,12500000.0,-12500000.0,Equity,eta_analytics,Eta Analytics Partners,2024-12
+3100,Retained Earnings,0.0,-68511369.00555171,68511369.00555171,Equity,eta_analytics,Eta Analytics Partners,2024-12
+4100,Service Revenue,0.0,2228048.9846611894,-2228048.9846611894,Revenue,eta_analytics,Eta Analytics Partners,2024-12
+5300,Cost of Services,779817.1446314162,0.0,779817.1446314162,COGS,eta_analytics,Eta Analytics Partners,2024-12
+6000,Salaries and Wages,506881.14401042054,0.0,506881.14401042054,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+6100,Employee Benefits,115858.54720238184,0.0,115858.54720238184,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+6200,Rent,72411.59200148865,0.0,72411.59200148865,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+6300,Utilities,71282.39301518879,0.0,71282.39301518879,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+6400,Insurance,58799.10818848556,0.0,58799.10818848556,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+6500,Professional Fees,27546.218839028134,0.0,27546.218839028134,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+7000,Sales and Marketing,115858.54720238184,0.0,115858.54720238184,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+7100,Advertising,21219.51377875135,0.0,21219.51377875135,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+7200,Travel and Entertainment,21255.463120329594,0.0,21255.463120329594,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+8000,Research and Development,0.0,0.0,0.0,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+9000,Depreciation Expense,43446.95520089319,0.0,43446.95520089319,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+9100,Amortization Expense,43446.95520089319,0.0,43446.95520089319,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12
+9500,Interest Expense,36736.52632456188,0.0,36736.52632456188,Operating Expense,eta_analytics,Eta Analytics Partners,2024-12

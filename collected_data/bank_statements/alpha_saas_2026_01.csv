@@ -1,0 +1,17 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2026-01-01,Beginning Balance,,,8748441.489113735,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-03,"Vendor Payment - Bell, Davis and Miller",179892.5161916453,,8568548.97292209,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-04,Vendor Payment - Harper-Bond,78228.76379111306,,8490320.209130978,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-06,"Vendor Payment - Monroe, Lawson and Church",83628.56715865836,,8406691.64197232,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-08,"Customer Payment - Miranda, Moore and Smith",,163156.64002608095,8569848.281998402,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-10,"Customer Payment - Taylor, Cobb and Lane",,419141.3335220067,8988989.615520408,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-14,"Vendor Payment - Thompson, Hanna and Lindsey",107962.91033491111,,8881026.705185497,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-16,Payroll,656249.9999999999,,8224776.705185497,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-17,"Vendor Payment - Bray, Edwards and Wiley",63317.164794126664,,8161459.540391371,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-21,Customer Payment - Sullivan-Wagner,,248082.3180947531,8409541.858486123,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-22,Customer Payment - Dennis-Keller,,173429.93791470397,8582971.796400826,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-22,Vendor Payment - Leonard Inc,61853.84304371353,,8521117.953357114,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-26,Vendor Payment - Whitney-Archer,77846.72947434094,,8443271.223882772,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-28,Customer Payment - Decker-Cherry,,168785.7813635305,8612057.005246302,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-28,"Vendor Payment - Giles, Hall and Nelson",191042.59518418866,,8421014.410062114,alpha_saas,Alpha SaaS Solutions,2026-01
+2026-01-30,Vendor Payment - Zavala-Cline,85856.0912532192,,8335158.318808895,alpha_saas,Alpha SaaS Solutions,2026-01

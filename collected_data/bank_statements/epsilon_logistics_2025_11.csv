@@ -1,0 +1,23 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-11-01,Beginning Balance,,,13702380.75248155,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-02,Customer Payment - Hines-Rodriguez,,90242.84829852801,13792623.600780077,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-03,"Customer Payment - Hall, Fields and Maddox",,271342.5226325387,14063966.123412617,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-04,Vendor Payment - Smith-Rivas,37688.37957304837,,14026277.743839568,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-05,Customer Payment - Harris-Juarez,,52581.45347501301,14078859.19731458,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-05,Vendor Payment - Castaneda Inc,12153.70540033758,,14066705.491914243,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-06,Customer Payment - Pitts-Vasquez,,207962.26007933365,14274667.751993576,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-07,Vendor Payment - English-Howard,116049.70233039401,,14158618.049663182,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-09,"Vendor Payment - Shepherd, Harvey and Miller",63473.768687356605,,14095144.280975826,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-11,"Customer Payment - Blair, Alexander and Lewis",,418949.60360397084,14514093.884579796,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-13,Vendor Payment - Cole-Ford,84385.0504550465,,14429708.83412475,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-14,Customer Payment - Huynh LLC,,195005.15606068223,14624713.990185432,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-14,Vendor Payment - May-Franklin,28927.692884202406,,14595786.29730123,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-16,Payroll,1166666.6666666667,,13429119.630634563,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-17,Customer Payment - Reeves-Perkins,,157679.30633852596,13586798.93697309,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-18,Customer Payment - Baker Ltd,,209702.66339549498,13796501.600368584,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-22,Vendor Payment - Johnson-Myers,123496.59582489861,,13673005.004543684,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-25,"Vendor Payment - Patterson, Watkins and Reeves",50627.02618586375,,13622377.97835782,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-27,Customer Payment - Brown-Gilbert,,341106.3635468214,13963484.341904642,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-27,Vendor Payment - Price PLC,190681.95662531955,,13772802.385279322,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-28,"Customer Payment - Duncan, Tucker and Sanchez",,374829.02219620295,14147631.407475526,epsilon_logistics,Epsilon Logistics Corp,2025-11
+2025-11-29,Customer Payment - Smith Inc,,75168.5880213854,14222799.99549691,epsilon_logistics,Epsilon Logistics Corp,2025-11

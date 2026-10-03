@@ -1,0 +1,19 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-12-01,Beginning Balance,,,10113273.743899865,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-02,"Vendor Payment - Roberts, Manning and Simmons",54861.493019782916,,10058412.250880083,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-05,"Vendor Payment - Pollard, Smith and Estrada",143994.91044908713,,9914417.340430995,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-06,Vendor Payment - Callahan and Sons,47180.62438962436,,9867236.716041371,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-09,Vendor Payment - Richardson-Simpson,145317.24864374104,,9721919.46739763,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-10,Vendor Payment - Rivera Group,54982.355301042946,,9666937.112096587,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-14,"Vendor Payment - Roberts, Valdez and Ramirez",101272.50465105574,,9565664.60744553,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-15,Vendor Payment - Reyes-Espinoza,64153.718768788,,9501510.888676742,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-16,Payroll,875000.0,,8626510.888676742,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-18,Customer Payment - Smith PLC,,464696.48623814824,9091207.37491489,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-20,Customer Payment - Horton and Sons,,375598.58599495696,9466805.960909847,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-21,Customer Payment - Moore PLC,,396861.3155689059,9863667.276478752,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-21,Vendor Payment - Donovan-Liu,35942.84037715863,,9827724.436101593,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-24,Customer Payment - Montgomery-Schmidt,,461535.4098802637,10289259.845981857,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-24,Vendor Payment - Wheeler Inc,156670.3968948684,,10132589.449086988,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-25,Customer Payment - Moore PLC,,215495.80067610234,10348085.24976309,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-26,Vendor Payment - Harmon-Johnson,144745.14093115868,,10203340.10883193,theta_packaging,Theta Sustainable Packaging,2025-12
+2025-12-27,Vendor Payment - Green-Harris,96241.95126077233,,10107098.15757116,theta_packaging,Theta Sustainable Packaging,2025-12

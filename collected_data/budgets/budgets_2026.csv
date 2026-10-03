@@ -1,0 +1,1549 @@
+company_id,company_name,year,month,account_code,account_name,budget_amount
+alpha_saas,Alpha SaaS Solutions,2026,1,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,1,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,1,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,1,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,1,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,1,6200,Rent,108500.08482939604
+alpha_saas,Alpha SaaS Solutions,2026,1,6300,Utilities,103353.82394506286
+alpha_saas,Alpha SaaS Solutions,2026,1,6400,Insurance,119318.32292761374
+alpha_saas,Alpha SaaS Solutions,2026,1,6500,Professional Fees,142141.23360045408
+alpha_saas,Alpha SaaS Solutions,2026,1,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,1,7100,Advertising,117902.23363579417
+alpha_saas,Alpha SaaS Solutions,2026,1,7200,Travel and Entertainment,123184.24862246921
+alpha_saas,Alpha SaaS Solutions,2026,1,8000,Research and Development,105861.21330608912
+alpha_saas,Alpha SaaS Solutions,2026,1,9000,Depreciation Expense,104408.59638127222
+alpha_saas,Alpha SaaS Solutions,2026,1,9100,Amortization Expense,130283.53311278873
+alpha_saas,Alpha SaaS Solutions,2026,1,9500,Interest Expense,70843.72082838803
+alpha_saas,Alpha SaaS Solutions,2026,2,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,2,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,2,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,2,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,2,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,2,6200,Rent,89141.79313545789
+alpha_saas,Alpha SaaS Solutions,2026,2,6300,Utilities,65453.558407200304
+alpha_saas,Alpha SaaS Solutions,2026,2,6400,Insurance,103045.68133769506
+alpha_saas,Alpha SaaS Solutions,2026,2,6500,Professional Fees,157471.9719289614
+alpha_saas,Alpha SaaS Solutions,2026,2,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,2,7100,Advertising,126363.93185714187
+alpha_saas,Alpha SaaS Solutions,2026,2,7200,Travel and Entertainment,81068.34596468619
+alpha_saas,Alpha SaaS Solutions,2026,2,8000,Research and Development,107285.43775661521
+alpha_saas,Alpha SaaS Solutions,2026,2,9000,Depreciation Expense,158131.1409899769
+alpha_saas,Alpha SaaS Solutions,2026,2,9100,Amortization Expense,151659.62465015918
+alpha_saas,Alpha SaaS Solutions,2026,2,9500,Interest Expense,105449.03325258127
+alpha_saas,Alpha SaaS Solutions,2026,3,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,3,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,3,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,3,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,3,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,3,6200,Rent,84897.45815130226
+alpha_saas,Alpha SaaS Solutions,2026,3,6300,Utilities,121368.86391573474
+alpha_saas,Alpha SaaS Solutions,2026,3,6400,Insurance,113096.70249717726
+alpha_saas,Alpha SaaS Solutions,2026,3,6500,Professional Fees,128445.28459993051
+alpha_saas,Alpha SaaS Solutions,2026,3,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,3,7100,Advertising,146129.22731945495
+alpha_saas,Alpha SaaS Solutions,2026,3,7200,Travel and Entertainment,140579.9177752008
+alpha_saas,Alpha SaaS Solutions,2026,3,8000,Research and Development,61069.866662938504
+alpha_saas,Alpha SaaS Solutions,2026,3,9000,Depreciation Expense,156341.00147568903
+alpha_saas,Alpha SaaS Solutions,2026,3,9100,Amortization Expense,101796.11029133972
+alpha_saas,Alpha SaaS Solutions,2026,3,9500,Interest Expense,60528.07736264453
+alpha_saas,Alpha SaaS Solutions,2026,4,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,4,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,4,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,4,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,4,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,4,6200,Rent,57239.96877506418
+alpha_saas,Alpha SaaS Solutions,2026,4,6300,Utilities,154401.8896899784
+alpha_saas,Alpha SaaS Solutions,2026,4,6400,Insurance,76845.45014426336
+alpha_saas,Alpha SaaS Solutions,2026,4,6500,Professional Fees,135699.82112565555
+alpha_saas,Alpha SaaS Solutions,2026,4,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,4,7100,Advertising,87955.51594648331
+alpha_saas,Alpha SaaS Solutions,2026,4,7200,Travel and Entertainment,137790.2583465462
+alpha_saas,Alpha SaaS Solutions,2026,4,8000,Research and Development,82964.9962815772
+alpha_saas,Alpha SaaS Solutions,2026,4,9000,Depreciation Expense,149743.57602429032
+alpha_saas,Alpha SaaS Solutions,2026,4,9100,Amortization Expense,73496.26331951279
+alpha_saas,Alpha SaaS Solutions,2026,4,9500,Interest Expense,86414.6803246227
+alpha_saas,Alpha SaaS Solutions,2026,5,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,5,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,5,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,5,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,5,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,5,6200,Rent,155307.01567404534
+alpha_saas,Alpha SaaS Solutions,2026,5,6300,Utilities,128421.30950344373
+alpha_saas,Alpha SaaS Solutions,2026,5,6400,Insurance,128098.94378861885
+alpha_saas,Alpha SaaS Solutions,2026,5,6500,Professional Fees,111358.25693421823
+alpha_saas,Alpha SaaS Solutions,2026,5,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,5,7100,Advertising,111051.7224410486
+alpha_saas,Alpha SaaS Solutions,2026,5,7200,Travel and Entertainment,101178.14932876463
+alpha_saas,Alpha SaaS Solutions,2026,5,8000,Research and Development,103215.46163821996
+alpha_saas,Alpha SaaS Solutions,2026,5,9000,Depreciation Expense,156323.2026014067
+alpha_saas,Alpha SaaS Solutions,2026,5,9100,Amortization Expense,146309.23671996672
+alpha_saas,Alpha SaaS Solutions,2026,5,9500,Interest Expense,123850.44158140861
+alpha_saas,Alpha SaaS Solutions,2026,6,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,6,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,6,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,6,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,6,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,6,6200,Rent,117068.48569656316
+alpha_saas,Alpha SaaS Solutions,2026,6,6300,Utilities,76083.52288214696
+alpha_saas,Alpha SaaS Solutions,2026,6,6400,Insurance,71469.86200018303
+alpha_saas,Alpha SaaS Solutions,2026,6,6500,Professional Fees,134122.48822014287
+alpha_saas,Alpha SaaS Solutions,2026,6,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,6,7100,Advertising,68311.20693181847
+alpha_saas,Alpha SaaS Solutions,2026,6,7200,Travel and Entertainment,131353.2829062563
+alpha_saas,Alpha SaaS Solutions,2026,6,8000,Research and Development,143772.52818087814
+alpha_saas,Alpha SaaS Solutions,2026,6,9000,Depreciation Expense,144882.41632772022
+alpha_saas,Alpha SaaS Solutions,2026,6,9100,Amortization Expense,94082.21931882903
+alpha_saas,Alpha SaaS Solutions,2026,6,9500,Interest Expense,157583.8809375071
+alpha_saas,Alpha SaaS Solutions,2026,7,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,7,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,7,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,7,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,7,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,7,6200,Rent,126279.59837042427
+alpha_saas,Alpha SaaS Solutions,2026,7,6300,Utilities,87477.38658381857
+alpha_saas,Alpha SaaS Solutions,2026,7,6400,Insurance,138142.0498799916
+alpha_saas,Alpha SaaS Solutions,2026,7,6500,Professional Fees,68932.17375684727
+alpha_saas,Alpha SaaS Solutions,2026,7,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,7,7100,Advertising,114102.96926784662
+alpha_saas,Alpha SaaS Solutions,2026,7,7200,Travel and Entertainment,95615.08784087002
+alpha_saas,Alpha SaaS Solutions,2026,7,8000,Research and Development,58211.96863875602
+alpha_saas,Alpha SaaS Solutions,2026,7,9000,Depreciation Expense,104764.86606492773
+alpha_saas,Alpha SaaS Solutions,2026,7,9100,Amortization Expense,119175.64058655474
+alpha_saas,Alpha SaaS Solutions,2026,7,9500,Interest Expense,92188.43432405757
+alpha_saas,Alpha SaaS Solutions,2026,8,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,8,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,8,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,8,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,8,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,8,6200,Rent,139580.9293338852
+alpha_saas,Alpha SaaS Solutions,2026,8,6300,Utilities,63753.06628657757
+alpha_saas,Alpha SaaS Solutions,2026,8,6400,Insurance,62928.624462195425
+alpha_saas,Alpha SaaS Solutions,2026,8,6500,Professional Fees,161374.01884894856
+alpha_saas,Alpha SaaS Solutions,2026,8,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,8,7100,Advertising,65497.04426767461
+alpha_saas,Alpha SaaS Solutions,2026,8,7200,Travel and Entertainment,62518.19562971211
+alpha_saas,Alpha SaaS Solutions,2026,8,8000,Research and Development,99535.20184632506
+alpha_saas,Alpha SaaS Solutions,2026,8,9000,Depreciation Expense,83265.36453613426
+alpha_saas,Alpha SaaS Solutions,2026,8,9100,Amortization Expense,150673.16549378252
+alpha_saas,Alpha SaaS Solutions,2026,8,9500,Interest Expense,140924.70217895252
+alpha_saas,Alpha SaaS Solutions,2026,9,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,9,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,9,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,9,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,9,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,9,6200,Rent,117095.56499548956
+alpha_saas,Alpha SaaS Solutions,2026,9,6300,Utilities,78176.7722011135
+alpha_saas,Alpha SaaS Solutions,2026,9,6400,Insurance,97736.74515716784
+alpha_saas,Alpha SaaS Solutions,2026,9,6500,Professional Fees,133983.77321888763
+alpha_saas,Alpha SaaS Solutions,2026,9,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,9,7100,Advertising,129775.5860501981
+alpha_saas,Alpha SaaS Solutions,2026,9,7200,Travel and Entertainment,98160.10201928977
+alpha_saas,Alpha SaaS Solutions,2026,9,8000,Research and Development,150006.5796607044
+alpha_saas,Alpha SaaS Solutions,2026,9,9000,Depreciation Expense,67600.85602827153
+alpha_saas,Alpha SaaS Solutions,2026,9,9100,Amortization Expense,83983.2031519767
+alpha_saas,Alpha SaaS Solutions,2026,9,9500,Interest Expense,56817.10942330375
+alpha_saas,Alpha SaaS Solutions,2026,10,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,10,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,10,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,10,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,10,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,10,6200,Rent,135603.14813017662
+alpha_saas,Alpha SaaS Solutions,2026,10,6300,Utilities,148614.16423989154
+alpha_saas,Alpha SaaS Solutions,2026,10,6400,Insurance,58443.586784106024
+alpha_saas,Alpha SaaS Solutions,2026,10,6500,Professional Fees,77307.0456921068
+alpha_saas,Alpha SaaS Solutions,2026,10,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,10,7100,Advertising,59036.297219016975
+alpha_saas,Alpha SaaS Solutions,2026,10,7200,Travel and Entertainment,119176.20055557747
+alpha_saas,Alpha SaaS Solutions,2026,10,8000,Research and Development,71767.07912373103
+alpha_saas,Alpha SaaS Solutions,2026,10,9000,Depreciation Expense,112923.24621444677
+alpha_saas,Alpha SaaS Solutions,2026,10,9100,Amortization Expense,93210.03805900516
+alpha_saas,Alpha SaaS Solutions,2026,10,9500,Interest Expense,115224.14618062353
+alpha_saas,Alpha SaaS Solutions,2026,11,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,11,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,11,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,11,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,11,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,11,6200,Rent,122512.78332961375
+alpha_saas,Alpha SaaS Solutions,2026,11,6300,Utilities,96522.23183555102
+alpha_saas,Alpha SaaS Solutions,2026,11,6400,Insurance,159105.02715224665
+alpha_saas,Alpha SaaS Solutions,2026,11,6500,Professional Fees,75738.37178471165
+alpha_saas,Alpha SaaS Solutions,2026,11,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,11,7100,Advertising,91615.89350851113
+alpha_saas,Alpha SaaS Solutions,2026,11,7200,Travel and Entertainment,83751.14114256174
+alpha_saas,Alpha SaaS Solutions,2026,11,8000,Research and Development,67694.57092733668
+alpha_saas,Alpha SaaS Solutions,2026,11,9000,Depreciation Expense,134282.13170491403
+alpha_saas,Alpha SaaS Solutions,2026,11,9100,Amortization Expense,124859.4213366878
+alpha_saas,Alpha SaaS Solutions,2026,11,9500,Interest Expense,95058.9649682922
+alpha_saas,Alpha SaaS Solutions,2026,12,4200,Subscription Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,12,4100,Professional Services Revenue,3750000.0
+alpha_saas,Alpha SaaS Solutions,2026,12,5300,Cost of Services,1050000.0
+alpha_saas,Alpha SaaS Solutions,2026,12,6000,Salaries and Wages,944999.9999999999
+alpha_saas,Alpha SaaS Solutions,2026,12,6100,Employee Benefits,216000.0
+alpha_saas,Alpha SaaS Solutions,2026,12,6200,Rent,56896.85060896088
+alpha_saas,Alpha SaaS Solutions,2026,12,6300,Utilities,90514.38523275265
+alpha_saas,Alpha SaaS Solutions,2026,12,6400,Insurance,157359.23504674275
+alpha_saas,Alpha SaaS Solutions,2026,12,6500,Professional Fees,130291.22589479428
+alpha_saas,Alpha SaaS Solutions,2026,12,7000,Sales and Marketing,405000.0
+alpha_saas,Alpha SaaS Solutions,2026,12,7100,Advertising,87929.99460759768
+alpha_saas,Alpha SaaS Solutions,2026,12,7200,Travel and Entertainment,155459.20965441025
+alpha_saas,Alpha SaaS Solutions,2026,12,8000,Research and Development,87091.23051408128
+alpha_saas,Alpha SaaS Solutions,2026,12,9000,Depreciation Expense,106945.30692096811
+alpha_saas,Alpha SaaS Solutions,2026,12,9100,Amortization Expense,143776.14624933837
+alpha_saas,Alpha SaaS Solutions,2026,12,9500,Interest Expense,93422.78746730062
+beta_manufacturing,Beta Manufacturing Co,2026,1,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,1,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,1,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,1,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,1,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,1,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,1,6200,Rent,74783.19510157811
+beta_manufacturing,Beta Manufacturing Co,2026,1,6300,Utilities,185994.57288984643
+beta_manufacturing,Beta Manufacturing Co,2026,1,6400,Insurance,145967.3156966059
+beta_manufacturing,Beta Manufacturing Co,2026,1,6500,Professional Fees,95992.15821997909
+beta_manufacturing,Beta Manufacturing Co,2026,1,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,1,7100,Advertising,148261.28250109014
+beta_manufacturing,Beta Manufacturing Co,2026,1,7200,Travel and Entertainment,81282.89942742477
+beta_manufacturing,Beta Manufacturing Co,2026,1,8000,Research and Development,175316.70417589264
+beta_manufacturing,Beta Manufacturing Co,2026,1,9000,Depreciation Expense,86713.07281999954
+beta_manufacturing,Beta Manufacturing Co,2026,1,9100,Amortization Expense,165268.7830136994
+beta_manufacturing,Beta Manufacturing Co,2026,1,9500,Interest Expense,170779.10650133833
+beta_manufacturing,Beta Manufacturing Co,2026,2,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,2,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,2,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,2,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,2,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,2,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,2,6200,Rent,82019.29148913857
+beta_manufacturing,Beta Manufacturing Co,2026,2,6300,Utilities,135127.24354607484
+beta_manufacturing,Beta Manufacturing Co,2026,2,6400,Insurance,178552.96936121245
+beta_manufacturing,Beta Manufacturing Co,2026,2,6500,Professional Fees,141379.29383206108
+beta_manufacturing,Beta Manufacturing Co,2026,2,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,2,7100,Advertising,141535.54599692932
+beta_manufacturing,Beta Manufacturing Co,2026,2,7200,Travel and Entertainment,136642.48957120694
+beta_manufacturing,Beta Manufacturing Co,2026,2,8000,Research and Development,172294.84187826424
+beta_manufacturing,Beta Manufacturing Co,2026,2,9000,Depreciation Expense,155440.59813119902
+beta_manufacturing,Beta Manufacturing Co,2026,2,9100,Amortization Expense,129754.2946960423
+beta_manufacturing,Beta Manufacturing Co,2026,2,9500,Interest Expense,72782.98601666249
+beta_manufacturing,Beta Manufacturing Co,2026,3,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,3,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,3,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,3,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,3,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,3,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,3,6200,Rent,86273.80778579945
+beta_manufacturing,Beta Manufacturing Co,2026,3,6300,Utilities,149378.03393439003
+beta_manufacturing,Beta Manufacturing Co,2026,3,6400,Insurance,95117.7169914118
+beta_manufacturing,Beta Manufacturing Co,2026,3,6500,Professional Fees,113894.0774313331
+beta_manufacturing,Beta Manufacturing Co,2026,3,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,3,7100,Advertising,128125.91472233024
+beta_manufacturing,Beta Manufacturing Co,2026,3,7200,Travel and Entertainment,130431.8540787733
+beta_manufacturing,Beta Manufacturing Co,2026,3,8000,Research and Development,157755.7091572785
+beta_manufacturing,Beta Manufacturing Co,2026,3,9000,Depreciation Expense,77325.15975292293
+beta_manufacturing,Beta Manufacturing Co,2026,3,9100,Amortization Expense,177580.13608078696
+beta_manufacturing,Beta Manufacturing Co,2026,3,9500,Interest Expense,123041.7637982943
+beta_manufacturing,Beta Manufacturing Co,2026,4,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,4,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,4,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,4,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,4,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,4,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,4,6200,Rent,176160.3969155384
+beta_manufacturing,Beta Manufacturing Co,2026,4,6300,Utilities,100009.97275592762
+beta_manufacturing,Beta Manufacturing Co,2026,4,6400,Insurance,173409.78961743164
+beta_manufacturing,Beta Manufacturing Co,2026,4,6500,Professional Fees,116869.57468246871
+beta_manufacturing,Beta Manufacturing Co,2026,4,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,4,7100,Advertising,115320.14959211429
+beta_manufacturing,Beta Manufacturing Co,2026,4,7200,Travel and Entertainment,136377.0098938393
+beta_manufacturing,Beta Manufacturing Co,2026,4,8000,Research and Development,153341.35864739804
+beta_manufacturing,Beta Manufacturing Co,2026,4,9000,Depreciation Expense,86395.04283175203
+beta_manufacturing,Beta Manufacturing Co,2026,4,9100,Amortization Expense,140453.24938648375
+beta_manufacturing,Beta Manufacturing Co,2026,4,9500,Interest Expense,89251.16627949841
+beta_manufacturing,Beta Manufacturing Co,2026,5,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,5,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,5,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,5,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,5,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,5,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,5,6200,Rent,143238.92500533137
+beta_manufacturing,Beta Manufacturing Co,2026,5,6300,Utilities,93923.86011617073
+beta_manufacturing,Beta Manufacturing Co,2026,5,6400,Insurance,112945.68764971946
+beta_manufacturing,Beta Manufacturing Co,2026,5,6500,Professional Fees,92455.17098906769
+beta_manufacturing,Beta Manufacturing Co,2026,5,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,5,7100,Advertising,66081.45018530983
+beta_manufacturing,Beta Manufacturing Co,2026,5,7200,Travel and Entertainment,91318.44285394443
+beta_manufacturing,Beta Manufacturing Co,2026,5,8000,Research and Development,98010.9910813223
+beta_manufacturing,Beta Manufacturing Co,2026,5,9000,Depreciation Expense,75600.90059661896
+beta_manufacturing,Beta Manufacturing Co,2026,5,9100,Amortization Expense,83532.78614820288
+beta_manufacturing,Beta Manufacturing Co,2026,5,9500,Interest Expense,138981.40500304298
+beta_manufacturing,Beta Manufacturing Co,2026,6,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,6,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,6,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,6,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,6,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,6,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,6,6200,Rent,151334.81645667032
+beta_manufacturing,Beta Manufacturing Co,2026,6,6300,Utilities,187764.3361431645
+beta_manufacturing,Beta Manufacturing Co,2026,6,6400,Insurance,110019.67982328826
+beta_manufacturing,Beta Manufacturing Co,2026,6,6500,Professional Fees,186513.6037810963
+beta_manufacturing,Beta Manufacturing Co,2026,6,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,6,7100,Advertising,182826.00534579286
+beta_manufacturing,Beta Manufacturing Co,2026,6,7200,Travel and Entertainment,98373.7037910312
+beta_manufacturing,Beta Manufacturing Co,2026,6,8000,Research and Development,94016.02550447705
+beta_manufacturing,Beta Manufacturing Co,2026,6,9000,Depreciation Expense,94440.01822467128
+beta_manufacturing,Beta Manufacturing Co,2026,6,9100,Amortization Expense,150880.6150354786
+beta_manufacturing,Beta Manufacturing Co,2026,6,9500,Interest Expense,72230.74724620569
+beta_manufacturing,Beta Manufacturing Co,2026,7,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,7,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,7,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,7,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,7,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,7,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,7,6200,Rent,152112.40309047227
+beta_manufacturing,Beta Manufacturing Co,2026,7,6300,Utilities,104228.12419353462
+beta_manufacturing,Beta Manufacturing Co,2026,7,6400,Insurance,104969.40263305606
+beta_manufacturing,Beta Manufacturing Co,2026,7,6500,Professional Fees,156349.02088922478
+beta_manufacturing,Beta Manufacturing Co,2026,7,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,7,7100,Advertising,142216.5222321253
+beta_manufacturing,Beta Manufacturing Co,2026,7,7200,Travel and Entertainment,183097.9174451526
+beta_manufacturing,Beta Manufacturing Co,2026,7,8000,Research and Development,67069.98315394204
+beta_manufacturing,Beta Manufacturing Co,2026,7,9000,Depreciation Expense,103018.73914016204
+beta_manufacturing,Beta Manufacturing Co,2026,7,9100,Amortization Expense,75225.28201203975
+beta_manufacturing,Beta Manufacturing Co,2026,7,9500,Interest Expense,96097.89984306751
+beta_manufacturing,Beta Manufacturing Co,2026,8,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,8,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,8,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,8,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,8,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,8,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,8,6200,Rent,74097.3572384986
+beta_manufacturing,Beta Manufacturing Co,2026,8,6300,Utilities,106218.37686198192
+beta_manufacturing,Beta Manufacturing Co,2026,8,6400,Insurance,144428.84367718137
+beta_manufacturing,Beta Manufacturing Co,2026,8,6500,Professional Fees,67877.74063565396
+beta_manufacturing,Beta Manufacturing Co,2026,8,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,8,7100,Advertising,169283.42760032805
+beta_manufacturing,Beta Manufacturing Co,2026,8,7200,Travel and Entertainment,77117.76716977947
+beta_manufacturing,Beta Manufacturing Co,2026,8,8000,Research and Development,70794.35578173817
+beta_manufacturing,Beta Manufacturing Co,2026,8,9000,Depreciation Expense,178683.7445556238
+beta_manufacturing,Beta Manufacturing Co,2026,8,9100,Amortization Expense,142714.3813223014
+beta_manufacturing,Beta Manufacturing Co,2026,8,9500,Interest Expense,86401.83414562988
+beta_manufacturing,Beta Manufacturing Co,2026,9,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,9,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,9,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,9,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,9,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,9,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,9,6200,Rent,150559.5509100439
+beta_manufacturing,Beta Manufacturing Co,2026,9,6300,Utilities,107758.67140387798
+beta_manufacturing,Beta Manufacturing Co,2026,9,6400,Insurance,130492.76741118525
+beta_manufacturing,Beta Manufacturing Co,2026,9,6500,Professional Fees,149539.31364018394
+beta_manufacturing,Beta Manufacturing Co,2026,9,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,9,7100,Advertising,106121.10301294507
+beta_manufacturing,Beta Manufacturing Co,2026,9,7200,Travel and Entertainment,179944.88486779362
+beta_manufacturing,Beta Manufacturing Co,2026,9,8000,Research and Development,79309.43514306251
+beta_manufacturing,Beta Manufacturing Co,2026,9,9000,Depreciation Expense,168993.42075360962
+beta_manufacturing,Beta Manufacturing Co,2026,9,9100,Amortization Expense,124727.4961667787
+beta_manufacturing,Beta Manufacturing Co,2026,9,9500,Interest Expense,128911.55124243397
+beta_manufacturing,Beta Manufacturing Co,2026,10,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,10,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,10,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,10,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,10,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,10,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,10,6200,Rent,82668.6106945832
+beta_manufacturing,Beta Manufacturing Co,2026,10,6300,Utilities,110135.89017780856
+beta_manufacturing,Beta Manufacturing Co,2026,10,6400,Insurance,113659.02928888667
+beta_manufacturing,Beta Manufacturing Co,2026,10,6500,Professional Fees,131582.51736914663
+beta_manufacturing,Beta Manufacturing Co,2026,10,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,10,7100,Advertising,64968.87596303697
+beta_manufacturing,Beta Manufacturing Co,2026,10,7200,Travel and Entertainment,104975.01092079404
+beta_manufacturing,Beta Manufacturing Co,2026,10,8000,Research and Development,129798.03507702332
+beta_manufacturing,Beta Manufacturing Co,2026,10,9000,Depreciation Expense,184942.7051753137
+beta_manufacturing,Beta Manufacturing Co,2026,10,9100,Amortization Expense,149886.1449185357
+beta_manufacturing,Beta Manufacturing Co,2026,10,9500,Interest Expense,105646.39266000049
+beta_manufacturing,Beta Manufacturing Co,2026,11,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,11,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,11,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,11,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,11,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,11,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,11,6200,Rent,181955.59819769228
+beta_manufacturing,Beta Manufacturing Co,2026,11,6300,Utilities,74408.93421520955
+beta_manufacturing,Beta Manufacturing Co,2026,11,6400,Insurance,163513.800263435
+beta_manufacturing,Beta Manufacturing Co,2026,11,6500,Professional Fees,168832.25164984772
+beta_manufacturing,Beta Manufacturing Co,2026,11,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,11,7100,Advertising,165097.7812732696
+beta_manufacturing,Beta Manufacturing Co,2026,11,7200,Travel and Entertainment,130709.04510920109
+beta_manufacturing,Beta Manufacturing Co,2026,11,8000,Research and Development,106257.13837665752
+beta_manufacturing,Beta Manufacturing Co,2026,11,9000,Depreciation Expense,177271.55343558884
+beta_manufacturing,Beta Manufacturing Co,2026,11,9100,Amortization Expense,94345.00819192105
+beta_manufacturing,Beta Manufacturing Co,2026,11,9500,Interest Expense,140375.5045039654
+beta_manufacturing,Beta Manufacturing Co,2026,12,4000,Product Sales,10000000.0
+beta_manufacturing,Beta Manufacturing Co,2026,12,5000,Cost of Goods Sold - Materials,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,12,5100,Cost of Goods Sold - Labor,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,12,5200,Cost of Goods Sold - Overhead,2266666.6666666665
+beta_manufacturing,Beta Manufacturing Co,2026,12,6000,Salaries and Wages,1120000.0
+beta_manufacturing,Beta Manufacturing Co,2026,12,6100,Employee Benefits,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,12,6200,Rent,123138.38234243084
+beta_manufacturing,Beta Manufacturing Co,2026,12,6300,Utilities,66631.79096987974
+beta_manufacturing,Beta Manufacturing Co,2026,12,6400,Insurance,189632.75973252577
+beta_manufacturing,Beta Manufacturing Co,2026,12,6500,Professional Fees,134010.71214978094
+beta_manufacturing,Beta Manufacturing Co,2026,12,7000,Sales and Marketing,256000.0
+beta_manufacturing,Beta Manufacturing Co,2026,12,7100,Advertising,147310.75501375043
+beta_manufacturing,Beta Manufacturing Co,2026,12,7200,Travel and Entertainment,116571.8013216413
+beta_manufacturing,Beta Manufacturing Co,2026,12,8000,Research and Development,77265.06337161707
+beta_manufacturing,Beta Manufacturing Co,2026,12,9000,Depreciation Expense,124299.4153503103
+beta_manufacturing,Beta Manufacturing Co,2026,12,9100,Amortization Expense,190609.46073434662
+beta_manufacturing,Beta Manufacturing Co,2026,12,9500,Interest Expense,73685.11458451698
+gamma_retail,Gamma Retail Group,2026,1,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,1,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,1,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,1,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,1,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,1,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,1,6200,Rent,256671.29351798253
+gamma_retail,Gamma Retail Group,2026,1,6300,Utilities,333714.7028939804
+gamma_retail,Gamma Retail Group,2026,1,6400,Insurance,162322.42424978706
+gamma_retail,Gamma Retail Group,2026,1,6500,Professional Fees,335226.8019595789
+gamma_retail,Gamma Retail Group,2026,1,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,1,7100,Advertising,333589.2459744957
+gamma_retail,Gamma Retail Group,2026,1,7200,Travel and Entertainment,326946.81674837973
+gamma_retail,Gamma Retail Group,2026,1,8000,Research and Development,217304.95917066227
+gamma_retail,Gamma Retail Group,2026,1,9000,Depreciation Expense,264965.3034941032
+gamma_retail,Gamma Retail Group,2026,1,9100,Amortization Expense,170586.64875779083
+gamma_retail,Gamma Retail Group,2026,1,9500,Interest Expense,309401.74491790275
+gamma_retail,Gamma Retail Group,2026,2,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,2,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,2,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,2,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,2,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,2,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,2,6200,Rent,189318.1121247297
+gamma_retail,Gamma Retail Group,2026,2,6300,Utilities,223213.57011015632
+gamma_retail,Gamma Retail Group,2026,2,6400,Insurance,136936.47057953893
+gamma_retail,Gamma Retail Group,2026,2,6500,Professional Fees,221696.17075871926
+gamma_retail,Gamma Retail Group,2026,2,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,2,7100,Advertising,324627.18466261844
+gamma_retail,Gamma Retail Group,2026,2,7200,Travel and Entertainment,259459.389664438
+gamma_retail,Gamma Retail Group,2026,2,8000,Research and Development,154247.13812106647
+gamma_retail,Gamma Retail Group,2026,2,9000,Depreciation Expense,276218.74851315643
+gamma_retail,Gamma Retail Group,2026,2,9100,Amortization Expense,238439.48520171008
+gamma_retail,Gamma Retail Group,2026,2,9500,Interest Expense,209152.11359026725
+gamma_retail,Gamma Retail Group,2026,3,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,3,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,3,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,3,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,3,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,3,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,3,6200,Rent,223121.5804240509
+gamma_retail,Gamma Retail Group,2026,3,6300,Utilities,215439.9326972503
+gamma_retail,Gamma Retail Group,2026,3,6400,Insurance,235645.87698673876
+gamma_retail,Gamma Retail Group,2026,3,6500,Professional Fees,224396.21825385682
+gamma_retail,Gamma Retail Group,2026,3,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,3,7100,Advertising,127150.39790452455
+gamma_retail,Gamma Retail Group,2026,3,7200,Travel and Entertainment,172474.03593161152
+gamma_retail,Gamma Retail Group,2026,3,8000,Research and Development,257093.38574607697
+gamma_retail,Gamma Retail Group,2026,3,9000,Depreciation Expense,299204.3716153163
+gamma_retail,Gamma Retail Group,2026,3,9100,Amortization Expense,179586.03164693917
+gamma_retail,Gamma Retail Group,2026,3,9500,Interest Expense,329689.794009849
+gamma_retail,Gamma Retail Group,2026,4,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,4,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,4,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,4,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,4,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,4,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,4,6200,Rent,368869.81458445225
+gamma_retail,Gamma Retail Group,2026,4,6300,Utilities,203817.79769969275
+gamma_retail,Gamma Retail Group,2026,4,6400,Insurance,266529.97152598
+gamma_retail,Gamma Retail Group,2026,4,6500,Professional Fees,322339.6799444294
+gamma_retail,Gamma Retail Group,2026,4,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,4,7100,Advertising,187525.16784674296
+gamma_retail,Gamma Retail Group,2026,4,7200,Travel and Entertainment,293136.8724038609
+gamma_retail,Gamma Retail Group,2026,4,8000,Research and Development,288370.66879990307
+gamma_retail,Gamma Retail Group,2026,4,9000,Depreciation Expense,361942.28388717247
+gamma_retail,Gamma Retail Group,2026,4,9100,Amortization Expense,136136.03187359366
+gamma_retail,Gamma Retail Group,2026,4,9500,Interest Expense,284288.85892949393
+gamma_retail,Gamma Retail Group,2026,5,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,5,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,5,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,5,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,5,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,5,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,5,6200,Rent,160343.23065102324
+gamma_retail,Gamma Retail Group,2026,5,6300,Utilities,356419.0123690547
+gamma_retail,Gamma Retail Group,2026,5,6400,Insurance,223492.98926727314
+gamma_retail,Gamma Retail Group,2026,5,6500,Professional Fees,258249.09757811174
+gamma_retail,Gamma Retail Group,2026,5,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,5,7100,Advertising,278772.867410578
+gamma_retail,Gamma Retail Group,2026,5,7200,Travel and Entertainment,305516.2373569338
+gamma_retail,Gamma Retail Group,2026,5,8000,Research and Development,284789.98833787104
+gamma_retail,Gamma Retail Group,2026,5,9000,Depreciation Expense,218043.42764932162
+gamma_retail,Gamma Retail Group,2026,5,9100,Amortization Expense,197234.74694274666
+gamma_retail,Gamma Retail Group,2026,5,9500,Interest Expense,288555.5890068541
+gamma_retail,Gamma Retail Group,2026,6,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,6,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,6,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,6,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,6,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,6,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,6,6200,Rent,280208.2970176833
+gamma_retail,Gamma Retail Group,2026,6,6300,Utilities,190826.08345365996
+gamma_retail,Gamma Retail Group,2026,6,6400,Insurance,346453.38206711423
+gamma_retail,Gamma Retail Group,2026,6,6500,Professional Fees,291385.4902694886
+gamma_retail,Gamma Retail Group,2026,6,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,6,7100,Advertising,370441.3929211478
+gamma_retail,Gamma Retail Group,2026,6,7200,Travel and Entertainment,375599.420413108
+gamma_retail,Gamma Retail Group,2026,6,8000,Research and Development,268976.525263852
+gamma_retail,Gamma Retail Group,2026,6,9000,Depreciation Expense,271108.1665661072
+gamma_retail,Gamma Retail Group,2026,6,9100,Amortization Expense,365462.79605951
+gamma_retail,Gamma Retail Group,2026,6,9500,Interest Expense,237506.49818061618
+gamma_retail,Gamma Retail Group,2026,7,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,7,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,7,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,7,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,7,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,7,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,7,6200,Rent,342864.88649342064
+gamma_retail,Gamma Retail Group,2026,7,6300,Utilities,130850.4373938153
+gamma_retail,Gamma Retail Group,2026,7,6400,Insurance,350187.6494026109
+gamma_retail,Gamma Retail Group,2026,7,6500,Professional Fees,127765.65256321414
+gamma_retail,Gamma Retail Group,2026,7,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,7,7100,Advertising,184008.646548901
+gamma_retail,Gamma Retail Group,2026,7,7200,Travel and Entertainment,315343.17083096155
+gamma_retail,Gamma Retail Group,2026,7,8000,Research and Development,276087.7301536888
+gamma_retail,Gamma Retail Group,2026,7,9000,Depreciation Expense,322562.67134874605
+gamma_retail,Gamma Retail Group,2026,7,9100,Amortization Expense,184096.7139548078
+gamma_retail,Gamma Retail Group,2026,7,9500,Interest Expense,298903.9389454316
+gamma_retail,Gamma Retail Group,2026,8,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,8,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,8,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,8,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,8,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,8,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,8,6200,Rent,205114.37648368216
+gamma_retail,Gamma Retail Group,2026,8,6300,Utilities,174206.91688914684
+gamma_retail,Gamma Retail Group,2026,8,6400,Insurance,339846.58321590576
+gamma_retail,Gamma Retail Group,2026,8,6500,Professional Fees,374360.427761643
+gamma_retail,Gamma Retail Group,2026,8,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,8,7100,Advertising,210596.47184112022
+gamma_retail,Gamma Retail Group,2026,8,7200,Travel and Entertainment,361145.7419081523
+gamma_retail,Gamma Retail Group,2026,8,8000,Research and Development,131252.30246280305
+gamma_retail,Gamma Retail Group,2026,8,9000,Depreciation Expense,222404.98390046545
+gamma_retail,Gamma Retail Group,2026,8,9100,Amortization Expense,165441.38284002445
+gamma_retail,Gamma Retail Group,2026,8,9500,Interest Expense,182138.7845134294
+gamma_retail,Gamma Retail Group,2026,9,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,9,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,9,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,9,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,9,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,9,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,9,6200,Rent,155605.34097567326
+gamma_retail,Gamma Retail Group,2026,9,6300,Utilities,281106.5725210374
+gamma_retail,Gamma Retail Group,2026,9,6400,Insurance,310553.88658044446
+gamma_retail,Gamma Retail Group,2026,9,6500,Professional Fees,207044.52001832167
+gamma_retail,Gamma Retail Group,2026,9,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,9,7100,Advertising,217722.4041787629
+gamma_retail,Gamma Retail Group,2026,9,7200,Travel and Entertainment,141714.42983288472
+gamma_retail,Gamma Retail Group,2026,9,8000,Research and Development,245828.89361344662
+gamma_retail,Gamma Retail Group,2026,9,9000,Depreciation Expense,138295.2722670441
+gamma_retail,Gamma Retail Group,2026,9,9100,Amortization Expense,299369.61890981667
+gamma_retail,Gamma Retail Group,2026,9,9500,Interest Expense,141432.49755757043
+gamma_retail,Gamma Retail Group,2026,10,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,10,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,10,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,10,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,10,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,10,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,10,6200,Rent,282914.0845890831
+gamma_retail,Gamma Retail Group,2026,10,6300,Utilities,218977.28944706378
+gamma_retail,Gamma Retail Group,2026,10,6400,Insurance,280523.1028353581
+gamma_retail,Gamma Retail Group,2026,10,6500,Professional Fees,373141.0066532451
+gamma_retail,Gamma Retail Group,2026,10,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,10,7100,Advertising,178795.44218890855
+gamma_retail,Gamma Retail Group,2026,10,7200,Travel and Entertainment,174233.69362048016
+gamma_retail,Gamma Retail Group,2026,10,8000,Research and Development,320399.90086658124
+gamma_retail,Gamma Retail Group,2026,10,9000,Depreciation Expense,225721.07867354763
+gamma_retail,Gamma Retail Group,2026,10,9100,Amortization Expense,272041.26821273897
+gamma_retail,Gamma Retail Group,2026,10,9500,Interest Expense,180132.778934383
+gamma_retail,Gamma Retail Group,2026,11,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,11,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,11,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,11,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,11,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,11,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,11,6200,Rent,173994.84001735965
+gamma_retail,Gamma Retail Group,2026,11,6300,Utilities,272146.1709603445
+gamma_retail,Gamma Retail Group,2026,11,6400,Insurance,128352.80130955792
+gamma_retail,Gamma Retail Group,2026,11,6500,Professional Fees,378636.7651160895
+gamma_retail,Gamma Retail Group,2026,11,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,11,7100,Advertising,158925.74454843995
+gamma_retail,Gamma Retail Group,2026,11,7200,Travel and Entertainment,165707.53349707456
+gamma_retail,Gamma Retail Group,2026,11,8000,Research and Development,191847.20695231942
+gamma_retail,Gamma Retail Group,2026,11,9000,Depreciation Expense,261270.80484688678
+gamma_retail,Gamma Retail Group,2026,11,9100,Amortization Expense,325852.39646633173
+gamma_retail,Gamma Retail Group,2026,11,9500,Interest Expense,272662.8558524711
+gamma_retail,Gamma Retail Group,2026,12,4000,Store Revenue,16666666.666666666
+gamma_retail,Gamma Retail Group,2026,12,5000,Cost of Goods Sold - Materials,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,12,5100,Cost of Goods Sold - Labor,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,12,5200,Cost of Goods Sold - Overhead,3444444.444444444
+gamma_retail,Gamma Retail Group,2026,12,6000,Salaries and Wages,2216666.6666666665
+gamma_retail,Gamma Retail Group,2026,12,6100,Employee Benefits,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,12,6200,Rent,249500.85616228884
+gamma_retail,Gamma Retail Group,2026,12,6300,Utilities,164421.22008858426
+gamma_retail,Gamma Retail Group,2026,12,6400,Insurance,129059.22073699727
+gamma_retail,Gamma Retail Group,2026,12,6500,Professional Fees,353189.49100681517
+gamma_retail,Gamma Retail Group,2026,12,7000,Sales and Marketing,506666.6666666666
+gamma_retail,Gamma Retail Group,2026,12,7100,Advertising,142430.65394934404
+gamma_retail,Gamma Retail Group,2026,12,7200,Travel and Entertainment,355999.5160984964
+gamma_retail,Gamma Retail Group,2026,12,8000,Research and Development,315304.32220880524
+gamma_retail,Gamma Retail Group,2026,12,9000,Depreciation Expense,335125.8618618491
+gamma_retail,Gamma Retail Group,2026,12,9100,Amortization Expense,296170.9988669878
+gamma_retail,Gamma Retail Group,2026,12,9500,Interest Expense,256778.49962301235
+delta_healthcare,Delta Healthcare Services,2026,1,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,1,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,1,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,1,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,1,6200,Rent,39915.345975983255
+delta_healthcare,Delta Healthcare Services,2026,1,6300,Utilities,89579.68657500269
+delta_healthcare,Delta Healthcare Services,2026,1,6400,Insurance,93022.90341165784
+delta_healthcare,Delta Healthcare Services,2026,1,6500,Professional Fees,76907.66918107873
+delta_healthcare,Delta Healthcare Services,2026,1,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,1,7100,Advertising,39054.524856093965
+delta_healthcare,Delta Healthcare Services,2026,1,7200,Travel and Entertainment,81646.06964280842
+delta_healthcare,Delta Healthcare Services,2026,1,8000,Research and Development,32206.542926102684
+delta_healthcare,Delta Healthcare Services,2026,1,9000,Depreciation Expense,70270.30149329867
+delta_healthcare,Delta Healthcare Services,2026,1,9100,Amortization Expense,61995.3338705177
+delta_healthcare,Delta Healthcare Services,2026,1,9500,Interest Expense,64734.52298828074
+delta_healthcare,Delta Healthcare Services,2026,2,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,2,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,2,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,2,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,2,6200,Rent,54094.487521734896
+delta_healthcare,Delta Healthcare Services,2026,2,6300,Utilities,75006.8565726003
+delta_healthcare,Delta Healthcare Services,2026,2,6400,Insurance,75618.92951926989
+delta_healthcare,Delta Healthcare Services,2026,2,6500,Professional Fees,48734.52427306725
+delta_healthcare,Delta Healthcare Services,2026,2,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,2,7100,Advertising,69322.65315992657
+delta_healthcare,Delta Healthcare Services,2026,2,7200,Travel and Entertainment,35074.64194562439
+delta_healthcare,Delta Healthcare Services,2026,2,8000,Research and Development,83334.59856894895
+delta_healthcare,Delta Healthcare Services,2026,2,9000,Depreciation Expense,83665.12011614813
+delta_healthcare,Delta Healthcare Services,2026,2,9100,Amortization Expense,36732.824980889345
+delta_healthcare,Delta Healthcare Services,2026,2,9500,Interest Expense,43596.073723598245
+delta_healthcare,Delta Healthcare Services,2026,3,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,3,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,3,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,3,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,3,6200,Rent,82015.09703665107
+delta_healthcare,Delta Healthcare Services,2026,3,6300,Utilities,49897.77526815144
+delta_healthcare,Delta Healthcare Services,2026,3,6400,Insurance,35453.808300388766
+delta_healthcare,Delta Healthcare Services,2026,3,6500,Professional Fees,34996.6837066638
+delta_healthcare,Delta Healthcare Services,2026,3,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,3,7100,Advertising,89727.94940276576
+delta_healthcare,Delta Healthcare Services,2026,3,7200,Travel and Entertainment,36286.30370536017
+delta_healthcare,Delta Healthcare Services,2026,3,8000,Research and Development,38623.90070362335
+delta_healthcare,Delta Healthcare Services,2026,3,9000,Depreciation Expense,40880.319770241666
+delta_healthcare,Delta Healthcare Services,2026,3,9100,Amortization Expense,53172.52700762699
+delta_healthcare,Delta Healthcare Services,2026,3,9500,Interest Expense,37405.18013948179
+delta_healthcare,Delta Healthcare Services,2026,4,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,4,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,4,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,4,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,4,6200,Rent,69373.22756830078
+delta_healthcare,Delta Healthcare Services,2026,4,6300,Utilities,83917.33155622908
+delta_healthcare,Delta Healthcare Services,2026,4,6400,Insurance,60180.42426605829
+delta_healthcare,Delta Healthcare Services,2026,4,6500,Professional Fees,77243.4944140428
+delta_healthcare,Delta Healthcare Services,2026,4,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,4,7100,Advertising,80836.43445853199
+delta_healthcare,Delta Healthcare Services,2026,4,7200,Travel and Entertainment,89485.29664894273
+delta_healthcare,Delta Healthcare Services,2026,4,8000,Research and Development,46035.39539451073
+delta_healthcare,Delta Healthcare Services,2026,4,9000,Depreciation Expense,53912.07582098979
+delta_healthcare,Delta Healthcare Services,2026,4,9100,Amortization Expense,42058.5068126059
+delta_healthcare,Delta Healthcare Services,2026,4,9500,Interest Expense,80556.97747436112
+delta_healthcare,Delta Healthcare Services,2026,5,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,5,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,5,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,5,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,5,6200,Rent,55364.155701064105
+delta_healthcare,Delta Healthcare Services,2026,5,6300,Utilities,79417.23693619379
+delta_healthcare,Delta Healthcare Services,2026,5,6400,Insurance,81984.48722824665
+delta_healthcare,Delta Healthcare Services,2026,5,6500,Professional Fees,68028.72718076369
+delta_healthcare,Delta Healthcare Services,2026,5,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,5,7100,Advertising,42834.84713326403
+delta_healthcare,Delta Healthcare Services,2026,5,7200,Travel and Entertainment,59061.556782433196
+delta_healthcare,Delta Healthcare Services,2026,5,8000,Research and Development,68046.80405401529
+delta_healthcare,Delta Healthcare Services,2026,5,9000,Depreciation Expense,94598.17269745927
+delta_healthcare,Delta Healthcare Services,2026,5,9100,Amortization Expense,60708.054783252315
+delta_healthcare,Delta Healthcare Services,2026,5,9500,Interest Expense,82241.21130538009
+delta_healthcare,Delta Healthcare Services,2026,6,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,6,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,6,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,6,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,6,6200,Rent,62353.04514551763
+delta_healthcare,Delta Healthcare Services,2026,6,6300,Utilities,77898.47080986245
+delta_healthcare,Delta Healthcare Services,2026,6,6400,Insurance,81301.01011486528
+delta_healthcare,Delta Healthcare Services,2026,6,6500,Professional Fees,91323.17919656454
+delta_healthcare,Delta Healthcare Services,2026,6,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,6,7100,Advertising,48342.052064866744
+delta_healthcare,Delta Healthcare Services,2026,6,7200,Travel and Entertainment,61201.53283247712
+delta_healthcare,Delta Healthcare Services,2026,6,8000,Research and Development,78101.83904947004
+delta_healthcare,Delta Healthcare Services,2026,6,9000,Depreciation Expense,48139.467360781644
+delta_healthcare,Delta Healthcare Services,2026,6,9100,Amortization Expense,37099.98399665993
+delta_healthcare,Delta Healthcare Services,2026,6,9500,Interest Expense,37545.71124629196
+delta_healthcare,Delta Healthcare Services,2026,7,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,7,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,7,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,7,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,7,6200,Rent,37067.59132351155
+delta_healthcare,Delta Healthcare Services,2026,7,6300,Utilities,84322.7488019273
+delta_healthcare,Delta Healthcare Services,2026,7,6400,Insurance,66176.03171951312
+delta_healthcare,Delta Healthcare Services,2026,7,6500,Professional Fees,76804.41505582484
+delta_healthcare,Delta Healthcare Services,2026,7,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,7,7100,Advertising,32480.49706183535
+delta_healthcare,Delta Healthcare Services,2026,7,7200,Travel and Entertainment,60096.169223996105
+delta_healthcare,Delta Healthcare Services,2026,7,8000,Research and Development,95005.15398728721
+delta_healthcare,Delta Healthcare Services,2026,7,9000,Depreciation Expense,37486.32335201606
+delta_healthcare,Delta Healthcare Services,2026,7,9100,Amortization Expense,65148.65160530289
+delta_healthcare,Delta Healthcare Services,2026,7,9500,Interest Expense,84962.49184170403
+delta_healthcare,Delta Healthcare Services,2026,8,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,8,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,8,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,8,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,8,6200,Rent,73240.8456746128
+delta_healthcare,Delta Healthcare Services,2026,8,6300,Utilities,56019.845435334966
+delta_healthcare,Delta Healthcare Services,2026,8,6400,Insurance,75659.09391991547
+delta_healthcare,Delta Healthcare Services,2026,8,6500,Professional Fees,63163.615802457454
+delta_healthcare,Delta Healthcare Services,2026,8,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,8,7100,Advertising,78105.66225940107
+delta_healthcare,Delta Healthcare Services,2026,8,7200,Travel and Entertainment,39923.85318542632
+delta_healthcare,Delta Healthcare Services,2026,8,8000,Research and Development,60892.999604036944
+delta_healthcare,Delta Healthcare Services,2026,8,9000,Depreciation Expense,89388.00444487193
+delta_healthcare,Delta Healthcare Services,2026,8,9100,Amortization Expense,40169.67033810651
+delta_healthcare,Delta Healthcare Services,2026,8,9500,Interest Expense,96078.4112685989
+delta_healthcare,Delta Healthcare Services,2026,9,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,9,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,9,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,9,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,9,6200,Rent,52901.9586116982
+delta_healthcare,Delta Healthcare Services,2026,9,6300,Utilities,82169.93783629675
+delta_healthcare,Delta Healthcare Services,2026,9,6400,Insurance,85230.60670484141
+delta_healthcare,Delta Healthcare Services,2026,9,6500,Professional Fees,72363.94382945211
+delta_healthcare,Delta Healthcare Services,2026,9,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,9,7100,Advertising,44192.20843446946
+delta_healthcare,Delta Healthcare Services,2026,9,7200,Travel and Entertainment,82721.01702824101
+delta_healthcare,Delta Healthcare Services,2026,9,8000,Research and Development,57962.1008362406
+delta_healthcare,Delta Healthcare Services,2026,9,9000,Depreciation Expense,66890.6085613474
+delta_healthcare,Delta Healthcare Services,2026,9,9100,Amortization Expense,71056.29631298938
+delta_healthcare,Delta Healthcare Services,2026,9,9500,Interest Expense,86503.23423558772
+delta_healthcare,Delta Healthcare Services,2026,10,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,10,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,10,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,10,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,10,6200,Rent,48304.35204981639
+delta_healthcare,Delta Healthcare Services,2026,10,6300,Utilities,62001.74483486033
+delta_healthcare,Delta Healthcare Services,2026,10,6400,Insurance,76334.32209527485
+delta_healthcare,Delta Healthcare Services,2026,10,6500,Professional Fees,57005.57639520375
+delta_healthcare,Delta Healthcare Services,2026,10,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,10,7100,Advertising,53083.395565801744
+delta_healthcare,Delta Healthcare Services,2026,10,7200,Travel and Entertainment,70242.55818997558
+delta_healthcare,Delta Healthcare Services,2026,10,8000,Research and Development,37063.02871945188
+delta_healthcare,Delta Healthcare Services,2026,10,9000,Depreciation Expense,69445.29966858267
+delta_healthcare,Delta Healthcare Services,2026,10,9100,Amortization Expense,73536.39312531575
+delta_healthcare,Delta Healthcare Services,2026,10,9500,Interest Expense,54194.103707206974
+delta_healthcare,Delta Healthcare Services,2026,11,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,11,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,11,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,11,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,11,6200,Rent,49996.39052418715
+delta_healthcare,Delta Healthcare Services,2026,11,6300,Utilities,74830.96350060297
+delta_healthcare,Delta Healthcare Services,2026,11,6400,Insurance,36275.4461339838
+delta_healthcare,Delta Healthcare Services,2026,11,6500,Professional Fees,59448.822255796964
+delta_healthcare,Delta Healthcare Services,2026,11,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,11,7100,Advertising,49547.13541996358
+delta_healthcare,Delta Healthcare Services,2026,11,7200,Travel and Entertainment,94311.59731388302
+delta_healthcare,Delta Healthcare Services,2026,11,8000,Research and Development,44537.52655651155
+delta_healthcare,Delta Healthcare Services,2026,11,9000,Depreciation Expense,88790.29695408705
+delta_healthcare,Delta Healthcare Services,2026,11,9100,Amortization Expense,77712.8235309406
+delta_healthcare,Delta Healthcare Services,2026,11,9500,Interest Expense,56192.606233576276
+delta_healthcare,Delta Healthcare Services,2026,12,4100,Service Revenue,2916666.6666666665
+delta_healthcare,Delta Healthcare Services,2026,12,5300,Cost of Services,1312499.9999999998
+delta_healthcare,Delta Healthcare Services,2026,12,6000,Salaries and Wages,561458.3333333334
+delta_healthcare,Delta Healthcare Services,2026,12,6100,Employee Benefits,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,12,6200,Rent,34772.84733443449
+delta_healthcare,Delta Healthcare Services,2026,12,6300,Utilities,94035.8608181073
+delta_healthcare,Delta Healthcare Services,2026,12,6400,Insurance,88030.3934440322
+delta_healthcare,Delta Healthcare Services,2026,12,6500,Professional Fees,64917.46279454828
+delta_healthcare,Delta Healthcare Services,2026,12,7000,Sales and Marketing,128333.33333333334
+delta_healthcare,Delta Healthcare Services,2026,12,7100,Advertising,77446.78817285081
+delta_healthcare,Delta Healthcare Services,2026,12,7200,Travel and Entertainment,48815.89975796468
+delta_healthcare,Delta Healthcare Services,2026,12,8000,Research and Development,92308.18802135039
+delta_healthcare,Delta Healthcare Services,2026,12,9000,Depreciation Expense,54599.99622239606
+delta_healthcare,Delta Healthcare Services,2026,12,9100,Amortization Expense,81100.10606543897
+delta_healthcare,Delta Healthcare Services,2026,12,9500,Interest Expense,74286.87801320996
+epsilon_logistics,Epsilon Logistics Corp,2026,1,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,1,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,1,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,1,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,1,6200,Rent,44924.1122120643
+epsilon_logistics,Epsilon Logistics Corp,2026,1,6300,Utilities,62136.958023060455
+epsilon_logistics,Epsilon Logistics Corp,2026,1,6400,Insurance,58107.026822643886
+epsilon_logistics,Epsilon Logistics Corp,2026,1,6500,Professional Fees,77169.51277126183
+epsilon_logistics,Epsilon Logistics Corp,2026,1,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,1,7100,Advertising,70541.03686150778
+epsilon_logistics,Epsilon Logistics Corp,2026,1,7200,Travel and Entertainment,52213.16600373766
+epsilon_logistics,Epsilon Logistics Corp,2026,1,8000,Research and Development,58158.70859469321
+epsilon_logistics,Epsilon Logistics Corp,2026,1,9000,Depreciation Expense,65252.271165009035
+epsilon_logistics,Epsilon Logistics Corp,2026,1,9100,Amortization Expense,83262.45008292972
+epsilon_logistics,Epsilon Logistics Corp,2026,1,9500,Interest Expense,83662.45223827842
+epsilon_logistics,Epsilon Logistics Corp,2026,2,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,2,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,2,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,2,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,2,6200,Rent,40474.031557887734
+epsilon_logistics,Epsilon Logistics Corp,2026,2,6300,Utilities,49142.922426697405
+epsilon_logistics,Epsilon Logistics Corp,2026,2,6400,Insurance,49612.80156231095
+epsilon_logistics,Epsilon Logistics Corp,2026,2,6500,Professional Fees,53589.55094424174
+epsilon_logistics,Epsilon Logistics Corp,2026,2,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,2,7100,Advertising,78397.69733433655
+epsilon_logistics,Epsilon Logistics Corp,2026,2,7200,Travel and Entertainment,52871.2945748407
+epsilon_logistics,Epsilon Logistics Corp,2026,2,8000,Research and Development,45093.9650822811
+epsilon_logistics,Epsilon Logistics Corp,2026,2,9000,Depreciation Expense,36875.49149159285
+epsilon_logistics,Epsilon Logistics Corp,2026,2,9100,Amortization Expense,75478.0164541428
+epsilon_logistics,Epsilon Logistics Corp,2026,2,9500,Interest Expense,44242.11812832769
+epsilon_logistics,Epsilon Logistics Corp,2026,3,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,3,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,3,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,3,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,3,6200,Rent,43418.4813975702
+epsilon_logistics,Epsilon Logistics Corp,2026,3,6300,Utilities,43277.92994576483
+epsilon_logistics,Epsilon Logistics Corp,2026,3,6400,Insurance,41207.691370620465
+epsilon_logistics,Epsilon Logistics Corp,2026,3,6500,Professional Fees,46520.611631955326
+epsilon_logistics,Epsilon Logistics Corp,2026,3,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,3,7100,Advertising,47638.969189168005
+epsilon_logistics,Epsilon Logistics Corp,2026,3,7200,Travel and Entertainment,67508.07791100859
+epsilon_logistics,Epsilon Logistics Corp,2026,3,8000,Research and Development,77761.46389303186
+epsilon_logistics,Epsilon Logistics Corp,2026,3,9000,Depreciation Expense,35942.77404467589
+epsilon_logistics,Epsilon Logistics Corp,2026,3,9100,Amortization Expense,32057.11193852362
+epsilon_logistics,Epsilon Logistics Corp,2026,3,9500,Interest Expense,31021.870410184132
+epsilon_logistics,Epsilon Logistics Corp,2026,4,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,4,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,4,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,4,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,4,6200,Rent,48522.94421818862
+epsilon_logistics,Epsilon Logistics Corp,2026,4,6300,Utilities,59268.1451773034
+epsilon_logistics,Epsilon Logistics Corp,2026,4,6400,Insurance,34162.01103823669
+epsilon_logistics,Epsilon Logistics Corp,2026,4,6500,Professional Fees,49460.067367521035
+epsilon_logistics,Epsilon Logistics Corp,2026,4,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,4,7100,Advertising,41144.77299261309
+epsilon_logistics,Epsilon Logistics Corp,2026,4,7200,Travel and Entertainment,71138.53340511273
+epsilon_logistics,Epsilon Logistics Corp,2026,4,8000,Research and Development,32035.020606724753
+epsilon_logistics,Epsilon Logistics Corp,2026,4,9000,Depreciation Expense,82542.74987697022
+epsilon_logistics,Epsilon Logistics Corp,2026,4,9100,Amortization Expense,31011.46130463885
+epsilon_logistics,Epsilon Logistics Corp,2026,4,9500,Interest Expense,30114.76824302687
+epsilon_logistics,Epsilon Logistics Corp,2026,5,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,5,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,5,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,5,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,5,6200,Rent,73524.24113305804
+epsilon_logistics,Epsilon Logistics Corp,2026,5,6300,Utilities,43685.293787135255
+epsilon_logistics,Epsilon Logistics Corp,2026,5,6400,Insurance,42842.01876026091
+epsilon_logistics,Epsilon Logistics Corp,2026,5,6500,Professional Fees,73950.97575113713
+epsilon_logistics,Epsilon Logistics Corp,2026,5,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,5,7100,Advertising,74295.79952530707
+epsilon_logistics,Epsilon Logistics Corp,2026,5,7200,Travel and Entertainment,55914.04972089693
+epsilon_logistics,Epsilon Logistics Corp,2026,5,8000,Research and Development,54733.84609695228
+epsilon_logistics,Epsilon Logistics Corp,2026,5,9000,Depreciation Expense,40547.75619128693
+epsilon_logistics,Epsilon Logistics Corp,2026,5,9100,Amortization Expense,84070.41359460291
+epsilon_logistics,Epsilon Logistics Corp,2026,5,9500,Interest Expense,70995.44307268284
+epsilon_logistics,Epsilon Logistics Corp,2026,6,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,6,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,6,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,6,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,6,6200,Rent,72032.38628993565
+epsilon_logistics,Epsilon Logistics Corp,2026,6,6300,Utilities,51329.06207807775
+epsilon_logistics,Epsilon Logistics Corp,2026,6,6400,Insurance,81586.75386392706
+epsilon_logistics,Epsilon Logistics Corp,2026,6,6500,Professional Fees,61032.60423437598
+epsilon_logistics,Epsilon Logistics Corp,2026,6,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,6,7100,Advertising,82391.91390440395
+epsilon_logistics,Epsilon Logistics Corp,2026,6,7200,Travel and Entertainment,39506.30148728529
+epsilon_logistics,Epsilon Logistics Corp,2026,6,8000,Research and Development,87666.49292055897
+epsilon_logistics,Epsilon Logistics Corp,2026,6,9000,Depreciation Expense,82974.64088086868
+epsilon_logistics,Epsilon Logistics Corp,2026,6,9100,Amortization Expense,44588.605356907174
+epsilon_logistics,Epsilon Logistics Corp,2026,6,9500,Interest Expense,78598.66189608396
+epsilon_logistics,Epsilon Logistics Corp,2026,7,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,7,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,7,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,7,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,7,6200,Rent,46068.475086536964
+epsilon_logistics,Epsilon Logistics Corp,2026,7,6300,Utilities,62782.82967109071
+epsilon_logistics,Epsilon Logistics Corp,2026,7,6400,Insurance,73141.68250194706
+epsilon_logistics,Epsilon Logistics Corp,2026,7,6500,Professional Fees,36700.49044744194
+epsilon_logistics,Epsilon Logistics Corp,2026,7,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,7,7100,Advertising,68206.43319456824
+epsilon_logistics,Epsilon Logistics Corp,2026,7,7200,Travel and Entertainment,49165.861443757996
+epsilon_logistics,Epsilon Logistics Corp,2026,7,8000,Research and Development,30999.5081124721
+epsilon_logistics,Epsilon Logistics Corp,2026,7,9000,Depreciation Expense,58222.28020354987
+epsilon_logistics,Epsilon Logistics Corp,2026,7,9100,Amortization Expense,35679.416571337366
+epsilon_logistics,Epsilon Logistics Corp,2026,7,9500,Interest Expense,67271.24389101591
+epsilon_logistics,Epsilon Logistics Corp,2026,8,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,8,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,8,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,8,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,8,6200,Rent,80684.79383864164
+epsilon_logistics,Epsilon Logistics Corp,2026,8,6300,Utilities,70215.90994202919
+epsilon_logistics,Epsilon Logistics Corp,2026,8,6400,Insurance,33287.39834141053
+epsilon_logistics,Epsilon Logistics Corp,2026,8,6500,Professional Fees,66120.5687124877
+epsilon_logistics,Epsilon Logistics Corp,2026,8,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,8,7100,Advertising,33060.257557541234
+epsilon_logistics,Epsilon Logistics Corp,2026,8,7200,Travel and Entertainment,87092.87269971475
+epsilon_logistics,Epsilon Logistics Corp,2026,8,8000,Research and Development,31102.54863417139
+epsilon_logistics,Epsilon Logistics Corp,2026,8,9000,Depreciation Expense,87188.93008019839
+epsilon_logistics,Epsilon Logistics Corp,2026,8,9100,Amortization Expense,37989.6844191661
+epsilon_logistics,Epsilon Logistics Corp,2026,8,9500,Interest Expense,68371.35749428663
+epsilon_logistics,Epsilon Logistics Corp,2026,9,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,9,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,9,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,9,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,9,6200,Rent,34770.53066041054
+epsilon_logistics,Epsilon Logistics Corp,2026,9,6300,Utilities,36576.43628863546
+epsilon_logistics,Epsilon Logistics Corp,2026,9,6400,Insurance,78019.37329825124
+epsilon_logistics,Epsilon Logistics Corp,2026,9,6500,Professional Fees,84228.08314066251
+epsilon_logistics,Epsilon Logistics Corp,2026,9,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,9,7100,Advertising,52166.31250038029
+epsilon_logistics,Epsilon Logistics Corp,2026,9,7200,Travel and Entertainment,49712.3427527809
+epsilon_logistics,Epsilon Logistics Corp,2026,9,8000,Research and Development,49975.86493968167
+epsilon_logistics,Epsilon Logistics Corp,2026,9,9000,Depreciation Expense,46588.19687851092
+epsilon_logistics,Epsilon Logistics Corp,2026,9,9100,Amortization Expense,60534.75772420555
+epsilon_logistics,Epsilon Logistics Corp,2026,9,9500,Interest Expense,65812.78133914512
+epsilon_logistics,Epsilon Logistics Corp,2026,10,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,10,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,10,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,10,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,10,6200,Rent,46990.569569723506
+epsilon_logistics,Epsilon Logistics Corp,2026,10,6300,Utilities,54213.88834546676
+epsilon_logistics,Epsilon Logistics Corp,2026,10,6400,Insurance,49897.9159260212
+epsilon_logistics,Epsilon Logistics Corp,2026,10,6500,Professional Fees,69457.22135579534
+epsilon_logistics,Epsilon Logistics Corp,2026,10,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,10,7100,Advertising,51588.150500220545
+epsilon_logistics,Epsilon Logistics Corp,2026,10,7200,Travel and Entertainment,79343.29198524919
+epsilon_logistics,Epsilon Logistics Corp,2026,10,8000,Research and Development,30402.571827911022
+epsilon_logistics,Epsilon Logistics Corp,2026,10,9000,Depreciation Expense,77409.96501221445
+epsilon_logistics,Epsilon Logistics Corp,2026,10,9100,Amortization Expense,75916.09900292657
+epsilon_logistics,Epsilon Logistics Corp,2026,10,9500,Interest Expense,68215.33600789157
+epsilon_logistics,Epsilon Logistics Corp,2026,11,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,11,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,11,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,11,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,11,6200,Rent,66253.23328475397
+epsilon_logistics,Epsilon Logistics Corp,2026,11,6300,Utilities,45197.362041528715
+epsilon_logistics,Epsilon Logistics Corp,2026,11,6400,Insurance,80315.47975877096
+epsilon_logistics,Epsilon Logistics Corp,2026,11,6500,Professional Fees,82786.82056188922
+epsilon_logistics,Epsilon Logistics Corp,2026,11,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,11,7100,Advertising,73949.32400388934
+epsilon_logistics,Epsilon Logistics Corp,2026,11,7200,Travel and Entertainment,35531.313884416195
+epsilon_logistics,Epsilon Logistics Corp,2026,11,8000,Research and Development,51336.566199556844
+epsilon_logistics,Epsilon Logistics Corp,2026,11,9000,Depreciation Expense,74477.40584525334
+epsilon_logistics,Epsilon Logistics Corp,2026,11,9100,Amortization Expense,63095.26548554058
+epsilon_logistics,Epsilon Logistics Corp,2026,11,9500,Interest Expense,83713.3134608917
+epsilon_logistics,Epsilon Logistics Corp,2026,12,4100,Service Revenue,6666666.666666667
+epsilon_logistics,Epsilon Logistics Corp,2026,12,5300,Cost of Services,5200000.0
+epsilon_logistics,Epsilon Logistics Corp,2026,12,6000,Salaries and Wages,513333.3333333333
+epsilon_logistics,Epsilon Logistics Corp,2026,12,6100,Employee Benefits,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,12,6200,Rent,80350.54156900979
+epsilon_logistics,Epsilon Logistics Corp,2026,12,6300,Utilities,71869.95986974263
+epsilon_logistics,Epsilon Logistics Corp,2026,12,6400,Insurance,75257.13155695984
+epsilon_logistics,Epsilon Logistics Corp,2026,12,6500,Professional Fees,66399.00048879365
+epsilon_logistics,Epsilon Logistics Corp,2026,12,7000,Sales and Marketing,117333.33333333334
+epsilon_logistics,Epsilon Logistics Corp,2026,12,7100,Advertising,72922.30417001578
+epsilon_logistics,Epsilon Logistics Corp,2026,12,7200,Travel and Entertainment,43650.09405340356
+epsilon_logistics,Epsilon Logistics Corp,2026,12,8000,Research and Development,70352.41079828003
+epsilon_logistics,Epsilon Logistics Corp,2026,12,9000,Depreciation Expense,81849.22767908243
+epsilon_logistics,Epsilon Logistics Corp,2026,12,9100,Amortization Expense,33537.26681447569
+epsilon_logistics,Epsilon Logistics Corp,2026,12,9500,Interest Expense,31521.631864068226
+zeta_distribution,Zeta Distribution Inc,2026,1,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,1,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,1,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,1,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,1,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,1,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,1,6200,Rent,52141.25590397778
+zeta_distribution,Zeta Distribution Inc,2026,1,6300,Utilities,63146.97071785753
+zeta_distribution,Zeta Distribution Inc,2026,1,6400,Insurance,64480.974984777626
+zeta_distribution,Zeta Distribution Inc,2026,1,6500,Professional Fees,117546.76552527685
+zeta_distribution,Zeta Distribution Inc,2026,1,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,1,7100,Advertising,83578.84567164116
+zeta_distribution,Zeta Distribution Inc,2026,1,7200,Travel and Entertainment,51756.12082199837
+zeta_distribution,Zeta Distribution Inc,2026,1,8000,Research and Development,77630.80417915751
+zeta_distribution,Zeta Distribution Inc,2026,1,9000,Depreciation Expense,71685.55778596616
+zeta_distribution,Zeta Distribution Inc,2026,1,9100,Amortization Expense,70712.59842764834
+zeta_distribution,Zeta Distribution Inc,2026,1,9500,Interest Expense,102869.48684161608
+zeta_distribution,Zeta Distribution Inc,2026,2,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,2,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,2,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,2,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,2,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,2,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,2,6200,Rent,78590.05308986593
+zeta_distribution,Zeta Distribution Inc,2026,2,6300,Utilities,134636.01311692476
+zeta_distribution,Zeta Distribution Inc,2026,2,6400,Insurance,131158.7409394868
+zeta_distribution,Zeta Distribution Inc,2026,2,6500,Professional Fees,56919.19162224376
+zeta_distribution,Zeta Distribution Inc,2026,2,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,2,7100,Advertising,65059.5646674101
+zeta_distribution,Zeta Distribution Inc,2026,2,7200,Travel and Entertainment,108763.4706079749
+zeta_distribution,Zeta Distribution Inc,2026,2,8000,Research and Development,84251.61946552353
+zeta_distribution,Zeta Distribution Inc,2026,2,9000,Depreciation Expense,133369.12649652467
+zeta_distribution,Zeta Distribution Inc,2026,2,9100,Amortization Expense,123454.44545036562
+zeta_distribution,Zeta Distribution Inc,2026,2,9500,Interest Expense,84361.14048491664
+zeta_distribution,Zeta Distribution Inc,2026,3,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,3,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,3,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,3,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,3,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,3,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,3,6200,Rent,106658.4393997717
+zeta_distribution,Zeta Distribution Inc,2026,3,6300,Utilities,89862.32905417237
+zeta_distribution,Zeta Distribution Inc,2026,3,6400,Insurance,64257.26240738345
+zeta_distribution,Zeta Distribution Inc,2026,3,6500,Professional Fees,110063.39025744135
+zeta_distribution,Zeta Distribution Inc,2026,3,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,3,7100,Advertising,51344.78177989953
+zeta_distribution,Zeta Distribution Inc,2026,3,7200,Travel and Entertainment,115562.99090796418
+zeta_distribution,Zeta Distribution Inc,2026,3,8000,Research and Development,82117.22622966616
+zeta_distribution,Zeta Distribution Inc,2026,3,9000,Depreciation Expense,67251.44066796622
+zeta_distribution,Zeta Distribution Inc,2026,3,9100,Amortization Expense,85033.42453141315
+zeta_distribution,Zeta Distribution Inc,2026,3,9500,Interest Expense,80867.2711671841
+zeta_distribution,Zeta Distribution Inc,2026,4,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,4,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,4,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,4,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,4,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,4,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,4,6200,Rent,79500.68279803904
+zeta_distribution,Zeta Distribution Inc,2026,4,6300,Utilities,53828.95363530951
+zeta_distribution,Zeta Distribution Inc,2026,4,6400,Insurance,96025.65984293622
+zeta_distribution,Zeta Distribution Inc,2026,4,6500,Professional Fees,83573.18679152022
+zeta_distribution,Zeta Distribution Inc,2026,4,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,4,7100,Advertising,72158.89024277453
+zeta_distribution,Zeta Distribution Inc,2026,4,7200,Travel and Entertainment,108064.71542786299
+zeta_distribution,Zeta Distribution Inc,2026,4,8000,Research and Development,92274.88352656797
+zeta_distribution,Zeta Distribution Inc,2026,4,9000,Depreciation Expense,88680.37152345922
+zeta_distribution,Zeta Distribution Inc,2026,4,9100,Amortization Expense,108242.58755350123
+zeta_distribution,Zeta Distribution Inc,2026,4,9500,Interest Expense,133933.25355388425
+zeta_distribution,Zeta Distribution Inc,2026,5,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,5,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,5,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,5,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,5,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,5,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,5,6200,Rent,85898.97571517069
+zeta_distribution,Zeta Distribution Inc,2026,5,6300,Utilities,134202.2099562487
+zeta_distribution,Zeta Distribution Inc,2026,5,6400,Insurance,78224.82967364117
+zeta_distribution,Zeta Distribution Inc,2026,5,6500,Professional Fees,127050.1080403348
+zeta_distribution,Zeta Distribution Inc,2026,5,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,5,7100,Advertising,113086.64199968925
+zeta_distribution,Zeta Distribution Inc,2026,5,7200,Travel and Entertainment,110827.90976986014
+zeta_distribution,Zeta Distribution Inc,2026,5,8000,Research and Development,132277.3938368674
+zeta_distribution,Zeta Distribution Inc,2026,5,9000,Depreciation Expense,60020.47492200967
+zeta_distribution,Zeta Distribution Inc,2026,5,9100,Amortization Expense,91775.71470034671
+zeta_distribution,Zeta Distribution Inc,2026,5,9500,Interest Expense,49400.505475117214
+zeta_distribution,Zeta Distribution Inc,2026,6,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,6,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,6,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,6,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,6,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,6,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,6,6200,Rent,114595.82582601918
+zeta_distribution,Zeta Distribution Inc,2026,6,6300,Utilities,90485.48256894985
+zeta_distribution,Zeta Distribution Inc,2026,6,6400,Insurance,68498.582150616
+zeta_distribution,Zeta Distribution Inc,2026,6,6500,Professional Fees,117835.72392859543
+zeta_distribution,Zeta Distribution Inc,2026,6,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,6,7100,Advertising,63051.340537673896
+zeta_distribution,Zeta Distribution Inc,2026,6,7200,Travel and Entertainment,107691.91144743608
+zeta_distribution,Zeta Distribution Inc,2026,6,8000,Research and Development,47952.02063309166
+zeta_distribution,Zeta Distribution Inc,2026,6,9000,Depreciation Expense,119254.86116719685
+zeta_distribution,Zeta Distribution Inc,2026,6,9100,Amortization Expense,66487.66037557514
+zeta_distribution,Zeta Distribution Inc,2026,6,9500,Interest Expense,90667.37735730564
+zeta_distribution,Zeta Distribution Inc,2026,7,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,7,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,7,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,7,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,7,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,7,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,7,6200,Rent,83236.05021485352
+zeta_distribution,Zeta Distribution Inc,2026,7,6300,Utilities,89120.3064185177
+zeta_distribution,Zeta Distribution Inc,2026,7,6400,Insurance,92186.62577360973
+zeta_distribution,Zeta Distribution Inc,2026,7,6500,Professional Fees,59980.928679097175
+zeta_distribution,Zeta Distribution Inc,2026,7,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,7,7100,Advertising,84735.96596014881
+zeta_distribution,Zeta Distribution Inc,2026,7,7200,Travel and Entertainment,122608.54182262329
+zeta_distribution,Zeta Distribution Inc,2026,7,8000,Research and Development,55265.179018100636
+zeta_distribution,Zeta Distribution Inc,2026,7,9000,Depreciation Expense,95175.428399198
+zeta_distribution,Zeta Distribution Inc,2026,7,9100,Amortization Expense,91940.02946916722
+zeta_distribution,Zeta Distribution Inc,2026,7,9500,Interest Expense,55824.808392863706
+zeta_distribution,Zeta Distribution Inc,2026,8,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,8,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,8,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,8,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,8,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,8,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,8,6200,Rent,46453.095571169295
+zeta_distribution,Zeta Distribution Inc,2026,8,6300,Utilities,118060.49090592275
+zeta_distribution,Zeta Distribution Inc,2026,8,6400,Insurance,69392.97596518404
+zeta_distribution,Zeta Distribution Inc,2026,8,6500,Professional Fees,49326.447855347666
+zeta_distribution,Zeta Distribution Inc,2026,8,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,8,7100,Advertising,127375.10483648481
+zeta_distribution,Zeta Distribution Inc,2026,8,7200,Travel and Entertainment,99589.12662479392
+zeta_distribution,Zeta Distribution Inc,2026,8,8000,Research and Development,110928.68110728782
+zeta_distribution,Zeta Distribution Inc,2026,8,9000,Depreciation Expense,76066.89410998153
+zeta_distribution,Zeta Distribution Inc,2026,8,9100,Amortization Expense,105948.50967755743
+zeta_distribution,Zeta Distribution Inc,2026,8,9500,Interest Expense,80553.78962289801
+zeta_distribution,Zeta Distribution Inc,2026,9,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,9,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,9,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,9,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,9,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,9,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,9,6200,Rent,95175.01061829123
+zeta_distribution,Zeta Distribution Inc,2026,9,6300,Utilities,87794.70380818303
+zeta_distribution,Zeta Distribution Inc,2026,9,6400,Insurance,68369.92616717667
+zeta_distribution,Zeta Distribution Inc,2026,9,6500,Professional Fees,128651.07258758873
+zeta_distribution,Zeta Distribution Inc,2026,9,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,9,7100,Advertising,82245.16826511973
+zeta_distribution,Zeta Distribution Inc,2026,9,7200,Travel and Entertainment,108025.89396945204
+zeta_distribution,Zeta Distribution Inc,2026,9,8000,Research and Development,52544.26609395794
+zeta_distribution,Zeta Distribution Inc,2026,9,9000,Depreciation Expense,81236.38413841881
+zeta_distribution,Zeta Distribution Inc,2026,9,9100,Amortization Expense,49613.10945236784
+zeta_distribution,Zeta Distribution Inc,2026,9,9500,Interest Expense,129035.60179995344
+zeta_distribution,Zeta Distribution Inc,2026,10,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,10,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,10,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,10,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,10,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,10,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,10,6200,Rent,92649.97002248083
+zeta_distribution,Zeta Distribution Inc,2026,10,6300,Utilities,123304.88829059874
+zeta_distribution,Zeta Distribution Inc,2026,10,6400,Insurance,99290.55688883243
+zeta_distribution,Zeta Distribution Inc,2026,10,6500,Professional Fees,104177.12981627006
+zeta_distribution,Zeta Distribution Inc,2026,10,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,10,7100,Advertising,55082.253763752764
+zeta_distribution,Zeta Distribution Inc,2026,10,7200,Travel and Entertainment,124160.80729507197
+zeta_distribution,Zeta Distribution Inc,2026,10,8000,Research and Development,66226.75726497777
+zeta_distribution,Zeta Distribution Inc,2026,10,9000,Depreciation Expense,133238.73982309538
+zeta_distribution,Zeta Distribution Inc,2026,10,9100,Amortization Expense,104674.92607233278
+zeta_distribution,Zeta Distribution Inc,2026,10,9500,Interest Expense,123880.36380557847
+zeta_distribution,Zeta Distribution Inc,2026,11,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,11,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,11,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,11,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,11,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,11,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,11,6200,Rent,111115.31233329783
+zeta_distribution,Zeta Distribution Inc,2026,11,6300,Utilities,84194.78395374723
+zeta_distribution,Zeta Distribution Inc,2026,11,6400,Insurance,120596.35341832
+zeta_distribution,Zeta Distribution Inc,2026,11,6500,Professional Fees,111654.095300779
+zeta_distribution,Zeta Distribution Inc,2026,11,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,11,7100,Advertising,45788.39515241519
+zeta_distribution,Zeta Distribution Inc,2026,11,7200,Travel and Entertainment,125224.62010150547
+zeta_distribution,Zeta Distribution Inc,2026,11,8000,Research and Development,70467.08282667499
+zeta_distribution,Zeta Distribution Inc,2026,11,9000,Depreciation Expense,69470.98381765305
+zeta_distribution,Zeta Distribution Inc,2026,11,9100,Amortization Expense,73347.18533241283
+zeta_distribution,Zeta Distribution Inc,2026,11,9500,Interest Expense,119980.53797292676
+zeta_distribution,Zeta Distribution Inc,2026,12,4000,Product Sales,12500000.0
+zeta_distribution,Zeta Distribution Inc,2026,12,5000,Cost of Goods Sold - Materials,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,12,5100,Cost of Goods Sold - Labor,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,12,5200,Cost of Goods Sold - Overhead,3416666.6666666665
+zeta_distribution,Zeta Distribution Inc,2026,12,6000,Salaries and Wages,787500.0
+zeta_distribution,Zeta Distribution Inc,2026,12,6100,Employee Benefits,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,12,6200,Rent,72491.16257352759
+zeta_distribution,Zeta Distribution Inc,2026,12,6300,Utilities,47228.79180384315
+zeta_distribution,Zeta Distribution Inc,2026,12,6400,Insurance,102242.4562070089
+zeta_distribution,Zeta Distribution Inc,2026,12,6500,Professional Fees,131521.92027629577
+zeta_distribution,Zeta Distribution Inc,2026,12,7000,Sales and Marketing,180000.0
+zeta_distribution,Zeta Distribution Inc,2026,12,7100,Advertising,88024.96461742498
+zeta_distribution,Zeta Distribution Inc,2026,12,7200,Travel and Entertainment,80428.8660513205
+zeta_distribution,Zeta Distribution Inc,2026,12,8000,Research and Development,47441.59860605836
+zeta_distribution,Zeta Distribution Inc,2026,12,9000,Depreciation Expense,113421.83899498142
+zeta_distribution,Zeta Distribution Inc,2026,12,9100,Amortization Expense,53968.149136214626
+zeta_distribution,Zeta Distribution Inc,2026,12,9500,Interest Expense,56503.42693202061
+eta_analytics,Eta Analytics Partners,2026,1,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,1,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,1,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,1,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,1,6200,Rent,71420.08089526699
+eta_analytics,Eta Analytics Partners,2026,1,6300,Utilities,28002.586205561092
+eta_analytics,Eta Analytics Partners,2026,1,6400,Insurance,31390.473773972502
+eta_analytics,Eta Analytics Partners,2026,1,6500,Professional Fees,46111.00473258417
+eta_analytics,Eta Analytics Partners,2026,1,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,1,7100,Advertising,73141.55351575483
+eta_analytics,Eta Analytics Partners,2026,1,7200,Travel and Entertainment,76916.238609623
+eta_analytics,Eta Analytics Partners,2026,1,8000,Research and Development,73848.40553986393
+eta_analytics,Eta Analytics Partners,2026,1,9000,Depreciation Expense,35265.33028499298
+eta_analytics,Eta Analytics Partners,2026,1,9100,Amortization Expense,31852.528634504542
+eta_analytics,Eta Analytics Partners,2026,1,9500,Interest Expense,58244.182802441945
+eta_analytics,Eta Analytics Partners,2026,2,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,2,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,2,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,2,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,2,6200,Rent,68630.45558676109
+eta_analytics,Eta Analytics Partners,2026,2,6300,Utilities,63836.32298391404
+eta_analytics,Eta Analytics Partners,2026,2,6400,Insurance,56358.71215441784
+eta_analytics,Eta Analytics Partners,2026,2,6500,Professional Fees,55326.88941485654
+eta_analytics,Eta Analytics Partners,2026,2,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,2,7100,Advertising,80391.19442509889
+eta_analytics,Eta Analytics Partners,2026,2,7200,Travel and Entertainment,36469.9155251962
+eta_analytics,Eta Analytics Partners,2026,2,8000,Research and Development,54544.510162378276
+eta_analytics,Eta Analytics Partners,2026,2,9000,Depreciation Expense,61329.839121518635
+eta_analytics,Eta Analytics Partners,2026,2,9100,Amortization Expense,61735.56708218038
+eta_analytics,Eta Analytics Partners,2026,2,9500,Interest Expense,37994.835278117745
+eta_analytics,Eta Analytics Partners,2026,3,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,3,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,3,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,3,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,3,6200,Rent,35886.4072185752
+eta_analytics,Eta Analytics Partners,2026,3,6300,Utilities,60109.14196713126
+eta_analytics,Eta Analytics Partners,2026,3,6400,Insurance,65091.15252328749
+eta_analytics,Eta Analytics Partners,2026,3,6500,Professional Fees,44406.87932905401
+eta_analytics,Eta Analytics Partners,2026,3,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,3,7100,Advertising,76960.58834689771
+eta_analytics,Eta Analytics Partners,2026,3,7200,Travel and Entertainment,34789.58549105879
+eta_analytics,Eta Analytics Partners,2026,3,8000,Research and Development,55187.1263950437
+eta_analytics,Eta Analytics Partners,2026,3,9000,Depreciation Expense,48723.27700772962
+eta_analytics,Eta Analytics Partners,2026,3,9100,Amortization Expense,46067.64120822046
+eta_analytics,Eta Analytics Partners,2026,3,9500,Interest Expense,65472.0467248864
+eta_analytics,Eta Analytics Partners,2026,4,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,4,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,4,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,4,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,4,6200,Rent,52169.41950706595
+eta_analytics,Eta Analytics Partners,2026,4,6300,Utilities,52828.23291155843
+eta_analytics,Eta Analytics Partners,2026,4,6400,Insurance,40075.76028723786
+eta_analytics,Eta Analytics Partners,2026,4,6500,Professional Fees,37011.151891991874
+eta_analytics,Eta Analytics Partners,2026,4,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,4,7100,Advertising,40116.30742688557
+eta_analytics,Eta Analytics Partners,2026,4,7200,Travel and Entertainment,51248.784914165946
+eta_analytics,Eta Analytics Partners,2026,4,8000,Research and Development,64151.71983842086
+eta_analytics,Eta Analytics Partners,2026,4,9000,Depreciation Expense,39932.41018633707
+eta_analytics,Eta Analytics Partners,2026,4,9100,Amortization Expense,62315.65112642852
+eta_analytics,Eta Analytics Partners,2026,4,9500,Interest Expense,42441.507623865014
+eta_analytics,Eta Analytics Partners,2026,5,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,5,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,5,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,5,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,5,6200,Rent,45696.45503816263
+eta_analytics,Eta Analytics Partners,2026,5,6300,Utilities,44472.988772834535
+eta_analytics,Eta Analytics Partners,2026,5,6400,Insurance,38870.60455479834
+eta_analytics,Eta Analytics Partners,2026,5,6500,Professional Fees,47952.56823882105
+eta_analytics,Eta Analytics Partners,2026,5,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,5,7100,Advertising,33277.02952633132
+eta_analytics,Eta Analytics Partners,2026,5,7200,Travel and Entertainment,32182.18852642271
+eta_analytics,Eta Analytics Partners,2026,5,8000,Research and Development,72966.54178842195
+eta_analytics,Eta Analytics Partners,2026,5,9000,Depreciation Expense,35138.927454935525
+eta_analytics,Eta Analytics Partners,2026,5,9100,Amortization Expense,48684.82485399685
+eta_analytics,Eta Analytics Partners,2026,5,9500,Interest Expense,67115.10108247049
+eta_analytics,Eta Analytics Partners,2026,6,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,6,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,6,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,6,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,6,6200,Rent,50398.175705139314
+eta_analytics,Eta Analytics Partners,2026,6,6300,Utilities,80844.68610342758
+eta_analytics,Eta Analytics Partners,2026,6,6400,Insurance,70697.05677166361
+eta_analytics,Eta Analytics Partners,2026,6,6500,Professional Fees,79306.85628681455
+eta_analytics,Eta Analytics Partners,2026,6,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,6,7100,Advertising,66361.72030253454
+eta_analytics,Eta Analytics Partners,2026,6,7200,Travel and Entertainment,50056.86589124062
+eta_analytics,Eta Analytics Partners,2026,6,8000,Research and Development,73327.90913603194
+eta_analytics,Eta Analytics Partners,2026,6,9000,Depreciation Expense,31111.740356242364
+eta_analytics,Eta Analytics Partners,2026,6,9100,Amortization Expense,40357.41128130501
+eta_analytics,Eta Analytics Partners,2026,6,9500,Interest Expense,80568.40324629619
+eta_analytics,Eta Analytics Partners,2026,7,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,7,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,7,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,7,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,7,6200,Rent,63744.930049592884
+eta_analytics,Eta Analytics Partners,2026,7,6300,Utilities,72215.86178306455
+eta_analytics,Eta Analytics Partners,2026,7,6400,Insurance,72310.47657676718
+eta_analytics,Eta Analytics Partners,2026,7,6500,Professional Fees,51436.149184560934
+eta_analytics,Eta Analytics Partners,2026,7,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,7,7100,Advertising,28084.073997969674
+eta_analytics,Eta Analytics Partners,2026,7,7200,Travel and Entertainment,70223.89855219318
+eta_analytics,Eta Analytics Partners,2026,7,8000,Research and Development,68333.65705053357
+eta_analytics,Eta Analytics Partners,2026,7,9000,Depreciation Expense,65344.31139956252
+eta_analytics,Eta Analytics Partners,2026,7,9100,Amortization Expense,56110.24393298681
+eta_analytics,Eta Analytics Partners,2026,7,9500,Interest Expense,57112.997934047235
+eta_analytics,Eta Analytics Partners,2026,8,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,8,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,8,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,8,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,8,6200,Rent,30186.42705857831
+eta_analytics,Eta Analytics Partners,2026,8,6300,Utilities,45198.23933751113
+eta_analytics,Eta Analytics Partners,2026,8,6400,Insurance,33514.42179234204
+eta_analytics,Eta Analytics Partners,2026,8,6500,Professional Fees,44451.83306983559
+eta_analytics,Eta Analytics Partners,2026,8,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,8,7100,Advertising,72111.3266129936
+eta_analytics,Eta Analytics Partners,2026,8,7200,Travel and Entertainment,73566.30093358165
+eta_analytics,Eta Analytics Partners,2026,8,8000,Research and Development,51559.07615550483
+eta_analytics,Eta Analytics Partners,2026,8,9000,Depreciation Expense,28696.905023584408
+eta_analytics,Eta Analytics Partners,2026,8,9100,Amortization Expense,33611.17372225436
+eta_analytics,Eta Analytics Partners,2026,8,9500,Interest Expense,61671.785410038116
+eta_analytics,Eta Analytics Partners,2026,9,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,9,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,9,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,9,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,9,6200,Rent,64787.85111072761
+eta_analytics,Eta Analytics Partners,2026,9,6300,Utilities,58532.28964441314
+eta_analytics,Eta Analytics Partners,2026,9,6400,Insurance,72910.21592173445
+eta_analytics,Eta Analytics Partners,2026,9,6500,Professional Fees,71566.03626280616
+eta_analytics,Eta Analytics Partners,2026,9,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,9,7100,Advertising,65833.9999019638
+eta_analytics,Eta Analytics Partners,2026,9,7200,Travel and Entertainment,80519.51824422786
+eta_analytics,Eta Analytics Partners,2026,9,8000,Research and Development,52322.70082982172
+eta_analytics,Eta Analytics Partners,2026,9,9000,Depreciation Expense,72166.82243566927
+eta_analytics,Eta Analytics Partners,2026,9,9100,Amortization Expense,48486.51182399539
+eta_analytics,Eta Analytics Partners,2026,9,9500,Interest Expense,27143.040894661877
+eta_analytics,Eta Analytics Partners,2026,10,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,10,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,10,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,10,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,10,6200,Rent,44846.181253725736
+eta_analytics,Eta Analytics Partners,2026,10,6300,Utilities,72307.12189967785
+eta_analytics,Eta Analytics Partners,2026,10,6400,Insurance,37216.178481014744
+eta_analytics,Eta Analytics Partners,2026,10,6500,Professional Fees,71035.56060160918
+eta_analytics,Eta Analytics Partners,2026,10,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,10,7100,Advertising,38581.502912401265
+eta_analytics,Eta Analytics Partners,2026,10,7200,Travel and Entertainment,55066.19430411681
+eta_analytics,Eta Analytics Partners,2026,10,8000,Research and Development,40123.38100521839
+eta_analytics,Eta Analytics Partners,2026,10,9000,Depreciation Expense,41822.377650520146
+eta_analytics,Eta Analytics Partners,2026,10,9100,Amortization Expense,65948.27343615078
+eta_analytics,Eta Analytics Partners,2026,10,9500,Interest Expense,47817.000773683205
+eta_analytics,Eta Analytics Partners,2026,11,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,11,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,11,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,11,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,11,6200,Rent,46514.63491608134
+eta_analytics,Eta Analytics Partners,2026,11,6300,Utilities,67381.96682983538
+eta_analytics,Eta Analytics Partners,2026,11,6400,Insurance,66186.95069691524
+eta_analytics,Eta Analytics Partners,2026,11,6500,Professional Fees,60937.98563985751
+eta_analytics,Eta Analytics Partners,2026,11,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,11,7100,Advertising,49854.26609356288
+eta_analytics,Eta Analytics Partners,2026,11,7200,Travel and Entertainment,75905.13555327946
+eta_analytics,Eta Analytics Partners,2026,11,8000,Research and Development,53817.92223430662
+eta_analytics,Eta Analytics Partners,2026,11,9000,Depreciation Expense,41390.80549693772
+eta_analytics,Eta Analytics Partners,2026,11,9100,Amortization Expense,54942.72117461729
+eta_analytics,Eta Analytics Partners,2026,11,9500,Interest Expense,75564.29841837593
+eta_analytics,Eta Analytics Partners,2026,12,4100,Service Revenue,2083333.3333333333
+eta_analytics,Eta Analytics Partners,2026,12,5300,Cost of Services,729166.6666666666
+eta_analytics,Eta Analytics Partners,2026,12,6000,Salaries and Wages,473958.3333333333
+eta_analytics,Eta Analytics Partners,2026,12,6100,Employee Benefits,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,12,6200,Rent,78640.13390298536
+eta_analytics,Eta Analytics Partners,2026,12,6300,Utilities,34691.93565713857
+eta_analytics,Eta Analytics Partners,2026,12,6400,Insurance,50443.29891715485
+eta_analytics,Eta Analytics Partners,2026,12,6500,Professional Fees,70096.08070233044
+eta_analytics,Eta Analytics Partners,2026,12,7000,Sales and Marketing,108333.33333333334
+eta_analytics,Eta Analytics Partners,2026,12,7100,Advertising,34931.471271442395
+eta_analytics,Eta Analytics Partners,2026,12,7200,Travel and Entertainment,44682.02905974551
+eta_analytics,Eta Analytics Partners,2026,12,8000,Research and Development,75367.50046760608
+eta_analytics,Eta Analytics Partners,2026,12,9000,Depreciation Expense,70304.41796324226
+eta_analytics,Eta Analytics Partners,2026,12,9100,Amortization Expense,69110.21561452857
+eta_analytics,Eta Analytics Partners,2026,12,9500,Interest Expense,41618.44033298741
+theta_packaging,Theta Sustainable Packaging,2026,1,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,1,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,1,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,1,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,1,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,1,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,1,6200,Rent,45871.84490944579
+theta_packaging,Theta Sustainable Packaging,2026,1,6300,Utilities,35301.85254009926
+theta_packaging,Theta Sustainable Packaging,2026,1,6400,Insurance,37056.74807866163
+theta_packaging,Theta Sustainable Packaging,2026,1,6500,Professional Fees,69776.83305152376
+theta_packaging,Theta Sustainable Packaging,2026,1,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,1,7100,Advertising,60138.24994712518
+theta_packaging,Theta Sustainable Packaging,2026,1,7200,Travel and Entertainment,78011.30322915314
+theta_packaging,Theta Sustainable Packaging,2026,1,8000,Research and Development,47328.37587922608
+theta_packaging,Theta Sustainable Packaging,2026,1,9000,Depreciation Expense,73988.43230243775
+theta_packaging,Theta Sustainable Packaging,2026,1,9100,Amortization Expense,56338.35857434124
+theta_packaging,Theta Sustainable Packaging,2026,1,9500,Interest Expense,44591.48166699687
+theta_packaging,Theta Sustainable Packaging,2026,2,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,2,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,2,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,2,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,2,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,2,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,2,6200,Rent,46066.57586094954
+theta_packaging,Theta Sustainable Packaging,2026,2,6300,Utilities,36743.90603974152
+theta_packaging,Theta Sustainable Packaging,2026,2,6400,Insurance,58752.087364566774
+theta_packaging,Theta Sustainable Packaging,2026,2,6500,Professional Fees,81721.69809179848
+theta_packaging,Theta Sustainable Packaging,2026,2,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,2,7100,Advertising,33279.786223619405
+theta_packaging,Theta Sustainable Packaging,2026,2,7200,Travel and Entertainment,44287.982880455726
+theta_packaging,Theta Sustainable Packaging,2026,2,8000,Research and Development,45197.90157527657
+theta_packaging,Theta Sustainable Packaging,2026,2,9000,Depreciation Expense,45290.14927511139
+theta_packaging,Theta Sustainable Packaging,2026,2,9100,Amortization Expense,68533.37017669002
+theta_packaging,Theta Sustainable Packaging,2026,2,9500,Interest Expense,77202.4288077756
+theta_packaging,Theta Sustainable Packaging,2026,3,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,3,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,3,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,3,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,3,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,3,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,3,6200,Rent,58844.89588559424
+theta_packaging,Theta Sustainable Packaging,2026,3,6300,Utilities,58542.47467758647
+theta_packaging,Theta Sustainable Packaging,2026,3,6400,Insurance,39624.600840915824
+theta_packaging,Theta Sustainable Packaging,2026,3,6500,Professional Fees,61801.492197755375
+theta_packaging,Theta Sustainable Packaging,2026,3,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,3,7100,Advertising,34445.111888881176
+theta_packaging,Theta Sustainable Packaging,2026,3,7200,Travel and Entertainment,38963.45209054201
+theta_packaging,Theta Sustainable Packaging,2026,3,8000,Research and Development,46494.51467460506
+theta_packaging,Theta Sustainable Packaging,2026,3,9000,Depreciation Expense,79659.35593736342
+theta_packaging,Theta Sustainable Packaging,2026,3,9100,Amortization Expense,31056.672759502668
+theta_packaging,Theta Sustainable Packaging,2026,3,9500,Interest Expense,49490.63814286197
+theta_packaging,Theta Sustainable Packaging,2026,4,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,4,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,4,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,4,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,4,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,4,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,4,6200,Rent,74775.7943560699
+theta_packaging,Theta Sustainable Packaging,2026,4,6300,Utilities,54506.88827612748
+theta_packaging,Theta Sustainable Packaging,2026,4,6400,Insurance,44500.42886826479
+theta_packaging,Theta Sustainable Packaging,2026,4,6500,Professional Fees,50646.12235747365
+theta_packaging,Theta Sustainable Packaging,2026,4,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,4,7100,Advertising,61211.89314335285
+theta_packaging,Theta Sustainable Packaging,2026,4,7200,Travel and Entertainment,33838.191054390234
+theta_packaging,Theta Sustainable Packaging,2026,4,8000,Research and Development,82459.2004672496
+theta_packaging,Theta Sustainable Packaging,2026,4,9000,Depreciation Expense,72872.98384086683
+theta_packaging,Theta Sustainable Packaging,2026,4,9100,Amortization Expense,35119.28472461026
+theta_packaging,Theta Sustainable Packaging,2026,4,9500,Interest Expense,50609.47973753604
+theta_packaging,Theta Sustainable Packaging,2026,5,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,5,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,5,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,5,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,5,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,5,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,5,6200,Rent,53316.63816633243
+theta_packaging,Theta Sustainable Packaging,2026,5,6300,Utilities,67650.95424129778
+theta_packaging,Theta Sustainable Packaging,2026,5,6400,Insurance,50193.124020985524
+theta_packaging,Theta Sustainable Packaging,2026,5,6500,Professional Fees,29966.68029535797
+theta_packaging,Theta Sustainable Packaging,2026,5,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,5,7100,Advertising,28597.38752161518
+theta_packaging,Theta Sustainable Packaging,2026,5,7200,Travel and Entertainment,79553.99967938215
+theta_packaging,Theta Sustainable Packaging,2026,5,8000,Research and Development,56898.26812372551
+theta_packaging,Theta Sustainable Packaging,2026,5,9000,Depreciation Expense,55920.70485015941
+theta_packaging,Theta Sustainable Packaging,2026,5,9100,Amortization Expense,78358.51565624883
+theta_packaging,Theta Sustainable Packaging,2026,5,9500,Interest Expense,37301.623239665925
+theta_packaging,Theta Sustainable Packaging,2026,6,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,6,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,6,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,6,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,6,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,6,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,6,6200,Rent,30571.580718907087
+theta_packaging,Theta Sustainable Packaging,2026,6,6300,Utilities,72857.31338904129
+theta_packaging,Theta Sustainable Packaging,2026,6,6400,Insurance,64439.69094573119
+theta_packaging,Theta Sustainable Packaging,2026,6,6500,Professional Fees,42319.823438254134
+theta_packaging,Theta Sustainable Packaging,2026,6,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,6,7100,Advertising,44042.357594627385
+theta_packaging,Theta Sustainable Packaging,2026,6,7200,Travel and Entertainment,41642.947368765614
+theta_packaging,Theta Sustainable Packaging,2026,6,8000,Research and Development,77513.74505617263
+theta_packaging,Theta Sustainable Packaging,2026,6,9000,Depreciation Expense,83047.25576552612
+theta_packaging,Theta Sustainable Packaging,2026,6,9100,Amortization Expense,83320.6095055253
+theta_packaging,Theta Sustainable Packaging,2026,6,9500,Interest Expense,39913.6095200308
+theta_packaging,Theta Sustainable Packaging,2026,7,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,7,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,7,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,7,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,7,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,7,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,7,6200,Rent,58539.678923380525
+theta_packaging,Theta Sustainable Packaging,2026,7,6300,Utilities,48127.06573233136
+theta_packaging,Theta Sustainable Packaging,2026,7,6400,Insurance,36974.44890863413
+theta_packaging,Theta Sustainable Packaging,2026,7,6500,Professional Fees,76964.4653995721
+theta_packaging,Theta Sustainable Packaging,2026,7,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,7,7100,Advertising,28971.220696464785
+theta_packaging,Theta Sustainable Packaging,2026,7,7200,Travel and Entertainment,81262.89021464912
+theta_packaging,Theta Sustainable Packaging,2026,7,8000,Research and Development,50858.813548789934
+theta_packaging,Theta Sustainable Packaging,2026,7,9000,Depreciation Expense,29906.51623338778
+theta_packaging,Theta Sustainable Packaging,2026,7,9100,Amortization Expense,34519.26560444163
+theta_packaging,Theta Sustainable Packaging,2026,7,9500,Interest Expense,44665.2361628476
+theta_packaging,Theta Sustainable Packaging,2026,8,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,8,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,8,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,8,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,8,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,8,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,8,6200,Rent,79803.52768482738
+theta_packaging,Theta Sustainable Packaging,2026,8,6300,Utilities,31005.43909260008
+theta_packaging,Theta Sustainable Packaging,2026,8,6400,Insurance,65873.18146813859
+theta_packaging,Theta Sustainable Packaging,2026,8,6500,Professional Fees,73597.18883089471
+theta_packaging,Theta Sustainable Packaging,2026,8,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,8,7100,Advertising,43602.98377352625
+theta_packaging,Theta Sustainable Packaging,2026,8,7200,Travel and Entertainment,71680.74517601905
+theta_packaging,Theta Sustainable Packaging,2026,8,8000,Research and Development,40017.21500391614
+theta_packaging,Theta Sustainable Packaging,2026,8,9000,Depreciation Expense,78579.45028852599
+theta_packaging,Theta Sustainable Packaging,2026,8,9100,Amortization Expense,79307.61963907589
+theta_packaging,Theta Sustainable Packaging,2026,8,9500,Interest Expense,38927.15745574587
+theta_packaging,Theta Sustainable Packaging,2026,9,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,9,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,9,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,9,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,9,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,9,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,9,6200,Rent,82652.58221655588
+theta_packaging,Theta Sustainable Packaging,2026,9,6300,Utilities,35691.84693229901
+theta_packaging,Theta Sustainable Packaging,2026,9,6400,Insurance,82028.05878003553
+theta_packaging,Theta Sustainable Packaging,2026,9,6500,Professional Fees,29712.413506932975
+theta_packaging,Theta Sustainable Packaging,2026,9,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,9,7100,Advertising,51624.87107238073
+theta_packaging,Theta Sustainable Packaging,2026,9,7200,Travel and Entertainment,64440.111038911506
+theta_packaging,Theta Sustainable Packaging,2026,9,8000,Research and Development,52046.94165114956
+theta_packaging,Theta Sustainable Packaging,2026,9,9000,Depreciation Expense,39524.585236131126
+theta_packaging,Theta Sustainable Packaging,2026,9,9100,Amortization Expense,48539.42338027817
+theta_packaging,Theta Sustainable Packaging,2026,9,9500,Interest Expense,82703.97342323257
+theta_packaging,Theta Sustainable Packaging,2026,10,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,10,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,10,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,10,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,10,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,10,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,10,6200,Rent,42341.109292722336
+theta_packaging,Theta Sustainable Packaging,2026,10,6300,Utilities,79920.3156775797
+theta_packaging,Theta Sustainable Packaging,2026,10,6400,Insurance,42504.422010990296
+theta_packaging,Theta Sustainable Packaging,2026,10,6500,Professional Fees,45497.690341508285
+theta_packaging,Theta Sustainable Packaging,2026,10,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,10,7100,Advertising,32466.177798758832
+theta_packaging,Theta Sustainable Packaging,2026,10,7200,Travel and Entertainment,78569.59452473294
+theta_packaging,Theta Sustainable Packaging,2026,10,8000,Research and Development,54277.65863045128
+theta_packaging,Theta Sustainable Packaging,2026,10,9000,Depreciation Expense,77741.70840390539
+theta_packaging,Theta Sustainable Packaging,2026,10,9100,Amortization Expense,59435.38099056471
+theta_packaging,Theta Sustainable Packaging,2026,10,9500,Interest Expense,41923.3958459258
+theta_packaging,Theta Sustainable Packaging,2026,11,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,11,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,11,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,11,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,11,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,11,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,11,6200,Rent,81468.1075369322
+theta_packaging,Theta Sustainable Packaging,2026,11,6300,Utilities,79123.45866187962
+theta_packaging,Theta Sustainable Packaging,2026,11,6400,Insurance,79382.25950490452
+theta_packaging,Theta Sustainable Packaging,2026,11,6500,Professional Fees,72852.39731134598
+theta_packaging,Theta Sustainable Packaging,2026,11,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,11,7100,Advertising,55407.927842613615
+theta_packaging,Theta Sustainable Packaging,2026,11,7200,Travel and Entertainment,83805.30430430782
+theta_packaging,Theta Sustainable Packaging,2026,11,8000,Research and Development,59259.62217939575
+theta_packaging,Theta Sustainable Packaging,2026,11,9000,Depreciation Expense,35278.1778101031
+theta_packaging,Theta Sustainable Packaging,2026,11,9100,Amortization Expense,55653.11502364659
+theta_packaging,Theta Sustainable Packaging,2026,11,9500,Interest Expense,81928.6287222082
+theta_packaging,Theta Sustainable Packaging,2026,12,4000,Product Sales,5000000.0
+theta_packaging,Theta Sustainable Packaging,2026,12,5000,Cost of Goods Sold - Materials,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,12,5100,Cost of Goods Sold - Labor,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,12,5200,Cost of Goods Sold - Overhead,1200000.0
+theta_packaging,Theta Sustainable Packaging,2026,12,6000,Salaries and Wages,490000.00000000006
+theta_packaging,Theta Sustainable Packaging,2026,12,6100,Employee Benefits,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,12,6200,Rent,59791.63436449573
+theta_packaging,Theta Sustainable Packaging,2026,12,6300,Utilities,62665.21328000141
+theta_packaging,Theta Sustainable Packaging,2026,12,6400,Insurance,47720.02065525518
+theta_packaging,Theta Sustainable Packaging,2026,12,6500,Professional Fees,60885.86598459034
+theta_packaging,Theta Sustainable Packaging,2026,12,7000,Sales and Marketing,112000.00000000001
+theta_packaging,Theta Sustainable Packaging,2026,12,7100,Advertising,52619.224431077026
+theta_packaging,Theta Sustainable Packaging,2026,12,7200,Travel and Entertainment,62635.26492704925
+theta_packaging,Theta Sustainable Packaging,2026,12,8000,Research and Development,67471.72010064991
+theta_packaging,Theta Sustainable Packaging,2026,12,9000,Depreciation Expense,28309.131852129194
+theta_packaging,Theta Sustainable Packaging,2026,12,9100,Amortization Expense,67798.91117808715
+theta_packaging,Theta Sustainable Packaging,2026,12,9500,Interest Expense,61043.52065098193

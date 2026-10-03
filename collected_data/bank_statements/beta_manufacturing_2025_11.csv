@@ -1,0 +1,20 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-11-01,Beginning Balance,,,15194729.304241758,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-03,Customer Payment - Cummings-Snyder,,117088.81655160758,15311818.120793365,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-04,Vendor Payment - Case Ltd,153537.41518310853,,15158280.705610257,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-05,Customer Payment - Anderson-Harris,,363329.34607875615,15521610.051689012,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-05,Vendor Payment - Rivera and Sons,98242.2349839731,,15423367.816705039,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-06,"Vendor Payment - King, Boyer and Thompson",152212.08203445098,,15271155.734670587,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-07,"Vendor Payment - Robertson, Miller and Powell",32195.855043196687,,15238959.87962739,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-10,Vendor Payment - Downs Group,62936.860728177606,,15176023.018899212,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-11,Vendor Payment - Morgan PLC,74054.21780886705,,15101968.801090345,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-15,Customer Payment - Ewing Inc,,383857.68088494526,15485826.48197529,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-15,Vendor Payment - Mcdaniel PLC,153755.36272144783,,15332071.119253844,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-16,"Customer Payment - Simmons, Mcdonald and Cook",,231472.53084995266,15563543.650103796,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-16,Payroll,1750000.0,,13813543.650103796,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-18,Customer Payment - Garcia-Freeman,,153524.55112233822,13967068.201226134,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-22,Vendor Payment - Ellison-Henson,194472.8028593565,,13772595.398366777,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-23,Vendor Payment - Gonzalez LLC,197218.7542675371,,13575376.64409924,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-25,"Vendor Payment - Hernandez, Morgan and Kim",197089.46025789072,,13378287.183841348,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-27,Vendor Payment - Robinson-Santos,140597.98528423771,,13237689.19855711,beta_manufacturing,Beta Manufacturing Co,2025-11
+2025-11-29,Vendor Payment - Palmer-Collier,56358.03843557548,,13181331.160121536,beta_manufacturing,Beta Manufacturing Co,2025-11

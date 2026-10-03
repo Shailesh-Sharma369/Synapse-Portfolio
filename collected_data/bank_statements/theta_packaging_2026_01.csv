@@ -1,0 +1,19 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2026-01-01,Beginning Balance,,,7884586.951005587,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-02,Customer Payment - Mason PLC,,112771.00275775362,7997357.953763341,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-05,Vendor Payment - Carson-Smith,197757.80706151278,,7799600.146701828,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-09,"Customer Payment - Garrett, Lowe and Barnett",,54174.855573962195,7853775.00227579,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-10,"Customer Payment - Hill, Dickerson and Phillips",,267599.3489361894,8121374.351211979,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-12,Customer Payment - Lynch Group,,212914.82589990334,8334289.177111883,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-14,Customer Payment - Kerr-Collins,,352093.62731328653,8686382.804425169,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-15,"Customer Payment - Moon, Alexander and Powers",,137389.62516823364,8823772.429593403,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-16,Payroll,875000.0,,7948772.429593403,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-18,Vendor Payment - Waters and Sons,20316.07272009227,,7928456.35687331,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-20,"Customer Payment - Taylor, Waller and Watts",,163502.60668722753,8091958.963560537,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-20,"Vendor Payment - Hernandez, Nolan and Parker",158739.19977271807,,7933219.763787819,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-21,Customer Payment - Jefferson Ltd,,438754.9670702559,8371974.7308580745,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-21,"Vendor Payment - Reyes, Cherry and Vargas",129875.34882045117,,8242099.382037624,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-25,Customer Payment - Sanchez-Whitaker,,57628.64347603972,8299728.025513664,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-27,Vendor Payment - Reyes LLC,147289.926350163,,8152438.099163501,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-28,"Customer Payment - Hernandez, Dodson and Martin",,390094.4718314519,8542532.570994953,theta_packaging,Theta Sustainable Packaging,2026-01
+2026-01-30,Vendor Payment - Patterson and Sons,67470.43045885745,,8475062.140536096,theta_packaging,Theta Sustainable Packaging,2026-01

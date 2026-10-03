@@ -1,0 +1,19 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-11-01,Beginning Balance,,,24691587.030731127,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-02,Customer Payment - Thomas-Lee,,446346.16198002064,25137933.19271115,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-04,Vendor Payment - Woods-Zimmerman,135869.0813342748,,25002064.111376874,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-05,Vendor Payment - Spencer LLC,37168.317417233986,,24964895.79395964,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-07,Customer Payment - Cabrera and Sons,,171447.63089124527,25136343.424850885,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-11,Vendor Payment - Baker and Sons,183297.56676820933,,24953045.858082674,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-12,"Vendor Payment - Nunez, Brown and Escobar",180161.38829024692,,24772884.46979243,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-15,Customer Payment - Jones Ltd,,376182.7433912493,25149067.21318368,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-15,Vendor Payment - Morris-Bowers,119448.88374292971,,25029618.32944075,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-16,Payroll,2187500.0,,22842118.32944075,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-16,"Vendor Payment - Cook, Schwartz and Frederick",56007.54091771508,,22786110.788523033,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-18,Customer Payment - Maynard-Rios,,221959.82647046616,23008070.614993498,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-19,Vendor Payment - Cummings-Griffin,90436.4467115624,,22917634.168281935,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-24,"Vendor Payment - Wilkerson, Benitez and Dudley",61270.67085238363,,22856363.49742955,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-25,Vendor Payment - Martin PLC,66656.70152005757,,22789706.79590949,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-26,"Customer Payment - Estrada, Meyer and Johnson",,175665.67109529197,22965372.467004783,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-29,Customer Payment - Diaz-Clay,,246299.35515202535,23211671.82215681,zeta_distribution,Zeta Distribution Inc,2025-11
+2025-11-29,Vendor Payment - Jenkins-Sanchez,95253.3744604399,,23116418.44769637,zeta_distribution,Zeta Distribution Inc,2025-11

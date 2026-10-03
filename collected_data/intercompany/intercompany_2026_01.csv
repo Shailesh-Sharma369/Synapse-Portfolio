@@ -1,0 +1,1001 @@
+transaction_id,date,selling_entity_id,selling_entity_name,buying_entity_id,buying_entity_name,description,amount,gl_account
+IC-202601-001,2026-01-19,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Management Fees,15121.574353387452,7000
+IC-202601-002,2026-01-12,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Shared Services,87095.92889074424,6500
+IC-202601-003,2026-01-28,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,224536.77022013103,5000
+IC-202601-004,2026-01-20,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Software Licenses,15856.5453285996,7000
+IC-202601-005,2026-01-04,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Management Fees,46771.271347261616,7000
+IC-202601-006,2026-01-20,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Shared Services,35033.842586770916,6500
+IC-202601-007,2026-01-16,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,76412.46258556761,5000
+IC-202601-008,2026-01-23,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Software Licenses,20646.756515337154,7000
+IC-202601-009,2026-01-07,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Management Fees,40082.614333807454,7000
+IC-202601-010,2026-01-12,beta_manufacturing,Beta Manufacturing Co,eta_analytics,Eta Analytics Partners,Shared Services,54142.829518281906,6500
+IC-202601-011,2026-01-18,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,160443.45657756485,5000
+IC-202601-012,2026-01-25,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Software Licenses,22323.78809353707,7000
+IC-202601-013,2026-01-24,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Management Fees,13678.869422065723,7000
+IC-202601-014,2026-01-04,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Shared Services,24931.80780480972,6500
+IC-202601-015,2026-01-14,beta_manufacturing,Beta Manufacturing Co,eta_analytics,Eta Analytics Partners,Inventory/Supplies,135118.74499949504,5000
+IC-202601-016,2026-01-20,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,11550.934744665934,7000
+IC-202601-017,2026-01-15,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Management Fees,32864.87637569532,7000
+IC-202601-018,2026-01-23,theta_packaging,Theta Sustainable Packaging,beta_manufacturing,Beta Manufacturing Co,Shared Services,50416.226874294385,6500
+IC-202601-019,2026-01-07,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,234385.20594134947,5000
+IC-202601-020,2026-01-10,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Software Licenses,12169.31355728817,7000
+IC-202601-021,2026-01-22,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Management Fees,26826.027807826966,7000
+IC-202601-022,2026-01-28,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Shared Services,59768.6688226883,6500
+IC-202601-023,2026-01-14,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Inventory/Supplies,119209.79100414281,5000
+IC-202601-024,2026-01-03,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,13532.933806211373,7000
+IC-202601-025,2026-01-23,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Management Fees,43264.59166902821,7000
+IC-202601-026,2026-01-12,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Shared Services,32438.96009694626,6500
+IC-202601-027,2026-01-19,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Inventory/Supplies,167866.9808940271,5000
+IC-202601-028,2026-01-12,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,20697.662468959476,7000
+IC-202601-029,2026-01-25,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Management Fees,18678.260517117,7000
+IC-202601-030,2026-01-13,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Shared Services,58212.48994608377,6500
+IC-202601-031,2026-01-17,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,157281.4891752464,5000
+IC-202601-032,2026-01-14,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Software Licenses,14130.054124348164,7000
+IC-202601-033,2026-01-18,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Management Fees,11078.501542831205,7000
+IC-202601-034,2026-01-10,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Shared Services,44848.10462760602,6500
+IC-202601-035,2026-01-11,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,78699.99856838424,5000
+IC-202601-036,2026-01-04,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,24772.306398070064,7000
+IC-202601-037,2026-01-12,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Management Fees,14045.421963998477,7000
+IC-202601-038,2026-01-06,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Shared Services,42271.456461953654,6500
+IC-202601-039,2026-01-24,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,189889.8621332033,5000
+IC-202601-040,2026-01-11,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,22486.260734724397,7000
+IC-202601-041,2026-01-08,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Management Fees,27751.279126553058,7000
+IC-202601-042,2026-01-19,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Shared Services,33238.86566873577,6500
+IC-202601-043,2026-01-22,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,97283.13490295153,5000
+IC-202601-044,2026-01-11,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,21504.3881047167,7000
+IC-202601-045,2026-01-12,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Management Fees,49951.105306159465,7000
+IC-202601-046,2026-01-28,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Shared Services,29006.434182405625,6500
+IC-202601-047,2026-01-11,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,214969.6167155496,5000
+IC-202601-048,2026-01-04,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Software Licenses,21993.145627307753,7000
+IC-202601-049,2026-01-12,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Management Fees,24218.363042711688,7000
+IC-202601-050,2026-01-14,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Shared Services,49274.52143016727,6500
+IC-202601-051,2026-01-03,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,108125.42647890723,5000
+IC-202601-052,2026-01-05,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Software Licenses,15008.895445736305,7000
+IC-202601-053,2026-01-09,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Management Fees,48887.12738291102,7000
+IC-202601-054,2026-01-23,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Shared Services,45866.62294594498,6500
+IC-202601-055,2026-01-21,eta_analytics,Eta Analytics Partners,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,145633.08801377792,5000
+IC-202601-056,2026-01-26,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Software Licenses,15090.561487888128,7000
+IC-202601-057,2026-01-03,theta_packaging,Theta Sustainable Packaging,beta_manufacturing,Beta Manufacturing Co,Management Fees,32773.143932033025,7000
+IC-202601-058,2026-01-21,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Shared Services,57874.213386795265,6500
+IC-202601-059,2026-01-16,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,176188.0931504796,5000
+IC-202601-060,2026-01-26,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Software Licenses,5712.242702433774,7000
+IC-202601-061,2026-01-18,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Management Fees,22499.44252444284,7000
+IC-202601-062,2026-01-03,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Shared Services,26343.83779264999,6500
+IC-202601-063,2026-01-24,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,125290.09969718308,5000
+IC-202601-064,2026-01-20,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Software Licenses,20240.392827907905,7000
+IC-202601-065,2026-01-11,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Management Fees,11867.142206582777,7000
+IC-202601-066,2026-01-10,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Shared Services,71773.2603658883,6500
+IC-202601-067,2026-01-07,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Inventory/Supplies,92169.4996900163,5000
+IC-202601-068,2026-01-20,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Software Licenses,10617.131444501145,7000
+IC-202601-069,2026-01-23,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Management Fees,17381.851673485227,7000
+IC-202601-070,2026-01-15,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Shared Services,27613.49339131647,6500
+IC-202601-071,2026-01-15,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,218308.60400312065,5000
+IC-202601-072,2026-01-08,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Software Licenses,18609.808205540285,7000
+IC-202601-073,2026-01-04,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Management Fees,28286.137163581912,7000
+IC-202601-074,2026-01-14,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Shared Services,66673.12636284763,6500
+IC-202601-075,2026-01-23,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Inventory/Supplies,141204.86822420836,5000
+IC-202601-076,2026-01-14,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Software Licenses,15895.482164047135,7000
+IC-202601-077,2026-01-15,beta_manufacturing,Beta Manufacturing Co,eta_analytics,Eta Analytics Partners,Management Fees,42572.39023696825,7000
+IC-202601-078,2026-01-14,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Shared Services,65562.75092802799,6500
+IC-202601-079,2026-01-07,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Inventory/Supplies,192130.72514320334,5000
+IC-202601-080,2026-01-25,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Software Licenses,20300.1919434241,7000
+IC-202601-081,2026-01-21,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Management Fees,45979.0089289084,7000
+IC-202601-082,2026-01-19,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Shared Services,86530.72780153005,6500
+IC-202601-083,2026-01-02,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Inventory/Supplies,70569.93126226476,5000
+IC-202601-084,2026-01-15,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Software Licenses,19881.147668000027,7000
+IC-202601-085,2026-01-04,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Management Fees,33843.04615489528,7000
+IC-202601-086,2026-01-15,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Shared Services,72165.69574463772,6500
+IC-202601-087,2026-01-26,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,192959.09022443445,5000
+IC-202601-088,2026-01-09,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Software Licenses,14800.153407676746,7000
+IC-202601-089,2026-01-26,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Management Fees,35421.77568958513,7000
+IC-202601-090,2026-01-04,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Shared Services,47948.98286309075,6500
+IC-202601-091,2026-01-26,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,193035.28194910026,5000
+IC-202601-092,2026-01-19,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Software Licenses,21776.14897840726,7000
+IC-202601-093,2026-01-09,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Management Fees,49793.64436537464,7000
+IC-202601-094,2026-01-26,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Shared Services,76052.46562162333,6500
+IC-202601-095,2026-01-14,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,183930.1224941647,5000
+IC-202601-096,2026-01-22,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Software Licenses,24615.17785260163,7000
+IC-202601-097,2026-01-21,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Management Fees,39773.707151316135,7000
+IC-202601-098,2026-01-22,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Shared Services,35269.60864744027,6500
+IC-202601-099,2026-01-11,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Inventory/Supplies,206255.6419023669,5000
+IC-202601-100,2026-01-26,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Software Licenses,9627.866663526973,7000
+IC-202601-101,2026-01-28,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Management Fees,25501.046717289755,7000
+IC-202601-102,2026-01-16,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Shared Services,39664.04277461971,6500
+IC-202601-103,2026-01-23,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,243354.98343064162,5000
+IC-202601-104,2026-01-11,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Software Licenses,11715.796483084734,7000
+IC-202601-105,2026-01-06,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Management Fees,13813.143780693377,7000
+IC-202601-106,2026-01-14,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Shared Services,62183.42044303563,6500
+IC-202601-107,2026-01-04,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,150551.8771998245,5000
+IC-202601-108,2026-01-12,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Software Licenses,13130.87470791262,7000
+IC-202601-109,2026-01-22,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Management Fees,20795.353173222167,7000
+IC-202601-110,2026-01-11,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Shared Services,43684.17989872699,6500
+IC-202601-111,2026-01-14,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,55594.506765196486,5000
+IC-202601-112,2026-01-25,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Software Licenses,11338.775688543681,7000
+IC-202601-113,2026-01-16,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Management Fees,21474.544108465238,7000
+IC-202601-114,2026-01-19,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Shared Services,51261.59831025767,6500
+IC-202601-115,2026-01-24,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Inventory/Supplies,213015.24869339308,5000
+IC-202601-116,2026-01-04,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Software Licenses,7515.7949933254085,7000
+IC-202601-117,2026-01-06,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Management Fees,15426.23747683225,7000
+IC-202601-118,2026-01-06,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Shared Services,69032.98046588147,6500
+IC-202601-119,2026-01-23,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,129463.11074320365,5000
+IC-202601-120,2026-01-10,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Software Licenses,10739.890597926178,7000
+IC-202601-121,2026-01-10,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Management Fees,33584.10003129514,7000
+IC-202601-122,2026-01-27,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Shared Services,29086.18968662733,6500
+IC-202601-123,2026-01-02,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Inventory/Supplies,64221.300827983854,5000
+IC-202601-124,2026-01-04,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Software Licenses,16686.764889640293,7000
+IC-202601-125,2026-01-02,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Management Fees,13341.50356597663,7000
+IC-202601-126,2026-01-23,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Shared Services,59837.635902894544,6500
+IC-202601-127,2026-01-19,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,70128.03836780519,5000
+IC-202601-128,2026-01-19,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Software Licenses,11449.99480671375,7000
+IC-202601-129,2026-01-02,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Management Fees,41443.348875765594,7000
+IC-202601-130,2026-01-22,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Shared Services,23772.873914183056,6500
+IC-202601-131,2026-01-24,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,157066.43163168328,5000
+IC-202601-132,2026-01-23,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Software Licenses,17816.601656222057,7000
+IC-202601-133,2026-01-22,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Management Fees,24124.44622323833,7000
+IC-202601-134,2026-01-25,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Shared Services,41717.87045288273,6500
+IC-202601-135,2026-01-13,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,148744.22552845665,5000
+IC-202601-136,2026-01-25,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Software Licenses,12922.983067651108,7000
+IC-202601-137,2026-01-14,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Management Fees,36402.7605127547,7000
+IC-202601-138,2026-01-15,eta_analytics,Eta Analytics Partners,beta_manufacturing,Beta Manufacturing Co,Shared Services,86764.20760172968,6500
+IC-202601-139,2026-01-06,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,191690.62679817757,5000
+IC-202601-140,2026-01-24,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Software Licenses,17669.21627690433,7000
+IC-202601-141,2026-01-23,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Management Fees,42822.76118284485,7000
+IC-202601-142,2026-01-05,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Shared Services,30064.50822651641,6500
+IC-202601-143,2026-01-03,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Inventory/Supplies,239220.12735820518,5000
+IC-202601-144,2026-01-22,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,12649.913064647339,7000
+IC-202601-145,2026-01-15,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Management Fees,39185.75405244328,7000
+IC-202601-146,2026-01-10,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Shared Services,32563.56447039378,6500
+IC-202601-147,2026-01-07,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,89445.7438838189,5000
+IC-202601-148,2026-01-18,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Software Licenses,20961.164433217302,7000
+IC-202601-149,2026-01-18,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Management Fees,22715.65551405763,7000
+IC-202601-150,2026-01-03,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Shared Services,83675.20441149452,6500
+IC-202601-151,2026-01-10,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,159426.19390044754,5000
+IC-202601-152,2026-01-17,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Software Licenses,23486.023279786128,7000
+IC-202601-153,2026-01-07,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Management Fees,33438.89372865124,7000
+IC-202601-154,2026-01-12,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Shared Services,23641.73044955547,6500
+IC-202601-155,2026-01-21,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Inventory/Supplies,77966.32997706707,5000
+IC-202601-156,2026-01-03,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Software Licenses,6654.1119771200365,7000
+IC-202601-157,2026-01-12,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Management Fees,39974.8897742865,7000
+IC-202601-158,2026-01-06,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Shared Services,31961.287929282596,6500
+IC-202601-159,2026-01-21,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,199496.61320271678,5000
+IC-202601-160,2026-01-15,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Software Licenses,13957.171562032127,7000
+IC-202601-161,2026-01-03,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Management Fees,46987.84204560944,7000
+IC-202601-162,2026-01-13,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Shared Services,47846.134140987444,6500
+IC-202601-163,2026-01-17,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,246071.53487893502,5000
+IC-202601-164,2026-01-02,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Software Licenses,5925.407686730185,7000
+IC-202601-165,2026-01-27,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Management Fees,38533.15441250035,7000
+IC-202601-166,2026-01-22,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Shared Services,28961.555179370287,6500
+IC-202601-167,2026-01-05,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,90238.04862363118,5000
+IC-202601-168,2026-01-10,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Software Licenses,23936.356454980254,7000
+IC-202601-169,2026-01-05,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Management Fees,39769.32921557737,7000
+IC-202601-170,2026-01-23,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Shared Services,31944.295044089275,6500
+IC-202601-171,2026-01-03,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,246068.1024203997,5000
+IC-202601-172,2026-01-09,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Software Licenses,6702.642301404644,7000
+IC-202601-173,2026-01-25,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Management Fees,35911.80567926343,7000
+IC-202601-174,2026-01-20,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Shared Services,89451.53282372373,6500
+IC-202601-175,2026-01-17,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,202504.71711026467,5000
+IC-202601-176,2026-01-07,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Software Licenses,14283.418966044546,7000
+IC-202601-177,2026-01-08,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Management Fees,39822.0680946045,7000
+IC-202601-178,2026-01-08,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Shared Services,54381.60979704575,6500
+IC-202601-179,2026-01-07,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Inventory/Supplies,232285.20794806018,5000
+IC-202601-180,2026-01-21,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Software Licenses,12498.267840404591,7000
+IC-202601-181,2026-01-13,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Management Fees,44789.203100423176,7000
+IC-202601-182,2026-01-10,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Shared Services,63700.22392145974,6500
+IC-202601-183,2026-01-25,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,226944.98182771038,5000
+IC-202601-184,2026-01-12,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Software Licenses,19855.535917609213,7000
+IC-202601-185,2026-01-09,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Management Fees,41800.279334241095,7000
+IC-202601-186,2026-01-02,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Shared Services,42972.76452205945,6500
+IC-202601-187,2026-01-25,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,235721.42381890665,5000
+IC-202601-188,2026-01-06,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Software Licenses,22330.06462108576,7000
+IC-202601-189,2026-01-28,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Management Fees,34080.09343708641,7000
+IC-202601-190,2026-01-11,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Shared Services,64429.25305435412,6500
+IC-202601-191,2026-01-03,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Inventory/Supplies,223145.06814550786,5000
+IC-202601-192,2026-01-20,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Software Licenses,13229.333294308679,7000
+IC-202601-193,2026-01-03,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Management Fees,38463.42220696635,7000
+IC-202601-194,2026-01-02,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Shared Services,43002.26718417292,6500
+IC-202601-195,2026-01-06,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,120841.63857629293,5000
+IC-202601-196,2026-01-03,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Software Licenses,9163.810183918933,7000
+IC-202601-197,2026-01-08,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Management Fees,27884.06325026298,7000
+IC-202601-198,2026-01-25,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Shared Services,88926.70622520045,6500
+IC-202601-199,2026-01-08,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Inventory/Supplies,100691.39125272854,5000
+IC-202601-200,2026-01-22,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Software Licenses,22334.068708968673,7000
+IC-202601-201,2026-01-13,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Management Fees,31150.168471262772,7000
+IC-202601-202,2026-01-08,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Shared Services,47481.053743052835,6500
+IC-202601-203,2026-01-20,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,215000.94271706548,5000
+IC-202601-204,2026-01-02,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Software Licenses,10878.493389415675,7000
+IC-202601-205,2026-01-25,beta_manufacturing,Beta Manufacturing Co,eta_analytics,Eta Analytics Partners,Management Fees,20848.279397414248,7000
+IC-202601-206,2026-01-17,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Shared Services,35802.13219818546,6500
+IC-202601-207,2026-01-19,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,189946.7200884042,5000
+IC-202601-208,2026-01-25,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Software Licenses,17901.221492219745,7000
+IC-202601-209,2026-01-03,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Management Fees,27104.88082854074,7000
+IC-202601-210,2026-01-28,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Shared Services,59775.73879006177,6500
+IC-202601-211,2026-01-16,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,145276.43008575193,5000
+IC-202601-212,2026-01-24,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Software Licenses,17492.95085923688,7000
+IC-202601-213,2026-01-28,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Management Fees,17849.742417040445,7000
+IC-202601-214,2026-01-28,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Shared Services,51022.10530832657,6500
+IC-202601-215,2026-01-24,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,83008.82044603449,5000
+IC-202601-216,2026-01-06,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Software Licenses,18564.010074857928,7000
+IC-202601-217,2026-01-23,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Management Fees,24383.24687971382,7000
+IC-202601-218,2026-01-20,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Shared Services,46300.034296345584,6500
+IC-202601-219,2026-01-25,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,52123.01530326757,5000
+IC-202601-220,2026-01-14,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,11635.692530905526,7000
+IC-202601-221,2026-01-05,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Management Fees,12583.817759515838,7000
+IC-202601-222,2026-01-07,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Shared Services,22212.572542949998,6500
+IC-202601-223,2026-01-21,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,227036.52195961511,5000
+IC-202601-224,2026-01-12,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Software Licenses,16607.741921155706,7000
+IC-202601-225,2026-01-24,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Management Fees,24595.62878661247,7000
+IC-202601-226,2026-01-13,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Shared Services,48646.25027894892,6500
+IC-202601-227,2026-01-06,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Inventory/Supplies,228124.3551019486,5000
+IC-202601-228,2026-01-04,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Software Licenses,16308.143932508907,7000
+IC-202601-229,2026-01-09,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Management Fees,17423.847654259993,7000
+IC-202601-230,2026-01-21,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Shared Services,24652.59658923917,6500
+IC-202601-231,2026-01-02,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,197997.41396202208,5000
+IC-202601-232,2026-01-08,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Software Licenses,24514.691851230236,7000
+IC-202601-233,2026-01-15,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Management Fees,45179.80750504828,7000
+IC-202601-234,2026-01-28,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Shared Services,53960.617413646156,6500
+IC-202601-235,2026-01-22,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,139610.62310117861,5000
+IC-202601-236,2026-01-25,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Software Licenses,9792.124870784424,7000
+IC-202601-237,2026-01-23,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Management Fees,34160.37518353169,7000
+IC-202601-238,2026-01-20,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Shared Services,86234.73027120937,6500
+IC-202601-239,2026-01-20,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,76611.82268035074,5000
+IC-202601-240,2026-01-11,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Software Licenses,22687.732638351892,7000
+IC-202601-241,2026-01-28,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Management Fees,16512.530293761025,7000
+IC-202601-242,2026-01-11,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Shared Services,60879.311174306924,6500
+IC-202601-243,2026-01-23,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,89054.56021535592,5000
+IC-202601-244,2026-01-02,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Software Licenses,22517.685887461506,7000
+IC-202601-245,2026-01-23,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Management Fees,16757.820397416526,7000
+IC-202601-246,2026-01-08,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Shared Services,25995.256935443373,6500
+IC-202601-247,2026-01-18,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,147396.3698679926,5000
+IC-202601-248,2026-01-04,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Software Licenses,24621.53224178254,7000
+IC-202601-249,2026-01-14,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Management Fees,11770.572902558079,7000
+IC-202601-250,2026-01-02,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Shared Services,58425.9891211007,6500
+IC-202601-251,2026-01-11,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,101094.73232348764,5000
+IC-202601-252,2026-01-26,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Software Licenses,19984.582830335283,7000
+IC-202601-253,2026-01-16,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Management Fees,34936.445547001575,7000
+IC-202601-254,2026-01-12,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Shared Services,46631.91027156515,6500
+IC-202601-255,2026-01-18,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,114496.66694580851,5000
+IC-202601-256,2026-01-28,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Software Licenses,9953.526340155991,7000
+IC-202601-257,2026-01-13,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Management Fees,33800.395989182114,7000
+IC-202601-258,2026-01-27,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Shared Services,27458.966685446838,6500
+IC-202601-259,2026-01-19,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,236276.96298103634,5000
+IC-202601-260,2026-01-13,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,17588.597309376193,7000
+IC-202601-261,2026-01-18,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Management Fees,16026.048149411656,7000
+IC-202601-262,2026-01-19,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Shared Services,76406.93668948991,6500
+IC-202601-263,2026-01-24,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,248434.2797985024,5000
+IC-202601-264,2026-01-05,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Software Licenses,11086.970245693567,7000
+IC-202601-265,2026-01-14,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Management Fees,17133.741341774446,7000
+IC-202601-266,2026-01-05,theta_packaging,Theta Sustainable Packaging,beta_manufacturing,Beta Manufacturing Co,Shared Services,67780.95959800376,6500
+IC-202601-267,2026-01-10,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Inventory/Supplies,137593.6606766553,5000
+IC-202601-268,2026-01-10,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Software Licenses,8227.392807359249,7000
+IC-202601-269,2026-01-12,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Management Fees,38621.69986302067,7000
+IC-202601-270,2026-01-25,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Shared Services,41581.41293719795,6500
+IC-202601-271,2026-01-10,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,130023.47145631896,5000
+IC-202601-272,2026-01-24,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,6218.55779941836,7000
+IC-202601-273,2026-01-07,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Management Fees,25676.605791119175,7000
+IC-202601-274,2026-01-25,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Shared Services,25531.518909696984,6500
+IC-202601-275,2026-01-24,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Inventory/Supplies,183756.60637306343,5000
+IC-202601-276,2026-01-21,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Software Licenses,8911.281700295462,7000
+IC-202601-277,2026-01-08,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Management Fees,10789.108142305515,7000
+IC-202601-278,2026-01-20,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Shared Services,29583.63507210849,6500
+IC-202601-279,2026-01-27,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,119299.01533030516,5000
+IC-202601-280,2026-01-05,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,20505.175961930297,7000
+IC-202601-281,2026-01-07,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Management Fees,35633.54116827654,7000
+IC-202601-282,2026-01-28,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Shared Services,34140.86962073359,6500
+IC-202601-283,2026-01-19,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,132083.60236192358,5000
+IC-202601-284,2026-01-07,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Software Licenses,21075.197890193318,7000
+IC-202601-285,2026-01-18,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Management Fees,17876.69078439132,7000
+IC-202601-286,2026-01-16,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Shared Services,30205.790588425574,6500
+IC-202601-287,2026-01-09,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,101869.09117465571,5000
+IC-202601-288,2026-01-05,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Software Licenses,22286.704811392443,7000
+IC-202601-289,2026-01-04,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Management Fees,45317.448321349344,7000
+IC-202601-290,2026-01-14,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Shared Services,69919.42288844394,6500
+IC-202601-291,2026-01-16,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Inventory/Supplies,233888.1613233323,5000
+IC-202601-292,2026-01-12,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Software Licenses,15082.508486844097,7000
+IC-202601-293,2026-01-13,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Management Fees,25229.17070881719,7000
+IC-202601-294,2026-01-17,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Shared Services,91705.17020188339,6500
+IC-202601-295,2026-01-03,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,246756.84037727275,5000
+IC-202601-296,2026-01-28,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Software Licenses,9063.182389774614,7000
+IC-202601-297,2026-01-05,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Management Fees,48000.53476612686,7000
+IC-202601-298,2026-01-09,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Shared Services,88349.89756038102,6500
+IC-202601-299,2026-01-17,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,55809.52681689759,5000
+IC-202601-300,2026-01-16,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Software Licenses,8048.600413709201,7000
+IC-202601-301,2026-01-18,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Management Fees,36341.31457420564,7000
+IC-202601-302,2026-01-23,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Shared Services,49930.49279432256,6500
+IC-202601-303,2026-01-05,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Inventory/Supplies,163716.6218131893,5000
+IC-202601-304,2026-01-05,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Software Licenses,22430.827170788165,7000
+IC-202601-305,2026-01-27,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Management Fees,16990.62123187128,7000
+IC-202601-306,2026-01-24,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Shared Services,73712.12163471777,6500
+IC-202601-307,2026-01-14,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,156054.70600025496,5000
+IC-202601-308,2026-01-19,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Software Licenses,11856.581255961712,7000
+IC-202601-309,2026-01-10,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Management Fees,36901.83952903135,7000
+IC-202601-310,2026-01-15,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Shared Services,25361.083910536443,6500
+IC-202601-311,2026-01-15,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,157976.4855282699,5000
+IC-202601-312,2026-01-22,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Software Licenses,8490.89859067344,7000
+IC-202601-313,2026-01-14,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Management Fees,23841.093539213554,7000
+IC-202601-314,2026-01-14,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Shared Services,99739.50763259642,6500
+IC-202601-315,2026-01-15,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,119309.2531698058,5000
+IC-202601-316,2026-01-25,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Software Licenses,24707.217629903476,7000
+IC-202601-317,2026-01-17,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Management Fees,27257.181446534203,7000
+IC-202601-318,2026-01-26,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Shared Services,33518.85098765898,6500
+IC-202601-319,2026-01-05,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,125116.56261506611,5000
+IC-202601-320,2026-01-28,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Software Licenses,19526.584033817802,7000
+IC-202601-321,2026-01-22,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Management Fees,13454.28278463852,7000
+IC-202601-322,2026-01-22,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Shared Services,59136.742192886566,6500
+IC-202601-323,2026-01-25,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,149202.5360285791,5000
+IC-202601-324,2026-01-03,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Software Licenses,5446.376029548048,7000
+IC-202601-325,2026-01-08,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Management Fees,21593.421785911058,7000
+IC-202601-326,2026-01-18,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Shared Services,58357.469641166215,6500
+IC-202601-327,2026-01-11,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,102755.82574851208,5000
+IC-202601-328,2026-01-09,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Software Licenses,21175.801347476896,7000
+IC-202601-329,2026-01-08,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Management Fees,49174.83656210555,7000
+IC-202601-330,2026-01-04,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Shared Services,20020.63408991244,6500
+IC-202601-331,2026-01-03,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,241310.44554115998,5000
+IC-202601-332,2026-01-07,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Software Licenses,12839.584719481334,7000
+IC-202601-333,2026-01-26,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Management Fees,39320.945974497554,7000
+IC-202601-334,2026-01-11,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Shared Services,59482.98537547637,6500
+IC-202601-335,2026-01-10,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,124674.47308318382,5000
+IC-202601-336,2026-01-13,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Software Licenses,21952.370275299836,7000
+IC-202601-337,2026-01-27,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Management Fees,32270.84859864847,7000
+IC-202601-338,2026-01-26,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Shared Services,64963.698910161846,6500
+IC-202601-339,2026-01-04,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Inventory/Supplies,60740.495965792405,5000
+IC-202601-340,2026-01-20,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Software Licenses,13738.151439332183,7000
+IC-202601-341,2026-01-17,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Management Fees,11874.960297793998,7000
+IC-202601-342,2026-01-07,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Shared Services,53476.43463401512,6500
+IC-202601-343,2026-01-26,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,76622.95585659536,5000
+IC-202601-344,2026-01-16,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Software Licenses,16644.03063874203,7000
+IC-202601-345,2026-01-02,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Management Fees,37892.11703260312,7000
+IC-202601-346,2026-01-11,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Shared Services,42718.85983745678,6500
+IC-202601-347,2026-01-26,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Inventory/Supplies,207621.9443553051,5000
+IC-202601-348,2026-01-16,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Software Licenses,24841.412059215207,7000
+IC-202601-349,2026-01-06,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Management Fees,21606.631078626135,7000
+IC-202601-350,2026-01-19,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Shared Services,65203.71068767584,6500
+IC-202601-351,2026-01-24,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,56627.56281453543,5000
+IC-202601-352,2026-01-04,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Software Licenses,24023.829079314826,7000
+IC-202601-353,2026-01-09,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Management Fees,19236.13551017704,7000
+IC-202601-354,2026-01-06,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Shared Services,62736.5831148915,6500
+IC-202601-355,2026-01-08,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,229629.904666178,5000
+IC-202601-356,2026-01-11,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Software Licenses,18034.39297023713,7000
+IC-202601-357,2026-01-06,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Management Fees,38345.313274736676,7000
+IC-202601-358,2026-01-23,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Shared Services,81703.2182426806,6500
+IC-202601-359,2026-01-04,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,96713.96023748722,5000
+IC-202601-360,2026-01-13,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Software Licenses,9812.366053522022,7000
+IC-202601-361,2026-01-15,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Management Fees,38243.0780403742,7000
+IC-202601-362,2026-01-18,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Shared Services,28352.58237118547,6500
+IC-202601-363,2026-01-05,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,152837.10438400996,5000
+IC-202601-364,2026-01-22,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Software Licenses,18790.842447722753,7000
+IC-202601-365,2026-01-10,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Management Fees,30380.902658147552,7000
+IC-202601-366,2026-01-27,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Shared Services,80519.60008831587,6500
+IC-202601-367,2026-01-28,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,72952.55629037325,5000
+IC-202601-368,2026-01-12,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,23361.42974888307,7000
+IC-202601-369,2026-01-22,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Management Fees,33524.907760742964,7000
+IC-202601-370,2026-01-03,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Shared Services,47482.05118743112,6500
+IC-202601-371,2026-01-09,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Inventory/Supplies,198309.52480841466,5000
+IC-202601-372,2026-01-08,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Software Licenses,22067.028414431043,7000
+IC-202601-373,2026-01-10,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Management Fees,19161.30219104357,7000
+IC-202601-374,2026-01-08,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Shared Services,49276.77911401967,6500
+IC-202601-375,2026-01-17,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,53460.927499371726,5000
+IC-202601-376,2026-01-07,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Software Licenses,6052.576091075519,7000
+IC-202601-377,2026-01-15,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Management Fees,40159.49637782471,7000
+IC-202601-378,2026-01-18,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Shared Services,93454.87511489191,6500
+IC-202601-379,2026-01-15,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,137385.30947385426,5000
+IC-202601-380,2026-01-23,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Software Licenses,19305.171526351653,7000
+IC-202601-381,2026-01-14,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Management Fees,46547.989419548525,7000
+IC-202601-382,2026-01-23,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Shared Services,50742.50395457052,6500
+IC-202601-383,2026-01-25,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,125200.30891371667,5000
+IC-202601-384,2026-01-17,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,16955.000977366235,7000
+IC-202601-385,2026-01-28,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Management Fees,21349.360233967647,7000
+IC-202601-386,2026-01-12,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Shared Services,52639.666593947855,6500
+IC-202601-387,2026-01-19,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,115740.62174389741,5000
+IC-202601-388,2026-01-08,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Software Licenses,22779.9583401404,7000
+IC-202601-389,2026-01-05,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Management Fees,13898.214710829912,7000
+IC-202601-390,2026-01-03,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Shared Services,47503.89345069163,6500
+IC-202601-391,2026-01-19,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,220933.05428441227,5000
+IC-202601-392,2026-01-11,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,11362.19540380816,7000
+IC-202601-393,2026-01-03,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Management Fees,14061.133781715469,7000
+IC-202601-394,2026-01-13,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Shared Services,46888.12654123863,6500
+IC-202601-395,2026-01-23,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,204305.521480001,5000
+IC-202601-396,2026-01-19,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Software Licenses,7218.6620936079,7000
+IC-202601-397,2026-01-07,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Management Fees,32245.700321224384,7000
+IC-202601-398,2026-01-07,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Shared Services,26849.607253808,6500
+IC-202601-399,2026-01-15,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,226964.27523035626,5000
+IC-202601-400,2026-01-24,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Software Licenses,20136.056494995762,7000
+IC-202601-401,2026-01-22,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Management Fees,44519.310797737206,7000
+IC-202601-402,2026-01-16,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Shared Services,67288.04650875347,6500
+IC-202601-403,2026-01-27,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,190568.30372656957,5000
+IC-202601-404,2026-01-06,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Software Licenses,20313.397769583313,7000
+IC-202601-405,2026-01-28,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Management Fees,21967.733538402925,7000
+IC-202601-406,2026-01-10,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Shared Services,97770.7827864432,6500
+IC-202601-407,2026-01-18,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Inventory/Supplies,146546.9503230914,5000
+IC-202601-408,2026-01-02,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Software Licenses,6801.769632480415,7000
+IC-202601-409,2026-01-18,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Management Fees,38869.21790546444,7000
+IC-202601-410,2026-01-28,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Shared Services,35132.717409434365,6500
+IC-202601-411,2026-01-27,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Inventory/Supplies,233251.68646875708,5000
+IC-202601-412,2026-01-25,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Software Licenses,13912.101993722765,7000
+IC-202601-413,2026-01-14,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Management Fees,17168.149751866702,7000
+IC-202601-414,2026-01-13,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Shared Services,87750.34089899874,6500
+IC-202601-415,2026-01-14,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,105386.33615877964,5000
+IC-202601-416,2026-01-05,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Software Licenses,8052.864205692645,7000
+IC-202601-417,2026-01-28,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Management Fees,49092.91461171151,7000
+IC-202601-418,2026-01-28,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Shared Services,67143.79181168383,6500
+IC-202601-419,2026-01-03,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Inventory/Supplies,83029.34344109774,5000
+IC-202601-420,2026-01-08,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Software Licenses,21732.90193960561,7000
+IC-202601-421,2026-01-06,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Management Fees,20735.88463646223,7000
+IC-202601-422,2026-01-06,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Shared Services,30394.19756865284,6500
+IC-202601-423,2026-01-23,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,145275.17528457454,5000
+IC-202601-424,2026-01-27,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Software Licenses,14784.443308124391,7000
+IC-202601-425,2026-01-04,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Management Fees,19199.519826861837,7000
+IC-202601-426,2026-01-19,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Shared Services,99232.33088379126,6500
+IC-202601-427,2026-01-22,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,88545.17011844431,5000
+IC-202601-428,2026-01-15,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Software Licenses,23564.36388156252,7000
+IC-202601-429,2026-01-12,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Management Fees,21712.45590608017,7000
+IC-202601-430,2026-01-13,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Shared Services,69729.39127676838,6500
+IC-202601-431,2026-01-28,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,132573.60357392003,5000
+IC-202601-432,2026-01-02,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Software Licenses,15450.852910170455,7000
+IC-202601-433,2026-01-10,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Management Fees,31155.298752627863,7000
+IC-202601-434,2026-01-22,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Shared Services,38907.29341963568,6500
+IC-202601-435,2026-01-19,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,138443.37187811383,5000
+IC-202601-436,2026-01-22,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Software Licenses,14800.205327418362,7000
+IC-202601-437,2026-01-24,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Management Fees,18220.53930947606,7000
+IC-202601-438,2026-01-28,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Shared Services,58633.37227716555,6500
+IC-202601-439,2026-01-15,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,133186.527342474,5000
+IC-202601-440,2026-01-02,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,11040.83926681391,7000
+IC-202601-441,2026-01-24,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Management Fees,26420.237266700125,7000
+IC-202601-442,2026-01-09,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Shared Services,60232.42422451115,6500
+IC-202601-443,2026-01-12,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Inventory/Supplies,141799.09986980874,5000
+IC-202601-444,2026-01-20,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Software Licenses,13929.83037249546,7000
+IC-202601-445,2026-01-17,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Management Fees,13303.224314365685,7000
+IC-202601-446,2026-01-22,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Shared Services,52448.950975369546,6500
+IC-202601-447,2026-01-16,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Inventory/Supplies,57900.092829910995,5000
+IC-202601-448,2026-01-25,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Software Licenses,5111.35498179408,7000
+IC-202601-449,2026-01-19,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Management Fees,44258.79980146849,7000
+IC-202601-450,2026-01-05,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Shared Services,25455.44784125714,6500
+IC-202601-451,2026-01-25,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,134430.19211216387,5000
+IC-202601-452,2026-01-04,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Software Licenses,12426.283730420835,7000
+IC-202601-453,2026-01-05,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Management Fees,45611.22499838579,7000
+IC-202601-454,2026-01-22,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Shared Services,35345.65361666988,6500
+IC-202601-455,2026-01-26,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Inventory/Supplies,62249.68385520804,5000
+IC-202601-456,2026-01-25,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Software Licenses,20879.081067461026,7000
+IC-202601-457,2026-01-18,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Management Fees,27178.537970253597,7000
+IC-202601-458,2026-01-07,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Shared Services,28622.582176600587,6500
+IC-202601-459,2026-01-03,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,85152.10815906647,5000
+IC-202601-460,2026-01-15,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,21570.31721370667,7000
+IC-202601-461,2026-01-20,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Management Fees,42200.732649593876,7000
+IC-202601-462,2026-01-20,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Shared Services,53148.9335240285,6500
+IC-202601-463,2026-01-19,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Inventory/Supplies,214537.663110066,5000
+IC-202601-464,2026-01-08,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Software Licenses,12280.823663854302,7000
+IC-202601-465,2026-01-12,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Management Fees,32714.840465334117,7000
+IC-202601-466,2026-01-03,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Shared Services,33999.419151404356,6500
+IC-202601-467,2026-01-03,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,242805.20036293042,5000
+IC-202601-468,2026-01-04,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Software Licenses,21446.48088041961,7000
+IC-202601-469,2026-01-09,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Management Fees,12786.446383988667,7000
+IC-202601-470,2026-01-24,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Shared Services,28471.492337530224,6500
+IC-202601-471,2026-01-17,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,248855.26044214488,5000
+IC-202601-472,2026-01-26,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Software Licenses,21086.171046023534,7000
+IC-202601-473,2026-01-23,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Management Fees,16919.521292812155,7000
+IC-202601-474,2026-01-24,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Shared Services,22008.583282364958,6500
+IC-202601-475,2026-01-19,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Inventory/Supplies,106869.15046265812,5000
+IC-202601-476,2026-01-02,eta_analytics,Eta Analytics Partners,beta_manufacturing,Beta Manufacturing Co,Software Licenses,24462.779989752813,7000
+IC-202601-477,2026-01-25,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Management Fees,33452.94003105322,7000
+IC-202601-478,2026-01-19,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Shared Services,59153.422372387395,6500
+IC-202601-479,2026-01-19,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,123072.35820507139,5000
+IC-202601-480,2026-01-27,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Software Licenses,24933.42875373376,7000
+IC-202601-481,2026-01-21,eta_analytics,Eta Analytics Partners,beta_manufacturing,Beta Manufacturing Co,Management Fees,16863.58175606039,7000
+IC-202601-482,2026-01-03,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Shared Services,62508.797515103215,6500
+IC-202601-483,2026-01-15,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Inventory/Supplies,79794.47281689667,5000
+IC-202601-484,2026-01-08,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Software Licenses,16182.450772678167,7000
+IC-202601-485,2026-01-26,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Management Fees,31418.359637266243,7000
+IC-202601-486,2026-01-25,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Shared Services,57209.88164524735,6500
+IC-202601-487,2026-01-25,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,242198.16371259477,5000
+IC-202601-488,2026-01-21,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Software Licenses,20380.42845348379,7000
+IC-202601-489,2026-01-10,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Management Fees,13587.147124707126,7000
+IC-202601-490,2026-01-08,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Shared Services,90596.00104789513,6500
+IC-202601-491,2026-01-21,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,108288.7437375517,5000
+IC-202601-492,2026-01-10,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Software Licenses,5094.577644290692,7000
+IC-202601-493,2026-01-07,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Management Fees,42690.79567032848,7000
+IC-202601-494,2026-01-26,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Shared Services,46322.05917615692,6500
+IC-202601-495,2026-01-10,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,128753.44882066814,5000
+IC-202601-496,2026-01-02,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,23378.742590047328,7000
+IC-202601-497,2026-01-15,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Management Fees,11911.205634300726,7000
+IC-202601-498,2026-01-16,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Shared Services,93969.31543356566,6500
+IC-202601-499,2026-01-10,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,62511.78242521969,5000
+IC-202601-500,2026-01-13,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Software Licenses,21521.975930030894,7000
+IC-202601-501,2026-01-18,beta_manufacturing,Beta Manufacturing Co,eta_analytics,Eta Analytics Partners,Management Fees,16843.14844864232,7000
+IC-202601-502,2026-01-08,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Shared Services,36938.17459719487,6500
+IC-202601-503,2026-01-14,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,137314.3647770711,5000
+IC-202601-504,2026-01-19,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,7904.96388710001,7000
+IC-202601-505,2026-01-08,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Management Fees,47911.567114091195,7000
+IC-202601-506,2026-01-15,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Shared Services,44207.14312608608,6500
+IC-202601-507,2026-01-12,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,61735.49097154405,5000
+IC-202601-508,2026-01-14,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Software Licenses,5784.323297814722,7000
+IC-202601-509,2026-01-21,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Management Fees,32493.003980572714,7000
+IC-202601-510,2026-01-18,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Shared Services,24768.567199693407,6500
+IC-202601-511,2026-01-12,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,242903.61803006698,5000
+IC-202601-512,2026-01-10,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Software Licenses,5247.850762655688,7000
+IC-202601-513,2026-01-13,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Management Fees,48503.360843484814,7000
+IC-202601-514,2026-01-15,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Shared Services,41988.76128690111,6500
+IC-202601-515,2026-01-19,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,175222.1439359011,5000
+IC-202601-516,2026-01-28,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,14286.043497419763,7000
+IC-202601-517,2026-01-17,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Management Fees,24757.900108423826,7000
+IC-202601-518,2026-01-11,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Shared Services,88688.97152883517,6500
+IC-202601-519,2026-01-03,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,59518.55973710996,5000
+IC-202601-520,2026-01-27,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Software Licenses,6204.558783368546,7000
+IC-202601-521,2026-01-19,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Management Fees,44515.513695510585,7000
+IC-202601-522,2026-01-17,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Shared Services,40736.451240520124,6500
+IC-202601-523,2026-01-24,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,160728.15914561393,5000
+IC-202601-524,2026-01-28,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Software Licenses,22379.046940325494,7000
+IC-202601-525,2026-01-21,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Management Fees,35823.70942917207,7000
+IC-202601-526,2026-01-06,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Shared Services,29459.99863906642,6500
+IC-202601-527,2026-01-06,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Inventory/Supplies,200841.57083724966,5000
+IC-202601-528,2026-01-07,eta_analytics,Eta Analytics Partners,beta_manufacturing,Beta Manufacturing Co,Software Licenses,12333.075275679967,7000
+IC-202601-529,2026-01-12,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Management Fees,39878.71072050304,7000
+IC-202601-530,2026-01-20,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Shared Services,38147.424596266814,6500
+IC-202601-531,2026-01-15,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Inventory/Supplies,180994.99304549844,5000
+IC-202601-532,2026-01-02,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Software Licenses,24288.951172812183,7000
+IC-202601-533,2026-01-11,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Management Fees,34339.60215912993,7000
+IC-202601-534,2026-01-06,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Shared Services,40901.440653603284,6500
+IC-202601-535,2026-01-02,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,227104.66781339952,5000
+IC-202601-536,2026-01-20,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,10731.551970041437,7000
+IC-202601-537,2026-01-08,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Management Fees,26880.845956791767,7000
+IC-202601-538,2026-01-28,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Shared Services,79735.37893243117,6500
+IC-202601-539,2026-01-06,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,120161.41429563751,5000
+IC-202601-540,2026-01-19,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Software Licenses,21247.02613602791,7000
+IC-202601-541,2026-01-13,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Management Fees,33091.59230192213,7000
+IC-202601-542,2026-01-17,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Shared Services,88463.05304270038,6500
+IC-202601-543,2026-01-16,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,100200.13121286558,5000
+IC-202601-544,2026-01-18,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Software Licenses,20151.013338419834,7000
+IC-202601-545,2026-01-05,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Management Fees,27393.523868741715,7000
+IC-202601-546,2026-01-16,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Shared Services,99221.10144440318,6500
+IC-202601-547,2026-01-14,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,147293.77348127248,5000
+IC-202601-548,2026-01-08,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Software Licenses,20613.51865618506,7000
+IC-202601-549,2026-01-22,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Management Fees,24790.95050639212,7000
+IC-202601-550,2026-01-23,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Shared Services,88025.73239626134,6500
+IC-202601-551,2026-01-25,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Inventory/Supplies,202737.56508138866,5000
+IC-202601-552,2026-01-09,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,9427.128651199055,7000
+IC-202601-553,2026-01-04,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Management Fees,49780.8078944224,7000
+IC-202601-554,2026-01-03,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Shared Services,83902.24239973808,6500
+IC-202601-555,2026-01-13,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Inventory/Supplies,104321.28840759906,5000
+IC-202601-556,2026-01-23,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Software Licenses,17644.384237849466,7000
+IC-202601-557,2026-01-06,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Management Fees,11409.22406171462,7000
+IC-202601-558,2026-01-18,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Shared Services,92214.44691987679,6500
+IC-202601-559,2026-01-20,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,110884.54902620305,5000
+IC-202601-560,2026-01-02,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Software Licenses,10232.570943855375,7000
+IC-202601-561,2026-01-26,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Management Fees,35593.06073779483,7000
+IC-202601-562,2026-01-26,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Shared Services,50551.07871434419,6500
+IC-202601-563,2026-01-02,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,226282.04899308764,5000
+IC-202601-564,2026-01-25,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Software Licenses,14802.288422974754,7000
+IC-202601-565,2026-01-15,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Management Fees,12863.85833312205,7000
+IC-202601-566,2026-01-24,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Shared Services,61901.223708461395,6500
+IC-202601-567,2026-01-03,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,110367.30399959369,5000
+IC-202601-568,2026-01-28,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Software Licenses,14310.700970594782,7000
+IC-202601-569,2026-01-25,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Management Fees,16331.519034206647,7000
+IC-202601-570,2026-01-22,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Shared Services,81333.72412029639,6500
+IC-202601-571,2026-01-24,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,133861.78636269245,5000
+IC-202601-572,2026-01-13,theta_packaging,Theta Sustainable Packaging,beta_manufacturing,Beta Manufacturing Co,Software Licenses,14054.802384719358,7000
+IC-202601-573,2026-01-05,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Management Fees,15057.955099430412,7000
+IC-202601-574,2026-01-21,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Shared Services,72416.88207232144,6500
+IC-202601-575,2026-01-12,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Inventory/Supplies,194207.4580439296,5000
+IC-202601-576,2026-01-09,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Software Licenses,19460.864635736507,7000
+IC-202601-577,2026-01-16,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Management Fees,49874.75966296555,7000
+IC-202601-578,2026-01-15,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Shared Services,70938.7445024687,6500
+IC-202601-579,2026-01-20,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,81211.77538122988,5000
+IC-202601-580,2026-01-28,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Software Licenses,18648.667304193994,7000
+IC-202601-581,2026-01-03,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Management Fees,13713.215061755913,7000
+IC-202601-582,2026-01-26,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Shared Services,64173.44122863458,6500
+IC-202601-583,2026-01-08,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,69656.5784501511,5000
+IC-202601-584,2026-01-28,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Software Licenses,11430.438708526246,7000
+IC-202601-585,2026-01-06,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Management Fees,24816.553401871246,7000
+IC-202601-586,2026-01-03,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Shared Services,46857.72316066611,6500
+IC-202601-587,2026-01-15,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,230787.11930590364,5000
+IC-202601-588,2026-01-08,eta_analytics,Eta Analytics Partners,beta_manufacturing,Beta Manufacturing Co,Software Licenses,6140.234339388597,7000
+IC-202601-589,2026-01-14,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Management Fees,49440.50601837502,7000
+IC-202601-590,2026-01-20,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Shared Services,35057.85696397739,6500
+IC-202601-591,2026-01-02,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Inventory/Supplies,200123.75110741012,5000
+IC-202601-592,2026-01-21,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Software Licenses,22099.103099032814,7000
+IC-202601-593,2026-01-09,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Management Fees,37061.013137517555,7000
+IC-202601-594,2026-01-12,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Shared Services,99509.03295843412,6500
+IC-202601-595,2026-01-06,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Inventory/Supplies,195005.62954503443,5000
+IC-202601-596,2026-01-25,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Software Licenses,17864.81887811965,7000
+IC-202601-597,2026-01-03,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Management Fees,42904.259964286895,7000
+IC-202601-598,2026-01-21,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Shared Services,39649.49865378995,6500
+IC-202601-599,2026-01-12,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Inventory/Supplies,57041.67835031049,5000
+IC-202601-600,2026-01-02,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Software Licenses,22629.371818814765,7000
+IC-202601-601,2026-01-13,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Management Fees,22544.60301700924,7000
+IC-202601-602,2026-01-13,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Shared Services,22456.446779530765,6500
+IC-202601-603,2026-01-08,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,248441.70330526022,5000
+IC-202601-604,2026-01-08,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Software Licenses,6284.410021631502,7000
+IC-202601-605,2026-01-09,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Management Fees,10919.254446049394,7000
+IC-202601-606,2026-01-04,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Shared Services,62343.67543836137,6500
+IC-202601-607,2026-01-21,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,78108.8487876775,5000
+IC-202601-608,2026-01-06,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Software Licenses,15494.430940018736,7000
+IC-202601-609,2026-01-12,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Management Fees,32372.118043531773,7000
+IC-202601-610,2026-01-06,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Shared Services,94638.47633226294,6500
+IC-202601-611,2026-01-16,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,73282.52723322489,5000
+IC-202601-612,2026-01-07,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,5685.2164547624425,7000
+IC-202601-613,2026-01-18,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Management Fees,17544.654543307723,7000
+IC-202601-614,2026-01-04,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Shared Services,54683.31674532073,6500
+IC-202601-615,2026-01-17,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Inventory/Supplies,162370.68643154477,5000
+IC-202601-616,2026-01-18,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Software Licenses,9480.76713922448,7000
+IC-202601-617,2026-01-14,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Management Fees,43825.62454863538,7000
+IC-202601-618,2026-01-07,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Shared Services,84369.12000839804,6500
+IC-202601-619,2026-01-02,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,241647.0206315445,5000
+IC-202601-620,2026-01-13,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Software Licenses,7171.609955582126,7000
+IC-202601-621,2026-01-08,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Management Fees,28988.910342268904,7000
+IC-202601-622,2026-01-16,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Shared Services,27285.509864418484,6500
+IC-202601-623,2026-01-11,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Inventory/Supplies,90118.13172778772,5000
+IC-202601-624,2026-01-18,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Software Licenses,22092.738124909505,7000
+IC-202601-625,2026-01-18,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Management Fees,22414.79480259539,7000
+IC-202601-626,2026-01-14,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Shared Services,21872.887890347156,6500
+IC-202601-627,2026-01-14,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,138721.61486395024,5000
+IC-202601-628,2026-01-08,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Software Licenses,21621.055990503988,7000
+IC-202601-629,2026-01-25,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Management Fees,12377.662429307366,7000
+IC-202601-630,2026-01-11,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Shared Services,37320.04949728039,6500
+IC-202601-631,2026-01-13,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,158302.50924775016,5000
+IC-202601-632,2026-01-26,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Software Licenses,9630.631275055952,7000
+IC-202601-633,2026-01-12,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Management Fees,44303.36913063266,7000
+IC-202601-634,2026-01-28,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Shared Services,42017.57827293177,6500
+IC-202601-635,2026-01-27,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,111281.81667561011,5000
+IC-202601-636,2026-01-24,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Software Licenses,8289.154700096202,7000
+IC-202601-637,2026-01-24,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Management Fees,13402.359721913974,7000
+IC-202601-638,2026-01-06,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Shared Services,48524.136650099565,6500
+IC-202601-639,2026-01-10,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Inventory/Supplies,203886.15711979824,5000
+IC-202601-640,2026-01-26,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Software Licenses,18689.044323541966,7000
+IC-202601-641,2026-01-22,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Management Fees,14238.173122783615,7000
+IC-202601-642,2026-01-11,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Shared Services,68725.37690637249,6500
+IC-202601-643,2026-01-18,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,199660.08910836666,5000
+IC-202601-644,2026-01-09,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Software Licenses,9325.88682928652,7000
+IC-202601-645,2026-01-26,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Management Fees,29956.245594526772,7000
+IC-202601-646,2026-01-21,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Shared Services,93999.85687245906,6500
+IC-202601-647,2026-01-05,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,193457.78678865553,5000
+IC-202601-648,2026-01-16,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Software Licenses,14647.318860359279,7000
+IC-202601-649,2026-01-28,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Management Fees,38921.24815934483,7000
+IC-202601-650,2026-01-28,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Shared Services,81825.11225188446,6500
+IC-202601-651,2026-01-23,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,190422.29471392807,5000
+IC-202601-652,2026-01-08,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Software Licenses,11777.784657916593,7000
+IC-202601-653,2026-01-09,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Management Fees,12553.494563568553,7000
+IC-202601-654,2026-01-25,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Shared Services,82232.11392075739,6500
+IC-202601-655,2026-01-27,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,200083.1932566513,5000
+IC-202601-656,2026-01-26,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Software Licenses,12189.442806776522,7000
+IC-202601-657,2026-01-26,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Management Fees,17978.35062674098,7000
+IC-202601-658,2026-01-28,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Shared Services,62577.56708173988,6500
+IC-202601-659,2026-01-14,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,60195.321650506674,5000
+IC-202601-660,2026-01-26,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Software Licenses,5260.029027550857,7000
+IC-202601-661,2026-01-04,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Management Fees,47688.88519781041,7000
+IC-202601-662,2026-01-16,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Shared Services,52345.85428243748,6500
+IC-202601-663,2026-01-15,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,235232.08510657944,5000
+IC-202601-664,2026-01-28,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Software Licenses,22824.00920489893,7000
+IC-202601-665,2026-01-04,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Management Fees,13366.851341335643,7000
+IC-202601-666,2026-01-17,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Shared Services,64700.53458603951,6500
+IC-202601-667,2026-01-04,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,93992.55093590211,5000
+IC-202601-668,2026-01-17,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Software Licenses,17307.960296269055,7000
+IC-202601-669,2026-01-25,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Management Fees,45893.55943988746,7000
+IC-202601-670,2026-01-03,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Shared Services,49485.33343515324,6500
+IC-202601-671,2026-01-15,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,157329.83460786648,5000
+IC-202601-672,2026-01-12,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Software Licenses,9020.615449347928,7000
+IC-202601-673,2026-01-09,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Management Fees,28105.947476521746,7000
+IC-202601-674,2026-01-18,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Shared Services,86989.27268057916,6500
+IC-202601-675,2026-01-11,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,60768.302494611846,5000
+IC-202601-676,2026-01-12,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,10806.07645972338,7000
+IC-202601-677,2026-01-20,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Management Fees,28523.642967590382,7000
+IC-202601-678,2026-01-04,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Shared Services,33373.742640726035,6500
+IC-202601-679,2026-01-17,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,81821.94393120232,5000
+IC-202601-680,2026-01-11,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Software Licenses,10303.031959993827,7000
+IC-202601-681,2026-01-27,theta_packaging,Theta Sustainable Packaging,beta_manufacturing,Beta Manufacturing Co,Management Fees,20942.360142170037,7000
+IC-202601-682,2026-01-14,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Shared Services,96286.76884361132,6500
+IC-202601-683,2026-01-09,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,181693.41877910285,5000
+IC-202601-684,2026-01-22,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Software Licenses,15578.611254034002,7000
+IC-202601-685,2026-01-14,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Management Fees,38152.94174319564,7000
+IC-202601-686,2026-01-03,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Shared Services,23640.72626773207,6500
+IC-202601-687,2026-01-03,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Inventory/Supplies,77789.40702562525,5000
+IC-202601-688,2026-01-24,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,9211.80938811514,7000
+IC-202601-689,2026-01-09,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Management Fees,36154.18171079634,7000
+IC-202601-690,2026-01-26,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Shared Services,32094.794304231764,6500
+IC-202601-691,2026-01-09,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,187799.8525981058,5000
+IC-202601-692,2026-01-15,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Software Licenses,15878.519397041087,7000
+IC-202601-693,2026-01-19,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Management Fees,29526.595327509036,7000
+IC-202601-694,2026-01-19,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Shared Services,66496.18327135818,6500
+IC-202601-695,2026-01-03,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,60473.163036184975,5000
+IC-202601-696,2026-01-08,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Software Licenses,18160.280661455086,7000
+IC-202601-697,2026-01-03,eta_analytics,Eta Analytics Partners,beta_manufacturing,Beta Manufacturing Co,Management Fees,21912.68878658578,7000
+IC-202601-698,2026-01-21,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Shared Services,75525.02819108564,6500
+IC-202601-699,2026-01-25,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Inventory/Supplies,105512.52102964839,5000
+IC-202601-700,2026-01-23,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Software Licenses,24084.117626950145,7000
+IC-202601-701,2026-01-24,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Management Fees,31355.501269185806,7000
+IC-202601-702,2026-01-06,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Shared Services,24505.4473088374,6500
+IC-202601-703,2026-01-05,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,138401.6905977448,5000
+IC-202601-704,2026-01-25,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Software Licenses,24550.58478889699,7000
+IC-202601-705,2026-01-02,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Management Fees,19670.723701199306,7000
+IC-202601-706,2026-01-11,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Shared Services,34920.1126624528,6500
+IC-202601-707,2026-01-09,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Inventory/Supplies,70825.50050527751,5000
+IC-202601-708,2026-01-08,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Software Licenses,16715.721666019475,7000
+IC-202601-709,2026-01-18,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Management Fees,27924.668837802987,7000
+IC-202601-710,2026-01-13,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Shared Services,59385.043135740314,6500
+IC-202601-711,2026-01-20,theta_packaging,Theta Sustainable Packaging,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,162443.81618535856,5000
+IC-202601-712,2026-01-02,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Software Licenses,11513.525796198099,7000
+IC-202601-713,2026-01-27,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Management Fees,46703.38917141231,7000
+IC-202601-714,2026-01-21,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Shared Services,59368.118332427395,6500
+IC-202601-715,2026-01-23,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Inventory/Supplies,98828.04768058978,5000
+IC-202601-716,2026-01-11,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,9085.611329371142,7000
+IC-202601-717,2026-01-07,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Management Fees,35000.97005887257,7000
+IC-202601-718,2026-01-14,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Shared Services,74567.21637788283,6500
+IC-202601-719,2026-01-17,beta_manufacturing,Beta Manufacturing Co,eta_analytics,Eta Analytics Partners,Inventory/Supplies,101852.74552577487,5000
+IC-202601-720,2026-01-26,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Software Licenses,24193.12011145502,7000
+IC-202601-721,2026-01-24,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Management Fees,45790.475576136516,7000
+IC-202601-722,2026-01-08,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Shared Services,73883.05398714921,6500
+IC-202601-723,2026-01-04,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,184565.04063862393,5000
+IC-202601-724,2026-01-28,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,9920.51295855222,7000
+IC-202601-725,2026-01-23,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Management Fees,38872.58269465153,7000
+IC-202601-726,2026-01-05,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Shared Services,41954.84629006118,6500
+IC-202601-727,2026-01-14,beta_manufacturing,Beta Manufacturing Co,eta_analytics,Eta Analytics Partners,Inventory/Supplies,246542.62520769754,5000
+IC-202601-728,2026-01-26,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Software Licenses,8437.389719344286,7000
+IC-202601-729,2026-01-23,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Management Fees,42290.589282438916,7000
+IC-202601-730,2026-01-21,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Shared Services,62290.04100437288,6500
+IC-202601-731,2026-01-07,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,237856.99335682162,5000
+IC-202601-732,2026-01-19,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Software Licenses,21326.77330927818,7000
+IC-202601-733,2026-01-26,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Management Fees,41306.82595523543,7000
+IC-202601-734,2026-01-22,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Shared Services,33773.26053712306,6500
+IC-202601-735,2026-01-16,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,136246.48507317074,5000
+IC-202601-736,2026-01-24,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Software Licenses,13627.777217908546,7000
+IC-202601-737,2026-01-02,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Management Fees,22145.22249980832,7000
+IC-202601-738,2026-01-18,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Shared Services,75406.09093000351,6500
+IC-202601-739,2026-01-27,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,239316.39035054896,5000
+IC-202601-740,2026-01-23,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,18416.508652882567,7000
+IC-202601-741,2026-01-14,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Management Fees,16890.379286822506,7000
+IC-202601-742,2026-01-22,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Shared Services,41131.814610504895,6500
+IC-202601-743,2026-01-17,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,184115.06799747425,5000
+IC-202601-744,2026-01-18,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Software Licenses,13790.941753534145,7000
+IC-202601-745,2026-01-18,theta_packaging,Theta Sustainable Packaging,beta_manufacturing,Beta Manufacturing Co,Management Fees,27293.524523237807,7000
+IC-202601-746,2026-01-23,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Shared Services,85712.06997868486,6500
+IC-202601-747,2026-01-13,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,77062.97040917844,5000
+IC-202601-748,2026-01-19,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Software Licenses,18126.55309249625,7000
+IC-202601-749,2026-01-04,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Management Fees,37371.40296402543,7000
+IC-202601-750,2026-01-04,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Shared Services,74610.44440977204,6500
+IC-202601-751,2026-01-04,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,190687.99524146266,5000
+IC-202601-752,2026-01-02,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,13061.255378920636,7000
+IC-202601-753,2026-01-15,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Management Fees,47937.61939884216,7000
+IC-202601-754,2026-01-16,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Shared Services,82079.33790920334,6500
+IC-202601-755,2026-01-22,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,57540.84467229892,5000
+IC-202601-756,2026-01-16,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Software Licenses,11593.793671757025,7000
+IC-202601-757,2026-01-18,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Management Fees,22136.49512343427,7000
+IC-202601-758,2026-01-27,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Shared Services,66946.58543079987,6500
+IC-202601-759,2026-01-13,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,205649.73527018947,5000
+IC-202601-760,2026-01-10,theta_packaging,Theta Sustainable Packaging,beta_manufacturing,Beta Manufacturing Co,Software Licenses,11220.998418593426,7000
+IC-202601-761,2026-01-16,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Management Fees,38831.911269619115,7000
+IC-202601-762,2026-01-14,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Shared Services,20696.933274671184,6500
+IC-202601-763,2026-01-04,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Inventory/Supplies,213778.90866163943,5000
+IC-202601-764,2026-01-04,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,17218.83784837069,7000
+IC-202601-765,2026-01-04,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Management Fees,39564.45161086334,7000
+IC-202601-766,2026-01-26,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Shared Services,93320.30252647976,6500
+IC-202601-767,2026-01-03,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,67566.73517742805,5000
+IC-202601-768,2026-01-18,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Software Licenses,16664.249780564925,7000
+IC-202601-769,2026-01-08,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Management Fees,26892.74579069575,7000
+IC-202601-770,2026-01-13,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Shared Services,73377.17126079075,6500
+IC-202601-771,2026-01-11,delta_healthcare,Delta Healthcare Services,gamma_retail,Gamma Retail Group,Inventory/Supplies,210076.46510062928,5000
+IC-202601-772,2026-01-03,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Software Licenses,19830.18326823928,7000
+IC-202601-773,2026-01-07,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Management Fees,20719.95286827172,7000
+IC-202601-774,2026-01-09,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Shared Services,32088.689873264728,6500
+IC-202601-775,2026-01-11,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,191185.42400217045,5000
+IC-202601-776,2026-01-03,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Software Licenses,24426.073660407907,7000
+IC-202601-777,2026-01-03,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Management Fees,16776.117901678674,7000
+IC-202601-778,2026-01-21,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Shared Services,57629.38480604335,6500
+IC-202601-779,2026-01-28,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,220172.11640054928,5000
+IC-202601-780,2026-01-11,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Software Licenses,22483.28131678542,7000
+IC-202601-781,2026-01-10,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Management Fees,34716.73315679486,7000
+IC-202601-782,2026-01-09,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Shared Services,54539.65061154763,6500
+IC-202601-783,2026-01-02,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,96525.32800502222,5000
+IC-202601-784,2026-01-20,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Software Licenses,18959.767843874703,7000
+IC-202601-785,2026-01-13,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Management Fees,26968.504229890856,7000
+IC-202601-786,2026-01-28,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Shared Services,61427.190586422366,6500
+IC-202601-787,2026-01-09,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,63898.660535984476,5000
+IC-202601-788,2026-01-08,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Software Licenses,20394.574585462884,7000
+IC-202601-789,2026-01-26,eta_analytics,Eta Analytics Partners,beta_manufacturing,Beta Manufacturing Co,Management Fees,41488.99072805946,7000
+IC-202601-790,2026-01-21,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Shared Services,93120.19100562001,6500
+IC-202601-791,2026-01-20,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,167704.87396981107,5000
+IC-202601-792,2026-01-20,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Software Licenses,16120.609432654583,7000
+IC-202601-793,2026-01-21,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Management Fees,28672.3661715818,7000
+IC-202601-794,2026-01-13,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Shared Services,84674.76073682093,6500
+IC-202601-795,2026-01-03,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,244583.7376860044,5000
+IC-202601-796,2026-01-03,eta_analytics,Eta Analytics Partners,beta_manufacturing,Beta Manufacturing Co,Software Licenses,7170.1365548192425,7000
+IC-202601-797,2026-01-05,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Management Fees,45590.11104990499,7000
+IC-202601-798,2026-01-12,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Shared Services,42572.01374495601,6500
+IC-202601-799,2026-01-21,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Inventory/Supplies,50625.8514487512,5000
+IC-202601-800,2026-01-09,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Software Licenses,14318.398239812694,7000
+IC-202601-801,2026-01-21,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Management Fees,25795.180513768406,7000
+IC-202601-802,2026-01-21,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Shared Services,92172.00723645717,6500
+IC-202601-803,2026-01-09,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Inventory/Supplies,164935.8798205969,5000
+IC-202601-804,2026-01-28,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,15517.781262270832,7000
+IC-202601-805,2026-01-24,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Management Fees,13036.227933359989,7000
+IC-202601-806,2026-01-04,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Shared Services,65673.82368092156,6500
+IC-202601-807,2026-01-27,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,58888.275254514454,5000
+IC-202601-808,2026-01-07,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Software Licenses,24732.8665332879,7000
+IC-202601-809,2026-01-17,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Management Fees,13233.580148015553,7000
+IC-202601-810,2026-01-10,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Shared Services,98611.82666356511,6500
+IC-202601-811,2026-01-04,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Inventory/Supplies,162192.10570412205,5000
+IC-202601-812,2026-01-04,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Software Licenses,14610.877055504166,7000
+IC-202601-813,2026-01-16,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Management Fees,22522.1919300652,7000
+IC-202601-814,2026-01-04,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Shared Services,26932.80170270861,6500
+IC-202601-815,2026-01-08,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,128546.7103581332,5000
+IC-202601-816,2026-01-07,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Software Licenses,14389.371135420059,7000
+IC-202601-817,2026-01-16,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Management Fees,12181.399675996865,7000
+IC-202601-818,2026-01-23,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Shared Services,72100.74047153615,6500
+IC-202601-819,2026-01-23,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,209106.47651564365,5000
+IC-202601-820,2026-01-17,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Software Licenses,24490.121274389578,7000
+IC-202601-821,2026-01-09,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Management Fees,10738.027221879776,7000
+IC-202601-822,2026-01-04,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Shared Services,65167.5520076781,6500
+IC-202601-823,2026-01-24,theta_packaging,Theta Sustainable Packaging,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,56079.089899082304,5000
+IC-202601-824,2026-01-16,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Software Licenses,9778.48983094488,7000
+IC-202601-825,2026-01-16,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Management Fees,25474.522565797255,7000
+IC-202601-826,2026-01-04,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Shared Services,41529.84640062852,6500
+IC-202601-827,2026-01-23,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Inventory/Supplies,196272.16975756708,5000
+IC-202601-828,2026-01-07,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Software Licenses,7702.402908290453,7000
+IC-202601-829,2026-01-25,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Management Fees,44710.215789671725,7000
+IC-202601-830,2026-01-05,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Shared Services,30796.65177307759,6500
+IC-202601-831,2026-01-09,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,88721.8784248379,5000
+IC-202601-832,2026-01-14,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Software Licenses,5774.101387462707,7000
+IC-202601-833,2026-01-14,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Management Fees,45987.38311343317,7000
+IC-202601-834,2026-01-17,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Shared Services,96850.54480350217,6500
+IC-202601-835,2026-01-25,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Inventory/Supplies,137490.8271523681,5000
+IC-202601-836,2026-01-17,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Software Licenses,9463.547554060202,7000
+IC-202601-837,2026-01-13,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Management Fees,47950.73845607857,7000
+IC-202601-838,2026-01-09,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Shared Services,82091.98007672784,6500
+IC-202601-839,2026-01-07,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Inventory/Supplies,162285.786045929,5000
+IC-202601-840,2026-01-19,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Software Licenses,10961.354329213571,7000
+IC-202601-841,2026-01-25,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Management Fees,45849.21751261172,7000
+IC-202601-842,2026-01-02,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Shared Services,63323.74089158526,6500
+IC-202601-843,2026-01-17,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Inventory/Supplies,150318.81254201167,5000
+IC-202601-844,2026-01-02,beta_manufacturing,Beta Manufacturing Co,eta_analytics,Eta Analytics Partners,Software Licenses,9485.46269988496,7000
+IC-202601-845,2026-01-19,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Management Fees,28917.72529427813,7000
+IC-202601-846,2026-01-10,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Shared Services,67703.34271492287,6500
+IC-202601-847,2026-01-22,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,66945.89754560534,5000
+IC-202601-848,2026-01-21,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Software Licenses,20513.08658692967,7000
+IC-202601-849,2026-01-07,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Management Fees,42111.383121461746,7000
+IC-202601-850,2026-01-08,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Shared Services,38266.045244592,6500
+IC-202601-851,2026-01-24,eta_analytics,Eta Analytics Partners,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,217383.9342288792,5000
+IC-202601-852,2026-01-28,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Software Licenses,10910.641147120597,7000
+IC-202601-853,2026-01-06,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Management Fees,47160.595321501685,7000
+IC-202601-854,2026-01-14,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Shared Services,84321.07652428272,6500
+IC-202601-855,2026-01-22,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,157849.47678659658,5000
+IC-202601-856,2026-01-23,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,24086.789912272958,7000
+IC-202601-857,2026-01-22,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Management Fees,11441.072026241454,7000
+IC-202601-858,2026-01-03,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Shared Services,35320.98618287212,6500
+IC-202601-859,2026-01-16,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Inventory/Supplies,243685.70210125003,5000
+IC-202601-860,2026-01-23,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Software Licenses,18601.448965792748,7000
+IC-202601-861,2026-01-16,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Management Fees,18520.044143244166,7000
+IC-202601-862,2026-01-08,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Shared Services,51032.38810420607,6500
+IC-202601-863,2026-01-10,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,197821.65318152047,5000
+IC-202601-864,2026-01-19,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Software Licenses,17077.283987467606,7000
+IC-202601-865,2026-01-04,beta_manufacturing,Beta Manufacturing Co,eta_analytics,Eta Analytics Partners,Management Fees,45892.23670101263,7000
+IC-202601-866,2026-01-07,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Shared Services,86696.71120192429,6500
+IC-202601-867,2026-01-23,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,167158.16421775182,5000
+IC-202601-868,2026-01-05,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Software Licenses,21154.353801860176,7000
+IC-202601-869,2026-01-04,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Management Fees,17458.601579450784,7000
+IC-202601-870,2026-01-02,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Shared Services,58496.52193668051,6500
+IC-202601-871,2026-01-21,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Inventory/Supplies,174805.4630010573,5000
+IC-202601-872,2026-01-15,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,18965.100111834334,7000
+IC-202601-873,2026-01-13,theta_packaging,Theta Sustainable Packaging,beta_manufacturing,Beta Manufacturing Co,Management Fees,27248.137154972635,7000
+IC-202601-874,2026-01-13,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Shared Services,57028.817971712124,6500
+IC-202601-875,2026-01-19,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,141783.69589776287,5000
+IC-202601-876,2026-01-28,epsilon_logistics,Epsilon Logistics Corp,theta_packaging,Theta Sustainable Packaging,Software Licenses,17592.768257655815,7000
+IC-202601-877,2026-01-02,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Management Fees,23418.597402084168,7000
+IC-202601-878,2026-01-27,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Shared Services,44847.91438442959,6500
+IC-202601-879,2026-01-21,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,163938.0122986128,5000
+IC-202601-880,2026-01-06,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Software Licenses,6720.807860350446,7000
+IC-202601-881,2026-01-21,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Management Fees,21929.50847501678,7000
+IC-202601-882,2026-01-24,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Shared Services,88673.61596394728,6500
+IC-202601-883,2026-01-04,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Inventory/Supplies,145042.99172981587,5000
+IC-202601-884,2026-01-07,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Software Licenses,17425.270648345464,7000
+IC-202601-885,2026-01-09,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Management Fees,25466.478106036386,7000
+IC-202601-886,2026-01-07,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Shared Services,48641.864833936954,6500
+IC-202601-887,2026-01-11,epsilon_logistics,Epsilon Logistics Corp,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,63064.482228135545,5000
+IC-202601-888,2026-01-14,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Software Licenses,18999.18050113193,7000
+IC-202601-889,2026-01-21,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Management Fees,31602.769492744,7000
+IC-202601-890,2026-01-14,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Shared Services,22579.32508437687,6500
+IC-202601-891,2026-01-13,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,77207.13613698745,5000
+IC-202601-892,2026-01-08,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Software Licenses,17098.553061959916,7000
+IC-202601-893,2026-01-18,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Management Fees,20512.35793460188,7000
+IC-202601-894,2026-01-07,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Shared Services,70089.21514137242,6500
+IC-202601-895,2026-01-22,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,176557.11895119149,5000
+IC-202601-896,2026-01-21,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Software Licenses,22733.2600212828,7000
+IC-202601-897,2026-01-08,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Management Fees,11251.95041153222,7000
+IC-202601-898,2026-01-02,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Shared Services,20416.617855419376,6500
+IC-202601-899,2026-01-09,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,163937.71130904456,5000
+IC-202601-900,2026-01-14,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,20472.22494360986,7000
+IC-202601-901,2026-01-27,gamma_retail,Gamma Retail Group,alpha_saas,Alpha SaaS Solutions,Management Fees,38753.05312440665,7000
+IC-202601-902,2026-01-27,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Shared Services,86769.01858731211,6500
+IC-202601-903,2026-01-13,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,60897.273825000964,5000
+IC-202601-904,2026-01-15,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Software Licenses,14708.227196193377,7000
+IC-202601-905,2026-01-21,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Management Fees,27632.608373632662,7000
+IC-202601-906,2026-01-09,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Shared Services,50897.499659159745,6500
+IC-202601-907,2026-01-07,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,220129.93974815923,5000
+IC-202601-908,2026-01-13,theta_packaging,Theta Sustainable Packaging,alpha_saas,Alpha SaaS Solutions,Software Licenses,11346.24661110976,7000
+IC-202601-909,2026-01-21,beta_manufacturing,Beta Manufacturing Co,delta_healthcare,Delta Healthcare Services,Management Fees,46414.59842186412,7000
+IC-202601-910,2026-01-11,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Shared Services,25632.693569651856,6500
+IC-202601-911,2026-01-15,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,191979.271773425,5000
+IC-202601-912,2026-01-22,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Software Licenses,6029.91621618439,7000
+IC-202601-913,2026-01-04,epsilon_logistics,Epsilon Logistics Corp,zeta_distribution,Zeta Distribution Inc,Management Fees,30776.69778900486,7000
+IC-202601-914,2026-01-11,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Shared Services,43679.55682410751,6500
+IC-202601-915,2026-01-27,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,75768.62999685528,5000
+IC-202601-916,2026-01-07,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Software Licenses,5934.048129402918,7000
+IC-202601-917,2026-01-06,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Management Fees,32882.62852984741,7000
+IC-202601-918,2026-01-28,eta_analytics,Eta Analytics Partners,gamma_retail,Gamma Retail Group,Shared Services,63907.83154833871,6500
+IC-202601-919,2026-01-28,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,242183.59243489752,5000
+IC-202601-920,2026-01-23,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Software Licenses,12853.540995982745,7000
+IC-202601-921,2026-01-03,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Management Fees,30207.69334574862,7000
+IC-202601-922,2026-01-20,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Shared Services,55464.22825594095,6500
+IC-202601-923,2026-01-21,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,216682.38209361213,5000
+IC-202601-924,2026-01-11,zeta_distribution,Zeta Distribution Inc,alpha_saas,Alpha SaaS Solutions,Software Licenses,21963.635357916006,7000
+IC-202601-925,2026-01-24,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Management Fees,33931.063272270054,7000
+IC-202601-926,2026-01-20,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Shared Services,74410.07390128689,6500
+IC-202601-927,2026-01-09,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,218969.18945965922,5000
+IC-202601-928,2026-01-17,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Software Licenses,7405.34005071954,7000
+IC-202601-929,2026-01-10,beta_manufacturing,Beta Manufacturing Co,gamma_retail,Gamma Retail Group,Management Fees,13404.176132813533,7000
+IC-202601-930,2026-01-21,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Shared Services,87381.27512933452,6500
+IC-202601-931,2026-01-08,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,86853.03414613448,5000
+IC-202601-932,2026-01-16,gamma_retail,Gamma Retail Group,beta_manufacturing,Beta Manufacturing Co,Software Licenses,21312.652861524286,7000
+IC-202601-933,2026-01-03,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Management Fees,39751.738294295676,7000
+IC-202601-934,2026-01-11,zeta_distribution,Zeta Distribution Inc,epsilon_logistics,Epsilon Logistics Corp,Shared Services,26564.760503018104,6500
+IC-202601-935,2026-01-02,eta_analytics,Eta Analytics Partners,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,123761.10706795618,5000
+IC-202601-936,2026-01-12,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,5103.837108566474,7000
+IC-202601-937,2026-01-03,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Management Fees,25407.965036463727,7000
+IC-202601-938,2026-01-06,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Shared Services,66188.50660711172,6500
+IC-202601-939,2026-01-28,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,211900.2562381978,5000
+IC-202601-940,2026-01-04,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Software Licenses,24326.1986230664,7000
+IC-202601-941,2026-01-03,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Management Fees,42266.50041878866,7000
+IC-202601-942,2026-01-15,eta_analytics,Eta Analytics Partners,delta_healthcare,Delta Healthcare Services,Shared Services,38775.48037435558,6500
+IC-202601-943,2026-01-10,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,216922.78794886166,5000
+IC-202601-944,2026-01-07,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,5956.556015641705,7000
+IC-202601-945,2026-01-04,alpha_saas,Alpha SaaS Solutions,zeta_distribution,Zeta Distribution Inc,Management Fees,39998.28820476266,7000
+IC-202601-946,2026-01-26,beta_manufacturing,Beta Manufacturing Co,zeta_distribution,Zeta Distribution Inc,Shared Services,33411.169598074775,6500
+IC-202601-947,2026-01-27,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Inventory/Supplies,104767.20434509168,5000
+IC-202601-948,2026-01-13,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Software Licenses,22018.229337541798,7000
+IC-202601-949,2026-01-04,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Management Fees,32452.307042824043,7000
+IC-202601-950,2026-01-22,zeta_distribution,Zeta Distribution Inc,beta_manufacturing,Beta Manufacturing Co,Shared Services,86434.23894014726,6500
+IC-202601-951,2026-01-08,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Inventory/Supplies,188400.67440618156,5000
+IC-202601-952,2026-01-23,alpha_saas,Alpha SaaS Solutions,theta_packaging,Theta Sustainable Packaging,Software Licenses,12822.093622720167,7000
+IC-202601-953,2026-01-18,alpha_saas,Alpha SaaS Solutions,eta_analytics,Eta Analytics Partners,Management Fees,17609.5036433908,7000
+IC-202601-954,2026-01-21,epsilon_logistics,Epsilon Logistics Corp,delta_healthcare,Delta Healthcare Services,Shared Services,54458.33988871937,6500
+IC-202601-955,2026-01-25,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Inventory/Supplies,190741.15377298472,5000
+IC-202601-956,2026-01-20,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,6040.343593411075,7000
+IC-202601-957,2026-01-26,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Management Fees,36216.46869408209,7000
+IC-202601-958,2026-01-28,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Shared Services,31797.918382272837,6500
+IC-202601-959,2026-01-06,beta_manufacturing,Beta Manufacturing Co,epsilon_logistics,Epsilon Logistics Corp,Inventory/Supplies,220201.29373672444,5000
+IC-202601-960,2026-01-16,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Software Licenses,5761.747469228991,7000
+IC-202601-961,2026-01-10,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Management Fees,38527.729289843264,7000
+IC-202601-962,2026-01-26,alpha_saas,Alpha SaaS Solutions,gamma_retail,Gamma Retail Group,Shared Services,47756.659808039665,6500
+IC-202601-963,2026-01-10,theta_packaging,Theta Sustainable Packaging,eta_analytics,Eta Analytics Partners,Inventory/Supplies,192652.96514957756,5000
+IC-202601-964,2026-01-16,theta_packaging,Theta Sustainable Packaging,delta_healthcare,Delta Healthcare Services,Software Licenses,19421.369654868868,7000
+IC-202601-965,2026-01-11,zeta_distribution,Zeta Distribution Inc,delta_healthcare,Delta Healthcare Services,Management Fees,11346.731752898562,7000
+IC-202601-966,2026-01-07,epsilon_logistics,Epsilon Logistics Corp,alpha_saas,Alpha SaaS Solutions,Shared Services,98699.62064221958,6500
+IC-202601-967,2026-01-05,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,117137.09835009392,5000
+IC-202601-968,2026-01-16,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Software Licenses,13175.198197309928,7000
+IC-202601-969,2026-01-13,delta_healthcare,Delta Healthcare Services,zeta_distribution,Zeta Distribution Inc,Management Fees,10755.959011624427,7000
+IC-202601-970,2026-01-03,gamma_retail,Gamma Retail Group,eta_analytics,Eta Analytics Partners,Shared Services,76529.0733902799,6500
+IC-202601-971,2026-01-06,theta_packaging,Theta Sustainable Packaging,gamma_retail,Gamma Retail Group,Inventory/Supplies,249254.6206299176,5000
+IC-202601-972,2026-01-04,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Software Licenses,22203.699547334374,7000
+IC-202601-973,2026-01-05,delta_healthcare,Delta Healthcare Services,alpha_saas,Alpha SaaS Solutions,Management Fees,39985.65162366547,7000
+IC-202601-974,2026-01-07,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Shared Services,21153.122722343527,6500
+IC-202601-975,2026-01-28,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Inventory/Supplies,175373.25022867712,5000
+IC-202601-976,2026-01-07,eta_analytics,Eta Analytics Partners,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,14323.205420637489,7000
+IC-202601-977,2026-01-19,beta_manufacturing,Beta Manufacturing Co,theta_packaging,Theta Sustainable Packaging,Management Fees,31532.56997288003,7000
+IC-202601-978,2026-01-06,gamma_retail,Gamma Retail Group,epsilon_logistics,Epsilon Logistics Corp,Shared Services,36131.35965917894,6500
+IC-202601-979,2026-01-25,eta_analytics,Eta Analytics Partners,theta_packaging,Theta Sustainable Packaging,Inventory/Supplies,152352.99084577337,5000
+IC-202601-980,2026-01-14,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,18022.545967999853,7000
+IC-202601-981,2026-01-23,gamma_retail,Gamma Retail Group,theta_packaging,Theta Sustainable Packaging,Management Fees,33111.66958999202,7000
+IC-202601-982,2026-01-04,beta_manufacturing,Beta Manufacturing Co,alpha_saas,Alpha SaaS Solutions,Shared Services,62682.500512885425,6500
+IC-202601-983,2026-01-27,epsilon_logistics,Epsilon Logistics Corp,eta_analytics,Eta Analytics Partners,Inventory/Supplies,117486.91112356531,5000
+IC-202601-984,2026-01-07,delta_healthcare,Delta Healthcare Services,eta_analytics,Eta Analytics Partners,Software Licenses,14486.617702300824,7000
+IC-202601-985,2026-01-08,alpha_saas,Alpha SaaS Solutions,epsilon_logistics,Epsilon Logistics Corp,Management Fees,20382.637833802884,7000
+IC-202601-986,2026-01-27,alpha_saas,Alpha SaaS Solutions,delta_healthcare,Delta Healthcare Services,Shared Services,83806.20451347262,6500
+IC-202601-987,2026-01-04,zeta_distribution,Zeta Distribution Inc,eta_analytics,Eta Analytics Partners,Inventory/Supplies,67918.84874863432,5000
+IC-202601-988,2026-01-28,zeta_distribution,Zeta Distribution Inc,gamma_retail,Gamma Retail Group,Software Licenses,9593.888212982278,7000
+IC-202601-989,2026-01-05,epsilon_logistics,Epsilon Logistics Corp,gamma_retail,Gamma Retail Group,Management Fees,39919.629167843275,7000
+IC-202601-990,2026-01-15,gamma_retail,Gamma Retail Group,zeta_distribution,Zeta Distribution Inc,Shared Services,58953.16725808714,6500
+IC-202601-991,2026-01-10,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,157885.10090848964,5000
+IC-202601-992,2026-01-09,delta_healthcare,Delta Healthcare Services,epsilon_logistics,Epsilon Logistics Corp,Software Licenses,7773.360184046567,7000
+IC-202601-993,2026-01-21,delta_healthcare,Delta Healthcare Services,theta_packaging,Theta Sustainable Packaging,Management Fees,43859.12298283041,7000
+IC-202601-994,2026-01-18,theta_packaging,Theta Sustainable Packaging,epsilon_logistics,Epsilon Logistics Corp,Shared Services,67062.27426407597,6500
+IC-202601-995,2026-01-21,gamma_retail,Gamma Retail Group,delta_healthcare,Delta Healthcare Services,Inventory/Supplies,171689.02928495902,5000
+IC-202601-996,2026-01-10,theta_packaging,Theta Sustainable Packaging,zeta_distribution,Zeta Distribution Inc,Software Licenses,19649.291031039604,7000
+IC-202601-997,2026-01-22,zeta_distribution,Zeta Distribution Inc,theta_packaging,Theta Sustainable Packaging,Management Fees,12628.505683372287,7000
+IC-202601-998,2026-01-12,eta_analytics,Eta Analytics Partners,alpha_saas,Alpha SaaS Solutions,Shared Services,62399.913046689806,6500
+IC-202601-999,2026-01-24,delta_healthcare,Delta Healthcare Services,beta_manufacturing,Beta Manufacturing Co,Inventory/Supplies,141169.27704494254,5000
+IC-202601-1000,2026-01-03,alpha_saas,Alpha SaaS Solutions,beta_manufacturing,Beta Manufacturing Co,Software Licenses,19938.901646851944,7000

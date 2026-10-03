@@ -1,0 +1,18 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-12-01,Beginning Balance,,,6068437.711757381,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-04,Customer Payment - Scott-Cervantes,,186520.31664539824,6254958.028402779,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-04,Vendor Payment - Mckenzie-Ruiz,68937.73852117106,,6186020.289881608,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-08,Vendor Payment - Maldonado-Vazquez,170447.2300816035,,6015573.059800005,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-09,Vendor Payment - Tran Ltd,57352.71854445872,,5958220.341255546,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-13,"Vendor Payment - Huerta, Brewer and Savage",54994.08697201941,,5903226.254283526,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-15,"Customer Payment - Gonzalez, Andrews and Reed",,451606.30597159534,6354832.560255121,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-16,Payroll,364583.3333333333,,5990249.226921788,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-18,Customer Payment - Garcia and Sons,,199364.91268386613,6189614.139605654,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-22,Vendor Payment - Weaver-Davis,48608.31042419954,,6141005.829181455,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-23,Customer Payment - Gonzales Group,,83998.1369659333,6225003.966147388,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-23,Vendor Payment - Jackson and Sons,81636.69206020815,,6143367.27408718,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-25,"Customer Payment - Miller, Miller and Ortega",,319594.5149594774,6462961.789046658,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-26,Vendor Payment - Martinez-Zamora,119941.26608180022,,6343020.5229648575,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-27,Customer Payment - Decker and Sons,,70492.27760827212,6413512.800573129,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-27,Vendor Payment - Franco-Velasquez,42966.59166886107,,6370546.208904268,eta_analytics,Eta Analytics Partners,2025-12
+2025-12-29,Vendor Payment - Vega-Walker,33952.19674085484,,6336594.012163414,eta_analytics,Eta Analytics Partners,2025-12

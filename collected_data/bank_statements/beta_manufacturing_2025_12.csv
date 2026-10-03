@@ -1,0 +1,14 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-12-01,Beginning Balance,,,15745695.810963418,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-05,Customer Payment - Walsh-Williams,,124618.14092703731,15870313.951890456,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-05,Vendor Payment - Terry-Collins,146238.56020822542,,15724075.39168223,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-06,Customer Payment - Johnson-Blackburn,,360069.34722460294,16084144.738906832,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-06,Vendor Payment - Khan-Cunningham,92396.00386425423,,15991748.735042578,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-07,Customer Payment - Sanchez-Russell,,421091.04981173086,16412839.784854308,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-09,Vendor Payment - Wallace-Johnson,187231.01973804802,,16225608.76511626,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-10,"Vendor Payment - Cole, Freeman and Clay",79077.43627722046,,16146531.32883904,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-16,Payroll,1750000.0,,14396531.32883904,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-18,"Vendor Payment - Pratt, Lewis and Solis",171265.98209815606,,14225265.346740883,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-22,"Customer Payment - Williams, Sampson and Spence",,499804.4296346487,14725069.776375532,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-25,Customer Payment - Wagner PLC,,406843.42339354026,15131913.199769072,beta_manufacturing,Beta Manufacturing Co,2025-12
+2025-12-29,Customer Payment - Davis-Valdez,,314781.37656995223,15446694.576339025,beta_manufacturing,Beta Manufacturing Co,2025-12

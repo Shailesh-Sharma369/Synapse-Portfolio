@@ -1,0 +1,14 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2026-01-01,Beginning Balance,,,12956670.628005467,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-07,"Customer Payment - Smith, Contreras and Conrad",,103832.78823006802,13060503.416235534,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-08,Customer Payment - Vargas Inc,,188562.76193420804,13249066.178169742,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-08,Vendor Payment - Dennis and Sons,12052.74803999007,,13237013.430129752,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-10,Customer Payment - Dean-Simpson,,131537.4088657734,13368550.838995526,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-15,Customer Payment - Brown and Sons,,335235.8886535299,13703786.727649055,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-16,Payroll,1166666.6666666667,,12537120.06098239,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-17,Vendor Payment - Wood-Hutchinson,155628.75613085667,,12381491.304851532,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-20,Vendor Payment - Johnson LLC,156135.0946340095,,12225356.210217522,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-23,Vendor Payment - Horton-Walker,162964.37639281398,,12062391.833824709,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-24,Vendor Payment - Copeland and Sons,174945.28311393247,,11887446.550710777,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-27,Vendor Payment - Smith-Rivera,107842.1040693942,,11779604.446641382,epsilon_logistics,Epsilon Logistics Corp,2026-01
+2026-01-28,Customer Payment - Green-Jennings,,345111.7866262607,12124716.233267643,epsilon_logistics,Epsilon Logistics Corp,2026-01

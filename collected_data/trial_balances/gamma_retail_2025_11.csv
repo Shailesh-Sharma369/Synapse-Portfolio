@@ -1,0 +1,37 @@
+account_code,account_name,debit,credit,balance,account_type,company_id,company_name,period
+1000,Cash and Cash Equivalents,30381260.07024824,0.0,30381260.07024824,Asset,gamma_retail,Gamma Retail Group,2025-11
+1100,Accounts Receivable,42770009.49372671,0.0,42770009.49372671,Asset,gamma_retail,Gamma Retail Group,2025-11
+1150,Allowance for Doubtful Accounts,0.0,351408.1344359022,-351408.1344359022,Asset,gamma_retail,Gamma Retail Group,2025-11
+1200,Inventory - Raw Materials,10098428.14816379,0.0,10098428.14816379,Asset,gamma_retail,Gamma Retail Group,2025-11
+1210,Inventory - Work in Process,22642148.993514992,0.0,22642148.993514992,Asset,gamma_retail,Gamma Retail Group,2025-11
+1220,Inventory - Finished Goods,17048910.176390376,0.0,17048910.176390376,Asset,gamma_retail,Gamma Retail Group,2025-11
+1300,Prepaid Expenses,8283813.369334186,0.0,8283813.369334186,Asset,gamma_retail,Gamma Retail Group,2025-11
+1400,"Property, Plant & Equipment",80000000.0,0.0,80000000.0,Asset,gamma_retail,Gamma Retail Group,2025-11
+1450,Accumulated Depreciation,0.0,30000000.0,-30000000.0,Asset,gamma_retail,Gamma Retail Group,2025-11
+1500,Intangible Assets,60000000.0,0.0,60000000.0,Asset,gamma_retail,Gamma Retail Group,2025-11
+1550,Accumulated Amortization,0.0,16000000.0,-16000000.0,Asset,gamma_retail,Gamma Retail Group,2025-11
+2000,Accounts Payable,0.0,17454263.129542053,-17454263.129542053,Liability,gamma_retail,Gamma Retail Group,2025-11
+2100,Accrued Expenses,0.0,2968446.4931804114,-2968446.4931804114,Liability,gamma_retail,Gamma Retail Group,2025-11
+2150,Accrued Payroll,0.0,4530364.688551152,-4530364.688551152,Liability,gamma_retail,Gamma Retail Group,2025-11
+2200,Deferred Revenue,0.0,0.0,0.0,Liability,gamma_retail,Gamma Retail Group,2025-11
+2300,Current Portion of Long-term Debt,0.0,183015282.31172988,-183015282.31172988,Liability,gamma_retail,Gamma Retail Group,2025-11
+2400,Long-term Debt,0.0,170525753.85330272,-170525753.85330272,Liability,gamma_retail,Gamma Retail Group,2025-11
+3000,Common Stock,0.0,100000000.0,-100000000.0,Equity,gamma_retail,Gamma Retail Group,2025-11
+3100,Retained Earnings,0.0,-254845237.77698272,254845237.77698272,Equity,gamma_retail,Gamma Retail Group,2025-11
+4000,Store Revenue,0.0,17570406.72179511,-17570406.72179511,Revenue,gamma_retail,Gamma Retail Group,2025-11
+5000,Cost of Goods Sold - Materials,3631217.389170989,0.0,3631217.389170989,COGS,gamma_retail,Gamma Retail Group,2025-11
+5100,Cost of Goods Sold - Labor,3631217.389170989,0.0,3631217.389170989,COGS,gamma_retail,Gamma Retail Group,2025-11
+5200,Cost of Goods Sold - Overhead,3631217.389170989,0.0,3631217.389170989,COGS,gamma_retail,Gamma Retail Group,2025-11
+6000,Salaries and Wages,2336864.0939987493,0.0,2336864.0939987493,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+6100,Employee Benefits,534140.3643425712,0.0,534140.3643425712,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+6200,Rent,333837.7277141071,0.0,333837.7277141071,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+6300,Utilities,187298.56520754434,0.0,187298.56520754434,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+6400,Insurance,116703.15289705222,0.0,116703.15289705222,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+6500,Professional Fees,331540.56434178964,0.0,331540.56434178964,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+7000,Sales and Marketing,534140.3643425712,0.0,534140.3643425712,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+7100,Advertising,226804.65241999517,0.0,226804.65241999517,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+7200,Travel and Entertainment,293425.53973002644,0.0,293425.53973002644,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+8000,Research and Development,0.0,0.0,0.0,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+9000,Depreciation Expense,200302.6366284642,0.0,200302.6366284642,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+9100,Amortization Expense,200302.6366284642,0.0,200302.6366284642,Operating Expense,gamma_retail,Gamma Retail Group,2025-11
+9500,Interest Expense,157104.83841189276,0.0,157104.83841189276,Operating Expense,gamma_retail,Gamma Retail Group,2025-11

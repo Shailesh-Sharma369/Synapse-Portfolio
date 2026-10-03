@@ -1,0 +1,17 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-11-01,Beginning Balance,,,5085923.821728558,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-02,"Customer Payment - Wilson, Dunn and Lutz",,338564.67034316855,5424488.492071727,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-02,Vendor Payment - Rodriguez Ltd,33104.466842134614,,5391384.025229593,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-06,Customer Payment - Prince-Rodriguez,,406463.7463954883,5797847.771625081,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-07,"Customer Payment - Garcia, Decker and Chavez",,312151.65052958747,6109999.422154669,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-09,Vendor Payment - Steele Group,60040.115351758715,,6049959.30680291,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-10,Customer Payment - Martinez Group,,408464.6029342006,6458423.90973711,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-11,"Customer Payment - Flores, Ross and Carr",,440163.7479016958,6898587.657638806,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-14,"Customer Payment - Manning, Taylor and Clark",,295300.9057424213,7193888.563381227,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-16,Payroll,364583.3333333333,,6829305.230047894,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-16,Vendor Payment - Bruce and Sons,85384.50195606211,,6743920.728091831,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-17,Vendor Payment - Waller-Jones,10769.350120417805,,6733151.377971414,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-19,Customer Payment - Bryan-Becker,,77591.04940753122,6810742.427378945,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-20,"Customer Payment - Matthews, Thomas and Nguyen",,331909.49750131194,7142651.924880257,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-21,"Vendor Payment - Smith, Sharp and Ortiz",126522.7076991621,,7016129.217181095,eta_analytics,Eta Analytics Partners,2025-11
+2025-11-27,Customer Payment - Armstrong-Gregory,,357214.80060234247,7373344.017783437,eta_analytics,Eta Analytics Partners,2025-11

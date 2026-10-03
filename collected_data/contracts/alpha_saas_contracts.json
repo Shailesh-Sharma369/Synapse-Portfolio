@@ -1,0 +1,552 @@
+[
+  {
+    "contract_id": "CNTR-2024-ALPH-001",
+    "customer": "Walker-Ramsey",
+    "company": "alpha_saas",
+    "start_date": "2024-05-23",
+    "end_date": "2025-05-23",
+    "total_contract_value": 2214976.71,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1882730.2
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 332246.51,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-002",
+    "customer": "Schwartz-Perez",
+    "company": "alpha_saas",
+    "start_date": "2025-09-01",
+    "end_date": "2028-08-31",
+    "total_contract_value": 1947929.08,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1655739.72
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 292189.36,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-003",
+    "customer": "Snow, Rivera and Rose",
+    "company": "alpha_saas",
+    "start_date": "2024-06-24",
+    "end_date": "2027-06-24",
+    "total_contract_value": 2219159.12,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1886285.25
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 332873.87,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-004",
+    "customer": "Nelson and Sons",
+    "company": "alpha_saas",
+    "start_date": "2024-03-02",
+    "end_date": "2026-03-02",
+    "total_contract_value": 1322742.8,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1124331.38
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 198411.42,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-005",
+    "customer": "Zuniga, Fisher and Hernandez",
+    "company": "alpha_saas",
+    "start_date": "2024-05-18",
+    "end_date": "2026-05-18",
+    "total_contract_value": 414514.17,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 352337.04
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 62177.13,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-006",
+    "customer": "Robertson, Mcdonald and Martin",
+    "company": "alpha_saas",
+    "start_date": "2025-06-30",
+    "end_date": "2028-06-29",
+    "total_contract_value": 1530896.05,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1301261.64
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 229634.41,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-007",
+    "customer": "Hardy-White",
+    "company": "alpha_saas",
+    "start_date": "2025-02-18",
+    "end_date": "2028-02-18",
+    "total_contract_value": 1872193.85,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1367592.14
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 241339.79,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-008",
+    "customer": "Banks LLC",
+    "company": "alpha_saas",
+    "start_date": "2025-09-17",
+    "end_date": "2028-09-16",
+    "total_contract_value": 535914.79,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 455527.57
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 80387.22,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-009",
+    "customer": "Norris-Parker",
+    "company": "alpha_saas",
+    "start_date": "2024-01-08",
+    "end_date": "2026-01-07",
+    "total_contract_value": 630464.02,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 535894.42
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 94569.6,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-010",
+    "customer": "Ritter-Edwards",
+    "company": "alpha_saas",
+    "start_date": "2025-09-09",
+    "end_date": "2026-09-09",
+    "total_contract_value": 1603112.48,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1362645.61
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 240466.87,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-011",
+    "customer": "Andrews, Sloan and Davis",
+    "company": "alpha_saas",
+    "start_date": "2025-10-19",
+    "end_date": "2028-10-18",
+    "total_contract_value": 2240025.7,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1904021.85
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 336003.86,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-012",
+    "customer": "Robbins Ltd",
+    "company": "alpha_saas",
+    "start_date": "2024-09-26",
+    "end_date": "2025-09-26",
+    "total_contract_value": 880677.13,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 748575.56
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 132101.57,
+        "completion_percentage": 86
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-013",
+    "customer": "Hodge, Hunt and Young",
+    "company": "alpha_saas",
+    "start_date": "2025-03-09",
+    "end_date": "2028-03-08",
+    "total_contract_value": 1105547.98,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 939715.78
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 165832.2,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-014",
+    "customer": "King-Rice",
+    "company": "alpha_saas",
+    "start_date": "2024-12-14",
+    "end_date": "2026-12-14",
+    "total_contract_value": 955161.23,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 811887.05
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 143274.18,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-015",
+    "customer": "Aguirre-Fernandez",
+    "company": "alpha_saas",
+    "start_date": "2024-06-14",
+    "end_date": "2026-06-14",
+    "total_contract_value": 987935.98,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 839745.58
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 148190.4,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-016",
+    "customer": "Lawrence LLC",
+    "company": "alpha_saas",
+    "start_date": "2024-06-27",
+    "end_date": "2027-06-27",
+    "total_contract_value": 600419.44,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 510356.52
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 90062.92,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-017",
+    "customer": "Camacho, Sandoval and Cline",
+    "company": "alpha_saas",
+    "start_date": "2024-06-15",
+    "end_date": "2027-06-15",
+    "total_contract_value": 611142.04,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 519470.73
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 91671.31,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-018",
+    "customer": "Kirk PLC",
+    "company": "alpha_saas",
+    "start_date": "2025-10-23",
+    "end_date": "2026-10-23",
+    "total_contract_value": 461536.77,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 392306.25
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 69230.52,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-019",
+    "customer": "Mcdaniel-Bailey",
+    "company": "alpha_saas",
+    "start_date": "2025-09-13",
+    "end_date": "2028-09-12",
+    "total_contract_value": 2186778.64,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1858761.84
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 328016.8,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-020",
+    "customer": "Miller-Martin",
+    "company": "alpha_saas",
+    "start_date": "2024-08-09",
+    "end_date": "2025-08-09",
+    "total_contract_value": 613228.54,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 521244.26
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 91984.28,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-021",
+    "customer": "Palmer, Smith and Hernandez",
+    "company": "alpha_saas",
+    "start_date": "2025-10-30",
+    "end_date": "2027-10-30",
+    "total_contract_value": 598721.39,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 508913.18
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 89808.21,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-022",
+    "customer": "Wright, Horn and Smith",
+    "company": "alpha_saas",
+    "start_date": "2025-04-10",
+    "end_date": "2028-04-09",
+    "total_contract_value": 1635457.11,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1390138.54
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 245318.57,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ALPH-023",
+    "customer": "Williams-Delacruz",
+    "company": "alpha_saas",
+    "start_date": "2024-01-21",
+    "end_date": "2025-01-20",
+    "total_contract_value": 1392441.12,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1183574.95
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 208866.17,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-024",
+    "customer": "Soto-Mills",
+    "company": "alpha_saas",
+    "start_date": "2025-03-08",
+    "end_date": "2027-03-08",
+    "total_contract_value": 1580962.28,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1343817.94
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 237144.34,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ALPH-025",
+    "customer": "Allen Inc",
+    "company": "alpha_saas",
+    "start_date": "2025-12-25",
+    "end_date": "2028-12-24",
+    "total_contract_value": 1644478.66,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Software subscription",
+        "revenue_recognition": "ratable",
+        "value": 1215638.85
+      },
+      {
+        "description": "Implementation services",
+        "revenue_recognition": "milestone",
+        "value": 214524.5,
+        "completion_percentage": 25
+      }
+    ]
+  }
+]

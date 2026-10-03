@@ -1,0 +1,21 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-12-01,Beginning Balance,,,5684575.09400194,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-04,Vendor Payment - Moore LLC,156555.13381420798,,5528019.960187732,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-06,"Customer Payment - Wilson, Gamble and Nguyen",,258052.07757158994,5786072.037759322,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-07,"Vendor Payment - Vaughn, Wilson and Hatfield",131942.90415552913,,5654129.133603793,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-10,"Customer Payment - Wilkins, Woodard and Mccarthy",,239165.83697167382,5893294.970575467,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-13,"Customer Payment - Jacobs, Bush and Garcia",,118354.15317877138,6011649.123754238,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-14,Customer Payment - Pierce-Velez,,454831.2016064658,6466480.325360703,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-15,Customer Payment - Long-Meyer,,274035.69913458906,6740516.024495292,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-16,"Customer Payment - Hernandez, Tucker and Nelson",,173420.9924419917,6913937.016937284,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-16,Payroll,656249.9999999999,,6257687.016937284,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-18,Vendor Payment - Fox Group,190571.00864476545,,6067116.008292519,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-19,Vendor Payment - Medina LLC,173258.4617766343,,5893857.546515884,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-21,"Vendor Payment - Anderson, Cunningham and Robertson",85680.49278606367,,5808177.05372982,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-22,"Vendor Payment - Robinson, Wheeler and Mcintyre",20976.652761903137,,5787200.4009679165,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-25,Customer Payment - Stark-Drake,,186827.10795165662,5974027.508919573,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-26,Customer Payment - Beck-Giles,,362450.27609687333,6336477.785016446,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-28,"Vendor Payment - Duncan, Vasquez and Murray",188727.43386915344,,6147750.351147293,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-29,Customer Payment - Smith PLC,,218974.1179139023,6366724.469061196,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-29,Vendor Payment - Murray-Blanchard,31018.82568682326,,6335705.643374372,alpha_saas,Alpha SaaS Solutions,2025-12
+2025-12-30,Customer Payment - Baker Ltd,,164412.95288518857,6500118.59625956,alpha_saas,Alpha SaaS Solutions,2025-12

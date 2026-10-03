@@ -1,0 +1,20 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2026-01-01,Beginning Balance,,,25577277.594986178,gamma_retail,Gamma Retail Group,2026-01
+2026-01-02,Customer Payment - Benson PLC,,89159.13261898083,25666436.72760516,gamma_retail,Gamma Retail Group,2026-01
+2026-01-03,Customer Payment - Leonard-Johnson,,335748.43643755035,26002185.16404271,gamma_retail,Gamma Retail Group,2026-01
+2026-01-03,Vendor Payment - Williams-Evans,76218.62201895055,,25925966.54202376,gamma_retail,Gamma Retail Group,2026-01
+2026-01-11,"Vendor Payment - Barrett, Murphy and Brooks",30604.621943670027,,25895361.920080088,gamma_retail,Gamma Retail Group,2026-01
+2026-01-12,Customer Payment - Parrish-West,,364953.8171862478,26260315.737266336,gamma_retail,Gamma Retail Group,2026-01
+2026-01-15,Customer Payment - Gonzales and Sons,,311502.9538651742,26571818.69113151,gamma_retail,Gamma Retail Group,2026-01
+2026-01-16,Customer Payment - King Inc,,325864.84874871577,26897683.539880227,gamma_retail,Gamma Retail Group,2026-01
+2026-01-16,Payroll,2916666.6666666665,,23981016.87321356,gamma_retail,Gamma Retail Group,2026-01
+2026-01-21,"Vendor Payment - Adams, Floyd and Hall",189018.3025899085,,23791998.57062365,gamma_retail,Gamma Retail Group,2026-01
+2026-01-22,"Customer Payment - Jones, Cabrera and Long",,91885.06896244247,23883883.639586095,gamma_retail,Gamma Retail Group,2026-01
+2026-01-22,"Vendor Payment - Hurst, Murphy and Arnold",24156.155155635955,,23859727.48443046,gamma_retail,Gamma Retail Group,2026-01
+2026-01-23,Customer Payment - Jackson Group,,495290.7838487479,24355018.268279206,gamma_retail,Gamma Retail Group,2026-01
+2026-01-25,"Vendor Payment - Morrison, Torres and Cruz",173433.62513549838,,24181584.643143706,gamma_retail,Gamma Retail Group,2026-01
+2026-01-26,Customer Payment - Reyes Ltd,,74583.14619634475,24256167.78934005,gamma_retail,Gamma Retail Group,2026-01
+2026-01-26,Vendor Payment - Miller PLC,86261.2039098128,,24169906.585430235,gamma_retail,Gamma Retail Group,2026-01
+2026-01-27,Vendor Payment - Harris Inc,121469.33920074093,,24048437.246229492,gamma_retail,Gamma Retail Group,2026-01
+2026-01-30,Customer Payment - Meza-Sampson,,168027.27109241398,24216464.517321907,gamma_retail,Gamma Retail Group,2026-01
+2026-01-30,Vendor Payment - Wallace PLC,88386.41518896098,,24128078.102132946,gamma_retail,Gamma Retail Group,2026-01

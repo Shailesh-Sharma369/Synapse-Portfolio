@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2025-EPSI-001",
+    "customer": "Larson-Rojas",
+    "company": "epsilon_logistics",
+    "start_date": "2025-07-26",
+    "end_date": "2026-07-26",
+    "total_contract_value": 1347705.64,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1078164.51
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 269541.13
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-002",
+    "customer": "Campbell, Jones and Rowe",
+    "company": "epsilon_logistics",
+    "start_date": "2025-03-28",
+    "end_date": "2027-03-28",
+    "total_contract_value": 1914783.96,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1378552.84
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 344638.21
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-003",
+    "customer": "Myers-Taylor",
+    "company": "epsilon_logistics",
+    "start_date": "2025-11-28",
+    "end_date": "2028-11-27",
+    "total_contract_value": 2909679.3,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2327743.44
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 581935.86
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-004",
+    "customer": "Harris-Cross",
+    "company": "epsilon_logistics",
+    "start_date": "2025-11-08",
+    "end_date": "2028-11-07",
+    "total_contract_value": 2158472.1,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1726777.68
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 431694.42
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-005",
+    "customer": "Russell-Braun",
+    "company": "epsilon_logistics",
+    "start_date": "2025-03-04",
+    "end_date": "2026-03-04",
+    "total_contract_value": 1403310.9,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1122648.72
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 280662.18
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-EPSI-006",
+    "customer": "Adkins Inc",
+    "company": "epsilon_logistics",
+    "start_date": "2024-12-02",
+    "end_date": "2027-12-02",
+    "total_contract_value": 1573597.23,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1258877.78
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 314719.45
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-EPSI-007",
+    "customer": "Mcbride Ltd",
+    "company": "epsilon_logistics",
+    "start_date": "2024-06-16",
+    "end_date": "2026-06-16",
+    "total_contract_value": 854438.06,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 683550.45
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 170887.61
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-008",
+    "customer": "Chang Ltd",
+    "company": "epsilon_logistics",
+    "start_date": "2025-04-28",
+    "end_date": "2027-04-28",
+    "total_contract_value": 2262781.4,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1810225.12
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 452556.28
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-009",
+    "customer": "Anderson Group",
+    "company": "epsilon_logistics",
+    "start_date": "2025-06-06",
+    "end_date": "2027-06-06",
+    "total_contract_value": 1606952.75,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1285562.2
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 321390.55
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-010",
+    "customer": "Ward Group",
+    "company": "epsilon_logistics",
+    "start_date": "2025-06-03",
+    "end_date": "2027-06-03",
+    "total_contract_value": 3465374.63,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2772299.7
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 693074.93
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-EPSI-011",
+    "customer": "Mckenzie-Brewer",
+    "company": "epsilon_logistics",
+    "start_date": "2024-11-09",
+    "end_date": "2025-11-09",
+    "total_contract_value": 2132855.98,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1706284.78
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 426571.2
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-012",
+    "customer": "Wells-Hurst",
+    "company": "epsilon_logistics",
+    "start_date": "2025-03-26",
+    "end_date": "2027-03-26",
+    "total_contract_value": 593366.4,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 474693.12
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 118673.28
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-013",
+    "customer": "Hudson, Pham and Roman",
+    "company": "epsilon_logistics",
+    "start_date": "2025-09-11",
+    "end_date": "2026-09-11",
+    "total_contract_value": 494004.13,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 395203.3
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 98800.83
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-EPSI-014",
+    "customer": "Barker PLC",
+    "company": "epsilon_logistics",
+    "start_date": "2024-06-28",
+    "end_date": "2025-06-28",
+    "total_contract_value": 1524645.58,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1219716.46
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 304929.12
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-015",
+    "customer": "Fowler PLC",
+    "company": "epsilon_logistics",
+    "start_date": "2025-06-17",
+    "end_date": "2027-06-17",
+    "total_contract_value": 2135566.87,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1708453.5
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 427113.37
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-016",
+    "customer": "Curry and Sons",
+    "company": "epsilon_logistics",
+    "start_date": "2025-06-01",
+    "end_date": "2028-05-31",
+    "total_contract_value": 3288920.42,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2229357.56
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 557339.39
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-017",
+    "customer": "Edwards-Guerrero",
+    "company": "epsilon_logistics",
+    "start_date": "2025-12-22",
+    "end_date": "2027-12-22",
+    "total_contract_value": 1377460.74,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1101968.59
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 275492.15
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-EPSI-018",
+    "customer": "Fernandez-Wade",
+    "company": "epsilon_logistics",
+    "start_date": "2024-02-26",
+    "end_date": "2026-02-25",
+    "total_contract_value": 593559.0,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 409912.04
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 102478.01
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-019",
+    "customer": "Phillips LLC",
+    "company": "epsilon_logistics",
+    "start_date": "2025-06-05",
+    "end_date": "2026-06-05",
+    "total_contract_value": 3826477.16,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3061181.73
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 765295.43
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-EPSI-020",
+    "customer": "Hill LLC",
+    "company": "epsilon_logistics",
+    "start_date": "2024-03-12",
+    "end_date": "2027-03-12",
+    "total_contract_value": 1301760.15,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1041408.12
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 260352.03
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-021",
+    "customer": "Park-Stevens",
+    "company": "epsilon_logistics",
+    "start_date": "2025-10-16",
+    "end_date": "2027-10-16",
+    "total_contract_value": 1308521.15,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1046816.92
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 261704.23
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-022",
+    "customer": "Smith, Mccarthy and Matthews",
+    "company": "epsilon_logistics",
+    "start_date": "2025-09-01",
+    "end_date": "2026-09-01",
+    "total_contract_value": 3255951.62,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2604761.3
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 651190.32
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-023",
+    "customer": "Long Group",
+    "company": "epsilon_logistics",
+    "start_date": "2025-12-12",
+    "end_date": "2027-12-12",
+    "total_contract_value": 1929330.82,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1286120.44
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 321530.11
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-EPSI-024",
+    "customer": "Ortega LLC",
+    "company": "epsilon_logistics",
+    "start_date": "2025-10-18",
+    "end_date": "2026-10-18",
+    "total_contract_value": 2629390.68,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1810252.51
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 452563.13
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-EPSI-025",
+    "customer": "Franklin-Chen",
+    "company": "epsilon_logistics",
+    "start_date": "2024-10-16",
+    "end_date": "2025-10-16",
+    "total_contract_value": 2140864.03,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1712691.22
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 428172.81
+      }
+    ]
+  }
+]

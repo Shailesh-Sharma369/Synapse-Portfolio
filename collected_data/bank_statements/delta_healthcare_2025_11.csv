@@ -1,0 +1,15 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-11-01,Beginning Balance,,,7313087.368449913,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-02,"Vendor Payment - Smith, Blanchard and Gonzalez",183087.86505081135,,7129999.503399102,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-03,Customer Payment - Blair Ltd,,451192.34191863827,7581191.84531774,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-05,Vendor Payment - Trujillo Inc,40520.375939715166,,7540671.469378025,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-06,Customer Payment - Wong Group,,266795.25320535083,7807466.722583376,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-09,Customer Payment - Thompson and Sons,,213067.9137733511,8020534.636356727,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-10,Customer Payment - Peterson-Mcguire,,291496.7729443043,8312031.409301031,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-11,Vendor Payment - Farrell Inc,167461.4677061053,,8144569.941594926,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-15,Customer Payment - Turner-Hawkins,,494519.43646781653,8639089.378062742,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-15,Vendor Payment - Smith-Graves,141866.47436459048,,8497222.903698152,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-16,Payroll,510416.6666666667,,7986806.237031485,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-24,Vendor Payment - Rowe-Daniels,65254.76990144343,,7921551.467130042,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-29,Customer Payment - Hurst-Stuart,,418945.3261221041,8340496.793252146,delta_healthcare,Delta Healthcare Services,2025-11
+2025-11-30,Vendor Payment - Richard PLC,57989.256068021314,,8282507.537184125,delta_healthcare,Delta Healthcare Services,2025-11

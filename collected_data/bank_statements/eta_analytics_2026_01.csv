@@ -1,0 +1,15 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2026-01-01,Beginning Balance,,,4333140.627059116,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-02,Customer Payment - Cortez Ltd,,161944.8322446477,4495085.459303764,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-05,Customer Payment - Donovan-Johnson,,493984.7738216773,4989070.233125441,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-12,Vendor Payment - Murphy-Ray,131893.20280612458,,4857177.030319316,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-14,Vendor Payment - Miller-Freeman,187647.3856755468,,4669529.64464377,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-16,Customer Payment - Summers-Mitchell,,259816.0000295644,4929345.644673334,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-16,Payroll,364583.3333333333,,4564762.311340001,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-17,Vendor Payment - Buchanan LLC,51404.24943835232,,4513358.061901649,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-18,"Vendor Payment - Lester, Rojas and Fleming",105128.77082648287,,4408229.291075166,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-19,Customer Payment - Garza Ltd,,342611.0301953266,4750840.321270493,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-19,Vendor Payment - Miles and Sons,153153.16410267327,,4597687.157167819,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-22,Customer Payment - Thomas-Nguyen,,181279.05538180858,4778966.212549628,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-25,Customer Payment - Lambert and Sons,,454421.3124394569,5233387.524989084,eta_analytics,Eta Analytics Partners,2026-01
+2026-01-30,Vendor Payment - Jackson-Hill,109402.31364229869,,5123985.211346786,eta_analytics,Eta Analytics Partners,2026-01

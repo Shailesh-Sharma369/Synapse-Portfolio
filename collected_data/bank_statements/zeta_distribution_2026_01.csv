@@ -1,0 +1,20 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2026-01-01,Beginning Balance,,,32009274.29010213,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-03,Vendor Payment - Meyer Inc,85743.13565609306,,31923531.15444604,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-04,"Customer Payment - Williams, Miller and Burton",,152913.9781081587,32076445.1325542,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-04,Vendor Payment - Evans-Craig,149748.994592901,,31926696.1379613,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-08,"Vendor Payment - Fowler, Santos and Wilson",110224.48159944022,,31816471.65636186,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-10,Vendor Payment - Simmons LLC,71193.77205743274,,31745277.884304427,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-15,Customer Payment - Garcia Group,,165528.2697317727,31910806.154036198,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-16,Payroll,2187500.0,,29723306.154036198,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-17,Vendor Payment - Meyer Ltd,30671.296261705647,,29692634.857774492,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-18,Customer Payment - Cortez-Barnes,,265876.011918606,29958510.869693097,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-20,Customer Payment - Hudson-Nelson,,189774.9038187377,30148285.773511834,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-22,Vendor Payment - Pitts Inc,198166.40173313025,,29950119.371778704,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-25,"Vendor Payment - Hogan, Hale and Mcdonald",154723.09927412943,,29795396.272504576,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-26,"Customer Payment - Skinner, Wilson and Wilson",,393273.1334818212,30188669.4059864,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-27,"Customer Payment - Allen, Friedman and Ramirez",,295222.7761089023,30483892.1820953,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-27,Vendor Payment - Robinson-Jimenez,20330.08256436517,,30463562.099530935,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-29,Customer Payment - Allison Group,,183816.42659181292,30647378.52612275,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-29,Vendor Payment - Carpenter PLC,161977.5913154183,,30485400.93480733,zeta_distribution,Zeta Distribution Inc,2026-01
+2026-01-30,Vendor Payment - Collins-Paul,101459.11664481138,,30383941.81816252,zeta_distribution,Zeta Distribution Inc,2026-01

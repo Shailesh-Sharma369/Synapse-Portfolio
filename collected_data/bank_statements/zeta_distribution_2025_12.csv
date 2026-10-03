@@ -1,0 +1,17 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-12-01,Beginning Balance,,,21924619.338845324,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-03,"Vendor Payment - Valenzuela, Noble and Peterson",165957.6453024986,,21758661.693542827,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-06,"Customer Payment - Harris, Hughes and Coleman",,253737.11269211848,22012398.806234945,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-06,Vendor Payment - Horton Inc,146789.6064391866,,21865609.199795756,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-08,"Customer Payment - Chang, Russell and Lewis",,169161.64912884263,22034770.8489246,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-11,"Customer Payment - Keller, Harris and Swanson",,96447.87179906412,22131218.720723663,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-11,Vendor Payment - Marshall and Sons,178688.42471431414,,21952530.296009347,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-15,Vendor Payment - Ford and Sons,73600.37040282803,,21878929.92560652,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-16,Payroll,2187500.0,,19691429.92560652,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-17,"Customer Payment - Coleman, Hardy and Stanton",,170081.5145301865,19861511.440136705,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-18,Customer Payment - Lee-Hopkins,,78485.25963993506,19939996.69977664,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-18,"Vendor Payment - Jefferson, Chavez and Skinner",24689.471158383905,,19915307.228618253,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-21,Customer Payment - Daniels PLC,,203266.50178901706,20118573.73040727,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-25,Customer Payment - Bass and Sons,,373303.7833097273,20491877.513717,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-25,Vendor Payment - Rodriguez-Summers,27218.89225283706,,20464658.621464163,zeta_distribution,Zeta Distribution Inc,2025-12
+2025-12-28,"Vendor Payment - Wise, Klein and Skinner",133919.29919327234,,20330739.322270893,zeta_distribution,Zeta Distribution Inc,2025-12

@@ -1,0 +1,17 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-11-01,Beginning Balance,,,47061358.38555746,gamma_retail,Gamma Retail Group,2025-11
+2025-11-02,Vendor Payment - Baldwin-Wilkins,60856.238121899725,,47000502.14743556,gamma_retail,Gamma Retail Group,2025-11
+2025-11-03,Customer Payment - Evans PLC,,442481.77212359454,47442983.91955916,gamma_retail,Gamma Retail Group,2025-11
+2025-11-04,Vendor Payment - Singh Inc,176477.75279913112,,47266506.16676003,gamma_retail,Gamma Retail Group,2025-11
+2025-11-07,Vendor Payment - Fisher-Gallagher,46683.81220809241,,47219822.35455193,gamma_retail,Gamma Retail Group,2025-11
+2025-11-08,Customer Payment - Daugherty-Hodges,,457174.39076053596,47676996.74531247,gamma_retail,Gamma Retail Group,2025-11
+2025-11-09,Customer Payment - Stanton Group,,89144.17496250688,47766140.92027497,gamma_retail,Gamma Retail Group,2025-11
+2025-11-10,"Vendor Payment - Poole, Baxter and Smith",129517.55368433961,,47636623.366590634,gamma_retail,Gamma Retail Group,2025-11
+2025-11-14,Vendor Payment - Gregory-Martin,14958.292625448801,,47621665.073965184,gamma_retail,Gamma Retail Group,2025-11
+2025-11-15,Vendor Payment - Gay LLC,33542.51779669424,,47588122.55616849,gamma_retail,Gamma Retail Group,2025-11
+2025-11-16,Payroll,2916666.6666666665,,44671455.889501825,gamma_retail,Gamma Retail Group,2025-11
+2025-11-18,Customer Payment - Armstrong-Gray,,444202.08866190433,45115657.97816373,gamma_retail,Gamma Retail Group,2025-11
+2025-11-20,"Vendor Payment - Johnston, Underwood and Baker",147087.72596635376,,44968570.25219737,gamma_retail,Gamma Retail Group,2025-11
+2025-11-23,Vendor Payment - Morton Inc,57346.24525083209,,44911224.00694654,gamma_retail,Gamma Retail Group,2025-11
+2025-11-25,Vendor Payment - Jones-Patel,195436.34485792153,,44715787.66208862,gamma_retail,Gamma Retail Group,2025-11
+2025-11-30,Customer Payment - Nicholson-Ball,,492534.7817747523,45208322.44386337,gamma_retail,Gamma Retail Group,2025-11

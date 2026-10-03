@@ -1,0 +1,32 @@
+account_code,account_name,debit,credit,balance,account_type,company_id,company_name,period
+1000,Cash and Cash Equivalents,10405496.50060315,0.0,10405496.50060315,Asset,epsilon_logistics,Epsilon Logistics Corp,2024-11
+1100,Accounts Receivable,13107806.9005033,0.0,13107806.9005033,Asset,epsilon_logistics,Epsilon Logistics Corp,2024-11
+1150,Allowance for Doubtful Accounts,0.0,126312.74197665042,-126312.74197665042,Asset,epsilon_logistics,Epsilon Logistics Corp,2024-11
+1300,Prepaid Expenses,2893582.985757397,0.0,2893582.985757397,Asset,epsilon_logistics,Epsilon Logistics Corp,2024-11
+1400,"Property, Plant & Equipment",32000000.0,0.0,32000000.0,Asset,epsilon_logistics,Epsilon Logistics Corp,2024-11
+1450,Accumulated Depreciation,0.0,12000000.0,-12000000.0,Asset,epsilon_logistics,Epsilon Logistics Corp,2024-11
+1500,Intangible Assets,24000000.0,0.0,24000000.0,Asset,epsilon_logistics,Epsilon Logistics Corp,2024-11
+1550,Accumulated Amortization,0.0,6400000.0,-6400000.0,Asset,epsilon_logistics,Epsilon Logistics Corp,2024-11
+2000,Accounts Payable,0.0,5030748.928480623,-5030748.928480623,Liability,epsilon_logistics,Epsilon Logistics Corp,2024-11
+2100,Accrued Expenses,0.0,1018786.3114413454,-1018786.3114413454,Liability,epsilon_logistics,Epsilon Logistics Corp,2024-11
+2150,Accrued Payroll,0.0,911439.9840204753,-911439.9840204753,Liability,epsilon_logistics,Epsilon Logistics Corp,2024-11
+2200,Deferred Revenue,0.0,0.0,0.0,Liability,epsilon_logistics,Epsilon Logistics Corp,2024-11
+2300,Current Portion of Long-term Debt,0.0,69593335.28333741,-69593335.28333741,Liability,epsilon_logistics,Epsilon Logistics Corp,2024-11
+2400,Long-term Debt,0.0,142487381.67065638,-142487381.67065638,Liability,epsilon_logistics,Epsilon Logistics Corp,2024-11
+3000,Common Stock,0.0,40000000.0,-40000000.0,Equity,epsilon_logistics,Epsilon Logistics Corp,2024-11
+3100,Retained Earnings,0.0,-195429975.56446117,195429975.56446117,Equity,epsilon_logistics,Epsilon Logistics Corp,2024-11
+4100,Service Revenue,0.0,6315637.098832521,-6315637.098832521,Revenue,epsilon_logistics,Epsilon Logistics Corp,2024-11
+5300,Cost of Services,4926196.937089366,0.0,4926196.937089366,COGS,epsilon_logistics,Epsilon Logistics Corp,2024-11
+6000,Salaries and Wages,486304.05661010405,0.0,486304.05661010405,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+6100,Employee Benefits,111155.21293945237,0.0,111155.21293945237,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+6200,Rent,69472.00808715772,0.0,69472.00808715772,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+6300,Utilities,22360.329182470556,0.0,22360.329182470556,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+6400,Insurance,30886.72468306912,0.0,30886.72468306912,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+6500,Professional Fees,46844.20767541001,0.0,46844.20767541001,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+7000,Sales and Marketing,111155.21293945237,0.0,111155.21293945237,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+7100,Advertising,43775.14066557534,0.0,43775.14066557534,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+7200,Travel and Entertainment,64461.71091775365,0.0,64461.71091775365,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+8000,Research and Development,0.0,0.0,0.0,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+9000,Depreciation Expense,41683.204852294635,0.0,41683.204852294635,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+9100,Amortization Expense,41683.204852294635,0.0,41683.204852294635,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11
+9500,Interest Expense,50802.11692597967,0.0,50802.11692597967,Operating Expense,epsilon_logistics,Epsilon Logistics Corp,2024-11

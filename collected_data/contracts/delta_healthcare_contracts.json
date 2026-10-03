@@ -1,0 +1,552 @@
+[
+  {
+    "contract_id": "CNTR-2025-DELT-001",
+    "customer": "Martinez PLC",
+    "company": "delta_healthcare",
+    "start_date": "2025-02-21",
+    "end_date": "2026-02-21",
+    "total_contract_value": 380013.94,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 228008.36
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 152005.58,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-002",
+    "customer": "Shaw-Vasquez",
+    "company": "delta_healthcare",
+    "start_date": "2025-01-23",
+    "end_date": "2027-01-23",
+    "total_contract_value": 889149.87,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 533489.92
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 355659.95,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-003",
+    "customer": "Byrd, Wagner and Harmon",
+    "company": "delta_healthcare",
+    "start_date": "2025-11-11",
+    "end_date": "2026-11-11",
+    "total_contract_value": 694033.37,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 416420.02
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 277613.35,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-004",
+    "customer": "Wheeler, Lamb and Mack",
+    "company": "delta_healthcare",
+    "start_date": "2025-10-31",
+    "end_date": "2026-10-31",
+    "total_contract_value": 1094208.51,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 534164.48
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 356109.65,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-005",
+    "customer": "Hunter, Green and Castillo",
+    "company": "delta_healthcare",
+    "start_date": "2024-01-30",
+    "end_date": "2026-01-29",
+    "total_contract_value": 668410.34,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 348400.85
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 232267.23,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-006",
+    "customer": "Vaughan LLC",
+    "company": "delta_healthcare",
+    "start_date": "2024-01-17",
+    "end_date": "2025-01-16",
+    "total_contract_value": 1377884.28,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 826730.57
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 551153.71,
+        "completion_percentage": 61
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-007",
+    "customer": "Adams, Johnson and Campbell",
+    "company": "delta_healthcare",
+    "start_date": "2025-11-18",
+    "end_date": "2026-11-18",
+    "total_contract_value": 1510722.6,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 906433.56
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 604289.04,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-008",
+    "customer": "Martin Ltd",
+    "company": "delta_healthcare",
+    "start_date": "2025-10-07",
+    "end_date": "2027-10-07",
+    "total_contract_value": 1249827.34,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 749896.4
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 499930.94,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-009",
+    "customer": "Smith, Davis and Cooper",
+    "company": "delta_healthcare",
+    "start_date": "2025-08-21",
+    "end_date": "2026-08-21",
+    "total_contract_value": 1675363.79,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 1005218.27
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 670145.52,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-010",
+    "customer": "Ortega and Sons",
+    "company": "delta_healthcare",
+    "start_date": "2024-07-28",
+    "end_date": "2027-07-28",
+    "total_contract_value": 843071.6,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 505842.96
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 337228.64,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-011",
+    "customer": "Phillips and Sons",
+    "company": "delta_healthcare",
+    "start_date": "2024-06-09",
+    "end_date": "2027-06-09",
+    "total_contract_value": 876134.64,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 525680.78
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 350453.86,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-012",
+    "customer": "Kelly-May",
+    "company": "delta_healthcare",
+    "start_date": "2024-02-10",
+    "end_date": "2027-02-09",
+    "total_contract_value": 231059.84,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 138635.9
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 92423.94,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-013",
+    "customer": "Bush-Bennett",
+    "company": "delta_healthcare",
+    "start_date": "2024-04-13",
+    "end_date": "2027-04-13",
+    "total_contract_value": 484938.24,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 290962.94
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 193975.3,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-014",
+    "customer": "Craig, Garcia and George",
+    "company": "delta_healthcare",
+    "start_date": "2024-06-06",
+    "end_date": "2025-06-06",
+    "total_contract_value": 925635.66,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 555381.4
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 370254.26,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-015",
+    "customer": "Anderson-Garcia",
+    "company": "delta_healthcare",
+    "start_date": "2024-01-10",
+    "end_date": "2025-01-09",
+    "total_contract_value": 1505989.31,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 903593.59
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 602395.72,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-016",
+    "customer": "Phillips Ltd",
+    "company": "delta_healthcare",
+    "start_date": "2024-05-22",
+    "end_date": "2025-05-22",
+    "total_contract_value": 913406.6,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 454923.47
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 303282.32,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-017",
+    "customer": "Soto-Villarreal",
+    "company": "delta_healthcare",
+    "start_date": "2024-12-28",
+    "end_date": "2025-12-28",
+    "total_contract_value": 726164.02,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 435698.41
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 290465.61,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-018",
+    "customer": "Rasmussen Inc",
+    "company": "delta_healthcare",
+    "start_date": "2025-11-22",
+    "end_date": "2027-11-22",
+    "total_contract_value": 540432.5,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 324259.5
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 216173.0,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-019",
+    "customer": "Sheppard, Hernandez and Berry",
+    "company": "delta_healthcare",
+    "start_date": "2024-07-17",
+    "end_date": "2026-07-17",
+    "total_contract_value": 1589187.01,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 844390.7
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 562927.14,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-DELT-020",
+    "customer": "Parker Ltd",
+    "company": "delta_healthcare",
+    "start_date": "2024-07-24",
+    "end_date": "2026-07-24",
+    "total_contract_value": 1342139.15,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 805283.49
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 536855.66,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-021",
+    "customer": "Walker Inc",
+    "company": "delta_healthcare",
+    "start_date": "2025-03-12",
+    "end_date": "2028-03-11",
+    "total_contract_value": 1703671.2,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 1022202.72
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 681468.48,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-022",
+    "customer": "Adams Group",
+    "company": "delta_healthcare",
+    "start_date": "2025-10-02",
+    "end_date": "2026-10-02",
+    "total_contract_value": 910598.84,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 546359.3
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 364239.54,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-023",
+    "customer": "Chavez and Sons",
+    "company": "delta_healthcare",
+    "start_date": "2025-03-08",
+    "end_date": "2026-03-08",
+    "total_contract_value": 417769.44,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 250661.66
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 167107.78,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-024",
+    "customer": "Collins, Bennett and Stone",
+    "company": "delta_healthcare",
+    "start_date": "2025-02-08",
+    "end_date": "2027-02-08",
+    "total_contract_value": 328836.4,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 197301.84
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 131534.56,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-DELT-025",
+    "customer": "Wallace, Peterson and Jones",
+    "company": "delta_healthcare",
+    "start_date": "2025-09-03",
+    "end_date": "2028-09-02",
+    "total_contract_value": 575491.59,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 345294.95
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 230196.64,
+        "completion_percentage": 50
+      }
+    ]
+  }
+]

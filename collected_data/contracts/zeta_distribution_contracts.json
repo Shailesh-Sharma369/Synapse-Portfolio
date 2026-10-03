@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2024-ZETA-001",
+    "customer": "Mata PLC",
+    "company": "zeta_distribution",
+    "start_date": "2024-10-08",
+    "end_date": "2026-10-08",
+    "total_contract_value": 5645810.06,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4516648.05
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1129162.01
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ZETA-002",
+    "customer": "Gonzales, Frey and Keller",
+    "company": "zeta_distribution",
+    "start_date": "2024-04-11",
+    "end_date": "2026-04-11",
+    "total_contract_value": 5207450.86,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4165960.69
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1041490.17
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ZETA-003",
+    "customer": "Johnson-Montgomery",
+    "company": "zeta_distribution",
+    "start_date": "2024-02-18",
+    "end_date": "2025-02-17",
+    "total_contract_value": 4468086.13,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3574468.9
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 893617.23
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-004",
+    "customer": "Mcclain, Hayes and Gutierrez",
+    "company": "zeta_distribution",
+    "start_date": "2025-09-28",
+    "end_date": "2026-09-28",
+    "total_contract_value": 3562440.27,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2849952.22
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 712488.05
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-005",
+    "customer": "Fernandez PLC",
+    "company": "zeta_distribution",
+    "start_date": "2025-02-18",
+    "end_date": "2027-02-18",
+    "total_contract_value": 6739996.03,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5391996.82
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1347999.21
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-006",
+    "customer": "Oconnor, Brown and Kim",
+    "company": "zeta_distribution",
+    "start_date": "2025-05-22",
+    "end_date": "2027-05-22",
+    "total_contract_value": 5489362.02,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4391489.62
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1097872.4
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-007",
+    "customer": "Wade and Sons",
+    "company": "zeta_distribution",
+    "start_date": "2025-05-24",
+    "end_date": "2026-05-24",
+    "total_contract_value": 2196776.23,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1757420.98
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 439355.25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ZETA-008",
+    "customer": "Moses-Johnson",
+    "company": "zeta_distribution",
+    "start_date": "2024-11-25",
+    "end_date": "2027-11-25",
+    "total_contract_value": 2876663.86,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1872878.19
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 468219.55
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-009",
+    "customer": "Robertson-Waller",
+    "company": "zeta_distribution",
+    "start_date": "2025-02-28",
+    "end_date": "2027-02-28",
+    "total_contract_value": 2466144.6,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1972915.68
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 493228.92
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ZETA-010",
+    "customer": "Case and Sons",
+    "company": "zeta_distribution",
+    "start_date": "2024-01-13",
+    "end_date": "2025-01-12",
+    "total_contract_value": 4992999.15,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3994399.32
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 998599.83
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-011",
+    "customer": "Livingston, Sparks and Orozco",
+    "company": "zeta_distribution",
+    "start_date": "2025-05-10",
+    "end_date": "2027-05-10",
+    "total_contract_value": 5363231.55,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4290585.24
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1072646.31
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-012",
+    "customer": "Oconnor LLC",
+    "company": "zeta_distribution",
+    "start_date": "2025-03-30",
+    "end_date": "2028-03-29",
+    "total_contract_value": 3591945.81,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2497335.91
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 624333.98
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-013",
+    "customer": "Jacobs-Brown",
+    "company": "zeta_distribution",
+    "start_date": "2025-11-23",
+    "end_date": "2028-11-22",
+    "total_contract_value": 2308618.98,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1846895.18
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 461723.8
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ZETA-014",
+    "customer": "Mora, Yates and Ballard",
+    "company": "zeta_distribution",
+    "start_date": "2024-03-26",
+    "end_date": "2026-03-26",
+    "total_contract_value": 1148473.32,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 811284.31
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 202821.08
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ZETA-015",
+    "customer": "Gillespie, Graham and Porter",
+    "company": "zeta_distribution",
+    "start_date": "2024-12-14",
+    "end_date": "2026-12-14",
+    "total_contract_value": 2511062.18,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1619217.14
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 404804.28
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ZETA-016",
+    "customer": "Murphy, Wilson and Jones",
+    "company": "zeta_distribution",
+    "start_date": "2024-05-28",
+    "end_date": "2025-05-28",
+    "total_contract_value": 2730029.2,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2184023.36
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 546005.84
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-017",
+    "customer": "Watson PLC",
+    "company": "zeta_distribution",
+    "start_date": "2025-07-21",
+    "end_date": "2026-07-21",
+    "total_contract_value": 6840605.03,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5472484.02
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1368121.01
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-018",
+    "customer": "Sanchez-Noble",
+    "company": "zeta_distribution",
+    "start_date": "2025-07-17",
+    "end_date": "2028-07-16",
+    "total_contract_value": 3295642.44,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2371631.69
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 592907.92
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-019",
+    "customer": "Cline LLC",
+    "company": "zeta_distribution",
+    "start_date": "2025-08-23",
+    "end_date": "2028-08-22",
+    "total_contract_value": 6747451.54,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 5397961.23
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1349490.31
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ZETA-020",
+    "customer": "Wood-Butler",
+    "company": "zeta_distribution",
+    "start_date": "2024-10-27",
+    "end_date": "2027-10-27",
+    "total_contract_value": 4121472.09,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3297177.67
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 824294.42
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-021",
+    "customer": "Massey, Shelton and Washington",
+    "company": "zeta_distribution",
+    "start_date": "2025-08-13",
+    "end_date": "2028-08-12",
+    "total_contract_value": 3934897.92,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2852016.95
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 713004.24
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-022",
+    "customer": "Walker, Harris and Nguyen",
+    "company": "zeta_distribution",
+    "start_date": "2025-02-25",
+    "end_date": "2026-02-25",
+    "total_contract_value": 3429084.68,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2743267.74
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 685816.94
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-023",
+    "customer": "Clark-Brandt",
+    "company": "zeta_distribution",
+    "start_date": "2025-07-31",
+    "end_date": "2028-07-30",
+    "total_contract_value": 6424194.7,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4393326.38
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1098331.6
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-024",
+    "customer": "Smith Group",
+    "company": "zeta_distribution",
+    "start_date": "2025-08-28",
+    "end_date": "2026-08-28",
+    "total_contract_value": 3602591.87,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2882073.5
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 720518.37
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ZETA-025",
+    "customer": "Cox and Sons",
+    "company": "zeta_distribution",
+    "start_date": "2025-06-26",
+    "end_date": "2028-06-25",
+    "total_contract_value": 1125553.57,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 900442.86
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 225110.71
+      }
+    ]
+  }
+]

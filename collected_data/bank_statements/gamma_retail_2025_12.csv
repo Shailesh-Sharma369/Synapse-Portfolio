@@ -1,0 +1,17 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-12-01,Beginning Balance,,,41128105.65793073,gamma_retail,Gamma Retail Group,2025-12
+2025-12-03,"Customer Payment - Ferguson, Gutierrez and Wood",,468826.44687167555,41596932.10480241,gamma_retail,Gamma Retail Group,2025-12
+2025-12-03,"Vendor Payment - Spencer, Dominguez and Henry",146882.89485104705,,41450049.20995136,gamma_retail,Gamma Retail Group,2025-12
+2025-12-04,Customer Payment - Fox-Johnson,,361719.86193520256,41811769.07188657,gamma_retail,Gamma Retail Group,2025-12
+2025-12-05,"Vendor Payment - Fuentes, Villa and Beck",37494.01397755719,,41774275.05790901,gamma_retail,Gamma Retail Group,2025-12
+2025-12-06,"Customer Payment - Watkins, Williams and Richards",,342745.30262511264,42117020.360534124,gamma_retail,Gamma Retail Group,2025-12
+2025-12-08,Vendor Payment - Baker and Sons,102139.65285055658,,42014880.70768357,gamma_retail,Gamma Retail Group,2025-12
+2025-12-11,Vendor Payment - Johnson-James,65884.87859838075,,41948995.82908519,gamma_retail,Gamma Retail Group,2025-12
+2025-12-12,Vendor Payment - Dickerson Inc,147770.38888767074,,41801225.44019752,gamma_retail,Gamma Retail Group,2025-12
+2025-12-15,Customer Payment - Tran PLC,,110943.32524764573,41912168.765445165,gamma_retail,Gamma Retail Group,2025-12
+2025-12-16,Customer Payment - Montgomery-Cook,,118826.76051955568,42030995.52596472,gamma_retail,Gamma Retail Group,2025-12
+2025-12-16,Payroll,2916666.6666666665,,39114328.85929806,gamma_retail,Gamma Retail Group,2025-12
+2025-12-16,Vendor Payment - Sanchez LLC,193878.0028303231,,38920450.85646773,gamma_retail,Gamma Retail Group,2025-12
+2025-12-21,"Vendor Payment - Webb, King and Johnson",68244.7956106672,,38852206.060857065,gamma_retail,Gamma Retail Group,2025-12
+2025-12-25,Customer Payment - Waters Ltd,,249826.75518328574,39102032.81604035,gamma_retail,Gamma Retail Group,2025-12
+2025-12-30,Customer Payment - Lawson LLC,,121254.69464801588,39223287.510688365,gamma_retail,Gamma Retail Group,2025-12

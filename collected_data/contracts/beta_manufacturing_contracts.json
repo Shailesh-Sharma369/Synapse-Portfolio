@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2024-BETA-001",
+    "customer": "House-Brown",
+    "company": "beta_manufacturing",
+    "start_date": "2024-09-05",
+    "end_date": "2027-09-05",
+    "total_contract_value": 4665125.65,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3732100.52
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 933025.13
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-002",
+    "customer": "Miller-Cooper",
+    "company": "beta_manufacturing",
+    "start_date": "2024-04-17",
+    "end_date": "2025-04-17",
+    "total_contract_value": 4204184.05,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3363347.24
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 840836.81
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-003",
+    "customer": "Fischer Group",
+    "company": "beta_manufacturing",
+    "start_date": "2024-11-10",
+    "end_date": "2026-11-10",
+    "total_contract_value": 5279810.14,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4223848.11
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1055962.03
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-004",
+    "customer": "Park LLC",
+    "company": "beta_manufacturing",
+    "start_date": "2024-04-12",
+    "end_date": "2027-04-12",
+    "total_contract_value": 2276026.4,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1820821.12
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 455205.28
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-BETA-005",
+    "customer": "Nguyen-Pierce",
+    "company": "beta_manufacturing",
+    "start_date": "2025-10-27",
+    "end_date": "2028-10-26",
+    "total_contract_value": 5071972.13,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4057577.7
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1014394.43
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-006",
+    "customer": "Haney, Bennett and Caldwell",
+    "company": "beta_manufacturing",
+    "start_date": "2024-04-10",
+    "end_date": "2025-04-10",
+    "total_contract_value": 5512943.42,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4410354.74
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1102588.68
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-007",
+    "customer": "Hines, Ball and Jones",
+    "company": "beta_manufacturing",
+    "start_date": "2024-06-01",
+    "end_date": "2026-06-01",
+    "total_contract_value": 3907314.5,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3125851.6
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 781462.9
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-BETA-008",
+    "customer": "Anderson Ltd",
+    "company": "beta_manufacturing",
+    "start_date": "2025-05-15",
+    "end_date": "2028-05-14",
+    "total_contract_value": 2669377.17,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2135501.74
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 533875.43
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-BETA-009",
+    "customer": "Cooper, Fitzgerald and King",
+    "company": "beta_manufacturing",
+    "start_date": "2025-07-16",
+    "end_date": "2028-07-15",
+    "total_contract_value": 4560220.06,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3648176.05
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 912044.01
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-BETA-010",
+    "customer": "Washington Group",
+    "company": "beta_manufacturing",
+    "start_date": "2025-07-04",
+    "end_date": "2028-07-03",
+    "total_contract_value": 1810546.33,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1198451.16
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 299612.79
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-011",
+    "customer": "Mendez, Turner and Gibbs",
+    "company": "beta_manufacturing",
+    "start_date": "2024-10-28",
+    "end_date": "2027-10-28",
+    "total_contract_value": 5719285.11,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4575428.09
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1143857.02
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-012",
+    "customer": "Mcpherson Ltd",
+    "company": "beta_manufacturing",
+    "start_date": "2024-09-27",
+    "end_date": "2027-09-27",
+    "total_contract_value": 5951625.33,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4761300.26
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1190325.07
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-013",
+    "customer": "Smith Group",
+    "company": "beta_manufacturing",
+    "start_date": "2024-07-04",
+    "end_date": "2026-07-04",
+    "total_contract_value": 3459541.74,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2272350.06
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 568087.52
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-014",
+    "customer": "Cummings, Nunez and Solis",
+    "company": "beta_manufacturing",
+    "start_date": "2024-11-04",
+    "end_date": "2027-11-04",
+    "total_contract_value": 799952.04,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 639961.63
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 159990.41
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-015",
+    "customer": "Robbins Inc",
+    "company": "beta_manufacturing",
+    "start_date": "2024-06-05",
+    "end_date": "2025-06-05",
+    "total_contract_value": 3926969.64,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3141575.71
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 785393.93
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-016",
+    "customer": "Prince, Reynolds and Bennett",
+    "company": "beta_manufacturing",
+    "start_date": "2024-09-11",
+    "end_date": "2025-09-11",
+    "total_contract_value": 5409937.52,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4327950.02
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1081987.5
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-BETA-017",
+    "customer": "Smith-Stevens",
+    "company": "beta_manufacturing",
+    "start_date": "2025-08-14",
+    "end_date": "2027-08-14",
+    "total_contract_value": 2670661.25,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2136529.0
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 534132.25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-BETA-018",
+    "customer": "Singleton, Young and Davis",
+    "company": "beta_manufacturing",
+    "start_date": "2025-01-21",
+    "end_date": "2027-01-21",
+    "total_contract_value": 1198500.88,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 958800.7
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 239700.18
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-BETA-019",
+    "customer": "Moses Group",
+    "company": "beta_manufacturing",
+    "start_date": "2025-07-26",
+    "end_date": "2028-07-25",
+    "total_contract_value": 2046945.58,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1637556.46
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 409389.12
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-020",
+    "customer": "Price, Phelps and Duncan",
+    "company": "beta_manufacturing",
+    "start_date": "2024-11-06",
+    "end_date": "2025-11-06",
+    "total_contract_value": 5770347.14,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4616277.71
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1154069.43
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-021",
+    "customer": "Franklin, Reed and Harris",
+    "company": "beta_manufacturing",
+    "start_date": "2024-02-24",
+    "end_date": "2026-02-23",
+    "total_contract_value": 3280038.13,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2624030.5
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 656007.63
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-022",
+    "customer": "Sampson-Mcpherson",
+    "company": "beta_manufacturing",
+    "start_date": "2024-07-14",
+    "end_date": "2026-07-14",
+    "total_contract_value": 778440.61,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 622752.49
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 155688.12
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-BETA-023",
+    "customer": "Sanders Inc",
+    "company": "beta_manufacturing",
+    "start_date": "2025-12-24",
+    "end_date": "2026-12-24",
+    "total_contract_value": 1991787.46,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1593429.97
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 398357.49
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-BETA-024",
+    "customer": "Cunningham, Williams and Hunt",
+    "company": "beta_manufacturing",
+    "start_date": "2025-08-20",
+    "end_date": "2027-08-20",
+    "total_contract_value": 5906998.52,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4725598.82
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1181399.7
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-BETA-025",
+    "customer": "Gould, Bailey and York",
+    "company": "beta_manufacturing",
+    "start_date": "2024-10-14",
+    "end_date": "2027-10-14",
+    "total_contract_value": 5697816.35,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4558253.08
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1139563.27
+      }
+    ]
+  }
+]

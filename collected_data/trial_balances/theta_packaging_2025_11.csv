@@ -1,0 +1,37 @@
+account_code,account_name,debit,credit,balance,account_type,company_id,company_name,period
+1000,Cash and Cash Equivalents,11341754.679063112,0.0,11341754.679063112,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+1100,Accounts Receivable,11327595.665304437,0.0,11327595.665304437,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+1150,Allowance for Doubtful Accounts,0.0,93126.35676884589,-93126.35676884589,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+1200,Inventory - Raw Materials,5576147.303693178,0.0,5576147.303693178,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+1210,Inventory - Work in Process,6345278.015206857,0.0,6345278.015206857,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+1220,Inventory - Finished Goods,3827624.676192576,0.0,3827624.676192576,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+1300,Prepaid Expenses,1894457.65602849,0.0,1894457.65602849,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+1400,"Property, Plant & Equipment",24000000.0,0.0,24000000.0,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+1450,Accumulated Depreciation,0.0,9000000.0,-9000000.0,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+1500,Intangible Assets,18000000.0,0.0,18000000.0,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+1550,Accumulated Amortization,0.0,4800000.0,-4800000.0,Asset,theta_packaging,Theta Sustainable Packaging,2025-11
+2000,Accounts Payable,0.0,2330500.7807349707,-2330500.7807349707,Liability,theta_packaging,Theta Sustainable Packaging,2025-11
+2100,Accrued Expenses,0.0,1288118.6289794531,-1288118.6289794531,Liability,theta_packaging,Theta Sustainable Packaging,2025-11
+2150,Accrued Payroll,0.0,663179.041579993,-663179.041579993,Liability,theta_packaging,Theta Sustainable Packaging,2025-11
+2200,Deferred Revenue,0.0,0.0,0.0,Liability,theta_packaging,Theta Sustainable Packaging,2025-11
+2300,Current Portion of Long-term Debt,0.0,32075123.17347256,-32075123.17347256,Liability,theta_packaging,Theta Sustainable Packaging,2025-11
+2400,Long-term Debt,0.0,48706443.658245586,-48706443.658245586,Liability,theta_packaging,Theta Sustainable Packaging,2025-11
+3000,Common Stock,0.0,30000000.0,-30000000.0,Equity,theta_packaging,Theta Sustainable Packaging,2025-11
+3100,Retained Earnings,0.0,-46666033.72853634,46666033.72853634,Equity,theta_packaging,Theta Sustainable Packaging,2025-11
+4000,Product Sales,0.0,4656317.838442294,-4656317.838442294,Revenue,theta_packaging,Theta Sustainable Packaging,2025-11
+5000,Cost of Goods Sold - Materials,1117516.2812261505,0.0,1117516.2812261505,COGS,theta_packaging,Theta Sustainable Packaging,2025-11
+5100,Cost of Goods Sold - Labor,1117516.2812261505,0.0,1117516.2812261505,COGS,theta_packaging,Theta Sustainable Packaging,2025-11
+5200,Cost of Goods Sold - Overhead,1117516.2812261505,0.0,1117516.2812261505,COGS,theta_packaging,Theta Sustainable Packaging,2025-11
+6000,Salaries and Wages,456319.1481673448,0.0,456319.1481673448,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+6100,Employee Benefits,104301.5195811074,0.0,104301.5195811074,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+6200,Rent,65188.44973819212,0.0,65188.44973819212,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+6300,Utilities,62848.112022238645,0.0,62848.112022238645,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+6400,Insurance,43800.74253833353,0.0,43800.74253833353,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+6500,Professional Fees,46675.22245481512,0.0,46675.22245481512,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+7000,Sales and Marketing,104301.5195811074,0.0,104301.5195811074,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+7100,Advertising,48766.75489777476,0.0,48766.75489777476,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+7200,Travel and Entertainment,55026.48506277212,0.0,55026.48506277212,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+8000,Research and Development,156452.27937166108,0.0,156452.27937166108,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+9000,Depreciation Expense,39113.06984291527,0.0,39113.06984291527,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+9100,Amortization Expense,39113.06984291527,0.0,39113.06984291527,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11
+9500,Interest Expense,59462.537419088396,0.0,59462.537419088396,Operating Expense,theta_packaging,Theta Sustainable Packaging,2025-11

@@ -796,8 +796,8 @@ with assistant_col:
             st.caption("Try one of these:")
             suggestions = [
                 "What's the TB Validator status?",
-                "Why is R&D over budget at SysForge?",
                 "Which entity has the biggest variance?",
+                "Show me the trial balance summary for the largest company.",
             ]
             for i, s in enumerate(suggestions):
                 if st.button(s, key=f"sug_{i}", width="stretch"):

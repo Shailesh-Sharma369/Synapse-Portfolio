@@ -1,0 +1,17 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2026-01-01,Beginning Balance,,,15476006.65947459,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-02,"Customer Payment - Rivera, Hammond and Lowery",,458063.571565172,15934070.231039762,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-03,Vendor Payment - Thomas Ltd,17902.050743618267,,15916168.180296144,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-08,Customer Payment - Ray Ltd,,53310.34769500279,15969478.527991146,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-09,"Vendor Payment - Sullivan, Pena and Wood",183292.01311548662,,15786186.51487566,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-10,Customer Payment - Marsh LLC,,311842.6792018989,16098029.194077559,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-12,"Vendor Payment - Johns, Wilkerson and Lester",137677.41487044853,,15960351.77920711,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-13,Vendor Payment - Strickland-Costa,173309.91671533015,,15787041.86249178,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-15,"Vendor Payment - Fletcher, Warner and Griffin",140127.8510933274,,15646914.011398453,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-16,Payroll,1750000.0,,13896914.011398453,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-17,"Vendor Payment - Washington, David and Gallegos",155052.46565654164,,13741861.545741912,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-22,Vendor Payment - Elliott-Morgan,70705.829581012,,13671155.7161609,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-23,Vendor Payment - Miller-Torres,41367.432144324484,,13629788.284016576,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-24,"Vendor Payment - Mckee, Browning and Mitchell",126572.45475480397,,13503215.829261772,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-25,"Vendor Payment - Hoffman, Williams and Smith",105545.67021376676,,13397670.159048006,beta_manufacturing,Beta Manufacturing Co,2026-01
+2026-01-26,"Customer Payment - Ramirez, Ingram and Hughes",,229402.50533794743,13627072.664385954,beta_manufacturing,Beta Manufacturing Co,2026-01

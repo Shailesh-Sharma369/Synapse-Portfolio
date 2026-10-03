@@ -54,7 +54,7 @@ celery_app.conf.update(
 # =============================================================================
 _beat_schedule: dict = {
     # ---- Daily summary email, 8:00 AM UTC --------------------------------
-    # Always active. This is the "Daily Summary" the assignment requires —
+    # Always active. This is the "Daily Summary" 
     # a morning progress update to stakeholders.
     "daily-summary-8am": {
         "task": "orchestrator.send_daily_summary",
@@ -62,7 +62,7 @@ _beat_schedule: dict = {
     },
 
     # ---- Weekly stakeholder report, Monday 8:00 AM UTC -------------------
-    # Always active. This is the "Stakeholder Report" the assignment requires.
+    # Always active. This is the "Stakeholder Report" 
     "weekly-report-monday-8am": {
         "task": "orchestrator.send_weekly_report",
         "schedule": crontab(day_of_week=1, hour=8, minute=0),

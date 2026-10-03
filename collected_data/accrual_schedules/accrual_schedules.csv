@@ -1,0 +1,1009 @@
+company_id,company_name,accrual_type,gl_account,frequency,amount,last_booked_date
+alpha_saas,Alpha SaaS Solutions,Rent Expense,6200,monthly,187500.0,2025-12-31
+alpha_saas,Alpha SaaS Solutions,Utilities,6300,monthly,75000.0,2025-12-31
+alpha_saas,Alpha SaaS Solutions,Insurance,6400,quarterly,450000.0,2025-12-31
+alpha_saas,Alpha SaaS Solutions,Professional Fees,6500,monthly,112500.0,2025-12-31
+alpha_saas,Alpha SaaS Solutions,Bonus Accrual,6000,annual,2250000.0,2025-12-31
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Butler-Bowman,6300,annual,30054.74829399063,2025-06-14
+alpha_saas,Alpha SaaS Solutions,Commission Accrual - Johns Group,6000,monthly,59341.64477822832,2025-03-04
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Bishop and Sons,6300,monthly,69211.45779975045,2025-06-25
+alpha_saas,Alpha SaaS Solutions,"Server Hosting Accrual - Ross, Dalton and Ortiz",6300,monthly,15591.771778122455,2025-06-05
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Lewis Ltd,6300,monthly,55308.95586503733,2025-07-07
+alpha_saas,Alpha SaaS Solutions,Interest Expense Accrual - Riley-Smith,9500,monthly,38424.49021541417,2025-12-10
+alpha_saas,Alpha SaaS Solutions,Contractor Fees Accrual - Sellers Group,6500,monthly,21927.32893734421,2025-04-16
+alpha_saas,Alpha SaaS Solutions,Consulting Fees Accrual - Clay Group,6500,monthly,32393.046985029723,2025-06-01
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Olson-Lam,6300,annual,69792.95400034235,2025-06-09
+alpha_saas,Alpha SaaS Solutions,"Legal Fees Accrual - Rodriguez, Harris and Skinner",6500,monthly,43060.366620493216,2025-10-07
+alpha_saas,Alpha SaaS Solutions,Travel Expense Accrual - Simmons-Fleming,7200,monthly,36431.13661881096,2025-09-22
+alpha_saas,Alpha SaaS Solutions,Interest Expense Accrual - Kelly-Ramos,9500,monthly,16058.915518805676,2025-06-22
+alpha_saas,Alpha SaaS Solutions,Equipment Maintenance - Allen and Sons,6300,quarterly,60340.83855425865,2025-03-04
+alpha_saas,Alpha SaaS Solutions,Consulting Fees Accrual - Kelly-Hooper,6500,monthly,35644.985101713144,2025-01-07
+alpha_saas,Alpha SaaS Solutions,Interest Expense Accrual - Harris-Smith,9500,monthly,53421.60022056605,2025-08-11
+alpha_saas,Alpha SaaS Solutions,"Software License Accrual - Marquez, Huffman and Roy",6300,monthly,60467.88692610118,2025-08-02
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Hanson-Smith,6300,monthly,14899.739988643349,2025-04-24
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Wilson LLC,6300,monthly,14674.213678829414,2025-06-03
+alpha_saas,Alpha SaaS Solutions,"Freight/Shipping Accrual - Campbell, Riddle and Jarvis",5200,monthly,29404.159008227445,2025-03-05
+alpha_saas,Alpha SaaS Solutions,Commission Accrual - Pierce LLC,6000,monthly,21620.368474607407,2025-11-03
+alpha_saas,Alpha SaaS Solutions,Legal Fees Accrual - Craig LLC,6500,monthly,62011.500780911665,2025-07-14
+alpha_saas,Alpha SaaS Solutions,Audit Fees Accrual - Mccullough LLC,6500,annual,30478.446870204607,2025-08-01
+alpha_saas,Alpha SaaS Solutions,Equipment Maintenance - Tanner Group,6300,quarterly,15476.25973704649,2025-11-11
+alpha_saas,Alpha SaaS Solutions,"Warranty Provision - Hodges, Johnson and Willis",5200,annual,17190.51552836143,2025-05-25
+alpha_saas,Alpha SaaS Solutions,Warranty Provision - Morrison-Zamora,5200,annual,39628.752373244504,2025-07-23
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Barry Ltd,6300,monthly,49413.63823760102,2025-10-12
+alpha_saas,Alpha SaaS Solutions,Consulting Fees Accrual - Webster PLC,6500,monthly,60582.70464065398,2025-01-13
+alpha_saas,Alpha SaaS Solutions,Equipment Maintenance - Powell-Barnes,6300,quarterly,33048.97056562508,2025-03-18
+alpha_saas,Alpha SaaS Solutions,"Freight/Shipping Accrual - Shelton, Smith and Schultz",5200,monthly,14955.564322609054,2025-06-19
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Mendoza-Brown,6300,annual,55597.27302408502,2025-01-05
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Holloway LLC,6300,annual,45593.82755712875,2025-07-13
+alpha_saas,Alpha SaaS Solutions,Contractor Fees Accrual - Moore-Hess,6500,monthly,55433.60518148544,2025-01-23
+alpha_saas,Alpha SaaS Solutions,Server Hosting Accrual - Camacho-Taylor,6300,monthly,39637.92738628273,2025-08-22
+alpha_saas,Alpha SaaS Solutions,"Commission Accrual - Richardson, Ramirez and Gibson",6000,monthly,47101.316949085885,2025-12-18
+alpha_saas,Alpha SaaS Solutions,Consulting Fees Accrual - Campbell-Gregory,6500,monthly,23909.20938831899,2025-09-27
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Sullivan PLC,6300,annual,5200.473405474216,2025-01-14
+alpha_saas,Alpha SaaS Solutions,"Contractor Fees Accrual - Leonard, Jordan and Anderson",6500,monthly,67780.51226925928,2025-02-19
+alpha_saas,Alpha SaaS Solutions,Equipment Maintenance - Mcknight PLC,6300,quarterly,26679.51860460165,2025-12-16
+alpha_saas,Alpha SaaS Solutions,"Consulting Fees Accrual - Clark, Mendez and Stone",6500,monthly,64503.0146342827,2025-11-06
+alpha_saas,Alpha SaaS Solutions,Interest Expense Accrual - Thomas-Robertson,9500,monthly,28935.60536164255,2025-08-16
+alpha_saas,Alpha SaaS Solutions,"Commission Accrual - Moore, Perry and Decker",6000,monthly,73428.86975257171,2025-12-08
+alpha_saas,Alpha SaaS Solutions,Warranty Provision - Mccall-Robles,5200,annual,41259.435056230206,2025-10-04
+alpha_saas,Alpha SaaS Solutions,"Server Hosting Accrual - Harris, Ortega and Holloway",6300,monthly,67040.22728207636,2025-01-14
+alpha_saas,Alpha SaaS Solutions,"Server Hosting Accrual - Howard, Clark and Davis",6300,monthly,27426.53295029119,2025-07-07
+alpha_saas,Alpha SaaS Solutions,Audit Fees Accrual - Parsons and Sons,6500,annual,72397.4667998406,2025-02-08
+alpha_saas,Alpha SaaS Solutions,Audit Fees Accrual - Austin and Sons,6500,annual,73305.24789634104,2025-09-18
+alpha_saas,Alpha SaaS Solutions,"Marketing Campaign Accrual - Perez, Underwood and Kaufman",7000,quarterly,12834.889047759169,2025-12-05
+alpha_saas,Alpha SaaS Solutions,"Contractor Fees Accrual - Swanson, Hubbard and Bell",6500,monthly,50937.583245912414,2025-02-07
+alpha_saas,Alpha SaaS Solutions,Marketing Campaign Accrual - Simmons Inc,7000,quarterly,70633.3752169925,2025-02-25
+alpha_saas,Alpha SaaS Solutions,Commission Accrual - Sanders-Lee,6000,monthly,33240.25858893458,2025-10-11
+alpha_saas,Alpha SaaS Solutions,Server Hosting Accrual - Khan LLC,6300,monthly,59480.98190636523,2025-05-02
+alpha_saas,Alpha SaaS Solutions,Equipment Maintenance - Garcia PLC,6300,quarterly,11008.67005931829,2025-03-27
+alpha_saas,Alpha SaaS Solutions,"Warranty Provision - Reynolds, Aguilar and Terry",5200,annual,34259.22440630111,2025-03-18
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Mueller-Chen,6300,monthly,12652.344275095822,2025-10-04
+alpha_saas,Alpha SaaS Solutions,Travel Expense Accrual - Black-Hall,7200,monthly,47463.07745196351,2025-05-05
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Franklin-Carter,6300,monthly,30253.21670371523,2025-06-02
+alpha_saas,Alpha SaaS Solutions,"Interest Expense Accrual - Patterson, Taylor and Roberts",9500,monthly,73970.43473339664,2025-07-18
+alpha_saas,Alpha SaaS Solutions,"Legal Fees Accrual - Torres, Franklin and Robinson",6500,monthly,6590.412373187854,2025-02-20
+alpha_saas,Alpha SaaS Solutions,Audit Fees Accrual - Stephens Inc,6500,annual,59775.26992755654,2025-12-14
+alpha_saas,Alpha SaaS Solutions,Travel Expense Accrual - Roberts PLC,7200,monthly,11651.08105181523,2025-03-11
+alpha_saas,Alpha SaaS Solutions,"Audit Fees Accrual - Johnson, Watts and Drake",6500,annual,47123.095033964295,2025-04-09
+alpha_saas,Alpha SaaS Solutions,"Warranty Provision - Thompson, Boyle and Williams",5200,annual,52385.961193836505,2025-11-04
+alpha_saas,Alpha SaaS Solutions,Freight/Shipping Accrual - Perez-Valdez,5200,monthly,72317.74955009711,2025-07-22
+alpha_saas,Alpha SaaS Solutions,"Commission Accrual - Campbell, Mitchell and Sanchez",6000,monthly,27039.14646592853,2025-03-26
+alpha_saas,Alpha SaaS Solutions,"Warranty Provision - Beltran, Boone and Shah",5200,annual,8840.0896613631,2025-11-08
+alpha_saas,Alpha SaaS Solutions,Travel Expense Accrual - Sullivan-Roberts,7200,monthly,21794.814009383943,2025-08-15
+alpha_saas,Alpha SaaS Solutions,"Property Tax Accrual - Caldwell, Thomas and Lopez",6300,annual,31849.263932898062,2025-05-09
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Mitchell-Harris,6300,annual,34492.67163279012,2025-12-06
+alpha_saas,Alpha SaaS Solutions,Interest Expense Accrual - Wilson and Sons,9500,monthly,20239.77630586297,2025-03-10
+alpha_saas,Alpha SaaS Solutions,"Interest Expense Accrual - Lara, Hancock and Townsend",9500,monthly,60362.4981631167,2025-05-09
+alpha_saas,Alpha SaaS Solutions,Travel Expense Accrual - Hughes Ltd,7200,monthly,8728.227672521618,2025-08-07
+alpha_saas,Alpha SaaS Solutions,Legal Fees Accrual - Jimenez Inc,6500,monthly,72145.96717699082,2025-12-22
+alpha_saas,Alpha SaaS Solutions,Marketing Campaign Accrual - Benson Group,7000,quarterly,9117.316410785956,2025-09-24
+alpha_saas,Alpha SaaS Solutions,"Warranty Provision - Smith, Wood and Rogers",5200,annual,28692.01772034522,2025-03-03
+alpha_saas,Alpha SaaS Solutions,Consulting Fees Accrual - Sutton-Rivera,6500,monthly,12651.429033428734,2025-03-17
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Perry Group,6300,annual,10751.408978515006,2025-01-12
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Rich LLC,6300,monthly,49298.22265580151,2025-12-08
+alpha_saas,Alpha SaaS Solutions,Equipment Maintenance - Simpson LLC,6300,quarterly,25329.386302267376,2025-12-24
+alpha_saas,Alpha SaaS Solutions,Consulting Fees Accrual - Donaldson Inc,6500,monthly,38617.56714949958,2025-11-20
+alpha_saas,Alpha SaaS Solutions,"Consulting Fees Accrual - Suarez, Gallegos and Taylor",6500,monthly,33644.02856654881,2025-06-10
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Hall and Sons,6300,annual,72851.05226183395,2025-02-24
+alpha_saas,Alpha SaaS Solutions,Contractor Fees Accrual - Davis-Griffin,6500,monthly,55514.24445934722,2025-05-24
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Warren-Ho,6300,annual,27277.940300991537,2025-02-04
+alpha_saas,Alpha SaaS Solutions,"Legal Fees Accrual - Schneider, Walsh and James",6500,monthly,74213.71951587974,2025-02-27
+alpha_saas,Alpha SaaS Solutions,Freight/Shipping Accrual - Garza Inc,5200,monthly,37013.28206594073,2025-12-10
+alpha_saas,Alpha SaaS Solutions,"Equipment Maintenance - Johnson, Friedman and Moody",6300,quarterly,48877.31522735429,2025-02-15
+alpha_saas,Alpha SaaS Solutions,Interest Expense Accrual - Salas-May,9500,monthly,50815.39046018102,2025-11-21
+alpha_saas,Alpha SaaS Solutions,Consulting Fees Accrual - Bautista Ltd,6500,monthly,74096.83617929262,2025-05-10
+alpha_saas,Alpha SaaS Solutions,Marketing Campaign Accrual - Massey and Sons,7000,quarterly,32612.343696896707,2025-11-09
+alpha_saas,Alpha SaaS Solutions,Warranty Provision - Jackson-Griffith,5200,annual,13514.311158460325,2025-05-22
+alpha_saas,Alpha SaaS Solutions,"Property Tax Accrual - Gray, Kelly and Morrison",6300,annual,35562.783762755855,2025-06-06
+alpha_saas,Alpha SaaS Solutions,Legal Fees Accrual - Alexander Inc,6500,monthly,59882.42820904852,2025-07-08
+alpha_saas,Alpha SaaS Solutions,Warranty Provision - Reilly LLC,5200,annual,53841.19054881456,2025-02-23
+alpha_saas,Alpha SaaS Solutions,Freight/Shipping Accrual - Miller Group,5200,monthly,42281.88747355586,2025-11-20
+alpha_saas,Alpha SaaS Solutions,"Legal Fees Accrual - King, Gregory and Powell",6500,monthly,28941.586355583633,2025-11-19
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Haas-Hughes,6300,monthly,58546.780195173254,2025-02-04
+alpha_saas,Alpha SaaS Solutions,Interest Expense Accrual - Lopez Group,9500,monthly,65089.25131732095,2025-05-14
+alpha_saas,Alpha SaaS Solutions,Audit Fees Accrual - Holloway-Shelton,6500,annual,26554.54173886592,2025-12-22
+alpha_saas,Alpha SaaS Solutions,Equipment Maintenance - Ramsey PLC,6300,quarterly,3916.173294192513,2025-09-15
+alpha_saas,Alpha SaaS Solutions,"Property Tax Accrual - Edwards, Mata and Martin",6300,annual,11329.715555370032,2025-01-27
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Watts PLC,6300,annual,38393.68925702877,2025-06-09
+alpha_saas,Alpha SaaS Solutions,Interest Expense Accrual - Christian LLC,9500,monthly,41042.19951233722,2025-09-17
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Johnson-Greene,6300,annual,53299.1345871535,2025-04-20
+alpha_saas,Alpha SaaS Solutions,"Consulting Fees Accrual - Mitchell, Johnson and Bray",6500,monthly,59935.60662470777,2025-04-22
+alpha_saas,Alpha SaaS Solutions,Legal Fees Accrual - Williams Ltd,6500,monthly,8835.593146586341,2025-03-21
+alpha_saas,Alpha SaaS Solutions,"Property Tax Accrual - Bates, Burnett and Walsh",6300,annual,71087.21935015448,2025-03-06
+alpha_saas,Alpha SaaS Solutions,"Software License Accrual - Robinson, Price and Peters",6300,monthly,36056.07665032124,2025-06-20
+alpha_saas,Alpha SaaS Solutions,"Audit Fees Accrual - Scott, Jackson and Taylor",6500,annual,50851.93717643222,2025-11-17
+alpha_saas,Alpha SaaS Solutions,Marketing Campaign Accrual - Miller and Sons,7000,quarterly,25199.34398193156,2025-07-03
+alpha_saas,Alpha SaaS Solutions,Equipment Maintenance - Hughes LLC,6300,quarterly,14834.193022004933,2025-06-12
+alpha_saas,Alpha SaaS Solutions,Property Tax Accrual - Osborne PLC,6300,annual,4165.4828568235425,2025-10-07
+alpha_saas,Alpha SaaS Solutions,"Freight/Shipping Accrual - Riley, Brown and Jones",5200,monthly,5142.206066563916,2025-11-20
+alpha_saas,Alpha SaaS Solutions,Server Hosting Accrual - Griffin-Dean,6300,monthly,60419.38456563271,2025-11-13
+alpha_saas,Alpha SaaS Solutions,Freight/Shipping Accrual - Cisneros LLC,5200,monthly,31263.260407935028,2025-07-02
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Robinson-Ramos,6300,monthly,55808.38139468466,2025-01-19
+alpha_saas,Alpha SaaS Solutions,"Equipment Maintenance - Blake, Cox and Wall",6300,quarterly,9036.446433075009,2025-05-06
+alpha_saas,Alpha SaaS Solutions,Commission Accrual - Nelson-Williams,6000,monthly,25945.58736111789,2025-02-02
+alpha_saas,Alpha SaaS Solutions,Software License Accrual - Miller-Lopez,6300,monthly,29683.737560334524,2025-03-15
+alpha_saas,Alpha SaaS Solutions,Interest Expense Accrual - Dixon-Ward,9500,monthly,9830.588051950415,2025-08-18
+alpha_saas,Alpha SaaS Solutions,"Travel Expense Accrual - Smith, Evans and Williams",7200,monthly,44445.07757865798,2025-01-14
+alpha_saas,Alpha SaaS Solutions,Warranty Provision - Nash Group,5200,annual,65957.4540774192,2025-03-23
+beta_manufacturing,Beta Manufacturing Co,Rent Expense,6200,monthly,500000.0,2025-12-31
+beta_manufacturing,Beta Manufacturing Co,Utilities,6300,monthly,200000.0,2025-12-31
+beta_manufacturing,Beta Manufacturing Co,Insurance,6400,quarterly,1200000.0,2025-12-31
+beta_manufacturing,Beta Manufacturing Co,Professional Fees,6500,monthly,300000.0,2025-12-31
+beta_manufacturing,Beta Manufacturing Co,Bonus Accrual,6000,annual,6000000.0,2025-12-31
+beta_manufacturing,Beta Manufacturing Co,Consulting Fees Accrual - Garcia-Mendoza,6500,monthly,173462.82189529669,2025-02-25
+beta_manufacturing,Beta Manufacturing Co,Equipment Maintenance - Tran-Hill,6300,quarterly,48308.58767870078,2025-10-04
+beta_manufacturing,Beta Manufacturing Co,Freight/Shipping Accrual - Perkins-Taylor,5200,monthly,173494.14922121968,2025-12-26
+beta_manufacturing,Beta Manufacturing Co,Server Hosting Accrual - Mendoza-Gonzalez,6300,monthly,121858.563269088,2025-06-21
+beta_manufacturing,Beta Manufacturing Co,"Property Tax Accrual - Mathews, Martinez and West",6300,annual,155537.26553728318,2025-09-27
+beta_manufacturing,Beta Manufacturing Co,"Contractor Fees Accrual - Lopez, Wallace and Mata",6500,monthly,94405.19787584679,2025-03-15
+beta_manufacturing,Beta Manufacturing Co,Software License Accrual - Cruz LLC,6300,monthly,110838.70321455796,2025-11-12
+beta_manufacturing,Beta Manufacturing Co,"Property Tax Accrual - Price, Cooper and Becker",6300,annual,171517.90887056844,2025-05-04
+beta_manufacturing,Beta Manufacturing Co,Contractor Fees Accrual - Greene-Carlson,6500,monthly,49230.78913752034,2025-08-13
+beta_manufacturing,Beta Manufacturing Co,Freight/Shipping Accrual - Rangel Ltd,5200,monthly,182357.13583353668,2025-08-13
+beta_manufacturing,Beta Manufacturing Co,Consulting Fees Accrual - Porter Group,6500,monthly,44003.240126831486,2025-07-12
+beta_manufacturing,Beta Manufacturing Co,"Equipment Maintenance - Wu, Rivera and Warren",6300,quarterly,52807.76938374313,2025-06-20
+beta_manufacturing,Beta Manufacturing Co,"Freight/Shipping Accrual - Gregory, Graves and Silva",5200,monthly,180595.7076221016,2025-03-16
+beta_manufacturing,Beta Manufacturing Co,Consulting Fees Accrual - Campbell LLC,6500,monthly,86551.1465010311,2025-09-17
+beta_manufacturing,Beta Manufacturing Co,"Commission Accrual - Martin, Harper and Molina",6000,monthly,35027.854083881924,2025-05-20
+beta_manufacturing,Beta Manufacturing Co,"Equipment Maintenance - Hudson, Baker and Harris",6300,quarterly,60806.44480924885,2025-07-15
+beta_manufacturing,Beta Manufacturing Co,"Property Tax Accrual - Park, Simmons and Smith",6300,annual,148854.40468931524,2025-01-24
+beta_manufacturing,Beta Manufacturing Co,Travel Expense Accrual - Ray-Dennis,7200,monthly,130019.5637253138,2025-04-20
+beta_manufacturing,Beta Manufacturing Co,"Server Hosting Accrual - Abbott, Bell and Serrano",6300,monthly,130459.41845632395,2025-10-16
+beta_manufacturing,Beta Manufacturing Co,"Contractor Fees Accrual - Russo, Moreno and Harris",6500,monthly,56648.6084360536,2025-03-16
+beta_manufacturing,Beta Manufacturing Co,Equipment Maintenance - Ross-Ford,6300,quarterly,11626.019988689513,2025-01-24
+beta_manufacturing,Beta Manufacturing Co,Interest Expense Accrual - Nguyen PLC,9500,monthly,199367.71547192897,2025-08-27
+beta_manufacturing,Beta Manufacturing Co,"Freight/Shipping Accrual - Medina, Holloway and Sherman",5200,monthly,15471.774208479588,2025-11-25
+beta_manufacturing,Beta Manufacturing Co,Equipment Maintenance - Fuller-Larson,6300,quarterly,163040.37303352993,2025-05-13
+beta_manufacturing,Beta Manufacturing Co,Equipment Maintenance - Oliver-Brown,6300,quarterly,149461.9946456097,2025-05-08
+beta_manufacturing,Beta Manufacturing Co,"Interest Expense Accrual - Park, Pierce and Daniels",9500,monthly,103095.8983293621,2025-01-15
+beta_manufacturing,Beta Manufacturing Co,"Server Hosting Accrual - Brewer, Fernandez and Larson",6300,monthly,131309.24664766557,2025-05-22
+beta_manufacturing,Beta Manufacturing Co,Software License Accrual - Montoya-Wang,6300,monthly,155098.891269023,2025-11-16
+beta_manufacturing,Beta Manufacturing Co,"Interest Expense Accrual - Smith, Larsen and Cruz",9500,monthly,180705.43323278573,2025-04-20
+beta_manufacturing,Beta Manufacturing Co,Interest Expense Accrual - Landry-Hernandez,9500,monthly,125405.23373417334,2025-06-27
+beta_manufacturing,Beta Manufacturing Co,Travel Expense Accrual - Mathews-Lee,7200,monthly,60638.347458807104,2025-10-07
+beta_manufacturing,Beta Manufacturing Co,Interest Expense Accrual - Green-Sexton,9500,monthly,115287.01355851677,2025-05-20
+beta_manufacturing,Beta Manufacturing Co,Contractor Fees Accrual - Greer LLC,6500,monthly,63248.91640609795,2025-06-22
+beta_manufacturing,Beta Manufacturing Co,"Server Hosting Accrual - Dunlap, Warren and Trujillo",6300,monthly,22813.909549324035,2025-06-18
+beta_manufacturing,Beta Manufacturing Co,"Legal Fees Accrual - Cooley, Cox and Sullivan",6500,monthly,37535.68624407822,2025-07-27
+beta_manufacturing,Beta Manufacturing Co,Commission Accrual - Lyons-Moore,6000,monthly,99344.53325783012,2025-09-04
+beta_manufacturing,Beta Manufacturing Co,Consulting Fees Accrual - Torres Inc,6500,monthly,85800.79022811179,2025-01-03
+beta_manufacturing,Beta Manufacturing Co,Equipment Maintenance - Lyons Inc,6300,quarterly,132104.38317487502,2025-08-23
+beta_manufacturing,Beta Manufacturing Co,"Freight/Shipping Accrual - Davis, Fitzgerald and Taylor",5200,monthly,53397.287700311674,2025-07-10
+beta_manufacturing,Beta Manufacturing Co,Equipment Maintenance - Whitaker Inc,6300,quarterly,138836.8843237699,2025-10-14
+beta_manufacturing,Beta Manufacturing Co,Marketing Campaign Accrual - Brock-Pierce,7000,quarterly,177268.22970665252,2025-07-27
+beta_manufacturing,Beta Manufacturing Co,Travel Expense Accrual - Collins-Contreras,7200,monthly,144166.88004249774,2025-01-22
+beta_manufacturing,Beta Manufacturing Co,"Equipment Maintenance - Green, Anderson and Mata",6300,quarterly,174901.32206008924,2025-09-07
+beta_manufacturing,Beta Manufacturing Co,Contractor Fees Accrual - Gordon-Rivera,6500,monthly,143620.24933355377,2025-05-19
+beta_manufacturing,Beta Manufacturing Co,Interest Expense Accrual - Smith-Hall,9500,monthly,186626.46163544393,2025-05-21
+beta_manufacturing,Beta Manufacturing Co,"Marketing Campaign Accrual - Silva, Atkinson and Phillips",7000,quarterly,117691.43784462164,2025-10-16
+beta_manufacturing,Beta Manufacturing Co,Travel Expense Accrual - Smith-Curtis,7200,monthly,131688.39883153173,2025-02-10
+beta_manufacturing,Beta Manufacturing Co,Freight/Shipping Accrual - Maynard-Ferguson,5200,monthly,92809.35266192163,2025-09-12
+beta_manufacturing,Beta Manufacturing Co,Consulting Fees Accrual - Melton LLC,6500,monthly,125746.2383456166,2025-01-27
+beta_manufacturing,Beta Manufacturing Co,Consulting Fees Accrual - Allen-Schultz,6500,monthly,66314.8898804,2025-07-21
+beta_manufacturing,Beta Manufacturing Co,Software License Accrual - Morris Group,6300,monthly,22973.536500646325,2025-05-18
+beta_manufacturing,Beta Manufacturing Co,Property Tax Accrual - Duffy PLC,6300,annual,14930.321584629923,2025-10-25
+beta_manufacturing,Beta Manufacturing Co,Marketing Campaign Accrual - Barnett-Williamson,7000,quarterly,197071.56672388964,2025-11-10
+beta_manufacturing,Beta Manufacturing Co,"Commission Accrual - Lyons, Ewing and Pham",6000,monthly,97203.18923331733,2025-09-02
+beta_manufacturing,Beta Manufacturing Co,Software License Accrual - Lopez-Weaver,6300,monthly,77605.86704100345,2025-06-24
+beta_manufacturing,Beta Manufacturing Co,"Property Tax Accrual - Montgomery, Stewart and Odom",6300,annual,141378.91725638282,2025-11-12
+beta_manufacturing,Beta Manufacturing Co,Equipment Maintenance - Moore and Sons,6300,quarterly,85543.0866017196,2025-12-24
+beta_manufacturing,Beta Manufacturing Co,Legal Fees Accrual - Walton-Hughes,6500,monthly,97646.18834610206,2025-02-05
+beta_manufacturing,Beta Manufacturing Co,Interest Expense Accrual - Simpson-Cook,9500,monthly,133466.01643411102,2025-01-12
+beta_manufacturing,Beta Manufacturing Co,Commission Accrual - Walker-Lopez,6000,monthly,57225.85819337929,2025-10-02
+beta_manufacturing,Beta Manufacturing Co,Commission Accrual - David-Cook,6000,monthly,103470.44716475962,2025-05-10
+beta_manufacturing,Beta Manufacturing Co,"Equipment Maintenance - Durham, Orozco and Daugherty",6300,quarterly,141780.20234349044,2025-08-05
+beta_manufacturing,Beta Manufacturing Co,Audit Fees Accrual - Lawson Inc,6500,annual,35837.4286003261,2025-01-24
+beta_manufacturing,Beta Manufacturing Co,"Warranty Provision - Montgomery, Arnold and Morrison",5200,annual,27656.338826784428,2025-09-06
+beta_manufacturing,Beta Manufacturing Co,Freight/Shipping Accrual - Novak Ltd,5200,monthly,162922.97494537968,2025-06-07
+beta_manufacturing,Beta Manufacturing Co,"Contractor Fees Accrual - Schaefer, Johnson and Dorsey",6500,monthly,68212.38868506163,2025-03-14
+beta_manufacturing,Beta Manufacturing Co,Commission Accrual - Nielsen-Hunt,6000,monthly,180606.42595172382,2025-10-24
+beta_manufacturing,Beta Manufacturing Co,Server Hosting Accrual - Roach Ltd,6300,monthly,136359.77291689138,2025-09-03
+beta_manufacturing,Beta Manufacturing Co,Contractor Fees Accrual - Hernandez Group,6500,monthly,32890.85296878477,2025-06-10
+beta_manufacturing,Beta Manufacturing Co,Warranty Provision - Lambert LLC,5200,annual,32940.48470764894,2025-08-26
+beta_manufacturing,Beta Manufacturing Co,Commission Accrual - Warren-Williams,6000,monthly,68197.8452157502,2025-07-23
+beta_manufacturing,Beta Manufacturing Co,Consulting Fees Accrual - Skinner Group,6500,monthly,190659.20924840926,2025-07-19
+beta_manufacturing,Beta Manufacturing Co,Property Tax Accrual - Robinson-Stephens,6300,annual,180907.8617344174,2025-05-09
+beta_manufacturing,Beta Manufacturing Co,"Legal Fees Accrual - Carney, Singleton and Rivera",6500,monthly,43769.734537830955,2025-07-14
+beta_manufacturing,Beta Manufacturing Co,Audit Fees Accrual - Mccarthy-Ruiz,6500,annual,67570.41735290686,2025-01-23
+beta_manufacturing,Beta Manufacturing Co,Contractor Fees Accrual - Green-Robertson,6500,monthly,72568.06130079445,2025-08-08
+beta_manufacturing,Beta Manufacturing Co,"Consulting Fees Accrual - Park, Martin and Mitchell",6500,monthly,30190.699104248943,2025-10-11
+beta_manufacturing,Beta Manufacturing Co,Software License Accrual - Martin-Cervantes,6300,monthly,184681.30789585967,2025-02-23
+beta_manufacturing,Beta Manufacturing Co,Server Hosting Accrual - Mason Inc,6300,monthly,46650.61494479841,2025-03-25
+beta_manufacturing,Beta Manufacturing Co,"Commission Accrual - Mills, Adams and Brown",6000,monthly,139710.80877739153,2025-05-08
+beta_manufacturing,Beta Manufacturing Co,Consulting Fees Accrual - Smith-Cook,6500,monthly,177366.07409295553,2025-04-17
+beta_manufacturing,Beta Manufacturing Co,Freight/Shipping Accrual - Gallegos-Johnson,5200,monthly,129286.54529137991,2025-07-12
+beta_manufacturing,Beta Manufacturing Co,Legal Fees Accrual - Lopez PLC,6500,monthly,107259.98200865682,2025-10-23
+beta_manufacturing,Beta Manufacturing Co,Consulting Fees Accrual - Mendoza Inc,6500,monthly,129656.84087759141,2025-11-14
+beta_manufacturing,Beta Manufacturing Co,Interest Expense Accrual - Gutierrez-Waters,9500,monthly,62160.82422789467,2025-09-10
+beta_manufacturing,Beta Manufacturing Co,Warranty Provision - Wilson-Palmer,5200,annual,72675.7734508278,2025-04-03
+beta_manufacturing,Beta Manufacturing Co,Marketing Campaign Accrual - Perez-Williams,7000,quarterly,131718.25066421533,2025-07-09
+beta_manufacturing,Beta Manufacturing Co,"Equipment Maintenance - Arellano, Gonzales and Thomas",6300,quarterly,176066.6206498751,2025-09-22
+beta_manufacturing,Beta Manufacturing Co,Warranty Provision - Green-Anderson,5200,annual,177324.89284533766,2025-10-15
+beta_manufacturing,Beta Manufacturing Co,Property Tax Accrual - Martinez Group,6300,annual,112057.29170266229,2025-08-10
+beta_manufacturing,Beta Manufacturing Co,"Commission Accrual - Nguyen, Anderson and Williams",6000,monthly,108886.60162403158,2025-07-12
+beta_manufacturing,Beta Manufacturing Co,"Travel Expense Accrual - Torres, Gomez and Pierce",7200,monthly,90418.55487782815,2025-01-21
+beta_manufacturing,Beta Manufacturing Co,"Server Hosting Accrual - Lopez, Saunders and Jones",6300,monthly,191055.47393384055,2025-10-09
+beta_manufacturing,Beta Manufacturing Co,"Legal Fees Accrual - Smith, Alexander and Freeman",6500,monthly,52927.80612554964,2025-08-25
+beta_manufacturing,Beta Manufacturing Co,"Freight/Shipping Accrual - Rodriguez, Hoffman and Russell",5200,monthly,80947.7260741447,2025-01-11
+beta_manufacturing,Beta Manufacturing Co,Software License Accrual - Perkins Group,6300,monthly,46521.52930294534,2025-03-13
+beta_manufacturing,Beta Manufacturing Co,Warranty Provision - Harris-Brown,5200,annual,15380.755141205715,2025-07-10
+beta_manufacturing,Beta Manufacturing Co,Property Tax Accrual - Hines PLC,6300,annual,104188.61870925406,2025-03-25
+beta_manufacturing,Beta Manufacturing Co,Warranty Provision - Waters and Sons,5200,annual,87018.64701856948,2025-10-04
+beta_manufacturing,Beta Manufacturing Co,Audit Fees Accrual - Wilson-West,6500,annual,15800.101824773923,2025-08-05
+beta_manufacturing,Beta Manufacturing Co,"Audit Fees Accrual - Walker, Cantrell and Coffey",6500,annual,38845.303351430826,2025-02-15
+beta_manufacturing,Beta Manufacturing Co,Audit Fees Accrual - Carson-Guerra,6500,annual,46343.33353473454,2025-02-07
+beta_manufacturing,Beta Manufacturing Co,Freight/Shipping Accrual - Castillo LLC,5200,monthly,161899.8929390435,2025-03-05
+beta_manufacturing,Beta Manufacturing Co,Freight/Shipping Accrual - Rodriguez Ltd,5200,monthly,93948.98463938771,2025-08-11
+beta_manufacturing,Beta Manufacturing Co,Equipment Maintenance - Davidson LLC,6300,quarterly,159250.1058277793,2025-08-01
+beta_manufacturing,Beta Manufacturing Co,"Software License Accrual - Williams, Preston and Meyer",6300,monthly,86721.00688267178,2025-01-13
+beta_manufacturing,Beta Manufacturing Co,Freight/Shipping Accrual - Anderson-Berry,5200,monthly,112796.16896889392,2025-05-06
+beta_manufacturing,Beta Manufacturing Co,"Audit Fees Accrual - Smith, Miller and Lowe",6500,annual,162768.54658993537,2025-05-25
+beta_manufacturing,Beta Manufacturing Co,Legal Fees Accrual - Marsh Inc,6500,monthly,97297.60422631846,2025-01-05
+beta_manufacturing,Beta Manufacturing Co,"Warranty Provision - Hampton, Crawford and Stone",5200,annual,35219.234553667986,2025-12-27
+beta_manufacturing,Beta Manufacturing Co,Freight/Shipping Accrual - Chavez-Foster,5200,monthly,45158.11127857506,2025-02-06
+beta_manufacturing,Beta Manufacturing Co,Audit Fees Accrual - Schaefer-Shields,6500,annual,80200.03373455936,2025-04-24
+beta_manufacturing,Beta Manufacturing Co,"Software License Accrual - Alvarado, Mcgrath and Bradley",6300,monthly,188640.45739890443,2025-10-27
+beta_manufacturing,Beta Manufacturing Co,Marketing Campaign Accrual - Jordan-Obrien,7000,quarterly,189959.58773161552,2025-05-01
+beta_manufacturing,Beta Manufacturing Co,Travel Expense Accrual - Fitzgerald Group,7200,monthly,121280.42249573156,2025-09-26
+beta_manufacturing,Beta Manufacturing Co,Audit Fees Accrual - Miller-Mcdonald,6500,annual,75711.7422227837,2025-09-10
+beta_manufacturing,Beta Manufacturing Co,Audit Fees Accrual - Perez-Roth,6500,annual,189139.0775688584,2025-04-05
+beta_manufacturing,Beta Manufacturing Co,Travel Expense Accrual - Lopez Inc,7200,monthly,43895.26730744043,2025-12-01
+beta_manufacturing,Beta Manufacturing Co,Marketing Campaign Accrual - Coleman-Huerta,7000,quarterly,116305.68383258155,2025-09-14
+beta_manufacturing,Beta Manufacturing Co,Contractor Fees Accrual - Gibson-Stewart,6500,monthly,41927.46491423884,2025-09-07
+beta_manufacturing,Beta Manufacturing Co,"Warranty Provision - Preston, Walsh and Zuniga",5200,annual,19353.40256030991,2025-06-10
+gamma_retail,Gamma Retail Group,Rent Expense,6200,monthly,833333.3333333334,2025-12-31
+gamma_retail,Gamma Retail Group,Utilities,6300,monthly,333333.3333333333,2025-12-31
+gamma_retail,Gamma Retail Group,Insurance,6400,quarterly,1999999.9999999998,2025-12-31
+gamma_retail,Gamma Retail Group,Professional Fees,6500,monthly,499999.99999999994,2025-12-31
+gamma_retail,Gamma Retail Group,Bonus Accrual,6000,annual,10000000.0,2025-12-31
+gamma_retail,Gamma Retail Group,Audit Fees Accrual - Ryan PLC,6500,annual,29163.6931163856,2025-07-13
+gamma_retail,Gamma Retail Group,Server Hosting Accrual - Simmons Group,6300,monthly,196537.67876786127,2025-09-21
+gamma_retail,Gamma Retail Group,Audit Fees Accrual - Hansen PLC,6500,annual,109089.88583801461,2025-12-09
+gamma_retail,Gamma Retail Group,Software License Accrual - Vargas-Carson,6300,monthly,45156.69902797605,2025-01-15
+gamma_retail,Gamma Retail Group,Freight/Shipping Accrual - Jones-Shaffer,5200,monthly,63940.73651856722,2025-06-06
+gamma_retail,Gamma Retail Group,Interest Expense Accrual - Bennett-Watson,9500,monthly,248949.53947807493,2025-09-01
+gamma_retail,Gamma Retail Group,"Server Hosting Accrual - Williams, Hansen and Tucker",6300,monthly,318470.32531057956,2025-02-17
+gamma_retail,Gamma Retail Group,Equipment Maintenance - Jimenez-Clark,6300,quarterly,109928.00346799694,2025-11-14
+gamma_retail,Gamma Retail Group,"Audit Fees Accrual - Brown, Clarke and Brown",6500,annual,265488.13297639333,2025-07-03
+gamma_retail,Gamma Retail Group,"Freight/Shipping Accrual - Carroll, Quinn and Randolph",5200,monthly,89808.8736439765,2025-11-07
+gamma_retail,Gamma Retail Group,"Property Tax Accrual - Fuller, Romero and Murray",6300,annual,285962.8981435509,2025-02-22
+gamma_retail,Gamma Retail Group,Audit Fees Accrual - Flores PLC,6500,annual,120330.30058422232,2025-12-02
+gamma_retail,Gamma Retail Group,Software License Accrual - Gonzalez Group,6300,monthly,312680.2515928348,2025-07-05
+gamma_retail,Gamma Retail Group,Property Tax Accrual - Collier Ltd,6300,annual,65745.05339954897,2025-03-22
+gamma_retail,Gamma Retail Group,Property Tax Accrual - Smith-Morrison,6300,annual,118062.55813734232,2025-09-12
+gamma_retail,Gamma Retail Group,"Legal Fees Accrual - Gibson, Yates and Sellers",6500,monthly,68643.17315236604,2025-10-23
+gamma_retail,Gamma Retail Group,Server Hosting Accrual - Taylor-Pope,6300,monthly,309230.76937290264,2025-08-10
+gamma_retail,Gamma Retail Group,"Warranty Provision - Martin, Johnson and Torres",5200,annual,280040.142297288,2025-07-20
+gamma_retail,Gamma Retail Group,Server Hosting Accrual - Hill Ltd,6300,monthly,268717.80779529206,2025-08-16
+gamma_retail,Gamma Retail Group,Legal Fees Accrual - Dominguez-Davis,6500,monthly,310218.5744133737,2025-09-24
+gamma_retail,Gamma Retail Group,"Consulting Fees Accrual - Miles, Harrison and Perez",6500,monthly,238377.21129603827,2025-07-02
+gamma_retail,Gamma Retail Group,Software License Accrual - Stevenson LLC,6300,monthly,110850.37632068414,2025-04-12
+gamma_retail,Gamma Retail Group,"Software License Accrual - Stevenson, Phillips and Graham",6300,monthly,298050.52390398254,2025-06-15
+gamma_retail,Gamma Retail Group,Legal Fees Accrual - Davis Ltd,6500,monthly,238550.30701629107,2025-05-20
+gamma_retail,Gamma Retail Group,Interest Expense Accrual - Hunter-Turner,9500,monthly,304103.91835319076,2025-02-23
+gamma_retail,Gamma Retail Group,Consulting Fees Accrual - Turner Inc,6500,monthly,260205.10536669908,2025-05-10
+gamma_retail,Gamma Retail Group,Legal Fees Accrual - Walton PLC,6500,monthly,238001.20636321447,2025-12-07
+gamma_retail,Gamma Retail Group,"Travel Expense Accrual - Vega, Jacobs and Jackson",7200,monthly,218396.364526078,2025-05-06
+gamma_retail,Gamma Retail Group,Server Hosting Accrual - Gilbert and Sons,6300,monthly,196366.38439664964,2025-06-10
+gamma_retail,Gamma Retail Group,"Contractor Fees Accrual - Harvey, Carroll and Blankenship",6500,monthly,130999.40230492622,2025-08-22
+gamma_retail,Gamma Retail Group,"Property Tax Accrual - Pena, Johnson and Higgins",6300,annual,76634.97343471,2025-02-05
+gamma_retail,Gamma Retail Group,Server Hosting Accrual - Garcia Ltd,6300,monthly,99220.39588059008,2025-09-10
+gamma_retail,Gamma Retail Group,"Interest Expense Accrual - Martinez, Escobar and Dillon",9500,monthly,41706.53700265249,2025-12-01
+gamma_retail,Gamma Retail Group,Warranty Provision - Gonzalez and Sons,5200,annual,275021.36166888097,2025-04-24
+gamma_retail,Gamma Retail Group,Interest Expense Accrual - Rodriguez Ltd,9500,monthly,226623.95327355168,2025-04-01
+gamma_retail,Gamma Retail Group,Commission Accrual - Eaton-Gilbert,6000,monthly,58868.22768231597,2025-11-26
+gamma_retail,Gamma Retail Group,"Server Hosting Accrual - Boyd, Ellis and Holt",6300,monthly,23355.8769665063,2025-04-24
+gamma_retail,Gamma Retail Group,Property Tax Accrual - Roberts PLC,6300,annual,298269.5527378264,2025-05-06
+gamma_retail,Gamma Retail Group,Marketing Campaign Accrual - Reynolds-Bell,7000,quarterly,258424.90147840336,2025-05-24
+gamma_retail,Gamma Retail Group,"Consulting Fees Accrual - Skinner, Dunn and Allen",6500,monthly,263064.9736445281,2025-01-19
+gamma_retail,Gamma Retail Group,"Equipment Maintenance - Hines, Leonard and Serrano",6300,quarterly,231583.71218592153,2025-11-10
+gamma_retail,Gamma Retail Group,Marketing Campaign Accrual - Schmidt Inc,7000,quarterly,91044.69390477777,2025-10-05
+gamma_retail,Gamma Retail Group,Software License Accrual - Brown-Carter,6300,monthly,122844.4766127079,2025-12-19
+gamma_retail,Gamma Retail Group,"Legal Fees Accrual - Adams, Thompson and Nunez",6500,monthly,270997.59480406216,2025-12-23
+gamma_retail,Gamma Retail Group,Interest Expense Accrual - Watson Ltd,9500,monthly,170237.9750651801,2025-09-03
+gamma_retail,Gamma Retail Group,"Commission Accrual - Ortega, Butler and Harrison",6000,monthly,246034.3753880457,2025-01-03
+gamma_retail,Gamma Retail Group,Consulting Fees Accrual - Baker-Evans,6500,monthly,243011.20361949084,2025-07-26
+gamma_retail,Gamma Retail Group,Consulting Fees Accrual - Martinez-Nicholson,6500,monthly,329467.2259896213,2025-10-15
+gamma_retail,Gamma Retail Group,Contractor Fees Accrual - Hooper Inc,6500,monthly,95137.72581165761,2025-02-14
+gamma_retail,Gamma Retail Group,Commission Accrual - Leach Inc,6000,monthly,95428.02634665986,2025-01-12
+gamma_retail,Gamma Retail Group,Interest Expense Accrual - Davenport-Huff,9500,monthly,101779.28226684779,2025-05-04
+gamma_retail,Gamma Retail Group,Freight/Shipping Accrual - Dixon Ltd,5200,monthly,152885.4557880877,2025-11-06
+gamma_retail,Gamma Retail Group,"Warranty Provision - Schroeder, Armstrong and Hicks",5200,annual,302366.37648176384,2025-05-01
+gamma_retail,Gamma Retail Group,"Software License Accrual - Bell, Ford and Garcia",6300,monthly,255313.56302526593,2025-07-02
+gamma_retail,Gamma Retail Group,"Software License Accrual - Barnes, Goodwin and Cohen",6300,monthly,231700.61500245638,2025-12-08
+gamma_retail,Gamma Retail Group,Contractor Fees Accrual - Hudson LLC,6500,monthly,39013.134560710685,2025-08-05
+gamma_retail,Gamma Retail Group,Contractor Fees Accrual - Peterson-Graham,6500,monthly,115979.66121188308,2025-03-10
+gamma_retail,Gamma Retail Group,Legal Fees Accrual - Olsen-Rogers,6500,monthly,45203.846750405275,2025-12-20
+gamma_retail,Gamma Retail Group,Travel Expense Accrual - Obrien Ltd,7200,monthly,188177.57368468744,2025-08-16
+gamma_retail,Gamma Retail Group,Property Tax Accrual - Quinn Inc,6300,annual,249934.36608515607,2025-07-10
+gamma_retail,Gamma Retail Group,"Software License Accrual - Coleman, Sims and Johnson",6300,monthly,22373.36760335834,2025-12-19
+gamma_retail,Gamma Retail Group,Legal Fees Accrual - Hernandez-Lozano,6500,monthly,163558.89130215734,2025-01-05
+gamma_retail,Gamma Retail Group,"Consulting Fees Accrual - Walker, Bell and Wilson",6500,monthly,27167.57286868261,2025-12-04
+gamma_retail,Gamma Retail Group,"Freight/Shipping Accrual - Padilla, Rodriguez and Pittman",5200,monthly,151871.01459382128,2025-05-10
+gamma_retail,Gamma Retail Group,Server Hosting Accrual - Smith-Suarez,6300,monthly,73709.12363842202,2025-01-10
+gamma_retail,Gamma Retail Group,"Freight/Shipping Accrual - Burgess, Rice and Sutton",5200,monthly,67298.38287395127,2025-11-10
+gamma_retail,Gamma Retail Group,"Commission Accrual - Wyatt, Ramsey and Perez",6000,monthly,192992.27590713353,2025-08-16
+gamma_retail,Gamma Retail Group,Audit Fees Accrual - Parker Group,6500,annual,274210.23892065167,2025-05-19
+gamma_retail,Gamma Retail Group,Interest Expense Accrual - White Group,9500,monthly,213764.77077742986,2025-03-27
+gamma_retail,Gamma Retail Group,Travel Expense Accrual - Campbell-Harris,7200,monthly,286508.6565229392,2025-09-22
+gamma_retail,Gamma Retail Group,"Freight/Shipping Accrual - Graham, Davis and Myers",5200,monthly,279024.0034321696,2025-05-03
+gamma_retail,Gamma Retail Group,Software License Accrual - Bartlett-Green,6300,monthly,192951.8950987139,2025-11-21
+gamma_retail,Gamma Retail Group,"Legal Fees Accrual - West, Gordon and Jones",6500,monthly,134211.23915033118,2025-07-04
+gamma_retail,Gamma Retail Group,Warranty Provision - Craig-Smith,5200,annual,163734.05020858554,2025-10-27
+gamma_retail,Gamma Retail Group,Server Hosting Accrual - Bright and Sons,6300,monthly,191586.69821378854,2025-07-22
+gamma_retail,Gamma Retail Group,Server Hosting Accrual - Jackson-Barnett,6300,monthly,196789.81501104782,2025-12-01
+gamma_retail,Gamma Retail Group,Interest Expense Accrual - Harper and Sons,9500,monthly,71215.19465145626,2025-02-08
+gamma_retail,Gamma Retail Group,Audit Fees Accrual - Carlson Ltd,6500,annual,246323.7853809578,2025-10-27
+gamma_retail,Gamma Retail Group,Audit Fees Accrual - Barton-Macdonald,6500,annual,90316.10467447103,2025-06-27
+gamma_retail,Gamma Retail Group,"Legal Fees Accrual - Sims, Ellis and Mcpherson",6500,monthly,17622.377171358516,2025-11-19
+gamma_retail,Gamma Retail Group,Marketing Campaign Accrual - Stanley-Schmidt,7000,quarterly,138641.3310437492,2025-04-10
+gamma_retail,Gamma Retail Group,Interest Expense Accrual - Wolfe LLC,9500,monthly,226752.26879597016,2025-07-15
+gamma_retail,Gamma Retail Group,"Commission Accrual - Lowe, Malone and Edwards",6000,monthly,333035.28608088644,2025-10-26
+gamma_retail,Gamma Retail Group,Consulting Fees Accrual - Ramos Group,6500,monthly,94811.08238169919,2025-02-25
+gamma_retail,Gamma Retail Group,"Audit Fees Accrual - Cervantes, Hickman and Barnes",6500,annual,75775.80910265929,2025-09-22
+gamma_retail,Gamma Retail Group,Warranty Provision - Sweeney-Pierce,5200,annual,210332.2491784439,2025-10-24
+gamma_retail,Gamma Retail Group,Freight/Shipping Accrual - Brown and Sons,5200,monthly,217424.5334294249,2025-01-02
+gamma_retail,Gamma Retail Group,Property Tax Accrual - Russell LLC,6300,annual,155727.48322698078,2025-09-05
+gamma_retail,Gamma Retail Group,Contractor Fees Accrual - Sullivan and Sons,6500,monthly,81489.02159840871,2025-01-11
+gamma_retail,Gamma Retail Group,Commission Accrual - Bates and Sons,6000,monthly,130230.71844830789,2025-12-13
+gamma_retail,Gamma Retail Group,Commission Accrual - Byrd-Rich,6000,monthly,75677.23918993158,2025-04-18
+gamma_retail,Gamma Retail Group,"Travel Expense Accrual - Shepherd, Jones and Cabrera",7200,monthly,223328.93587306197,2025-06-12
+gamma_retail,Gamma Retail Group,Marketing Campaign Accrual - Garcia Inc,7000,quarterly,287041.9587293563,2025-02-20
+gamma_retail,Gamma Retail Group,Audit Fees Accrual - Woods-Woods,6500,annual,277066.88925338286,2025-05-19
+gamma_retail,Gamma Retail Group,"Commission Accrual - Mcdowell, Ray and Jackson",6000,monthly,222084.95649144164,2025-01-14
+gamma_retail,Gamma Retail Group,Warranty Provision - Chavez Group,5200,annual,209206.7818664624,2025-06-06
+gamma_retail,Gamma Retail Group,Software License Accrual - Austin-James,6300,monthly,184374.18896101246,2025-05-12
+gamma_retail,Gamma Retail Group,Audit Fees Accrual - Byrd LLC,6500,annual,214740.7610846383,2025-09-25
+gamma_retail,Gamma Retail Group,Freight/Shipping Accrual - Kelley-Mcdowell,5200,monthly,105068.80440484849,2025-01-24
+gamma_retail,Gamma Retail Group,"Warranty Provision - Watson, Robinson and Travis",5200,annual,220605.78997187916,2025-10-09
+gamma_retail,Gamma Retail Group,"Marketing Campaign Accrual - Mcdonald, Miller and Martin",7000,quarterly,33809.55209279435,2025-02-13
+gamma_retail,Gamma Retail Group,Equipment Maintenance - Rice-Mitchell,6300,quarterly,230335.11085338268,2025-02-09
+gamma_retail,Gamma Retail Group,"Audit Fees Accrual - Jones, Bridges and Harris",6500,annual,73972.01783003182,2025-07-18
+gamma_retail,Gamma Retail Group,Contractor Fees Accrual - Esparza-Edwards,6500,monthly,87841.84818009633,2025-01-23
+gamma_retail,Gamma Retail Group,Legal Fees Accrual - Powell PLC,6500,monthly,273185.92195818835,2025-09-11
+gamma_retail,Gamma Retail Group,"Audit Fees Accrual - Valentine, Thomas and Jennings",6500,annual,328544.6035890112,2025-08-24
+gamma_retail,Gamma Retail Group,"Server Hosting Accrual - Barrett, Hale and Bush",6300,monthly,42816.218362428735,2025-01-20
+gamma_retail,Gamma Retail Group,"Contractor Fees Accrual - Payne, Chavez and Moyer",6500,monthly,158408.87483415418,2025-12-01
+gamma_retail,Gamma Retail Group,Consulting Fees Accrual - Sanders-Martinez,6500,monthly,288053.69339712366,2025-08-10
+gamma_retail,Gamma Retail Group,"Commission Accrual - Davis, Fernandez and Pearson",6000,monthly,250419.54454187801,2025-06-10
+gamma_retail,Gamma Retail Group,Interest Expense Accrual - Stafford-Marshall,9500,monthly,115341.78264893094,2025-07-09
+gamma_retail,Gamma Retail Group,Server Hosting Accrual - Valdez-Patterson,6300,monthly,64300.134997116176,2025-06-11
+gamma_retail,Gamma Retail Group,Contractor Fees Accrual - Gentry Inc,6500,monthly,276646.658097215,2025-07-25
+gamma_retail,Gamma Retail Group,Travel Expense Accrual - Mahoney Inc,7200,monthly,192508.54610502743,2025-09-20
+gamma_retail,Gamma Retail Group,"Commission Accrual - Rosales, Caldwell and Palmer",6000,monthly,271647.0119193057,2025-02-12
+gamma_retail,Gamma Retail Group,"Interest Expense Accrual - Sullivan, Burton and Atkinson",9500,monthly,130639.57055022585,2025-11-27
+gamma_retail,Gamma Retail Group,Contractor Fees Accrual - Brown Group,6500,monthly,51802.52270196103,2025-05-16
+gamma_retail,Gamma Retail Group,Audit Fees Accrual - Fernandez-Miller,6500,annual,163019.39595482685,2025-04-08
+gamma_retail,Gamma Retail Group,"Legal Fees Accrual - Olsen, Harmon and Robinson",6500,monthly,256533.12566722353,2025-03-27
+gamma_retail,Gamma Retail Group,Legal Fees Accrual - Johnson Ltd,6500,monthly,78403.66712286249,2025-01-01
+gamma_retail,Gamma Retail Group,Contractor Fees Accrual - Lee-Burns,6500,monthly,218574.4039006904,2025-09-27
+delta_healthcare,Delta Healthcare Services,Rent Expense,6200,monthly,145833.33333333334,2025-12-31
+delta_healthcare,Delta Healthcare Services,Utilities,6300,monthly,58333.33333333333,2025-12-31
+delta_healthcare,Delta Healthcare Services,Insurance,6400,quarterly,349999.99999999994,2025-12-31
+delta_healthcare,Delta Healthcare Services,Professional Fees,6500,monthly,87499.99999999999,2025-12-31
+delta_healthcare,Delta Healthcare Services,Bonus Accrual,6000,annual,1750000.0,2025-12-31
+delta_healthcare,Delta Healthcare Services,"Freight/Shipping Accrual - Malone, Mitchell and Howell",5200,monthly,15572.941973226196,2025-12-05
+delta_healthcare,Delta Healthcare Services,Server Hosting Accrual - Lucas-Holden,6300,monthly,49764.35741669515,2025-10-06
+delta_healthcare,Delta Healthcare Services,"Audit Fees Accrual - Wang, Brown and Smith",6500,annual,13930.515951077401,2025-07-16
+delta_healthcare,Delta Healthcare Services,Commission Accrual - Powell and Sons,6000,monthly,29653.527014200674,2025-02-21
+delta_healthcare,Delta Healthcare Services,Travel Expense Accrual - Cooper-Bailey,7200,monthly,55252.67545967352,2025-01-25
+delta_healthcare,Delta Healthcare Services,Interest Expense Accrual - Thompson-Murray,9500,monthly,16351.282630950693,2025-07-26
+delta_healthcare,Delta Healthcare Services,"Server Hosting Accrual - Flowers, Perez and Cook",6300,monthly,51382.3134398645,2025-11-19
+delta_healthcare,Delta Healthcare Services,Equipment Maintenance - Schneider-Evans,6300,quarterly,8273.250833148899,2025-07-23
+delta_healthcare,Delta Healthcare Services,Commission Accrual - Rice-Mccormick,6000,monthly,38057.965744376,2025-04-20
+delta_healthcare,Delta Healthcare Services,Commission Accrual - Romero-Thomas,6000,monthly,43669.78101715134,2025-03-14
+delta_healthcare,Delta Healthcare Services,Interest Expense Accrual - Martinez Inc,9500,monthly,10511.63306698532,2025-10-25
+delta_healthcare,Delta Healthcare Services,"Freight/Shipping Accrual - Ramirez, Green and Joseph",5200,monthly,31902.63954671875,2025-10-22
+delta_healthcare,Delta Healthcare Services,Marketing Campaign Accrual - Marshall Group,7000,quarterly,39006.066575193785,2025-09-26
+delta_healthcare,Delta Healthcare Services,Travel Expense Accrual - Johnson-Vega,7200,monthly,29615.724424672746,2025-03-06
+delta_healthcare,Delta Healthcare Services,"Commission Accrual - Williams, Miles and Daniel",6000,monthly,46187.88584893379,2025-05-02
+delta_healthcare,Delta Healthcare Services,Server Hosting Accrual - Sullivan Ltd,6300,monthly,4942.000599959378,2025-11-07
+delta_healthcare,Delta Healthcare Services,"Server Hosting Accrual - Robinson, Ross and Hughes",6300,monthly,25651.591641925614,2025-06-09
+delta_healthcare,Delta Healthcare Services,Equipment Maintenance - Smith-Thompson,6300,quarterly,20436.344103720177,2025-02-25
+delta_healthcare,Delta Healthcare Services,"Consulting Fees Accrual - Matthews, Johnson and Williams",6500,monthly,7957.883951840437,2025-09-16
+delta_healthcare,Delta Healthcare Services,"Property Tax Accrual - Manning, Livingston and Carter",6300,annual,30170.196396091418,2025-10-05
+delta_healthcare,Delta Healthcare Services,Legal Fees Accrual - Sims-Burton,6500,monthly,41242.00174830439,2025-04-10
+delta_healthcare,Delta Healthcare Services,Property Tax Accrual - Bell Group,6300,annual,55233.07619074229,2025-08-10
+delta_healthcare,Delta Healthcare Services,Freight/Shipping Accrual - Blackburn PLC,5200,monthly,28485.092578834887,2025-03-21
+delta_healthcare,Delta Healthcare Services,"Software License Accrual - Hudson, Webb and Walter",6300,monthly,34894.19601778842,2025-10-21
+delta_healthcare,Delta Healthcare Services,Travel Expense Accrual - Bonilla-Robbins,7200,monthly,52172.31348018199,2025-10-18
+delta_healthcare,Delta Healthcare Services,Audit Fees Accrual - Becker and Sons,6500,annual,27372.80520853933,2025-01-16
+delta_healthcare,Delta Healthcare Services,Audit Fees Accrual - Berry-Holland,6500,annual,42120.53558217892,2025-07-11
+delta_healthcare,Delta Healthcare Services,"Consulting Fees Accrual - Erickson, Ware and Clark",6500,monthly,14777.711260121918,2025-07-23
+delta_healthcare,Delta Healthcare Services,Server Hosting Accrual - Bryant-Smith,6300,monthly,36273.77438209466,2025-08-17
+delta_healthcare,Delta Healthcare Services,Commission Accrual - Reed Inc,6000,monthly,16802.97466775347,2025-02-08
+delta_healthcare,Delta Healthcare Services,"Travel Expense Accrual - Jenkins, Clay and Russell",7200,monthly,49242.333833160345,2025-07-02
+delta_healthcare,Delta Healthcare Services,Commission Accrual - Franklin LLC,6000,monthly,48951.93265319972,2025-10-08
+delta_healthcare,Delta Healthcare Services,Server Hosting Accrual - Sharp-Mitchell,6300,monthly,31564.052045043238,2025-08-04
+delta_healthcare,Delta Healthcare Services,Equipment Maintenance - Hogan-Martinez,6300,quarterly,43461.906608501275,2025-05-20
+delta_healthcare,Delta Healthcare Services,Equipment Maintenance - Curry-Marsh,6300,quarterly,14090.66786327225,2025-05-19
+delta_healthcare,Delta Healthcare Services,Contractor Fees Accrual - Mathews-Burke,6500,monthly,33607.700898052484,2025-12-04
+delta_healthcare,Delta Healthcare Services,"Property Tax Accrual - Alexander, Lester and Torres",6300,annual,16319.02188897872,2025-05-20
+delta_healthcare,Delta Healthcare Services,"Legal Fees Accrual - Sanders, Ruiz and Weeks",6500,monthly,23934.757840295257,2025-02-20
+delta_healthcare,Delta Healthcare Services,"Contractor Fees Accrual - Gordon, Hull and Harvey",6500,monthly,47448.77119481496,2025-02-16
+delta_healthcare,Delta Healthcare Services,Interest Expense Accrual - Evans and Sons,9500,monthly,7656.8862458478225,2025-05-18
+delta_healthcare,Delta Healthcare Services,"Marketing Campaign Accrual - Knight, Stanton and Steele",7000,quarterly,35265.72092268732,2025-01-04
+delta_healthcare,Delta Healthcare Services,Consulting Fees Accrual - Edwards Group,6500,monthly,39741.315476761774,2025-11-01
+delta_healthcare,Delta Healthcare Services,Travel Expense Accrual - Jennings LLC,7200,monthly,31056.783561861008,2025-08-17
+delta_healthcare,Delta Healthcare Services,"Audit Fees Accrual - Johnson, Mcgee and Blackburn",6500,annual,4880.794512226045,2025-02-12
+delta_healthcare,Delta Healthcare Services,Travel Expense Accrual - Guerrero and Sons,7200,monthly,9066.288590473925,2025-10-27
+delta_healthcare,Delta Healthcare Services,Travel Expense Accrual - Miller-Weber,7200,monthly,17923.408399644428,2025-01-24
+delta_healthcare,Delta Healthcare Services,"Contractor Fees Accrual - Aguilar, Ruiz and Jensen",6500,monthly,32820.68589060865,2025-07-12
+delta_healthcare,Delta Healthcare Services,"Property Tax Accrual - Oconnor, Schroeder and Hoffman",6300,annual,56204.55826492781,2025-11-24
+delta_healthcare,Delta Healthcare Services,Contractor Fees Accrual - Mayer-Andrews,6500,monthly,15926.394857846362,2025-12-19
+delta_healthcare,Delta Healthcare Services,Warranty Provision - Anderson-Thomas,5200,annual,14966.43540183919,2025-08-03
+delta_healthcare,Delta Healthcare Services,"Warranty Provision - Cameron, Li and Smith",5200,annual,36574.42312713353,2025-06-18
+delta_healthcare,Delta Healthcare Services,"Commission Accrual - Rogers, Khan and Clay",6000,monthly,54044.51050378795,2025-12-22
+delta_healthcare,Delta Healthcare Services,Audit Fees Accrual - Brown LLC,6500,annual,48807.04730546561,2025-08-24
+delta_healthcare,Delta Healthcare Services,Interest Expense Accrual - Cook-Johnson,9500,monthly,7667.327554746451,2025-05-19
+delta_healthcare,Delta Healthcare Services,"Equipment Maintenance - Hendrix, Garza and Mclaughlin",6300,quarterly,56702.13856335115,2025-04-16
+delta_healthcare,Delta Healthcare Services,Commission Accrual - Duke and Sons,6000,monthly,15544.343481200185,2025-03-18
+delta_healthcare,Delta Healthcare Services,Commission Accrual - Flynn-Lucas,6000,monthly,48783.09021453926,2025-06-03
+delta_healthcare,Delta Healthcare Services,"Commission Accrual - Taylor, Schmidt and Estrada",6000,monthly,29851.28980020116,2025-07-08
+delta_healthcare,Delta Healthcare Services,"Travel Expense Accrual - Mcclain, Jones and English",7200,monthly,52902.83117641968,2025-10-02
+delta_healthcare,Delta Healthcare Services,Equipment Maintenance - Sanders Group,6300,quarterly,28013.485796794434,2025-09-15
+delta_healthcare,Delta Healthcare Services,"Legal Fees Accrual - Turner, Lawrence and Hahn",6500,monthly,37894.8482604733,2025-05-12
+delta_healthcare,Delta Healthcare Services,Travel Expense Accrual - Bell-Johnson,7200,monthly,43502.95109646945,2025-02-04
+delta_healthcare,Delta Healthcare Services,"Marketing Campaign Accrual - Miller, Wilson and Smith",7000,quarterly,4620.004399790637,2025-05-14
+delta_healthcare,Delta Healthcare Services,"Property Tax Accrual - Harvey, Kelly and Rodriguez",6300,annual,57204.13410028274,2025-11-25
+delta_healthcare,Delta Healthcare Services,Interest Expense Accrual - Lee-Fletcher,9500,monthly,33434.804816605,2025-02-19
+delta_healthcare,Delta Healthcare Services,Warranty Provision - Clayton-Delacruz,5200,annual,33677.253311077904,2025-12-07
+delta_healthcare,Delta Healthcare Services,"Interest Expense Accrual - Morton, Harris and Green",9500,monthly,34753.45682199608,2025-11-22
+delta_healthcare,Delta Healthcare Services,"Contractor Fees Accrual - Perez, Williams and Schmidt",6500,monthly,46918.115337205476,2025-10-12
+delta_healthcare,Delta Healthcare Services,Contractor Fees Accrual - Stevens-Cox,6500,monthly,30942.947370979844,2025-10-09
+delta_healthcare,Delta Healthcare Services,"Marketing Campaign Accrual - Mendez, Smith and Chavez",7000,quarterly,45064.28683418494,2025-12-24
+delta_healthcare,Delta Healthcare Services,Audit Fees Accrual - Nguyen-Allen,6500,annual,14959.594393963274,2025-10-05
+delta_healthcare,Delta Healthcare Services,Property Tax Accrual - Meyer-Lin,6300,annual,18460.167398725654,2025-04-18
+delta_healthcare,Delta Healthcare Services,"Property Tax Accrual - Yang, Bentley and Smith",6300,annual,49512.64558157299,2025-06-22
+delta_healthcare,Delta Healthcare Services,Audit Fees Accrual - Marshall-Kelley,6500,annual,25179.790210221,2025-02-03
+delta_healthcare,Delta Healthcare Services,Warranty Provision - Frye-Jackson,5200,annual,32963.764595313565,2025-07-04
+delta_healthcare,Delta Healthcare Services,"Freight/Shipping Accrual - Hopkins, Morrison and Mosley",5200,monthly,29388.92227944493,2025-08-27
+delta_healthcare,Delta Healthcare Services,Travel Expense Accrual - Novak Inc,7200,monthly,40428.6979706046,2025-06-02
+delta_healthcare,Delta Healthcare Services,"Software License Accrual - Perry, Rogers and Bailey",6300,monthly,49467.749029397506,2025-05-02
+delta_healthcare,Delta Healthcare Services,Warranty Provision - Sanders LLC,5200,annual,22959.474004039377,2025-07-13
+delta_healthcare,Delta Healthcare Services,Travel Expense Accrual - Robinson Ltd,7200,monthly,52962.0729580654,2025-06-06
+delta_healthcare,Delta Healthcare Services,Commission Accrual - Brown PLC,6000,monthly,30449.83335846301,2025-07-08
+delta_healthcare,Delta Healthcare Services,"Server Hosting Accrual - Turner, Maxwell and Frost",6300,monthly,11039.593616634647,2025-10-12
+delta_healthcare,Delta Healthcare Services,Freight/Shipping Accrual - Blackwell-Green,5200,monthly,42547.20699234303,2025-04-09
+delta_healthcare,Delta Healthcare Services,Property Tax Accrual - Moreno and Sons,6300,annual,25195.317761069902,2025-02-07
+delta_healthcare,Delta Healthcare Services,Audit Fees Accrual - Thomas PLC,6500,annual,35936.64973288216,2025-10-26
+delta_healthcare,Delta Healthcare Services,Interest Expense Accrual - Hayes Ltd,9500,monthly,17042.77447330396,2025-11-04
+delta_healthcare,Delta Healthcare Services,"Travel Expense Accrual - Espinoza, Lopez and Wood",7200,monthly,15904.054693761265,2025-05-02
+delta_healthcare,Delta Healthcare Services,Audit Fees Accrual - Randall LLC,6500,annual,57988.77738073158,2025-02-08
+delta_healthcare,Delta Healthcare Services,Equipment Maintenance - King-Sanders,6300,quarterly,15793.016507558243,2025-12-07
+delta_healthcare,Delta Healthcare Services,Commission Accrual - Miller and Sons,6000,monthly,50423.883172731235,2025-11-19
+delta_healthcare,Delta Healthcare Services,Contractor Fees Accrual - Sanders-Nixon,6500,monthly,14638.347289982034,2025-03-25
+delta_healthcare,Delta Healthcare Services,Software License Accrual - Evans-Manning,6300,monthly,28897.660081401325,2025-01-03
+delta_healthcare,Delta Healthcare Services,Server Hosting Accrual - Wade Group,6300,monthly,13049.294493677911,2025-08-01
+delta_healthcare,Delta Healthcare Services,Interest Expense Accrual - Washington-Flores,9500,monthly,54217.48081534787,2025-06-24
+delta_healthcare,Delta Healthcare Services,"Interest Expense Accrual - Gonzalez, Lee and Campbell",9500,monthly,20257.6578393315,2025-04-03
+delta_healthcare,Delta Healthcare Services,Marketing Campaign Accrual - Adams Inc,7000,quarterly,31127.03874059587,2025-11-10
+delta_healthcare,Delta Healthcare Services,Interest Expense Accrual - Burns-Nelson,9500,monthly,22827.86864537941,2025-06-08
+delta_healthcare,Delta Healthcare Services,"Audit Fees Accrual - Price, Juarez and Stone",6500,annual,36685.10473476086,2025-04-04
+delta_healthcare,Delta Healthcare Services,Legal Fees Accrual - Green-Black,6500,monthly,55911.44779806643,2025-02-21
+delta_healthcare,Delta Healthcare Services,"Marketing Campaign Accrual - Mcconnell, Hall and Willis",7000,quarterly,8250.291418071407,2025-11-03
+delta_healthcare,Delta Healthcare Services,"Interest Expense Accrual - Dawson, Taylor and Brown",9500,monthly,52394.12062992589,2025-06-14
+delta_healthcare,Delta Healthcare Services,"Server Hosting Accrual - Gray, Estrada and Brown",6300,monthly,57353.73711035411,2025-10-24
+delta_healthcare,Delta Healthcare Services,Marketing Campaign Accrual - Delgado Ltd,7000,quarterly,41595.883135413496,2025-03-20
+delta_healthcare,Delta Healthcare Services,Audit Fees Accrual - Johnson LLC,6500,annual,38557.59220204874,2025-06-06
+delta_healthcare,Delta Healthcare Services,"Contractor Fees Accrual - Jenkins, Camacho and Dunn",6500,monthly,15500.697824499739,2025-10-14
+delta_healthcare,Delta Healthcare Services,Equipment Maintenance - Costa-Day,6300,quarterly,7112.252281727588,2025-10-17
+delta_healthcare,Delta Healthcare Services,"Software License Accrual - Drake, Juarez and Brown",6300,monthly,17329.65090104073,2025-07-16
+delta_healthcare,Delta Healthcare Services,"Property Tax Accrual - Martin, Raymond and Henry",6300,annual,13702.87391576508,2025-06-18
+delta_healthcare,Delta Healthcare Services,"Audit Fees Accrual - Ross, Walsh and Vasquez",6500,annual,50650.64357808765,2025-08-07
+delta_healthcare,Delta Healthcare Services,"Interest Expense Accrual - Peterson, Hughes and Church",9500,monthly,57538.264945177856,2025-11-10
+delta_healthcare,Delta Healthcare Services,Property Tax Accrual - Humphrey-Castillo,6300,annual,50768.221993428066,2025-11-03
+delta_healthcare,Delta Healthcare Services,"Contractor Fees Accrual - Blair, Hall and Marshall",6500,monthly,38285.47304705111,2025-06-12
+delta_healthcare,Delta Healthcare Services,Contractor Fees Accrual - Adams PLC,6500,monthly,41671.381067928865,2025-11-03
+delta_healthcare,Delta Healthcare Services,"Travel Expense Accrual - Thomas, Johnson and Mcknight",7200,monthly,45778.30118188851,2025-07-26
+delta_healthcare,Delta Healthcare Services,Contractor Fees Accrual - Powers-Rodriguez,6500,monthly,8387.191323155399,2025-09-23
+delta_healthcare,Delta Healthcare Services,"Software License Accrual - Wilson, Nielsen and Castro",6300,monthly,16743.500466354322,2025-04-19
+delta_healthcare,Delta Healthcare Services,"Audit Fees Accrual - Johnson, Hawkins and Evans",6500,annual,3771.9231498232234,2025-12-18
+delta_healthcare,Delta Healthcare Services,Marketing Campaign Accrual - Wagner-Cooper,7000,quarterly,20802.45957368787,2025-11-08
+delta_healthcare,Delta Healthcare Services,Travel Expense Accrual - Jones-Bailey,7200,monthly,15901.337047566465,2025-06-09
+delta_healthcare,Delta Healthcare Services,Consulting Fees Accrual - Ashley PLC,6500,monthly,32565.447802448853,2025-10-27
+delta_healthcare,Delta Healthcare Services,"Audit Fees Accrual - Drake, Sanchez and Bell",6500,annual,19248.514010477626,2025-09-08
+epsilon_logistics,Epsilon Logistics Corp,Rent Expense,6200,monthly,333333.3333333334,2025-12-31
+epsilon_logistics,Epsilon Logistics Corp,Utilities,6300,monthly,133333.33333333334,2025-12-31
+epsilon_logistics,Epsilon Logistics Corp,Insurance,6400,quarterly,800000.0,2025-12-31
+epsilon_logistics,Epsilon Logistics Corp,Professional Fees,6500,monthly,200000.0,2025-12-31
+epsilon_logistics,Epsilon Logistics Corp,Bonus Accrual,6000,annual,4000000.0,2025-12-31
+epsilon_logistics,Epsilon Logistics Corp,Property Tax Accrual - Richards Inc,6300,annual,31549.356823408725,2025-09-21
+epsilon_logistics,Epsilon Logistics Corp,"Interest Expense Accrual - Montgomery, Erickson and Parker",9500,monthly,21533.503574998547,2025-09-17
+epsilon_logistics,Epsilon Logistics Corp,"Property Tax Accrual - Martin, Buck and Moore",6300,annual,42017.17632243027,2025-11-22
+epsilon_logistics,Epsilon Logistics Corp,"Contractor Fees Accrual - Norris, Ryan and Chapman",6500,monthly,63733.38288067546,2025-06-05
+epsilon_logistics,Epsilon Logistics Corp,"Consulting Fees Accrual - Aguilar, Chandler and Daniels",6500,monthly,28566.215699677723,2025-06-20
+epsilon_logistics,Epsilon Logistics Corp,Consulting Fees Accrual - Allen Inc,6500,monthly,112068.26223961677,2025-06-17
+epsilon_logistics,Epsilon Logistics Corp,Travel Expense Accrual - Guzman LLC,7200,monthly,76836.33722440462,2025-02-27
+epsilon_logistics,Epsilon Logistics Corp,Property Tax Accrual - Lee-Khan,6300,annual,62197.95132293466,2025-02-19
+epsilon_logistics,Epsilon Logistics Corp,Interest Expense Accrual - Adams Inc,9500,monthly,84109.98025847651,2025-06-19
+epsilon_logistics,Epsilon Logistics Corp,Marketing Campaign Accrual - Lucero Inc,7000,quarterly,60043.22200170535,2025-03-24
+epsilon_logistics,Epsilon Logistics Corp,Legal Fees Accrual - Boyd and Sons,6500,monthly,122586.765196176,2025-01-02
+epsilon_logistics,Epsilon Logistics Corp,Marketing Campaign Accrual - Morgan-Potter,7000,quarterly,30535.790121265574,2025-08-10
+epsilon_logistics,Epsilon Logistics Corp,Warranty Provision - Campos-Williams,5200,annual,120569.83313862853,2025-08-25
+epsilon_logistics,Epsilon Logistics Corp,Warranty Provision - Torres-Key,5200,annual,88392.03451589488,2025-10-06
+epsilon_logistics,Epsilon Logistics Corp,Commission Accrual - Bailey-Sanders,6000,monthly,40415.987017056825,2025-11-11
+epsilon_logistics,Epsilon Logistics Corp,Server Hosting Accrual - Mitchell and Sons,6300,monthly,66202.6571984091,2025-09-07
+epsilon_logistics,Epsilon Logistics Corp,Marketing Campaign Accrual - Santos LLC,7000,quarterly,76863.52619964888,2025-02-22
+epsilon_logistics,Epsilon Logistics Corp,"Equipment Maintenance - Garcia, Ryan and Ramirez",6300,quarterly,49379.82270639842,2025-02-23
+epsilon_logistics,Epsilon Logistics Corp,Audit Fees Accrual - Simon-King,6500,annual,14277.531744526328,2025-07-19
+epsilon_logistics,Epsilon Logistics Corp,Travel Expense Accrual - Ball-Cain,7200,monthly,119101.45060653078,2025-05-11
+epsilon_logistics,Epsilon Logistics Corp,Freight/Shipping Accrual - Lin Group,5200,monthly,84838.16586329849,2025-02-19
+epsilon_logistics,Epsilon Logistics Corp,Consulting Fees Accrual - Anderson Group,6500,monthly,95314.17298098112,2025-11-24
+epsilon_logistics,Epsilon Logistics Corp,Contractor Fees Accrual - Duffy-Smith,6500,monthly,80958.25339037762,2025-02-02
+epsilon_logistics,Epsilon Logistics Corp,"Property Tax Accrual - Hicks, Cowan and Meyer",6300,annual,32263.103831724813,2025-03-20
+epsilon_logistics,Epsilon Logistics Corp,Legal Fees Accrual - Cox and Sons,6500,monthly,54554.366656028586,2025-10-01
+epsilon_logistics,Epsilon Logistics Corp,"Marketing Campaign Accrual - Weeks, Johnson and Ramos",7000,quarterly,61262.5178854571,2025-06-08
+epsilon_logistics,Epsilon Logistics Corp,Software License Accrual - Faulkner-Bell,6300,monthly,112838.06692663816,2025-07-17
+epsilon_logistics,Epsilon Logistics Corp,Contractor Fees Accrual - Palmer Ltd,6500,monthly,32865.93808630533,2025-02-22
+epsilon_logistics,Epsilon Logistics Corp,"Contractor Fees Accrual - Brown, Newton and Fletcher",6500,monthly,39871.606538570944,2025-05-15
+epsilon_logistics,Epsilon Logistics Corp,Consulting Fees Accrual - Martinez LLC,6500,monthly,129760.10087539493,2025-10-27
+epsilon_logistics,Epsilon Logistics Corp,Interest Expense Accrual - Clark-Johnson,9500,monthly,119542.36326314902,2025-07-09
+epsilon_logistics,Epsilon Logistics Corp,"Interest Expense Accrual - Phillips, Larson and Hernandez",9500,monthly,41766.78013872909,2025-09-22
+epsilon_logistics,Epsilon Logistics Corp,Consulting Fees Accrual - Garcia PLC,6500,monthly,70371.3983027386,2025-08-13
+epsilon_logistics,Epsilon Logistics Corp,Legal Fees Accrual - Smith-White,6500,monthly,80009.37570477251,2025-04-13
+epsilon_logistics,Epsilon Logistics Corp,"Interest Expense Accrual - Suarez, Burns and Gonzalez",9500,monthly,45732.02996294066,2025-01-12
+epsilon_logistics,Epsilon Logistics Corp,Consulting Fees Accrual - Reynolds Group,6500,monthly,31514.41529112047,2025-07-18
+epsilon_logistics,Epsilon Logistics Corp,"Freight/Shipping Accrual - Erickson, Wilcox and Perez",5200,monthly,127385.42934904918,2025-08-03
+epsilon_logistics,Epsilon Logistics Corp,"Interest Expense Accrual - Ochoa, Pittman and Stewart",9500,monthly,51077.133640761356,2025-08-05
+epsilon_logistics,Epsilon Logistics Corp,Commission Accrual - Macdonald-Johnson,6000,monthly,129414.12627827263,2025-08-13
+epsilon_logistics,Epsilon Logistics Corp,"Audit Fees Accrual - Brown, Zimmerman and Garcia",6500,annual,122690.17172542457,2025-07-12
+epsilon_logistics,Epsilon Logistics Corp,Software License Accrual - Stanton LLC,6300,monthly,16092.626366611546,2025-09-20
+epsilon_logistics,Epsilon Logistics Corp,Travel Expense Accrual - Williams-Rich,7200,monthly,78457.03193506486,2025-12-20
+epsilon_logistics,Epsilon Logistics Corp,Freight/Shipping Accrual - Lewis Group,5200,monthly,11306.396440652918,2025-01-24
+epsilon_logistics,Epsilon Logistics Corp,Consulting Fees Accrual - Garcia-Martinez,6500,monthly,130936.96583487291,2025-09-12
+epsilon_logistics,Epsilon Logistics Corp,"Server Hosting Accrual - Leblanc, Sharp and Collins",6300,monthly,26713.665408318855,2025-09-18
+epsilon_logistics,Epsilon Logistics Corp,Equipment Maintenance - Diaz-Lewis,6300,quarterly,68341.40284415844,2025-05-26
+epsilon_logistics,Epsilon Logistics Corp,Travel Expense Accrual - Pope Ltd,7200,monthly,20238.762801830206,2025-05-02
+epsilon_logistics,Epsilon Logistics Corp,"Audit Fees Accrual - Carlson, Vance and Mckay",6500,annual,88896.35811266543,2025-03-09
+epsilon_logistics,Epsilon Logistics Corp,"Audit Fees Accrual - Murillo, Ferguson and Wilson",6500,annual,125231.72351638482,2025-08-13
+epsilon_logistics,Epsilon Logistics Corp,"Server Hosting Accrual - Cortez, Jackson and Perez",6300,monthly,113172.6092948393,2025-04-19
+epsilon_logistics,Epsilon Logistics Corp,Audit Fees Accrual - Fuentes-Johnson,6500,annual,108380.77146995651,2025-03-24
+epsilon_logistics,Epsilon Logistics Corp,Equipment Maintenance - Lawson PLC,6300,quarterly,54467.20071093388,2025-01-26
+epsilon_logistics,Epsilon Logistics Corp,Audit Fees Accrual - Gibson-Harris,6500,annual,31018.469706166317,2025-05-23
+epsilon_logistics,Epsilon Logistics Corp,"Server Hosting Accrual - Murphy, Miller and Barry",6300,monthly,72383.89922101666,2025-08-06
+epsilon_logistics,Epsilon Logistics Corp,Contractor Fees Accrual - Moore-Young,6500,monthly,25955.675568254068,2025-04-06
+epsilon_logistics,Epsilon Logistics Corp,Interest Expense Accrual - Mann PLC,9500,monthly,39710.225268346694,2025-03-19
+epsilon_logistics,Epsilon Logistics Corp,Marketing Campaign Accrual - Poole PLC,7000,quarterly,131282.1826529151,2025-12-18
+epsilon_logistics,Epsilon Logistics Corp,"Commission Accrual - Gill, Griffith and Buchanan",6000,monthly,57364.43366795754,2025-08-22
+epsilon_logistics,Epsilon Logistics Corp,"Audit Fees Accrual - Brown, Sanchez and Wolf",6500,annual,37404.885153638235,2025-11-06
+epsilon_logistics,Epsilon Logistics Corp,Freight/Shipping Accrual - Anderson Inc,5200,monthly,129762.0544074669,2025-10-17
+epsilon_logistics,Epsilon Logistics Corp,Travel Expense Accrual - Fischer PLC,7200,monthly,122608.32410283333,2025-02-26
+epsilon_logistics,Epsilon Logistics Corp,"Travel Expense Accrual - Ward, Nichols and Warner",7200,monthly,91442.50001320145,2025-03-23
+epsilon_logistics,Epsilon Logistics Corp,Legal Fees Accrual - Forbes-Braun,6500,monthly,85426.91192074468,2025-10-26
+epsilon_logistics,Epsilon Logistics Corp,Commission Accrual - Lewis-Smith,6000,monthly,29823.24526753865,2025-10-20
+epsilon_logistics,Epsilon Logistics Corp,Legal Fees Accrual - Jones and Sons,6500,monthly,126764.98128179701,2025-12-16
+epsilon_logistics,Epsilon Logistics Corp,Marketing Campaign Accrual - Sutton-Lee,7000,quarterly,111115.84836131945,2025-05-02
+epsilon_logistics,Epsilon Logistics Corp,"Contractor Fees Accrual - Zimmerman, Larsen and Powell",6500,monthly,45609.38184874224,2025-10-11
+epsilon_logistics,Epsilon Logistics Corp,"Warranty Provision - Cooper, Thomas and Mitchell",5200,annual,13306.326776259357,2025-08-04
+epsilon_logistics,Epsilon Logistics Corp,"Property Tax Accrual - Valencia, Kelley and Cooper",6300,annual,106175.53267190186,2025-03-23
+epsilon_logistics,Epsilon Logistics Corp,"Warranty Provision - Wilson, Smith and Douglas",5200,annual,39347.50512099172,2025-01-01
+epsilon_logistics,Epsilon Logistics Corp,"Equipment Maintenance - Oconnor, Wagner and Lopez",6300,quarterly,45038.8043661176,2025-08-02
+epsilon_logistics,Epsilon Logistics Corp,"Legal Fees Accrual - Preston, Clark and Martin",6500,monthly,91198.58119577741,2025-03-03
+epsilon_logistics,Epsilon Logistics Corp,"Warranty Provision - Brown, Duncan and Hughes",5200,annual,120399.09071465606,2025-05-19
+epsilon_logistics,Epsilon Logistics Corp,Interest Expense Accrual - Cooper and Sons,9500,monthly,83928.22024047839,2025-10-18
+epsilon_logistics,Epsilon Logistics Corp,Commission Accrual - Ballard and Sons,6000,monthly,123545.23843734292,2025-01-22
+epsilon_logistics,Epsilon Logistics Corp,Commission Accrual - Williams-Banks,6000,monthly,127910.22647562258,2025-03-16
+epsilon_logistics,Epsilon Logistics Corp,"Freight/Shipping Accrual - Robinson, Lozano and Henry",5200,monthly,73799.19318023366,2025-04-05
+epsilon_logistics,Epsilon Logistics Corp,Freight/Shipping Accrual - Francis-Johnson,5200,monthly,14184.855331969806,2025-11-18
+epsilon_logistics,Epsilon Logistics Corp,Audit Fees Accrual - Keith-Ballard,6500,annual,8598.442850220814,2025-08-21
+epsilon_logistics,Epsilon Logistics Corp,Software License Accrual - Sheppard-George,6300,monthly,35676.822451075284,2025-01-05
+epsilon_logistics,Epsilon Logistics Corp,Commission Accrual - Hunt-Thomas,6000,monthly,60821.10367875225,2025-05-26
+epsilon_logistics,Epsilon Logistics Corp,"Property Tax Accrual - Guerra, Jordan and Shaw",6300,annual,22035.62434207645,2025-06-18
+epsilon_logistics,Epsilon Logistics Corp,Software License Accrual - Wood Inc,6300,monthly,54643.166203468645,2025-03-18
+epsilon_logistics,Epsilon Logistics Corp,Contractor Fees Accrual - Brennan and Sons,6500,monthly,97166.84180551548,2025-10-20
+epsilon_logistics,Epsilon Logistics Corp,Contractor Fees Accrual - Mcconnell Inc,6500,monthly,31289.13499980697,2025-02-10
+epsilon_logistics,Epsilon Logistics Corp,Contractor Fees Accrual - Gentry Inc,6500,monthly,73559.59512605026,2025-01-23
+epsilon_logistics,Epsilon Logistics Corp,Audit Fees Accrual - Duran and Sons,6500,annual,117806.83262910054,2025-03-27
+epsilon_logistics,Epsilon Logistics Corp,Equipment Maintenance - Wilkinson LLC,6300,quarterly,104476.58216943876,2025-11-23
+epsilon_logistics,Epsilon Logistics Corp,Audit Fees Accrual - Mendez-Foster,6500,annual,93485.62498850394,2025-05-24
+epsilon_logistics,Epsilon Logistics Corp,Software License Accrual - Jones-Welch,6300,monthly,119592.61191916442,2025-02-09
+epsilon_logistics,Epsilon Logistics Corp,"Software License Accrual - Bryant, Davis and Johnston",6300,monthly,46288.53848017665,2025-08-04
+epsilon_logistics,Epsilon Logistics Corp,Property Tax Accrual - Sullivan Group,6300,annual,85973.09487961716,2025-03-26
+epsilon_logistics,Epsilon Logistics Corp,Equipment Maintenance - Torres Group,6300,quarterly,33108.88710893122,2025-06-02
+epsilon_logistics,Epsilon Logistics Corp,"Commission Accrual - Moon, Rasmussen and Olson",6000,monthly,30961.67850494399,2025-08-19
+epsilon_logistics,Epsilon Logistics Corp,"Software License Accrual - Montgomery, Patterson and Villanueva",6300,monthly,16193.834436739175,2025-04-03
+epsilon_logistics,Epsilon Logistics Corp,"Audit Fees Accrual - Liu, Ramirez and Gray",6500,annual,118304.8309446164,2025-11-15
+epsilon_logistics,Epsilon Logistics Corp,Legal Fees Accrual - Anderson-Parker,6500,monthly,23129.723739703077,2025-05-06
+epsilon_logistics,Epsilon Logistics Corp,"Commission Accrual - Gibson, Anderson and Jefferson",6000,monthly,18227.183116883898,2025-05-04
+epsilon_logistics,Epsilon Logistics Corp,Equipment Maintenance - Douglas Inc,6300,quarterly,20826.306583806174,2025-05-19
+epsilon_logistics,Epsilon Logistics Corp,Interest Expense Accrual - Stevens Group,9500,monthly,7302.450664699963,2025-12-11
+epsilon_logistics,Epsilon Logistics Corp,"Software License Accrual - Hudson, Fernandez and Williams",6300,monthly,57649.504621986875,2025-02-24
+epsilon_logistics,Epsilon Logistics Corp,Equipment Maintenance - Robinson and Sons,6300,quarterly,113984.16235301796,2025-08-19
+epsilon_logistics,Epsilon Logistics Corp,Property Tax Accrual - Hodge-Bernard,6300,annual,103479.3130107668,2025-09-26
+epsilon_logistics,Epsilon Logistics Corp,Server Hosting Accrual - Williams-Butler,6300,monthly,7996.667670279207,2025-04-20
+epsilon_logistics,Epsilon Logistics Corp,Server Hosting Accrual - Solis LLC,6300,monthly,96364.3294083572,2025-03-23
+epsilon_logistics,Epsilon Logistics Corp,"Travel Expense Accrual - Moore, Perkins and Hess",7200,monthly,22177.338326848574,2025-02-13
+epsilon_logistics,Epsilon Logistics Corp,"Commission Accrual - Collins, Hernandez and Wallace",6000,monthly,69828.54487440157,2025-11-12
+epsilon_logistics,Epsilon Logistics Corp,"Property Tax Accrual - Davis, Dean and Stephens",6300,annual,36346.27156210446,2025-03-07
+epsilon_logistics,Epsilon Logistics Corp,"Marketing Campaign Accrual - Braun, Gamble and Greene",7000,quarterly,103678.42330505942,2025-11-23
+epsilon_logistics,Epsilon Logistics Corp,Travel Expense Accrual - West and Sons,7200,monthly,117692.2648305934,2025-12-15
+epsilon_logistics,Epsilon Logistics Corp,"Consulting Fees Accrual - Howard, Nichols and Gardner",6500,monthly,8508.102990695483,2025-10-11
+epsilon_logistics,Epsilon Logistics Corp,Commission Accrual - Singh-Williams,6000,monthly,41127.69413177598,2025-11-11
+epsilon_logistics,Epsilon Logistics Corp,Interest Expense Accrual - Mcneil-Harvey,9500,monthly,123138.23049866142,2025-12-24
+epsilon_logistics,Epsilon Logistics Corp,Audit Fees Accrual - Banks Ltd,6500,annual,60799.06894956439,2025-07-25
+epsilon_logistics,Epsilon Logistics Corp,Server Hosting Accrual - Pena Group,6300,monthly,51049.001399132845,2025-06-11
+epsilon_logistics,Epsilon Logistics Corp,Audit Fees Accrual - Rocha Ltd,6500,annual,90400.93447386561,2025-02-16
+epsilon_logistics,Epsilon Logistics Corp,"Property Tax Accrual - Graham, Ward and Chen",6300,annual,122246.65048046442,2025-04-18
+epsilon_logistics,Epsilon Logistics Corp,"Server Hosting Accrual - Frazier, Rogers and Thompson",6300,monthly,115067.01793485582,2025-07-10
+epsilon_logistics,Epsilon Logistics Corp,Audit Fees Accrual - Harris-Turner,6500,annual,71849.8817230955,2025-01-07
+epsilon_logistics,Epsilon Logistics Corp,Marketing Campaign Accrual - Hudson-Koch,7000,quarterly,99122.84151681476,2025-04-16
+epsilon_logistics,Epsilon Logistics Corp,"Server Hosting Accrual - Rosales, Pierce and Mclean",6300,monthly,75353.00509964443,2025-09-15
+zeta_distribution,Zeta Distribution Inc,Rent Expense,6200,monthly,625000.0,2025-12-31
+zeta_distribution,Zeta Distribution Inc,Utilities,6300,monthly,250000.0,2025-12-31
+zeta_distribution,Zeta Distribution Inc,Insurance,6400,quarterly,1500000.0,2025-12-31
+zeta_distribution,Zeta Distribution Inc,Professional Fees,6500,monthly,375000.0,2025-12-31
+zeta_distribution,Zeta Distribution Inc,Bonus Accrual,6000,annual,7500000.0,2025-12-31
+zeta_distribution,Zeta Distribution Inc,"Equipment Maintenance - Brewer, Logan and Rhodes",6300,quarterly,117200.63049948824,2025-06-21
+zeta_distribution,Zeta Distribution Inc,"Warranty Provision - Carter, Townsend and Martinez",5200,annual,58536.149636057955,2025-03-03
+zeta_distribution,Zeta Distribution Inc,Equipment Maintenance - Torres-Short,6300,quarterly,26147.197469151055,2025-07-04
+zeta_distribution,Zeta Distribution Inc,Commission Accrual - Burke PLC,6000,monthly,102596.66112405002,2025-03-12
+zeta_distribution,Zeta Distribution Inc,Contractor Fees Accrual - Rowe-Benson,6500,monthly,27532.938709442107,2025-11-19
+zeta_distribution,Zeta Distribution Inc,Warranty Provision - Richmond Inc,5200,annual,47723.535379141256,2025-10-16
+zeta_distribution,Zeta Distribution Inc,"Software License Accrual - Wood, Mccarty and Farrell",6300,monthly,154036.27584673112,2025-11-20
+zeta_distribution,Zeta Distribution Inc,Commission Accrual - Hardy-Valencia,6000,monthly,207521.01357691706,2025-01-18
+zeta_distribution,Zeta Distribution Inc,Equipment Maintenance - Herrera-Chavez,6300,quarterly,170084.3080903334,2025-11-06
+zeta_distribution,Zeta Distribution Inc,Audit Fees Accrual - Hall-Martinez,6500,annual,197060.35797649098,2025-01-16
+zeta_distribution,Zeta Distribution Inc,Warranty Provision - Ortega-Bailey,5200,annual,169163.59126407662,2025-05-05
+zeta_distribution,Zeta Distribution Inc,Legal Fees Accrual - Wood LLC,6500,monthly,158595.03622150535,2025-06-26
+zeta_distribution,Zeta Distribution Inc,"Software License Accrual - Martin, Bell and Riggs",6300,monthly,180213.25890667984,2025-04-07
+zeta_distribution,Zeta Distribution Inc,Software License Accrual - Goodman-Howard,6300,monthly,238917.62341858767,2025-10-20
+zeta_distribution,Zeta Distribution Inc,Server Hosting Accrual - Hughes and Sons,6300,monthly,223339.4192473329,2025-08-06
+zeta_distribution,Zeta Distribution Inc,Freight/Shipping Accrual - Williams-Ramirez,5200,monthly,130062.06936689466,2025-05-25
+zeta_distribution,Zeta Distribution Inc,Equipment Maintenance - Mitchell-Jenkins,6300,quarterly,167163.20226789018,2025-03-01
+zeta_distribution,Zeta Distribution Inc,Server Hosting Accrual - Sullivan Ltd,6300,monthly,46959.53476971333,2025-05-24
+zeta_distribution,Zeta Distribution Inc,Freight/Shipping Accrual - Brooks-Phillips,5200,monthly,231329.40711354374,2025-07-06
+zeta_distribution,Zeta Distribution Inc,"Property Tax Accrual - Johnson, Villegas and Booker",6300,annual,68488.77698367294,2025-11-16
+zeta_distribution,Zeta Distribution Inc,Server Hosting Accrual - Walker Group,6300,monthly,165149.23301131153,2025-08-06
+zeta_distribution,Zeta Distribution Inc,Legal Fees Accrual - Berger Group,6500,monthly,154592.5613184179,2025-12-06
+zeta_distribution,Zeta Distribution Inc,"Travel Expense Accrual - Walker, Blair and Snyder",7200,monthly,74064.64350643134,2025-01-27
+zeta_distribution,Zeta Distribution Inc,"Marketing Campaign Accrual - Robles, Bender and Williams",7000,quarterly,56343.63966835166,2025-10-17
+zeta_distribution,Zeta Distribution Inc,Commission Accrual - Griffith-Henry,6000,monthly,181996.24903368411,2025-06-24
+zeta_distribution,Zeta Distribution Inc,Warranty Provision - Smith Inc,5200,annual,130331.15829169986,2025-05-20
+zeta_distribution,Zeta Distribution Inc,Consulting Fees Accrual - Harris-Williams,6500,monthly,91875.81172111629,2025-01-23
+zeta_distribution,Zeta Distribution Inc,Interest Expense Accrual - Jones-Lee,9500,monthly,245087.94242599,2025-08-26
+zeta_distribution,Zeta Distribution Inc,Audit Fees Accrual - Brown LLC,6500,annual,223264.2212090355,2025-09-07
+zeta_distribution,Zeta Distribution Inc,Contractor Fees Accrual - Burns LLC,6500,monthly,222616.8839462328,2025-03-03
+zeta_distribution,Zeta Distribution Inc,Server Hosting Accrual - Jones Group,6300,monthly,82956.29285619702,2025-09-15
+zeta_distribution,Zeta Distribution Inc,Travel Expense Accrual - Kramer-Sanchez,7200,monthly,106175.78789767386,2025-06-13
+zeta_distribution,Zeta Distribution Inc,Software License Accrual - Lowe Group,6300,monthly,164446.783719523,2025-09-09
+zeta_distribution,Zeta Distribution Inc,"Software License Accrual - Johnson, Thompson and Blake",6300,monthly,241150.61141841617,2025-05-12
+zeta_distribution,Zeta Distribution Inc,Consulting Fees Accrual - Melendez Inc,6500,monthly,72330.28256302183,2025-09-21
+zeta_distribution,Zeta Distribution Inc,Legal Fees Accrual - Pierce and Sons,6500,monthly,129660.172164875,2025-07-06
+zeta_distribution,Zeta Distribution Inc,Freight/Shipping Accrual - Rodriguez LLC,5200,monthly,39430.83836475528,2025-09-27
+zeta_distribution,Zeta Distribution Inc,"Interest Expense Accrual - Lucas, Watson and Rodriguez",9500,monthly,166293.80277572814,2025-11-18
+zeta_distribution,Zeta Distribution Inc,Marketing Campaign Accrual - Hughes-Nelson,7000,quarterly,41309.25613782381,2025-12-20
+zeta_distribution,Zeta Distribution Inc,Legal Fees Accrual - Adkins-Farmer,6500,monthly,60574.6729757206,2025-12-11
+zeta_distribution,Zeta Distribution Inc,Software License Accrual - Martin-Huff,6300,monthly,95338.5452707519,2025-02-04
+zeta_distribution,Zeta Distribution Inc,Equipment Maintenance - Porter-Chen,6300,quarterly,242143.7011348281,2025-11-01
+zeta_distribution,Zeta Distribution Inc,Software License Accrual - Fields-Stevens,6300,monthly,151944.9703830356,2025-12-06
+zeta_distribution,Zeta Distribution Inc,Software License Accrual - Oconnell-Carroll,6300,monthly,79898.22042940545,2025-07-20
+zeta_distribution,Zeta Distribution Inc,Legal Fees Accrual - Ortiz-Murray,6500,monthly,193367.25708966944,2025-10-10
+zeta_distribution,Zeta Distribution Inc,"Warranty Provision - Erickson, Caldwell and Francis",5200,annual,157133.55592289008,2025-02-23
+zeta_distribution,Zeta Distribution Inc,Audit Fees Accrual - Lopez and Sons,6500,annual,151898.49514140285,2025-10-19
+zeta_distribution,Zeta Distribution Inc,"Equipment Maintenance - Moyer, Henderson and Gray",6300,quarterly,111392.35693093135,2025-10-21
+zeta_distribution,Zeta Distribution Inc,Server Hosting Accrual - Carroll PLC,6300,monthly,216309.8858363276,2025-01-23
+zeta_distribution,Zeta Distribution Inc,Server Hosting Accrual - Jones-Peterson,6300,monthly,205153.47454150073,2025-05-15
+zeta_distribution,Zeta Distribution Inc,"Software License Accrual - Walsh, Carter and Williams",6300,monthly,33922.04812683231,2025-08-13
+zeta_distribution,Zeta Distribution Inc,Contractor Fees Accrual - Williams Inc,6500,monthly,17372.760838480597,2025-09-01
+zeta_distribution,Zeta Distribution Inc,Interest Expense Accrual - Craig-Anderson,9500,monthly,128597.33572109182,2025-02-05
+zeta_distribution,Zeta Distribution Inc,Interest Expense Accrual - Mcfarland Group,9500,monthly,249154.42070840896,2025-05-14
+zeta_distribution,Zeta Distribution Inc,Travel Expense Accrual - Miller-Yates,7200,monthly,228537.60283304477,2025-10-16
+zeta_distribution,Zeta Distribution Inc,"Audit Fees Accrual - Snyder, Williams and Villarreal",6500,annual,114858.61913888615,2025-09-14
+zeta_distribution,Zeta Distribution Inc,"Freight/Shipping Accrual - Thomas, Stewart and Frank",5200,monthly,187552.26930090218,2025-09-20
+zeta_distribution,Zeta Distribution Inc,"Consulting Fees Accrual - Irwin, Odom and Barton",6500,monthly,60756.252627001275,2025-01-10
+zeta_distribution,Zeta Distribution Inc,Commission Accrual - Smith Inc,6000,monthly,185028.96508103688,2025-02-12
+zeta_distribution,Zeta Distribution Inc,"Audit Fees Accrual - Jones, Berry and King",6500,annual,189385.16578777885,2025-08-12
+zeta_distribution,Zeta Distribution Inc,Audit Fees Accrual - Brown-Mendoza,6500,annual,104713.984941285,2025-07-10
+zeta_distribution,Zeta Distribution Inc,"Property Tax Accrual - Ritter, Perez and Lewis",6300,annual,48979.34869401886,2025-03-18
+zeta_distribution,Zeta Distribution Inc,"Interest Expense Accrual - Adams, Owens and Miller",9500,monthly,148570.2769771774,2025-03-05
+zeta_distribution,Zeta Distribution Inc,Travel Expense Accrual - Miller-Gibson,7200,monthly,235123.7764470021,2025-11-05
+zeta_distribution,Zeta Distribution Inc,"Audit Fees Accrual - Brown, Houston and Smith",6500,annual,64726.3905176848,2025-06-02
+zeta_distribution,Zeta Distribution Inc,Interest Expense Accrual - Roman-Hubbard,9500,monthly,229874.56864210096,2025-01-16
+zeta_distribution,Zeta Distribution Inc,Audit Fees Accrual - Jones PLC,6500,annual,99071.00509071749,2025-02-03
+zeta_distribution,Zeta Distribution Inc,"Consulting Fees Accrual - Lewis, Bailey and Lowery",6500,monthly,42175.6017964957,2025-11-10
+zeta_distribution,Zeta Distribution Inc,"Freight/Shipping Accrual - Hicks, Smith and Williams",5200,monthly,238868.6710269738,2025-10-04
+zeta_distribution,Zeta Distribution Inc,"Freight/Shipping Accrual - Richards, Stuart and Flynn",5200,monthly,135475.94024548144,2025-02-06
+zeta_distribution,Zeta Distribution Inc,Equipment Maintenance - Brown Group,6300,quarterly,15217.885278526917,2025-05-02
+zeta_distribution,Zeta Distribution Inc,"Consulting Fees Accrual - Wagner, Allison and Guerrero",6500,monthly,102331.34927289959,2025-10-07
+zeta_distribution,Zeta Distribution Inc,Equipment Maintenance - Adams-Harris,6300,quarterly,248659.84004730743,2025-05-13
+zeta_distribution,Zeta Distribution Inc,"Legal Fees Accrual - Marshall, Mitchell and Yu",6500,monthly,148690.02685555833,2025-06-02
+zeta_distribution,Zeta Distribution Inc,Freight/Shipping Accrual - Sullivan Inc,5200,monthly,165497.55219993542,2025-09-02
+zeta_distribution,Zeta Distribution Inc,"Audit Fees Accrual - Kelley, Moore and Gregory",6500,annual,229031.12633156902,2025-11-17
+zeta_distribution,Zeta Distribution Inc,Equipment Maintenance - Anderson-Lopez,6300,quarterly,198421.06993140612,2025-05-08
+zeta_distribution,Zeta Distribution Inc,Travel Expense Accrual - Ramos Group,7200,monthly,153673.64997218383,2025-10-26
+zeta_distribution,Zeta Distribution Inc,Equipment Maintenance - Reed-Torres,6300,quarterly,169920.21787098298,2025-10-18
+zeta_distribution,Zeta Distribution Inc,Freight/Shipping Accrual - Taylor-Bond,5200,monthly,108723.6700352554,2025-03-14
+zeta_distribution,Zeta Distribution Inc,Freight/Shipping Accrual - Lowe and Sons,5200,monthly,120401.53129164164,2025-06-12
+zeta_distribution,Zeta Distribution Inc,Warranty Provision - Martinez PLC,5200,annual,223507.91584068237,2025-08-11
+zeta_distribution,Zeta Distribution Inc,Consulting Fees Accrual - Flores-Ortiz,6500,monthly,197129.00325443904,2025-02-07
+zeta_distribution,Zeta Distribution Inc,Interest Expense Accrual - Park-Baker,9500,monthly,172032.28743541354,2025-09-18
+zeta_distribution,Zeta Distribution Inc,Property Tax Accrual - Mendez-Green,6300,annual,91691.5772648687,2025-02-03
+zeta_distribution,Zeta Distribution Inc,Contractor Fees Accrual - Taylor-Spencer,6500,monthly,76595.50583114367,2025-07-11
+zeta_distribution,Zeta Distribution Inc,Consulting Fees Accrual - Rowe and Sons,6500,monthly,236367.28658010002,2025-03-18
+zeta_distribution,Zeta Distribution Inc,"Freight/Shipping Accrual - Burns, Anderson and Hanson",5200,monthly,239379.5089769687,2025-09-10
+zeta_distribution,Zeta Distribution Inc,Server Hosting Accrual - Andersen Group,6300,monthly,90104.9425856063,2025-10-09
+zeta_distribution,Zeta Distribution Inc,"Legal Fees Accrual - Hughes, Walton and Powers",6500,monthly,66615.92231845578,2025-07-27
+zeta_distribution,Zeta Distribution Inc,"Software License Accrual - Nguyen, Malone and Wheeler",6300,monthly,137817.18468688292,2025-12-22
+zeta_distribution,Zeta Distribution Inc,Travel Expense Accrual - Martinez-Brown,7200,monthly,52517.74235899066,2025-08-15
+zeta_distribution,Zeta Distribution Inc,Legal Fees Accrual - Mckinney Inc,6500,monthly,208434.59925761158,2025-11-08
+zeta_distribution,Zeta Distribution Inc,Software License Accrual - Walters-Martinez,6300,monthly,66189.65423617762,2025-04-12
+zeta_distribution,Zeta Distribution Inc,"Commission Accrual - Martinez, Sanchez and Howard",6000,monthly,177226.49876624037,2025-05-11
+zeta_distribution,Zeta Distribution Inc,Audit Fees Accrual - Robinson Ltd,6500,annual,104111.61938294956,2025-05-25
+zeta_distribution,Zeta Distribution Inc,"Software License Accrual - Erickson, Torres and Garza",6300,monthly,170802.27310347988,2025-06-24
+zeta_distribution,Zeta Distribution Inc,Consulting Fees Accrual - Lane and Sons,6500,monthly,121212.308794795,2025-10-09
+zeta_distribution,Zeta Distribution Inc,"Property Tax Accrual - Hernandez, Allen and Ramsey",6300,annual,57582.66293848058,2025-08-17
+zeta_distribution,Zeta Distribution Inc,Consulting Fees Accrual - Gordon Group,6500,monthly,223852.53305173534,2025-03-18
+zeta_distribution,Zeta Distribution Inc,Software License Accrual - Mitchell-Miller,6300,monthly,113073.43145264378,2025-01-25
+zeta_distribution,Zeta Distribution Inc,Software License Accrual - Williams-King,6300,monthly,31263.185156349286,2025-04-05
+zeta_distribution,Zeta Distribution Inc,Audit Fees Accrual - Baker and Sons,6500,annual,235603.3793211244,2025-05-10
+zeta_distribution,Zeta Distribution Inc,"Property Tax Accrual - Miller, Brown and Green",6300,annual,53331.05598573724,2025-01-21
+zeta_distribution,Zeta Distribution Inc,Warranty Provision - Garza-Foster,5200,annual,211174.03284409727,2025-03-10
+zeta_distribution,Zeta Distribution Inc,"Freight/Shipping Accrual - Smith, Hernandez and Bryant",5200,monthly,75501.98338653476,2025-10-16
+zeta_distribution,Zeta Distribution Inc,Travel Expense Accrual - Hernandez-Miller,7200,monthly,226519.92462640675,2025-02-27
+zeta_distribution,Zeta Distribution Inc,Equipment Maintenance - Fuller-Martinez,6300,quarterly,160817.3119944792,2025-10-22
+zeta_distribution,Zeta Distribution Inc,Legal Fees Accrual - Bennett LLC,6500,monthly,187031.77404418262,2025-03-18
+zeta_distribution,Zeta Distribution Inc,Property Tax Accrual - Williams PLC,6300,annual,233145.8053039948,2025-05-27
+zeta_distribution,Zeta Distribution Inc,Consulting Fees Accrual - Joseph Group,6500,monthly,19124.3610060928,2025-03-25
+zeta_distribution,Zeta Distribution Inc,Warranty Provision - Jones-Smith,5200,annual,90086.08029592215,2025-06-08
+zeta_distribution,Zeta Distribution Inc,"Travel Expense Accrual - Schroeder, Ward and Allen",7200,monthly,16732.978894395776,2025-10-11
+zeta_distribution,Zeta Distribution Inc,Commission Accrual - Foster and Sons,6000,monthly,243675.482487941,2025-09-19
+zeta_distribution,Zeta Distribution Inc,Software License Accrual - Jensen Ltd,6300,monthly,90757.80151561975,2025-01-08
+zeta_distribution,Zeta Distribution Inc,Software License Accrual - Stewart-Carroll,6300,monthly,162266.57129612536,2025-06-20
+zeta_distribution,Zeta Distribution Inc,Property Tax Accrual - Bailey PLC,6300,annual,248692.6620405018,2025-01-04
+zeta_distribution,Zeta Distribution Inc,Audit Fees Accrual - Anderson-Jones,6500,annual,170002.93054800766,2025-12-06
+zeta_distribution,Zeta Distribution Inc,Travel Expense Accrual - Goodwin Ltd,7200,monthly,163338.9145269369,2025-09-03
+zeta_distribution,Zeta Distribution Inc,Commission Accrual - Dominguez-Weaver,6000,monthly,17473.66547102535,2025-09-18
+zeta_distribution,Zeta Distribution Inc,Marketing Campaign Accrual - Smith-Mann,7000,quarterly,170792.65242102218,2025-08-07
+eta_analytics,Eta Analytics Partners,Rent Expense,6200,monthly,104166.66666666667,2025-12-31
+eta_analytics,Eta Analytics Partners,Utilities,6300,monthly,41666.666666666664,2025-12-31
+eta_analytics,Eta Analytics Partners,Insurance,6400,quarterly,249999.99999999997,2025-12-31
+eta_analytics,Eta Analytics Partners,Professional Fees,6500,monthly,62499.99999999999,2025-12-31
+eta_analytics,Eta Analytics Partners,Bonus Accrual,6000,annual,1250000.0,2025-12-31
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - Ramirez Ltd,6500,monthly,27148.021001898218,2025-05-17
+eta_analytics,Eta Analytics Partners,Travel Expense Accrual - Walker-Burton,7200,monthly,36741.49271557916,2025-05-16
+eta_analytics,Eta Analytics Partners,Server Hosting Accrual - Chan-Smith,6300,monthly,3533.661521570169,2025-01-27
+eta_analytics,Eta Analytics Partners,"Equipment Maintenance - Morgan, Young and Thompson",6300,quarterly,31679.616366243237,2025-11-06
+eta_analytics,Eta Analytics Partners,Equipment Maintenance - Oliver-Dominguez,6300,quarterly,23082.665896066123,2025-04-09
+eta_analytics,Eta Analytics Partners,Property Tax Accrual - Cole-Curry,6300,annual,8646.896478616012,2025-07-22
+eta_analytics,Eta Analytics Partners,Commission Accrual - Johnson-Valdez,6000,monthly,4448.05447764348,2025-07-21
+eta_analytics,Eta Analytics Partners,Marketing Campaign Accrual - Oliver-Wallace,7000,quarterly,24984.255754716436,2025-05-23
+eta_analytics,Eta Analytics Partners,"Travel Expense Accrual - Watkins, Davis and Durham",7200,monthly,2976.371665344944,2025-10-05
+eta_analytics,Eta Analytics Partners,Commission Accrual - Ward-Stone,6000,monthly,39525.63995673613,2025-03-18
+eta_analytics,Eta Analytics Partners,"Audit Fees Accrual - Bradley, Wilkins and Hess",6500,annual,30214.210523925976,2025-08-17
+eta_analytics,Eta Analytics Partners,Warranty Provision - Garcia-Ferguson,5200,annual,22311.25468392836,2025-10-11
+eta_analytics,Eta Analytics Partners,Interest Expense Accrual - Mitchell and Sons,9500,monthly,28294.46448319072,2025-02-25
+eta_analytics,Eta Analytics Partners,Travel Expense Accrual - Stanley-Alvarez,7200,monthly,17703.834910099748,2025-11-16
+eta_analytics,Eta Analytics Partners,Consulting Fees Accrual - Richard-Elliott,6500,monthly,33888.965366344535,2025-05-06
+eta_analytics,Eta Analytics Partners,Equipment Maintenance - Parker-Johnson,6300,quarterly,26730.710629088982,2025-04-24
+eta_analytics,Eta Analytics Partners,"Legal Fees Accrual - Simon, Mcdaniel and Sanchez",6500,monthly,32491.879366724806,2025-03-18
+eta_analytics,Eta Analytics Partners,Warranty Provision - Krueger-Jefferson,5200,annual,26942.18324615523,2025-09-12
+eta_analytics,Eta Analytics Partners,Warranty Provision - Davis-Allen,5200,annual,11665.33550548242,2025-04-27
+eta_analytics,Eta Analytics Partners,"Travel Expense Accrual - Roberson, Martinez and Hendricks",7200,monthly,30576.6534417075,2025-10-16
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - Parker LLC,6500,monthly,10986.851360543591,2025-11-04
+eta_analytics,Eta Analytics Partners,"Property Tax Accrual - Erickson, Patterson and Castro",6300,annual,27501.78289598485,2025-04-08
+eta_analytics,Eta Analytics Partners,"Interest Expense Accrual - Armstrong, Walker and Gonzalez",9500,monthly,35894.73633030843,2025-12-10
+eta_analytics,Eta Analytics Partners,Interest Expense Accrual - Tran PLC,9500,monthly,32583.880833362247,2025-08-07
+eta_analytics,Eta Analytics Partners,Warranty Provision - Martinez Inc,5200,annual,20581.981510659956,2025-12-11
+eta_analytics,Eta Analytics Partners,"Consulting Fees Accrual - Patterson, Booker and Martin",6500,monthly,18293.882641130986,2025-05-22
+eta_analytics,Eta Analytics Partners,"Marketing Campaign Accrual - Hudson, Campbell and Goodman",7000,quarterly,19218.690313424297,2025-05-02
+eta_analytics,Eta Analytics Partners,Equipment Maintenance - Johnson PLC,6300,quarterly,8620.674981760949,2025-02-26
+eta_analytics,Eta Analytics Partners,Server Hosting Accrual - Nicholson Ltd,6300,monthly,6255.389685104539,2025-01-16
+eta_analytics,Eta Analytics Partners,"Audit Fees Accrual - Grant, Cameron and Quinn",6500,annual,15589.281302260759,2025-08-13
+eta_analytics,Eta Analytics Partners,Warranty Provision - Smith LLC,5200,annual,30330.60562456348,2025-05-15
+eta_analytics,Eta Analytics Partners,Server Hosting Accrual - Fields Inc,6300,monthly,4665.042530814314,2025-03-23
+eta_analytics,Eta Analytics Partners,Freight/Shipping Accrual - Williams Inc,5200,monthly,40685.47301896771,2025-04-14
+eta_analytics,Eta Analytics Partners,"Warranty Provision - Morgan, Armstrong and Strong",5200,annual,7329.754019737322,2025-09-21
+eta_analytics,Eta Analytics Partners,Marketing Campaign Accrual - Sandoval-Boyle,7000,quarterly,13037.238641434358,2025-03-24
+eta_analytics,Eta Analytics Partners,Consulting Fees Accrual - Cameron-Flores,6500,monthly,28134.55991446785,2025-08-09
+eta_analytics,Eta Analytics Partners,"Contractor Fees Accrual - Maxwell, Foster and Cooper",6500,monthly,6540.983129801552,2025-08-12
+eta_analytics,Eta Analytics Partners,Contractor Fees Accrual - Watts Ltd,6500,monthly,23784.28665046463,2025-07-13
+eta_analytics,Eta Analytics Partners,Software License Accrual - Campbell-Jackson,6300,monthly,9353.368297306579,2025-05-18
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - Anderson LLC,6500,monthly,39748.12678433427,2025-02-19
+eta_analytics,Eta Analytics Partners,Marketing Campaign Accrual - Thompson-Thompson,7000,quarterly,38674.84284612675,2025-06-26
+eta_analytics,Eta Analytics Partners,Contractor Fees Accrual - Kim Inc,6500,monthly,32222.2372160744,2025-06-23
+eta_analytics,Eta Analytics Partners,Software License Accrual - Mckee Inc,6300,monthly,34910.00887802007,2025-12-06
+eta_analytics,Eta Analytics Partners,Marketing Campaign Accrual - Lee and Sons,7000,quarterly,31627.46689600123,2025-07-26
+eta_analytics,Eta Analytics Partners,"Property Tax Accrual - Watts, Moss and Daniels",6300,annual,3497.7859409186844,2025-05-21
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - King-Mccall,6500,monthly,18787.861214469558,2025-03-12
+eta_analytics,Eta Analytics Partners,Property Tax Accrual - Lester Ltd,6300,annual,33722.98237884911,2025-07-23
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - Clay Inc,6500,monthly,29898.001483065902,2025-07-12
+eta_analytics,Eta Analytics Partners,"Property Tax Accrual - Galloway, Martin and Atkins",6300,annual,15034.323244744359,2025-03-07
+eta_analytics,Eta Analytics Partners,Commission Accrual - Morgan-Olson,6000,monthly,31987.021758816805,2025-12-08
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - Ayala-Collins,6500,monthly,9433.764813364498,2025-12-01
+eta_analytics,Eta Analytics Partners,"Server Hosting Accrual - Ortiz, Mcintosh and Bruce",6300,monthly,40733.226877570174,2025-05-01
+eta_analytics,Eta Analytics Partners,"Freight/Shipping Accrual - Brown, Gordon and Walters",5200,monthly,10067.018847742713,2025-08-24
+eta_analytics,Eta Analytics Partners,Property Tax Accrual - Bender-Snow,6300,annual,10071.168791245302,2025-03-19
+eta_analytics,Eta Analytics Partners,Server Hosting Accrual - Petty-Anderson,6300,monthly,10063.893243747392,2025-02-26
+eta_analytics,Eta Analytics Partners,Commission Accrual - Rollins-Park,6000,monthly,19108.663499673643,2025-05-12
+eta_analytics,Eta Analytics Partners,"Travel Expense Accrual - Castillo, Cannon and Murphy",7200,monthly,23822.224989315197,2025-04-03
+eta_analytics,Eta Analytics Partners,"Marketing Campaign Accrual - Durham, Burke and Roberts",7000,quarterly,14533.609617292135,2025-10-19
+eta_analytics,Eta Analytics Partners,Consulting Fees Accrual - Ramos-Castillo,6500,monthly,2821.341125015976,2025-07-15
+eta_analytics,Eta Analytics Partners,"Travel Expense Accrual - Osborn, Thomas and Holland",7200,monthly,15165.940096545744,2025-04-22
+eta_analytics,Eta Analytics Partners,"Contractor Fees Accrual - Rodriguez, Gray and Thomas",6500,monthly,34301.42913385518,2025-02-26
+eta_analytics,Eta Analytics Partners,Software License Accrual - Walker-Brown,6300,monthly,11264.1529660261,2025-12-14
+eta_analytics,Eta Analytics Partners,Marketing Campaign Accrual - Osborn Group,7000,quarterly,24391.318606530072,2025-09-18
+eta_analytics,Eta Analytics Partners,"Legal Fees Accrual - Savage, Parker and Curry",6500,monthly,4972.540195012719,2025-08-25
+eta_analytics,Eta Analytics Partners,Commission Accrual - Best-Mcneil,6000,monthly,10980.516321279836,2025-09-19
+eta_analytics,Eta Analytics Partners,Software License Accrual - Page and Sons,6300,monthly,13716.566152201547,2025-12-02
+eta_analytics,Eta Analytics Partners,Audit Fees Accrual - Herrera PLC,6500,annual,27039.866016554784,2025-12-09
+eta_analytics,Eta Analytics Partners,Consulting Fees Accrual - Fowler-Jackson,6500,monthly,14680.02723905764,2025-08-24
+eta_analytics,Eta Analytics Partners,Interest Expense Accrual - Lewis-Herring,9500,monthly,4511.136209818111,2025-12-02
+eta_analytics,Eta Analytics Partners,"Commission Accrual - Chase, Yang and Morales",6000,monthly,31440.932988323308,2025-12-27
+eta_analytics,Eta Analytics Partners,Contractor Fees Accrual - Robles-Sweeney,6500,monthly,30634.697232418333,2025-07-17
+eta_analytics,Eta Analytics Partners,Commission Accrual - Wong Ltd,6000,monthly,28747.614329088065,2025-04-22
+eta_analytics,Eta Analytics Partners,Server Hosting Accrual - Smith LLC,6300,monthly,30800.22999306452,2025-11-23
+eta_analytics,Eta Analytics Partners,"Contractor Fees Accrual - Baker, Montes and Williams",6500,monthly,13823.88444013963,2025-06-01
+eta_analytics,Eta Analytics Partners,Software License Accrual - Brandt-Moore,6300,monthly,33596.14761244911,2025-06-13
+eta_analytics,Eta Analytics Partners,Property Tax Accrual - Delacruz-Wright,6300,annual,34694.02447875832,2025-10-23
+eta_analytics,Eta Analytics Partners,Marketing Campaign Accrual - Walker Group,7000,quarterly,35165.08653139301,2025-01-03
+eta_analytics,Eta Analytics Partners,"Contractor Fees Accrual - Williams, Beasley and Robinson",6500,monthly,37011.24624771288,2025-04-12
+eta_analytics,Eta Analytics Partners,"Consulting Fees Accrual - Mcdonald, Ferguson and Brown",6500,monthly,10223.942656656698,2025-01-17
+eta_analytics,Eta Analytics Partners,Travel Expense Accrual - Rhodes-Mcdonald,7200,monthly,12159.76340442768,2025-12-09
+eta_analytics,Eta Analytics Partners,"Marketing Campaign Accrual - Robinson, Atkinson and Lyons",7000,quarterly,26946.019126525618,2025-10-09
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - Barr Group,6500,monthly,26952.223145567707,2025-02-13
+eta_analytics,Eta Analytics Partners,Marketing Campaign Accrual - Archer LLC,7000,quarterly,6540.332745594514,2025-10-13
+eta_analytics,Eta Analytics Partners,Marketing Campaign Accrual - Williams Ltd,7000,quarterly,29495.772510859642,2025-05-25
+eta_analytics,Eta Analytics Partners,Consulting Fees Accrual - Morris Group,6500,monthly,4520.761122148034,2025-08-12
+eta_analytics,Eta Analytics Partners,Server Hosting Accrual - Whitaker-Mckenzie,6300,monthly,32333.287701117002,2025-09-22
+eta_analytics,Eta Analytics Partners,Warranty Provision - Davis and Sons,5200,annual,21093.66298617587,2025-12-24
+eta_analytics,Eta Analytics Partners,Travel Expense Accrual - Wright and Sons,7200,monthly,31058.800729456103,2025-08-11
+eta_analytics,Eta Analytics Partners,Warranty Provision - Romero-Holloway,5200,annual,19607.65382084928,2025-07-26
+eta_analytics,Eta Analytics Partners,"Commission Accrual - Woods, Hall and Thompson",6000,monthly,39792.16637386811,2025-03-17
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - Gray-Bradshaw,6500,monthly,8718.181947799298,2025-10-20
+eta_analytics,Eta Analytics Partners,Audit Fees Accrual - Wilkins LLC,6500,annual,20512.989992468698,2025-08-05
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - Burns-Krueger,6500,monthly,11362.63746277825,2025-11-25
+eta_analytics,Eta Analytics Partners,"Legal Fees Accrual - Adams, Walters and Braun",6500,monthly,6448.040380260614,2025-01-08
+eta_analytics,Eta Analytics Partners,Property Tax Accrual - Pacheco-Johnson,6300,annual,18174.561451010184,2025-05-19
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - Burke-Rivers,6500,monthly,36981.81039261442,2025-09-26
+eta_analytics,Eta Analytics Partners,Legal Fees Accrual - Shaw-Mendoza,6500,monthly,24597.482825921867,2025-11-13
+eta_analytics,Eta Analytics Partners,Software License Accrual - Moore PLC,6300,monthly,10022.857425170238,2025-12-12
+eta_analytics,Eta Analytics Partners,Interest Expense Accrual - Garza-Moore,9500,monthly,38410.8015253689,2025-02-06
+eta_analytics,Eta Analytics Partners,Warranty Provision - Burns-Roberts,5200,annual,2932.2833901063464,2025-04-14
+eta_analytics,Eta Analytics Partners,"Warranty Provision - Campbell, Stone and Shaw",5200,annual,30089.668712911192,2025-09-06
+eta_analytics,Eta Analytics Partners,"Property Tax Accrual - Johnson, Brown and Robinson",6300,annual,8345.25175132335,2025-06-09
+eta_analytics,Eta Analytics Partners,Server Hosting Accrual - Jones-Walker,6300,monthly,3702.0686455950436,2025-10-09
+eta_analytics,Eta Analytics Partners,Marketing Campaign Accrual - Rich Inc,7000,quarterly,2820.2756993045455,2025-06-08
+eta_analytics,Eta Analytics Partners,Travel Expense Accrual - Sparks-Lewis,7200,monthly,13730.568731698027,2025-06-20
+eta_analytics,Eta Analytics Partners,Marketing Campaign Accrual - Pugh Inc,7000,quarterly,4675.445210428635,2025-03-02
+eta_analytics,Eta Analytics Partners,"Freight/Shipping Accrual - Hopkins, Woodard and Williams",5200,monthly,10242.073196101463,2025-06-25
+eta_analytics,Eta Analytics Partners,"Software License Accrual - Hendricks, Jackson and Nichols",6300,monthly,29812.513720814935,2025-04-13
+eta_analytics,Eta Analytics Partners,Travel Expense Accrual - Woodward-Turner,7200,monthly,4212.806549411563,2025-10-04
+eta_analytics,Eta Analytics Partners,Audit Fees Accrual - Ross-Edwards,6500,annual,41446.73418816094,2025-03-01
+eta_analytics,Eta Analytics Partners,"Software License Accrual - Smith, Park and Reynolds",6300,monthly,36870.4097046991,2025-04-25
+eta_analytics,Eta Analytics Partners,Travel Expense Accrual - Jordan-Nelson,7200,monthly,5687.93532431918,2025-07-08
+eta_analytics,Eta Analytics Partners,"Software License Accrual - Lewis, Hernandez and Church",6300,monthly,30163.643780929757,2025-11-07
+eta_analytics,Eta Analytics Partners,"Contractor Fees Accrual - Olson, Cook and Andrews",6500,monthly,38124.844335738984,2025-05-08
+eta_analytics,Eta Analytics Partners,Property Tax Accrual - Harrison-Adams,6300,annual,23107.781884259697,2025-07-02
+eta_analytics,Eta Analytics Partners,Equipment Maintenance - Ramsey LLC,6300,quarterly,3596.982453123666,2025-10-26
+eta_analytics,Eta Analytics Partners,Property Tax Accrual - Carter-Griffin,6300,annual,30478.770208821137,2025-01-05
+eta_analytics,Eta Analytics Partners,Contractor Fees Accrual - Choi Group,6500,monthly,23684.96622937833,2025-05-26
+eta_analytics,Eta Analytics Partners,"Consulting Fees Accrual - Thompson, Watson and Steele",6500,monthly,8934.10866687321,2025-11-24
+eta_analytics,Eta Analytics Partners,"Marketing Campaign Accrual - Christian, Figueroa and Jackson",7000,quarterly,38269.8040122341,2025-05-22
+eta_analytics,Eta Analytics Partners,"Server Hosting Accrual - Freeman, Nelson and Cooper",6300,monthly,22001.594759366864,2025-12-10
+theta_packaging,Theta Sustainable Packaging,Rent Expense,6200,monthly,250000.0,2025-12-31
+theta_packaging,Theta Sustainable Packaging,Utilities,6300,monthly,100000.0,2025-12-31
+theta_packaging,Theta Sustainable Packaging,Insurance,6400,quarterly,600000.0,2025-12-31
+theta_packaging,Theta Sustainable Packaging,Professional Fees,6500,monthly,150000.0,2025-12-31
+theta_packaging,Theta Sustainable Packaging,Bonus Accrual,6000,annual,3000000.0,2025-12-31
+theta_packaging,Theta Sustainable Packaging,Software License Accrual - Moore LLC,6300,monthly,17333.749331779018,2025-05-11
+theta_packaging,Theta Sustainable Packaging,"Warranty Provision - Walters, Guzman and Kelly",5200,annual,63419.06608216879,2025-05-20
+theta_packaging,Theta Sustainable Packaging,Equipment Maintenance - Andrews-Pierce,6300,quarterly,68713.08100113264,2025-05-12
+theta_packaging,Theta Sustainable Packaging,"Consulting Fees Accrual - Willis, Cole and Yoder",6500,monthly,49554.59077075997,2025-11-17
+theta_packaging,Theta Sustainable Packaging,Commission Accrual - Levine Group,6000,monthly,94214.75102700165,2025-10-11
+theta_packaging,Theta Sustainable Packaging,Freight/Shipping Accrual - Fitzgerald PLC,5200,monthly,21755.10208027018,2025-07-25
+theta_packaging,Theta Sustainable Packaging,"Legal Fees Accrual - Marshall, Bennett and Anderson",6500,monthly,30381.298413447523,2025-04-19
+theta_packaging,Theta Sustainable Packaging,Freight/Shipping Accrual - Shaw and Sons,5200,monthly,75117.13266161976,2025-02-17
+theta_packaging,Theta Sustainable Packaging,Marketing Campaign Accrual - Vincent PLC,7000,quarterly,10256.353548847743,2025-04-27
+theta_packaging,Theta Sustainable Packaging,Audit Fees Accrual - Lopez-Campbell,6500,annual,91816.75708767003,2025-03-20
+theta_packaging,Theta Sustainable Packaging,"Travel Expense Accrual - Hill, Mccarty and Wilson",7200,monthly,71189.09638505854,2025-04-06
+theta_packaging,Theta Sustainable Packaging,Consulting Fees Accrual - Dougherty and Sons,6500,monthly,98491.86949855962,2025-10-09
+theta_packaging,Theta Sustainable Packaging,"Warranty Provision - Knight, Ochoa and Blake",5200,annual,75293.32914653122,2025-03-08
+theta_packaging,Theta Sustainable Packaging,Contractor Fees Accrual - Vaughn-Holt,6500,monthly,7338.6018125170185,2025-11-17
+theta_packaging,Theta Sustainable Packaging,Audit Fees Accrual - Morrison PLC,6500,annual,62384.9685784284,2025-01-22
+theta_packaging,Theta Sustainable Packaging,Interest Expense Accrual - Nixon-Rhodes,9500,monthly,72334.5239994146,2025-04-14
+theta_packaging,Theta Sustainable Packaging,Legal Fees Accrual - Decker-Anderson,6500,monthly,92614.3598253887,2025-10-22
+theta_packaging,Theta Sustainable Packaging,Equipment Maintenance - Walton Ltd,6300,quarterly,42243.975857397614,2025-11-08
+theta_packaging,Theta Sustainable Packaging,Commission Accrual - Gutierrez Inc,6000,monthly,65712.64688964903,2025-08-27
+theta_packaging,Theta Sustainable Packaging,Freight/Shipping Accrual - Hernandez-Carpenter,5200,monthly,12358.717764714278,2025-10-12
+theta_packaging,Theta Sustainable Packaging,Equipment Maintenance - Bailey Group,6300,quarterly,54929.08395182095,2025-08-03
+theta_packaging,Theta Sustainable Packaging,Contractor Fees Accrual - Huber-Olson,6500,monthly,72114.53203063,2025-01-18
+theta_packaging,Theta Sustainable Packaging,"Equipment Maintenance - Mora, Short and Padilla",6300,quarterly,48800.2720207222,2025-09-23
+theta_packaging,Theta Sustainable Packaging,"Audit Fees Accrual - White, Phelps and Wilkinson",6500,annual,42600.876552541966,2025-10-26
+theta_packaging,Theta Sustainable Packaging,Contractor Fees Accrual - Ramsey LLC,6500,monthly,36454.08222489681,2025-03-26
+theta_packaging,Theta Sustainable Packaging,Server Hosting Accrual - Carlson-Martinez,6300,monthly,45681.65175939432,2025-05-21
+theta_packaging,Theta Sustainable Packaging,"Marketing Campaign Accrual - Jackson, Charles and Williams",7000,quarterly,87984.78104063726,2025-11-23
+theta_packaging,Theta Sustainable Packaging,"Legal Fees Accrual - Perez, Phillips and Rose",6500,monthly,66292.0547266109,2025-05-26
+theta_packaging,Theta Sustainable Packaging,Commission Accrual - Turner-Golden,6000,monthly,38215.27701028765,2025-05-06
+theta_packaging,Theta Sustainable Packaging,Server Hosting Accrual - Hughes-Medina,6300,monthly,70223.84466068704,2025-11-13
+theta_packaging,Theta Sustainable Packaging,Consulting Fees Accrual - Thomas-Stokes,6500,monthly,5972.410442240209,2025-08-19
+theta_packaging,Theta Sustainable Packaging,Travel Expense Accrual - Palmer-Ali,7200,monthly,10208.857039145287,2025-09-22
+theta_packaging,Theta Sustainable Packaging,Consulting Fees Accrual - Molina Ltd,6500,monthly,54482.00378863359,2025-10-22
+theta_packaging,Theta Sustainable Packaging,Commission Accrual - Curry Inc,6000,monthly,79083.17863764788,2025-05-12
+theta_packaging,Theta Sustainable Packaging,"Audit Fees Accrual - Maxwell, Garcia and Welch",6500,annual,66965.10085230079,2025-01-25
+theta_packaging,Theta Sustainable Packaging,"Commission Accrual - Hopkins, Riley and Gomez",6000,monthly,91599.71629935161,2025-11-18
+theta_packaging,Theta Sustainable Packaging,Property Tax Accrual - Branch-Yoder,6300,annual,15691.785174672656,2025-06-27
+theta_packaging,Theta Sustainable Packaging,"Audit Fees Accrual - Madden, Franklin and Wilson",6500,annual,86419.75899914309,2025-09-27
+theta_packaging,Theta Sustainable Packaging,Audit Fees Accrual - Ramirez-Graham,6500,annual,74387.4859079156,2025-12-13
+theta_packaging,Theta Sustainable Packaging,"Consulting Fees Accrual - Washington, Davis and Chambers",6500,monthly,6395.392517753185,2025-08-14
+theta_packaging,Theta Sustainable Packaging,Equipment Maintenance - Lewis-Mccoy,6300,quarterly,36784.06529495235,2025-12-13
+theta_packaging,Theta Sustainable Packaging,Commission Accrual - Mercado LLC,6000,monthly,11127.39363646578,2025-11-06
+theta_packaging,Theta Sustainable Packaging,Contractor Fees Accrual - Dorsey-Cooper,6500,monthly,40942.86508405003,2025-04-03
+theta_packaging,Theta Sustainable Packaging,Freight/Shipping Accrual - Cook Inc,5200,monthly,11847.104335039408,2025-07-15
+theta_packaging,Theta Sustainable Packaging,Contractor Fees Accrual - Jackson Ltd,6500,monthly,63377.420369863656,2025-04-10
+theta_packaging,Theta Sustainable Packaging,Server Hosting Accrual - Coleman PLC,6300,monthly,59125.450573039685,2025-03-25
+theta_packaging,Theta Sustainable Packaging,Consulting Fees Accrual - Bridges Inc,6500,monthly,35177.47051494104,2025-11-02
+theta_packaging,Theta Sustainable Packaging,Audit Fees Accrual - Mcclure-Lee,6500,annual,12157.138666728893,2025-04-04
+theta_packaging,Theta Sustainable Packaging,"Warranty Provision - Garza, Bell and Price",5200,annual,59694.5333901264,2025-09-20
+theta_packaging,Theta Sustainable Packaging,"Interest Expense Accrual - Johnson, Richards and King",9500,monthly,63510.78493102735,2025-08-12
+theta_packaging,Theta Sustainable Packaging,"Marketing Campaign Accrual - Ingram, Silva and Taylor",7000,quarterly,25391.27714347304,2025-03-20
+theta_packaging,Theta Sustainable Packaging,Travel Expense Accrual - Garcia-Briggs,7200,monthly,34747.83405063866,2025-04-16
+theta_packaging,Theta Sustainable Packaging,Legal Fees Accrual - Perez Inc,6500,monthly,17237.854358080884,2025-11-05
+theta_packaging,Theta Sustainable Packaging,Server Hosting Accrual - Serrano LLC,6300,monthly,97576.78585951099,2025-11-07
+theta_packaging,Theta Sustainable Packaging,Legal Fees Accrual - Howell Inc,6500,monthly,65108.67996181766,2025-01-09
+theta_packaging,Theta Sustainable Packaging,Travel Expense Accrual - Chapman-Hughes,7200,monthly,90225.55185472118,2025-02-21
+theta_packaging,Theta Sustainable Packaging,"Property Tax Accrual - Washington, Dominguez and Weiss",6300,annual,31442.747391306333,2025-12-13
+theta_packaging,Theta Sustainable Packaging,Interest Expense Accrual - Cervantes LLC,9500,monthly,82883.12446775785,2025-01-08
+theta_packaging,Theta Sustainable Packaging,"Freight/Shipping Accrual - Cabrera, Jackson and Rivera",5200,monthly,57506.62894081857,2025-05-06
+theta_packaging,Theta Sustainable Packaging,Contractor Fees Accrual - Patterson PLC,6500,monthly,10545.904181097623,2025-04-26
+theta_packaging,Theta Sustainable Packaging,Software License Accrual - Schmitt-Rivera,6300,monthly,36603.34213751505,2025-06-17
+theta_packaging,Theta Sustainable Packaging,"Commission Accrual - Howe, Bell and Walker",6000,monthly,31100.372632703882,2025-09-10
+theta_packaging,Theta Sustainable Packaging,Contractor Fees Accrual - King and Sons,6500,monthly,58169.13132783704,2025-01-03
+theta_packaging,Theta Sustainable Packaging,Marketing Campaign Accrual - Nguyen and Sons,7000,quarterly,80221.00201649021,2025-03-26
+theta_packaging,Theta Sustainable Packaging,Property Tax Accrual - Mendez-Reynolds,6300,annual,21516.46472157872,2025-05-01
+theta_packaging,Theta Sustainable Packaging,Audit Fees Accrual - Williams-Cook,6500,annual,39384.798134938785,2025-07-02
+theta_packaging,Theta Sustainable Packaging,Property Tax Accrual - Thompson-Mora,6300,annual,26129.5696058922,2025-02-04
+theta_packaging,Theta Sustainable Packaging,"Audit Fees Accrual - Acosta, Bradford and Hood",6500,annual,89717.29001989141,2025-02-24
+theta_packaging,Theta Sustainable Packaging,"Marketing Campaign Accrual - Cruz, Alexander and Craig",7000,quarterly,76445.67646007681,2025-11-17
+theta_packaging,Theta Sustainable Packaging,"Interest Expense Accrual - Smith, Carney and Gomez",9500,monthly,10605.553138476535,2025-03-24
+theta_packaging,Theta Sustainable Packaging,Consulting Fees Accrual - Reeves and Sons,6500,monthly,88219.62608201851,2025-07-18
+theta_packaging,Theta Sustainable Packaging,Property Tax Accrual - Hunt Inc,6300,annual,24152.284442189826,2025-12-21
+theta_packaging,Theta Sustainable Packaging,Server Hosting Accrual - Park-Carrillo,6300,monthly,98294.59908353574,2025-06-07
+theta_packaging,Theta Sustainable Packaging,Commission Accrual - Benitez Group,6000,monthly,42335.44129905561,2025-05-24
+theta_packaging,Theta Sustainable Packaging,Legal Fees Accrual - Alvarado-Moyer,6500,monthly,77643.18968062181,2025-06-14
+theta_packaging,Theta Sustainable Packaging,Freight/Shipping Accrual - Bailey-Williams,5200,monthly,12025.465776214316,2025-04-17
+theta_packaging,Theta Sustainable Packaging,Audit Fees Accrual - Bailey-Fields,6500,annual,96601.82817002722,2025-09-18
+theta_packaging,Theta Sustainable Packaging,Equipment Maintenance - Wood and Sons,6300,quarterly,24579.716358590613,2025-10-12
+theta_packaging,Theta Sustainable Packaging,"Audit Fees Accrual - Hill, Thompson and Owens",6500,annual,77289.07414641273,2025-05-25
+theta_packaging,Theta Sustainable Packaging,Travel Expense Accrual - Miller-Marshall,7200,monthly,32083.432002967536,2025-09-16
+theta_packaging,Theta Sustainable Packaging,Software License Accrual - Kane-Williams,6300,monthly,43184.5708856145,2025-12-07
+theta_packaging,Theta Sustainable Packaging,Travel Expense Accrual - Johnson-Bowman,7200,monthly,7776.576618074257,2025-10-23
+theta_packaging,Theta Sustainable Packaging,Marketing Campaign Accrual - Mcgrath-Mckinney,7000,quarterly,16784.013816517832,2025-03-08
+theta_packaging,Theta Sustainable Packaging,Audit Fees Accrual - Allen-Hoffman,6500,annual,46265.58212281265,2025-01-20
+theta_packaging,Theta Sustainable Packaging,Server Hosting Accrual - Martinez LLC,6300,monthly,89526.54371556574,2025-09-13
+theta_packaging,Theta Sustainable Packaging,"Property Tax Accrual - Allen, Bernard and Monroe",6300,annual,55902.867184293034,2025-04-02
+theta_packaging,Theta Sustainable Packaging,"Server Hosting Accrual - Garcia, Holmes and Daniels",6300,monthly,44920.775300187845,2025-03-19
+theta_packaging,Theta Sustainable Packaging,"Freight/Shipping Accrual - Williams, Bryant and Anderson",5200,monthly,10259.140079072537,2025-09-10
+theta_packaging,Theta Sustainable Packaging,Software License Accrual - Carpenter-Bentley,6300,monthly,20182.307768295097,2025-06-10
+theta_packaging,Theta Sustainable Packaging,"Warranty Provision - Martin, Walters and Wood",5200,annual,83839.82294663716,2025-12-12
+theta_packaging,Theta Sustainable Packaging,"Interest Expense Accrual - Hunter, Greene and Cervantes",9500,monthly,18444.452335521393,2025-09-02
+theta_packaging,Theta Sustainable Packaging,Travel Expense Accrual - Booth PLC,7200,monthly,25763.817042900337,2025-12-25
+theta_packaging,Theta Sustainable Packaging,Marketing Campaign Accrual - Wyatt Ltd,7000,quarterly,77411.95503101216,2025-06-08
+theta_packaging,Theta Sustainable Packaging,Commission Accrual - Griffin Group,6000,monthly,81456.78909837056,2025-08-17
+theta_packaging,Theta Sustainable Packaging,Audit Fees Accrual - Benitez-Cohen,6500,annual,97117.40192098678,2025-12-11
+theta_packaging,Theta Sustainable Packaging,Property Tax Accrual - Cantrell PLC,6300,annual,93034.01367634808,2025-06-24
+theta_packaging,Theta Sustainable Packaging,"Server Hosting Accrual - Smith, Barnes and Larson",6300,monthly,94219.01871957102,2025-12-14
+theta_packaging,Theta Sustainable Packaging,Software License Accrual - Shepherd PLC,6300,monthly,97273.62369040019,2025-04-13
+theta_packaging,Theta Sustainable Packaging,Equipment Maintenance - Stewart Ltd,6300,quarterly,24982.723377450573,2025-01-08
+theta_packaging,Theta Sustainable Packaging,Freight/Shipping Accrual - Peterson-Douglas,5200,monthly,54304.1892777337,2025-07-08
+theta_packaging,Theta Sustainable Packaging,"Contractor Fees Accrual - Miller, Stewart and Smith",6500,monthly,74808.75689120393,2025-08-24
+theta_packaging,Theta Sustainable Packaging,Contractor Fees Accrual - Salazar LLC,6500,monthly,32956.29253554712,2025-04-23
+theta_packaging,Theta Sustainable Packaging,Marketing Campaign Accrual - Ferguson-Tapia,7000,quarterly,88950.72981330373,2025-10-07
+theta_packaging,Theta Sustainable Packaging,Contractor Fees Accrual - Mills Group,6500,monthly,89081.10756865136,2025-03-26
+theta_packaging,Theta Sustainable Packaging,Travel Expense Accrual - Larson LLC,7200,monthly,59429.82725849696,2025-02-11
+theta_packaging,Theta Sustainable Packaging,"Marketing Campaign Accrual - Copeland, Perez and Kane",7000,quarterly,35810.593479816154,2025-04-26
+theta_packaging,Theta Sustainable Packaging,Marketing Campaign Accrual - Ramirez-Wilson,7000,quarterly,47245.61142155407,2025-12-05
+theta_packaging,Theta Sustainable Packaging,Warranty Provision - Wallace Group,5200,annual,19974.32146947011,2025-06-21
+theta_packaging,Theta Sustainable Packaging,Travel Expense Accrual - Gutierrez and Sons,7200,monthly,44135.45540854149,2025-01-06
+theta_packaging,Theta Sustainable Packaging,Travel Expense Accrual - Maxwell-Murillo,7200,monthly,51718.969483481225,2025-07-26
+theta_packaging,Theta Sustainable Packaging,Software License Accrual - Stephens Ltd,6300,monthly,50312.97856558694,2025-11-03
+theta_packaging,Theta Sustainable Packaging,Travel Expense Accrual - Franklin and Sons,7200,monthly,52446.86463325168,2025-03-22
+theta_packaging,Theta Sustainable Packaging,Legal Fees Accrual - Perez-Grimes,6500,monthly,27937.695863695557,2025-11-02
+theta_packaging,Theta Sustainable Packaging,Warranty Provision - Brown-Foster,5200,annual,98713.17624982409,2025-04-20
+theta_packaging,Theta Sustainable Packaging,Freight/Shipping Accrual - Owens LLC,5200,monthly,76138.85887868221,2025-01-26
+theta_packaging,Theta Sustainable Packaging,"Warranty Provision - Gutierrez, Boyle and Willis",5200,annual,63639.31533344979,2025-01-04
+theta_packaging,Theta Sustainable Packaging,Consulting Fees Accrual - Rodriguez-Kramer,6500,monthly,97088.50870939551,2025-10-08
+theta_packaging,Theta Sustainable Packaging,Property Tax Accrual - James LLC,6300,annual,48399.38689171914,2025-12-03
+theta_packaging,Theta Sustainable Packaging,"Property Tax Accrual - Mcdonald, Barrera and Thomas",6300,annual,48136.96656255138,2025-05-05
+theta_packaging,Theta Sustainable Packaging,Audit Fees Accrual - Santos-Mckenzie,6500,annual,45205.36858746644,2025-07-13
+theta_packaging,Theta Sustainable Packaging,Contractor Fees Accrual - Black-Andrews,6500,monthly,6786.060719020112,2025-10-19

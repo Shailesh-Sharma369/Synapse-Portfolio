@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2024-GAMM-001",
+    "customer": "Payne Inc",
+    "company": "gamma_retail",
+    "start_date": "2024-10-20",
+    "end_date": "2026-10-20",
+    "total_contract_value": 2280749.28,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1824599.42
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 456149.86
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-002",
+    "customer": "Griffin-Bridges",
+    "company": "gamma_retail",
+    "start_date": "2024-04-29",
+    "end_date": "2027-04-29",
+    "total_contract_value": 4791895.06,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3833516.05
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 958379.01
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-003",
+    "customer": "Andrade-Bradshaw",
+    "company": "gamma_retail",
+    "start_date": "2024-12-10",
+    "end_date": "2025-12-10",
+    "total_contract_value": 1219921.3,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 975937.04
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 243984.26
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-004",
+    "customer": "Wilson, Briggs and Lawrence",
+    "company": "gamma_retail",
+    "start_date": "2024-12-31",
+    "end_date": "2026-12-31",
+    "total_contract_value": 8742007.08,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6993605.66
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1748401.42
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-005",
+    "customer": "Thomas-Frederick",
+    "company": "gamma_retail",
+    "start_date": "2025-04-27",
+    "end_date": "2028-04-26",
+    "total_contract_value": 7751284.9,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6201027.92
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1550256.98
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-006",
+    "customer": "Smith-Allen",
+    "company": "gamma_retail",
+    "start_date": "2024-07-16",
+    "end_date": "2026-07-16",
+    "total_contract_value": 4812796.04,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3850236.83
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 962559.21
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-007",
+    "customer": "Jacobs LLC",
+    "company": "gamma_retail",
+    "start_date": "2025-04-20",
+    "end_date": "2027-04-20",
+    "total_contract_value": 2126532.02,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1701225.62
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 425306.4
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-008",
+    "customer": "Rodriguez and Sons",
+    "company": "gamma_retail",
+    "start_date": "2025-04-13",
+    "end_date": "2026-04-13",
+    "total_contract_value": 5606744.83,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4485395.86
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1121348.97
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-009",
+    "customer": "Harmon, Warren and Rodriguez",
+    "company": "gamma_retail",
+    "start_date": "2024-11-05",
+    "end_date": "2025-11-05",
+    "total_contract_value": 9440281.12,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 7552224.9
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1888056.22
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-010",
+    "customer": "Schmidt PLC",
+    "company": "gamma_retail",
+    "start_date": "2025-12-05",
+    "end_date": "2028-12-04",
+    "total_contract_value": 1335558.36,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1068446.69
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 267111.67
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-011",
+    "customer": "Clark-Rodgers",
+    "company": "gamma_retail",
+    "start_date": "2025-11-11",
+    "end_date": "2026-11-11",
+    "total_contract_value": 7539543.63,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6031634.9
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1507908.73
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-012",
+    "customer": "Oconnor, Davis and Garcia",
+    "company": "gamma_retail",
+    "start_date": "2025-01-01",
+    "end_date": "2026-01-01",
+    "total_contract_value": 7703549.71,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6162839.77
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1540709.94
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-013",
+    "customer": "Massey, Crawford and Williams",
+    "company": "gamma_retail",
+    "start_date": "2025-09-26",
+    "end_date": "2026-09-26",
+    "total_contract_value": 8990338.15,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6426102.72
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1606525.68
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-014",
+    "customer": "Davis, Rodriguez and Gonzalez",
+    "company": "gamma_retail",
+    "start_date": "2025-08-09",
+    "end_date": "2027-08-09",
+    "total_contract_value": 4447937.99,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3558350.39
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 889587.6
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-015",
+    "customer": "Atkins and Sons",
+    "company": "gamma_retail",
+    "start_date": "2025-01-16",
+    "end_date": "2027-01-16",
+    "total_contract_value": 5259706.97,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3447483.19
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 861870.8
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-016",
+    "customer": "Aguirre, Thomas and Mullins",
+    "company": "gamma_retail",
+    "start_date": "2024-02-22",
+    "end_date": "2025-02-21",
+    "total_contract_value": 5436849.12,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3937025.58
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 984256.4
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-017",
+    "customer": "Ortiz, Lee and Williams",
+    "company": "gamma_retail",
+    "start_date": "2024-04-30",
+    "end_date": "2025-04-30",
+    "total_contract_value": 8610988.61,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6888790.89
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1722197.72
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-018",
+    "customer": "Brown-Brown",
+    "company": "gamma_retail",
+    "start_date": "2025-06-12",
+    "end_date": "2026-06-12",
+    "total_contract_value": 9594566.22,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 7675652.98
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1918913.24
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-019",
+    "customer": "Lee-Ayala",
+    "company": "gamma_retail",
+    "start_date": "2024-01-15",
+    "end_date": "2027-01-14",
+    "total_contract_value": 4972279.14,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 3977823.31
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 994455.83
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-020",
+    "customer": "Montgomery-Moore",
+    "company": "gamma_retail",
+    "start_date": "2024-02-23",
+    "end_date": "2025-02-22",
+    "total_contract_value": 5021070.78,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4016856.62
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1004214.16
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-021",
+    "customer": "Lucas-Mckinney",
+    "company": "gamma_retail",
+    "start_date": "2025-04-13",
+    "end_date": "2027-04-13",
+    "total_contract_value": 2915753.33,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2332602.66
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 583150.67
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-022",
+    "customer": "Guzman Ltd",
+    "company": "gamma_retail",
+    "start_date": "2025-07-05",
+    "end_date": "2026-07-05",
+    "total_contract_value": 2741453.37,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2193162.7
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 548290.67
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-023",
+    "customer": "Mckinney LLC",
+    "company": "gamma_retail",
+    "start_date": "2024-10-02",
+    "end_date": "2025-10-02",
+    "total_contract_value": 8330734.99,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6664587.99
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1666147.0
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-GAMM-024",
+    "customer": "Murray PLC",
+    "company": "gamma_retail",
+    "start_date": "2024-12-16",
+    "end_date": "2025-12-16",
+    "total_contract_value": 6097719.26,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 4276757.14
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1069189.29
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-GAMM-025",
+    "customer": "Miller Inc",
+    "company": "gamma_retail",
+    "start_date": "2025-04-16",
+    "end_date": "2028-04-15",
+    "total_contract_value": 7784766.53,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 6227813.22
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 1556953.31
+      }
+    ]
+  }
+]

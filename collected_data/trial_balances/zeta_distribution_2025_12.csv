@@ -1,0 +1,37 @@
+account_code,account_name,debit,credit,balance,account_type,company_id,company_name,period
+1000,Cash and Cash Equivalents,33127165.701017454,0.0,33127165.701017454,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+1100,Accounts Receivable,29158926.647250485,0.0,29158926.647250485,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+1150,Allowance for Doubtful Accounts,0.0,257311.68936429598,-257311.68936429598,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+1200,Inventory - Raw Materials,16100053.69525348,0.0,16100053.69525348,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+1210,Inventory - Work in Process,17755729.673979152,0.0,17755729.673979152,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+1220,Inventory - Finished Goods,7599926.59900355,0.0,7599926.59900355,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+1300,Prepaid Expenses,2374209.3633838147,0.0,2374209.3633838147,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+1400,"Property, Plant & Equipment",60000000.0,0.0,60000000.0,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+1450,Accumulated Depreciation,0.0,22500000.0,-22500000.0,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+1500,Intangible Assets,45000000.0,0.0,45000000.0,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+1550,Accumulated Amortization,0.0,12000000.0,-12000000.0,Asset,zeta_distribution,Zeta Distribution Inc,2025-12
+2000,Accounts Payable,0.0,12684361.081923561,-12684361.081923561,Liability,zeta_distribution,Zeta Distribution Inc,2025-12
+2100,Accrued Expenses,0.0,3596142.7369619804,-3596142.7369619804,Liability,zeta_distribution,Zeta Distribution Inc,2025-12
+2150,Accrued Payroll,0.0,3131571.8071096186,-3131571.8071096186,Liability,zeta_distribution,Zeta Distribution Inc,2025-12
+2200,Deferred Revenue,0.0,0.0,0.0,Liability,zeta_distribution,Zeta Distribution Inc,2025-12
+2300,Current Portion of Long-term Debt,0.0,120930820.64244959,-120930820.64244959,Liability,zeta_distribution,Zeta Distribution Inc,2025-12
+2400,Long-term Debt,0.0,264818362.65514538,-264818362.65514538,Liability,zeta_distribution,Zeta Distribution Inc,2025-12
+3000,Common Stock,0.0,75000000.0,-75000000.0,Equity,zeta_distribution,Zeta Distribution Inc,2025-12
+3100,Retained Earnings,0.0,-304234287.5315895,304234287.5315895,Equity,zeta_distribution,Zeta Distribution Inc,2025-12
+4000,Product Sales,0.0,12865584.468214799,-12865584.468214799,Revenue,zeta_distribution,Zeta Distribution Inc,2025-12
+5000,Cost of Goods Sold - Materials,3516593.087978712,0.0,3516593.087978712,COGS,zeta_distribution,Zeta Distribution Inc,2025-12
+5100,Cost of Goods Sold - Labor,3516593.087978712,0.0,3516593.087978712,COGS,zeta_distribution,Zeta Distribution Inc,2025-12
+5200,Cost of Goods Sold - Overhead,3516593.087978712,0.0,3516593.087978712,COGS,zeta_distribution,Zeta Distribution Inc,2025-12
+6000,Salaries and Wages,810531.8214975323,0.0,810531.8214975323,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+6100,Employee Benefits,185264.41634229312,0.0,185264.41634229312,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+6200,Rent,115790.26021393319,0.0,115790.26021393319,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+6300,Utilities,112768.11948875287,0.0,112768.11948875287,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+6400,Insurance,107657.48542551213,0.0,107657.48542551213,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+6500,Professional Fees,40427.169096695085,0.0,40427.169096695085,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+7000,Sales and Marketing,185264.41634229312,0.0,185264.41634229312,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+7100,Advertising,33091.78604654801,0.0,33091.78604654801,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+7200,Travel and Entertainment,75012.11256300015,0.0,75012.11256300015,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+8000,Research and Development,0.0,0.0,0.0,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+9000,Depreciation Expense,69474.15612835991,0.0,69474.15612835991,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+9100,Amortization Expense,69474.15612835991,0.0,69474.15612835991,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12
+9500,Interest Expense,79320.70648247845,0.0,79320.70648247845,Operating Expense,zeta_distribution,Zeta Distribution Inc,2025-12

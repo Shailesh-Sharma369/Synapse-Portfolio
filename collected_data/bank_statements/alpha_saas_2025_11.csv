@@ -1,0 +1,17 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-11-01,Beginning Balance,,,8035184.481840402,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-05,Customer Payment - Smith Inc,,320521.747910914,8355706.229751316,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-05,Vendor Payment - Khan Inc,66150.2035379516,,8289556.026213365,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-08,Customer Payment - Robbins-Smith,,210367.31336938872,8499923.339582754,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-09,"Customer Payment - Martinez, Baker and Palmer",,314255.3496703384,8814178.689253092,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-09,Vendor Payment - Wood-Mathis,62742.930809431105,,8751435.758443661,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-16,Payroll,656249.9999999999,,8095185.758443661,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-19,Customer Payment - Walker-Gomez,,130865.25795072611,8226051.016394387,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-20,"Customer Payment - Rivera, Smith and Grimes",,243486.3434279128,8469537.3598223,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-21,Vendor Payment - Brown Ltd,128596.137855887,,8340941.221966412,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-24,Customer Payment - Schneider LLC,,123646.81649299193,8464588.038459403,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-25,Customer Payment - Villarreal-Peterson,,494687.2176799952,8959275.2561394,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-26,Customer Payment - Hamilton-Ray,,224542.59102143883,9183817.847160839,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-27,Vendor Payment - Bryant Inc,19392.32418429482,,9164425.522976544,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-29,"Customer Payment - Mcmahon, Mckinney and Gill",,485783.9303361009,9650209.453312645,alpha_saas,Alpha SaaS Solutions,2025-11
+2025-11-30,"Vendor Payment - Jordan, Carson and Riley",132036.7955703056,,9518172.657742338,alpha_saas,Alpha SaaS Solutions,2025-11

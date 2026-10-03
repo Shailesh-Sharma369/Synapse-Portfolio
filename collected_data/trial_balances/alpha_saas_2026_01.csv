@@ -1,0 +1,33 @@
+account_code,account_name,debit,credit,balance,account_type,company_id,company_name,period
+1000,Cash and Cash Equivalents,9153602.123463849,0.0,9153602.123463849,Asset,alpha_saas,Alpha SaaS Solutions,2026-01
+1100,Accounts Receivable,8455887.04051297,0.0,8455887.04051297,Asset,alpha_saas,Alpha SaaS Solutions,2026-01
+1150,Allowance for Doubtful Accounts,0.0,68104.1004072051,-68104.1004072051,Asset,alpha_saas,Alpha SaaS Solutions,2026-01
+1300,Prepaid Expenses,1092920.5885254326,0.0,1092920.5885254326,Asset,alpha_saas,Alpha SaaS Solutions,2026-01
+1400,"Property, Plant & Equipment",18000000.0,0.0,18000000.0,Asset,alpha_saas,Alpha SaaS Solutions,2026-01
+1450,Accumulated Depreciation,0.0,6750000.0,-6750000.0,Asset,alpha_saas,Alpha SaaS Solutions,2026-01
+1500,Intangible Assets,13500000.0,0.0,13500000.0,Asset,alpha_saas,Alpha SaaS Solutions,2026-01
+1550,Accumulated Amortization,0.0,3600000.0,-3600000.0,Asset,alpha_saas,Alpha SaaS Solutions,2026-01
+2000,Accounts Payable,0.0,2653559.98419535,-2653559.98419535,Liability,alpha_saas,Alpha SaaS Solutions,2026-01
+2100,Accrued Expenses,0.0,981484.4085051249,-981484.4085051249,Liability,alpha_saas,Alpha SaaS Solutions,2026-01
+2150,Accrued Payroll,0.0,908230.6186870033,-908230.6186870033,Liability,alpha_saas,Alpha SaaS Solutions,2026-01
+2200,Deferred Revenue,0.0,5907382.640563532,-5907382.640563532,Liability,alpha_saas,Alpha SaaS Solutions,2026-01
+2300,Current Portion of Long-term Debt,0.0,81634627.40577413,-81634627.40577413,Liability,alpha_saas,Alpha SaaS Solutions,2026-01
+2400,Long-term Debt,0.0,66303288.04879046,-66303288.04879046,Liability,alpha_saas,Alpha SaaS Solutions,2026-01
+3000,Common Stock,0.0,22500000.0,-22500000.0,Equity,alpha_saas,Alpha SaaS Solutions,2026-01
+3100,Retained Earnings,0.0,-144533086.03248277,144533086.03248277,Equity,alpha_saas,Alpha SaaS Solutions,2026-01
+4200,Subscription Revenue,0.0,3405205.0203602547,-3405205.0203602547,Revenue,alpha_saas,Alpha SaaS Solutions,2026-01
+4100,Professional Services Revenue,0.0,3405205.0203602547,-3405205.0203602547,Revenue,alpha_saas,Alpha SaaS Solutions,2026-01
+5300,Cost of Services,953457.4057008714,0.0,953457.4057008714,COGS,alpha_saas,Alpha SaaS Solutions,2026-01
+6000,Salaries and Wages,858111.6651307842,0.0,858111.6651307842,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+6100,Employee Benefits,196139.80917275068,0.0,196139.80917275068,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+6200,Rent,122587.38073296918,0.0,122587.38073296918,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+6300,Utilities,39839.530539724394,0.0,39839.530539724394,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+6400,Insurance,85658.76238866709,0.0,85658.76238866709,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+6500,Professional Fees,90169.60661412068,0.0,90169.60661412068,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+7000,Sales and Marketing,367762.1421989075,0.0,367762.1421989075,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+7100,Advertising,70411.53984721894,0.0,70411.53984721894,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+7200,Travel and Entertainment,102143.49479518515,0.0,102143.49479518515,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+8000,Research and Development,294209.713759126,0.0,294209.713759126,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+9000,Depreciation Expense,73552.4284397815,0.0,73552.4284397815,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+9100,Amortization Expense,73552.4284397815,0.0,73552.4284397815,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01
+9500,Interest Expense,53995.554898394184,0.0,53995.554898394184,Operating Expense,alpha_saas,Alpha SaaS Solutions,2026-01

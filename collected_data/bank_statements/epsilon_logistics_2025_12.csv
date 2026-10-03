@@ -1,0 +1,21 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-12-01,Beginning Balance,,,18716274.591000218,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-02,Customer Payment - Hudson PLC,,130780.73963093248,18847055.33063115,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-03,"Customer Payment - Williams, Bell and Key",,124920.22571573815,18971975.55634689,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-03,"Vendor Payment - Long, Hicks and Nguyen",171796.96794667596,,18800178.588400215,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-05,"Vendor Payment - Medina, Waller and Berger",105169.80900607839,,18695008.779394135,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-07,Vendor Payment - Baldwin-Bray,27624.210939936405,,18667384.5684542,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-09,Customer Payment - Jenkins-Meyers,,63835.93782023053,18731220.50627443,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-12,"Customer Payment - Clements, Harrison and Smith",,167557.2186082861,18898777.724882714,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-12,"Vendor Payment - White, Li and Garrett",67013.30547696815,,18831764.419405747,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-14,Customer Payment - Moreno Ltd,,168713.2781575194,19000477.69756327,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-14,Vendor Payment - Hampton Group,52993.908546225415,,18947483.789017044,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-15,Customer Payment - Moore PLC,,488321.183909747,19435804.97292679,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-15,"Vendor Payment - Lowe, Smith and Horn",167154.38840012482,,19268650.584526666,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-16,Payroll,1166666.6666666667,,18101983.917859998,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-20,Customer Payment - Conway-Morales,,309764.6518508964,18411748.569710895,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-22,Customer Payment - Frazier-Sandoval,,399394.1026197363,18811142.672330633,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-22,Vendor Payment - Allen and Sons,24833.49662189786,,18786309.175708733,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-24,Customer Payment - Williams Group,,284132.8497115178,19070442.025420252,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-26,Vendor Payment - Shannon-Gilmore,187584.39311114562,,18882857.632309105,epsilon_logistics,Epsilon Logistics Corp,2025-12
+2025-12-29,"Vendor Payment - Davis, Vazquez and Dunn",167469.9827803767,,18715387.649528727,epsilon_logistics,Epsilon Logistics Corp,2025-12

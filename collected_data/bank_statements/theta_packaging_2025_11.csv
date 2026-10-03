@@ -1,0 +1,21 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-11-01,Beginning Balance,,,13131941.93548029,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-03,"Vendor Payment - Guerrero, Pearson and Harris",188076.4162544543,,12943865.519225836,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-04,Customer Payment - Johnson-Guzman,,137042.26673643853,13080907.785962274,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-04,Vendor Payment - Smith-Butler,93923.35471010207,,12986984.431252172,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-05,"Vendor Payment - Johnson, Obrien and Oneill",145213.7598084402,,12841770.671443732,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-06,Vendor Payment - Lucas LLC,92626.07012664239,,12749144.60131709,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-08,Vendor Payment - Andrews-Turner,186572.62504306252,,12562571.976274028,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-11,"Vendor Payment - Holt, Barnes and Barnes",176148.0695209206,,12386423.906753108,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-14,Customer Payment - Ruiz and Sons,,333784.05298304214,12720207.95973615,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-15,"Customer Payment - Perez, Allen and Lewis",,313983.7686497763,13034191.728385925,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-15,Vendor Payment - Pena-Liu,71499.96425976584,,12962691.76412616,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-16,Payroll,875000.0,,12087691.76412616,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-17,"Vendor Payment - Barber, Jackson and Diaz",99226.58875613377,,11988465.175370026,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-18,Customer Payment - Kane-Gonzalez,,127100.13403464123,12115565.309404667,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-20,Customer Payment - Anderson Group,,469760.4034985368,12585325.712903203,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-20,"Vendor Payment - Torres, Marshall and Riley",118763.35386714891,,12466562.359036054,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-21,Vendor Payment - Hansen-Ford,41576.858551283134,,12424985.500484772,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-26,Customer Payment - Brown-Jackson,,408969.41992625775,12833954.92041103,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-27,"Customer Payment - Jacobson, Velazquez and Mahoney",,176372.60029366578,13010327.520704696,theta_packaging,Theta Sustainable Packaging,2025-11
+2025-11-28,"Vendor Payment - Poole, Barker and White",108190.82674932048,,12902136.693955375,theta_packaging,Theta Sustainable Packaging,2025-11

@@ -1,0 +1,32 @@
+account_code,account_name,debit,credit,balance,account_type,company_id,company_name,period
+1000,Cash and Cash Equivalents,6625441.545976536,0.0,6625441.545976536,Asset,delta_healthcare,Delta Healthcare Services,2024-11
+1100,Accounts Receivable,4219423.895235199,0.0,4219423.895235199,Asset,delta_healthcare,Delta Healthcare Services,2024-11
+1150,Allowance for Doubtful Accounts,0.0,56961.145234784,-56961.145234784,Asset,delta_healthcare,Delta Healthcare Services,2024-11
+1300,Prepaid Expenses,914062.6473003323,0.0,914062.6473003323,Asset,delta_healthcare,Delta Healthcare Services,2024-11
+1400,"Property, Plant & Equipment",14000000.0,0.0,14000000.0,Asset,delta_healthcare,Delta Healthcare Services,2024-11
+1450,Accumulated Depreciation,0.0,5250000.0,-5250000.0,Asset,delta_healthcare,Delta Healthcare Services,2024-11
+1500,Intangible Assets,10500000.0,0.0,10500000.0,Asset,delta_healthcare,Delta Healthcare Services,2024-11
+1550,Accumulated Amortization,0.0,2800000.0,-2800000.0,Asset,delta_healthcare,Delta Healthcare Services,2024-11
+2000,Accounts Payable,0.0,1919468.9744405914,-1919468.9744405914,Liability,delta_healthcare,Delta Healthcare Services,2024-11
+2100,Accrued Expenses,0.0,516352.4665280424,-516352.4665280424,Liability,delta_healthcare,Delta Healthcare Services,2024-11
+2150,Accrued Payroll,0.0,593828.2417477741,-593828.2417477741,Liability,delta_healthcare,Delta Healthcare Services,2024-11
+2200,Deferred Revenue,0.0,0.0,0.0,Liability,delta_healthcare,Delta Healthcare Services,2024-11
+2300,Current Portion of Long-term Debt,0.0,24113692.461704217,-24113692.461704217,Liability,delta_healthcare,Delta Healthcare Services,2024-11
+2400,Long-term Debt,0.0,49743178.78868918,-49743178.78868918,Liability,delta_healthcare,Delta Healthcare Services,2024-11
+3000,Common Stock,0.0,17500000.0,-17500000.0,Equity,delta_healthcare,Delta Healthcare Services,2024-11
+3100,Retained Earnings,0.0,-66487252.47430788,66487252.47430788,Equity,delta_healthcare,Delta Healthcare Services,2024-11
+4100,Service Revenue,0.0,2848057.2617392,-2848057.2617392,Revenue,delta_healthcare,Delta Healthcare Services,2024-11
+5300,Cost of Services,1281625.76778264,0.0,1281625.76778264,COGS,delta_healthcare,Delta Healthcare Services,2024-11
+6000,Salaries and Wages,548251.022884796,0.0,548251.022884796,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+6100,Employee Benefits,125314.5195165248,0.0,125314.5195165248,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+6200,Rent,78321.57469782801,0.0,78321.57469782801,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+6300,Utilities,38672.98582854384,0.0,38672.98582854384,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+6400,Insurance,58522.58395087331,0.0,58522.58395087331,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+6500,Professional Fees,52153.10838642467,0.0,52153.10838642467,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+7000,Sales and Marketing,125314.5195165248,0.0,125314.5195165248,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+7100,Advertising,50857.42194297009,0.0,50857.42194297009,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+7200,Travel and Entertainment,70096.13064909018,0.0,70096.13064909018,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+8000,Research and Development,0.0,0.0,0.0,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+9000,Depreciation Expense,46992.9448186968,0.0,46992.9448186968,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+9100,Amortization Expense,46992.9448186968,0.0,46992.9448186968,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11
+9500,Interest Expense,72243.25247021974,0.0,72243.25247021974,Operating Expense,delta_healthcare,Delta Healthcare Services,2024-11

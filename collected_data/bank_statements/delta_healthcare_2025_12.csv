@@ -1,0 +1,17 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2025-12-01,Beginning Balance,,,8148493.716158383,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-02,Customer Payment - Davis Group,,196216.2377808617,8344709.953939244,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-05,Customer Payment - Williams LLC,,442303.12812750594,8787013.08206675,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-06,Vendor Payment - Gregory-Hoover,64812.28563277453,,8722200.796433976,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-07,"Customer Payment - Pearson, Morales and Schaefer",,397922.03438798845,9120122.830821965,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-08,"Customer Payment - Curtis, Morton and Gonzalez",,381695.8079474342,9501818.6387694,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-08,Vendor Payment - Gould LLC,10809.27745254822,,9491009.36131685,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-11,Vendor Payment - Wagner-Wagner,141294.74415303284,,9349714.617163818,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-13,Vendor Payment - Garcia-Norris,171417.85153863087,,9178296.765625188,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-16,Payroll,510416.6666666667,,8667880.098958522,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-21,"Customer Payment - Blair, Alexander and Hudson",,280442.6909918531,8948322.789950375,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-25,"Vendor Payment - Gibson, Ruiz and Cain",61336.375110463116,,8886986.414839912,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-27,Customer Payment - Owens-Beard,,402976.4979920962,9289962.912832009,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-29,Customer Payment - Ford Ltd,,474635.4762246104,9764598.38905662,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-29,Vendor Payment - Lang Ltd,53342.15724784909,,9711256.23180877,delta_healthcare,Delta Healthcare Services,2025-12
+2025-12-30,"Vendor Payment - Gardner, Brown and Heath",56959.48240909855,,9654296.749399671,delta_healthcare,Delta Healthcare Services,2025-12

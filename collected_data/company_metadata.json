@@ -1,0 +1,82 @@
+[
+  {
+    "id":"alpha_saas",
+    "name":"Alpha SaaS Solutions",
+    "industry":"SaaS",
+    "revenue_annual":45000000,
+    "employees":180,
+    "has_inventory":false,
+    "gross_margin":0.72,
+    "growth_rate":0.35
+  },
+  {
+    "id":"beta_manufacturing",
+    "name":"Beta Manufacturing Co",
+    "industry":"Manufacturing",
+    "revenue_annual":120000000,
+    "employees":450,
+    "has_inventory":true,
+    "gross_margin":0.32,
+    "growth_rate":0.08
+  },
+  {
+    "id":"gamma_retail",
+    "name":"Gamma Retail Group",
+    "industry":"Retail",
+    "revenue_annual":200000000,
+    "employees":1200,
+    "has_inventory":true,
+    "gross_margin":0.38,
+    "growth_rate":0.12
+  },
+  {
+    "id":"delta_healthcare",
+    "name":"Delta Healthcare Services",
+    "industry":"Healthcare Services",
+    "revenue_annual":35000000,
+    "employees":220,
+    "has_inventory":false,
+    "gross_margin":0.55,
+    "growth_rate":0.18
+  },
+  {
+    "id":"epsilon_logistics",
+    "name":"Epsilon Logistics Corp",
+    "industry":"Transportation",
+    "revenue_annual":80000000,
+    "employees":350,
+    "has_inventory":false,
+    "gross_margin":0.22,
+    "growth_rate":0.15
+  },
+  {
+    "id":"zeta_distribution",
+    "name":"Zeta Distribution Inc",
+    "industry":"Distribution",
+    "revenue_annual":150000000,
+    "employees":280,
+    "has_inventory":true,
+    "gross_margin":0.18,
+    "growth_rate":0.06
+  },
+  {
+    "id":"eta_analytics",
+    "name":"Eta Analytics Partners",
+    "industry":"Professional Services",
+    "revenue_annual":25000000,
+    "employees":95,
+    "has_inventory":false,
+    "gross_margin":0.65,
+    "growth_rate":0.22
+  },
+  {
+    "id":"theta_packaging",
+    "name":"Theta Sustainable Packaging",
+    "industry":"Manufacturing",
+    "revenue_annual":60000000,
+    "employees":310,
+    "has_inventory":true,
+    "gross_margin":0.28,
+    "growth_rate":0.25
+  }
+]

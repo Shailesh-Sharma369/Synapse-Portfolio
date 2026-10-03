@@ -1,0 +1,37 @@
+account_code,account_name,debit,credit,balance,account_type,company_id,company_name,period
+1000,Cash and Cash Equivalents,20931019.750719436,0.0,20931019.750719436,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+1100,Accounts Receivable,23577117.51666747,0.0,23577117.51666747,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+1150,Allowance for Doubtful Accounts,0.0,211230.6440522918,-211230.6440522918,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+1200,Inventory - Raw Materials,6381654.233612466,0.0,6381654.233612466,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+1210,Inventory - Work in Process,8945303.304675257,0.0,8945303.304675257,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+1220,Inventory - Finished Goods,12790936.966954881,0.0,12790936.966954881,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+1300,Prepaid Expenses,2226363.552726902,0.0,2226363.552726902,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+1400,"Property, Plant & Equipment",48000000.0,0.0,48000000.0,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+1450,Accumulated Depreciation,0.0,18000000.0,-18000000.0,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+1500,Intangible Assets,36000000.0,0.0,36000000.0,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+1550,Accumulated Amortization,0.0,9600000.0,-9600000.0,Asset,beta_manufacturing,Beta Manufacturing Co,2025-01
+2000,Accounts Payable,0.0,9017684.73076333,-9017684.73076333,Liability,beta_manufacturing,Beta Manufacturing Co,2025-01
+2100,Accrued Expenses,0.0,2738960.9687806726,-2738960.9687806726,Liability,beta_manufacturing,Beta Manufacturing Co,2025-01
+2150,Accrued Payroll,0.0,1797645.9527791485,-1797645.9527791485,Liability,beta_manufacturing,Beta Manufacturing Co,2025-01
+2200,Deferred Revenue,0.0,0.0,0.0,Liability,beta_manufacturing,Beta Manufacturing Co,2025-01
+2300,Current Portion of Long-term Debt,0.0,158670317.57719612,-158670317.57719612,Liability,beta_manufacturing,Beta Manufacturing Co,2025-01
+2400,Long-term Debt,0.0,154220810.56611735,-154220810.56611735,Liability,beta_manufacturing,Beta Manufacturing Co,2025-01
+3000,Common Stock,0.0,60000000.0,-60000000.0,Equity,beta_manufacturing,Beta Manufacturing Co,2025-01
+3100,Retained Earnings,0.0,-255612466.31333262,255612466.31333262,Equity,beta_manufacturing,Beta Manufacturing Co,2025-01
+4000,Product Sales,0.0,10561532.20261459,-10561532.20261459,Revenue,beta_manufacturing,Beta Manufacturing Co,2025-01
+5000,Cost of Goods Sold - Materials,2393947.299259307,0.0,2393947.299259307,COGS,beta_manufacturing,Beta Manufacturing Co,2025-01
+5100,Cost of Goods Sold - Labor,2393947.299259307,0.0,2393947.299259307,COGS,beta_manufacturing,Beta Manufacturing Co,2025-01
+5200,Cost of Goods Sold - Overhead,2393947.299259307,0.0,2393947.299259307,COGS,beta_manufacturing,Beta Manufacturing Co,2025-01
+6000,Salaries and Wages,1182891.606692834,0.0,1182891.606692834,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+6100,Employee Benefits,270375.22438693355,0.0,270375.22438693355,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+6200,Rent,168984.51524183346,0.0,168984.51524183346,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+6300,Utilities,136180.89972857,0.0,136180.89972857,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+6400,Insurance,104517.73772643185,0.0,104517.73772643185,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+6500,Professional Fees,141408.6069790489,0.0,141408.6069790489,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+7000,Sales and Marketing,270375.22438693355,0.0,270375.22438693355,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+7100,Advertising,74153.14199420431,0.0,74153.14199420431,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+7200,Travel and Entertainment,100153.0315002389,0.0,100153.0315002389,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+8000,Research and Development,405562.83658040024,0.0,405562.83658040024,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+9000,Depreciation Expense,101390.70914510006,0.0,101390.70914510006,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+9100,Amortization Expense,101390.70914510006,0.0,101390.70914510006,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01
+9500,Interest Expense,114094.86232888397,0.0,114094.86232888397,Operating Expense,beta_manufacturing,Beta Manufacturing Co,2025-01

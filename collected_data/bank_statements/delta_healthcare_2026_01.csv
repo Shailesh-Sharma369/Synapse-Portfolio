@@ -1,0 +1,26 @@
+date,description,debit,credit,balance,company_id,company_name,period
+2026-01-01,Beginning Balance,,,7022935.411728131,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-02,"Vendor Payment - Kemp, Nielsen and Fisher",95178.36152050065,,6927757.05020763,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-03,Customer Payment - Cross Inc,,121145.76600246946,7048902.8162100995,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-03,Vendor Payment - Woodward LLC,90481.56767656466,,6958421.248533535,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-04,Vendor Payment - Owens-West,43526.4641265865,,6914894.784406948,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-06,"Customer Payment - Snow, Hoffman and Ball",,66914.9672641822,6981809.75167113,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-06,"Vendor Payment - Curtis, Ramirez and Potter",123487.27152456738,,6858322.480146563,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-08,Vendor Payment - Thomas Ltd,65564.50592779771,,6792757.974218765,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-11,"Vendor Payment - George, Walter and Morse",104460.08798816706,,6688297.886230598,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-12,"Vendor Payment - Gates, Harper and Miller",59772.83668866599,,6628525.0495419325,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-13,"Customer Payment - Chavez, Gonzalez and Lawson",,243472.0956580325,6871997.145199965,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-14,"Customer Payment - Hebert, Soto and Johnson",,63710.32545734801,6935707.470657312,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-14,Vendor Payment - Floyd-Ford,37456.26906497148,,6898251.201592341,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-15,Customer Payment - Bush-Bailey,,219149.14804050443,7117400.349632845,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-15,"Vendor Payment - Russell, Morris and Ramos",198848.01872364004,,6918552.330909206,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-16,Payroll,510416.6666666667,,6408135.664242539,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-16,Vendor Payment - Hill Group,65832.13265536618,,6342303.531587172,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-21,"Customer Payment - Flores, Thompson and Owen",,400892.449542763,6743195.981129935,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-21,Vendor Payment - Foley-West,59608.730569692096,,6683587.250560243,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-22,"Vendor Payment - Malone, Lewis and Bradley",58319.802508293076,,6625267.44805195,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-23,Vendor Payment - Brown Group,181130.2731417974,,6444137.174910152,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-24,Vendor Payment - Austin-Lara,89532.80767181703,,6354604.367238335,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-26,Vendor Payment - Barry-Collins,38543.32753561893,,6316061.039702716,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-27,"Vendor Payment - Brown, Barber and House",198936.4526273776,,6117124.587075339,delta_healthcare,Delta Healthcare Services,2026-01
+2026-01-29,Customer Payment - Hernandez-Mccormick,,58795.64410219139,6175920.23117753,delta_healthcare,Delta Healthcare Services,2026-01

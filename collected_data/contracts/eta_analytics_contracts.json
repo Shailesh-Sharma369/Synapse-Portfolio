@@ -1,0 +1,552 @@
+[
+  {
+    "contract_id": "CNTR-2025-ETA_-001",
+    "customer": "Cooley Group",
+    "company": "eta_analytics",
+    "start_date": "2025-06-19",
+    "end_date": "2028-06-18",
+    "total_contract_value": 478396.27,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 259360.75
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 172907.16,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-002",
+    "customer": "Hudson-Harrell",
+    "company": "eta_analytics",
+    "start_date": "2025-05-31",
+    "end_date": "2027-05-31",
+    "total_contract_value": 1026737.55,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 616042.53
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 410695.02,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-003",
+    "customer": "Barr Inc",
+    "company": "eta_analytics",
+    "start_date": "2025-03-25",
+    "end_date": "2026-03-25",
+    "total_contract_value": 850440.8,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 510264.48
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 340176.32,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-004",
+    "customer": "Smith LLC",
+    "company": "eta_analytics",
+    "start_date": "2024-10-22",
+    "end_date": "2026-10-22",
+    "total_contract_value": 234856.61,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 140913.97
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 93942.64,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-005",
+    "customer": "Parker, Bright and Jordan",
+    "company": "eta_analytics",
+    "start_date": "2024-04-03",
+    "end_date": "2027-04-03",
+    "total_contract_value": 986260.27,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 591756.16
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 394504.11,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-006",
+    "customer": "Pena Inc",
+    "company": "eta_analytics",
+    "start_date": "2025-09-24",
+    "end_date": "2028-09-23",
+    "total_contract_value": 979959.72,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 587975.83
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 391983.89,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-007",
+    "customer": "Cantrell, Meyer and Potter",
+    "company": "eta_analytics",
+    "start_date": "2025-05-20",
+    "end_date": "2027-05-20",
+    "total_contract_value": 546116.27,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 327669.76
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 218446.51,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-008",
+    "customer": "Robinson, Gardner and Smith",
+    "company": "eta_analytics",
+    "start_date": "2025-07-03",
+    "end_date": "2028-07-02",
+    "total_contract_value": 1117657.92,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 670594.75
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 447063.17,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-009",
+    "customer": "James-Buchanan",
+    "company": "eta_analytics",
+    "start_date": "2025-03-18",
+    "end_date": "2027-03-18",
+    "total_contract_value": 157555.39,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 94533.23
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 63022.16,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-010",
+    "customer": "Hicks Ltd",
+    "company": "eta_analytics",
+    "start_date": "2025-09-23",
+    "end_date": "2026-09-23",
+    "total_contract_value": 460926.55,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 276555.93
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 184370.62,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-011",
+    "customer": "Conner, Nelson and Kemp",
+    "company": "eta_analytics",
+    "start_date": "2024-05-12",
+    "end_date": "2027-05-12",
+    "total_contract_value": 922516.24,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 553509.74
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 369006.5,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-012",
+    "customer": "Huffman PLC",
+    "company": "eta_analytics",
+    "start_date": "2025-03-15",
+    "end_date": "2026-03-15",
+    "total_contract_value": 1150952.63,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 690571.58
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 460381.05,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-013",
+    "customer": "Costa Inc",
+    "company": "eta_analytics",
+    "start_date": "2024-10-28",
+    "end_date": "2027-10-28",
+    "total_contract_value": 617403.62,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 370442.17
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 246961.45,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-014",
+    "customer": "Mills PLC",
+    "company": "eta_analytics",
+    "start_date": "2024-04-17",
+    "end_date": "2027-04-17",
+    "total_contract_value": 578215.18,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 346929.11
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 231286.07,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-015",
+    "customer": "Higgins-Lee",
+    "company": "eta_analytics",
+    "start_date": "2024-08-20",
+    "end_date": "2027-08-20",
+    "total_contract_value": 371649.16,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 222989.5
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 148659.66,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-016",
+    "customer": "Campbell Ltd",
+    "company": "eta_analytics",
+    "start_date": "2025-05-19",
+    "end_date": "2026-05-19",
+    "total_contract_value": 887454.3,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 532472.58
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 354981.72,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-017",
+    "customer": "Holmes-Jenkins",
+    "company": "eta_analytics",
+    "start_date": "2024-08-26",
+    "end_date": "2026-08-26",
+    "total_contract_value": 611034.0,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 366620.4
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 244413.6,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-018",
+    "customer": "Gibson-Griffin",
+    "company": "eta_analytics",
+    "start_date": "2024-01-25",
+    "end_date": "2025-01-24",
+    "total_contract_value": 770468.48,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 462281.09
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 308187.39,
+        "completion_percentage": 77
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-019",
+    "customer": "Cummings Ltd",
+    "company": "eta_analytics",
+    "start_date": "2024-11-16",
+    "end_date": "2026-11-16",
+    "total_contract_value": 740719.49,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 444431.69
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 296287.8,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-020",
+    "customer": "King, Williams and Farrell",
+    "company": "eta_analytics",
+    "start_date": "2025-02-15",
+    "end_date": "2026-02-15",
+    "total_contract_value": 333711.49,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 200226.89
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 133484.6,
+        "completion_percentage": 50
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-021",
+    "customer": "Huynh-Benitez",
+    "company": "eta_analytics",
+    "start_date": "2024-02-18",
+    "end_date": "2026-02-17",
+    "total_contract_value": 524205.35,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 314523.21
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 209682.14,
+        "completion_percentage": 75
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-022",
+    "customer": "Garcia-Graves",
+    "company": "eta_analytics",
+    "start_date": "2025-07-31",
+    "end_date": "2026-07-31",
+    "total_contract_value": 931591.94,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 481315.13
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 320876.76,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-ETA_-023",
+    "customer": "Anderson, Olson and Thompson",
+    "company": "eta_analytics",
+    "start_date": "2025-04-30",
+    "end_date": "2026-04-30",
+    "total_contract_value": 1148455.75,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 689073.45
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 459382.3,
+        "completion_percentage": 100
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-024",
+    "customer": "Hall-Brown",
+    "company": "eta_analytics",
+    "start_date": "2024-06-20",
+    "end_date": "2027-06-20",
+    "total_contract_value": 311007.84,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 186604.7
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 124403.14,
+        "completion_percentage": 25
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-ETA_-025",
+    "customer": "Nixon, Ball and Johnson",
+    "company": "eta_analytics",
+    "start_date": "2024-04-15",
+    "end_date": "2025-04-15",
+    "total_contract_value": 235826.91,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Service retainer",
+        "revenue_recognition": "ratable",
+        "value": 141496.15
+      },
+      {
+        "description": "Project delivery",
+        "revenue_recognition": "milestone",
+        "value": 94330.76,
+        "completion_percentage": 73
+      }
+    ]
+  }
+]

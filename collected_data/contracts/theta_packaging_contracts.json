@@ -1,0 +1,527 @@
+[
+  {
+    "contract_id": "CNTR-2024-THET-001",
+    "customer": "Wood, Pollard and Lawrence",
+    "company": "theta_packaging",
+    "start_date": "2024-06-12",
+    "end_date": "2025-06-12",
+    "total_contract_value": 1437370.23,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1149896.18
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 287474.05
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-002",
+    "customer": "Foster, Thomas and Preston",
+    "company": "theta_packaging",
+    "start_date": "2024-02-23",
+    "end_date": "2025-02-22",
+    "total_contract_value": 1242002.99,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 993602.39
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 248400.6
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-THET-003",
+    "customer": "Rhodes-Martin",
+    "company": "theta_packaging",
+    "start_date": "2025-08-02",
+    "end_date": "2027-08-02",
+    "total_contract_value": 2019785.84,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1411895.93
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 352973.98
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-004",
+    "customer": "Patel-Larson",
+    "company": "theta_packaging",
+    "start_date": "2024-07-21",
+    "end_date": "2027-07-21",
+    "total_contract_value": 2855076.74,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2284061.39
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 571015.35
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-005",
+    "customer": "Travis-Thomas",
+    "company": "theta_packaging",
+    "start_date": "2024-05-25",
+    "end_date": "2025-05-25",
+    "total_contract_value": 2006143.51,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1604914.81
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 401228.7
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-THET-006",
+    "customer": "Long, Sparks and Howard",
+    "company": "theta_packaging",
+    "start_date": "2025-05-05",
+    "end_date": "2026-05-05",
+    "total_contract_value": 1679256.76,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1343405.41
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 335851.35
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-007",
+    "customer": "Marquez LLC",
+    "company": "theta_packaging",
+    "start_date": "2024-12-16",
+    "end_date": "2025-12-16",
+    "total_contract_value": 813408.51,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 567427.22
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 141856.8
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-THET-008",
+    "customer": "Bond LLC",
+    "company": "theta_packaging",
+    "start_date": "2025-02-18",
+    "end_date": "2027-02-18",
+    "total_contract_value": 1278091.37,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1022473.1
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 255618.27
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-THET-009",
+    "customer": "Russell Inc",
+    "company": "theta_packaging",
+    "start_date": "2025-08-28",
+    "end_date": "2028-08-27",
+    "total_contract_value": 2336979.35,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1869583.48
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 467395.87
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-THET-010",
+    "customer": "Allen LLC",
+    "company": "theta_packaging",
+    "start_date": "2025-12-01",
+    "end_date": "2026-12-01",
+    "total_contract_value": 1000673.41,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 800538.73
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 200134.68
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-THET-011",
+    "customer": "Conner-Taylor",
+    "company": "theta_packaging",
+    "start_date": "2025-03-31",
+    "end_date": "2028-03-30",
+    "total_contract_value": 819569.23,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 655655.38
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 163913.85
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-012",
+    "customer": "Mccarthy PLC",
+    "company": "theta_packaging",
+    "start_date": "2024-04-01",
+    "end_date": "2026-04-01",
+    "total_contract_value": 1133815.71,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 907052.57
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 226763.14
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-THET-013",
+    "customer": "Crawford, Smith and Meyer",
+    "company": "theta_packaging",
+    "start_date": "2025-09-13",
+    "end_date": "2028-09-12",
+    "total_contract_value": 2148932.59,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1719146.07
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 429786.52
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-014",
+    "customer": "Flowers, Landry and Smith",
+    "company": "theta_packaging",
+    "start_date": "2024-04-15",
+    "end_date": "2026-04-15",
+    "total_contract_value": 1383273.78,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1106619.02
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 276654.76
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-015",
+    "customer": "Adams, Baker and Newman",
+    "company": "theta_packaging",
+    "start_date": "2024-09-27",
+    "end_date": "2027-09-27",
+    "total_contract_value": 2927704.88,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2342163.9
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 585540.98
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-016",
+    "customer": "Gonzalez-Armstrong",
+    "company": "theta_packaging",
+    "start_date": "2024-04-24",
+    "end_date": "2025-04-24",
+    "total_contract_value": 2909801.3,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2327841.04
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 581960.26
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-017",
+    "customer": "Robbins-Shields",
+    "company": "theta_packaging",
+    "start_date": "2024-03-07",
+    "end_date": "2025-03-07",
+    "total_contract_value": 1840734.08,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1472587.26
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 368146.82
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-THET-018",
+    "customer": "Hunter and Sons",
+    "company": "theta_packaging",
+    "start_date": "2025-03-03",
+    "end_date": "2028-03-02",
+    "total_contract_value": 1400489.47,
+    "billing_schedule": "monthly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1120391.58
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 280097.89
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-019",
+    "customer": "Garcia-Mann",
+    "company": "theta_packaging",
+    "start_date": "2024-07-22",
+    "end_date": "2027-07-22",
+    "total_contract_value": 2856332.87,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2285066.3
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 571266.57
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-020",
+    "customer": "Miller, Ramsey and Craig",
+    "company": "theta_packaging",
+    "start_date": "2024-07-27",
+    "end_date": "2026-07-27",
+    "total_contract_value": 1059377.71,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 772641.32
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 193160.33
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-021",
+    "customer": "Weaver-Evans",
+    "company": "theta_packaging",
+    "start_date": "2024-03-25",
+    "end_date": "2026-03-25",
+    "total_contract_value": 979665.79,
+    "billing_schedule": "annual",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 783732.63
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 195933.16
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-THET-022",
+    "customer": "Miller-Perry",
+    "company": "theta_packaging",
+    "start_date": "2025-08-15",
+    "end_date": "2027-08-15",
+    "total_contract_value": 2517591.41,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 2014073.13
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 503518.28
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2025-THET-023",
+    "customer": "Martin, Stephens and Odonnell",
+    "company": "theta_packaging",
+    "start_date": "2025-01-19",
+    "end_date": "2028-01-19",
+    "total_contract_value": 1422113.03,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 1137690.42
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 284422.61
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-024",
+    "customer": "Randall-Jackson",
+    "company": "theta_packaging",
+    "start_date": "2024-06-11",
+    "end_date": "2027-06-11",
+    "total_contract_value": 1224602.96,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 818849.69
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 204712.42
+      }
+    ]
+  },
+  {
+    "contract_id": "CNTR-2024-THET-025",
+    "customer": "Diaz, Miller and Holt",
+    "company": "theta_packaging",
+    "start_date": "2024-09-10",
+    "end_date": "2026-09-10",
+    "total_contract_value": 838363.3,
+    "billing_schedule": "quarterly",
+    "performance_obligations": [
+      {
+        "description": "Product supply agreement",
+        "revenue_recognition": "point_in_time",
+        "value": 670690.64
+      },
+      {
+        "description": "Installation & support",
+        "revenue_recognition": "ratable",
+        "value": 167672.66
+      }
+    ]
+  }
+]
