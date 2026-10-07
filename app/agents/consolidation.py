@@ -1,57 +1,34 @@
 """
-Consolidation Agent — Phase 4, Final Consolidation Group.
+app/agents/consolidation.py
 
-================================================================================
-BUSINESS PROBLEM
-================================================================================
-After intercompany elimination (Phase 3), the PE fund needs a SINGLE set of
-group financials that a CFO / LP can read. This agent rolls up the trial
-balances of all 8 portfolio companies into a group P&L, computes EBITDA, and
-applies GAAP consolidation rules — including NETTING intercompany revenue
-and intercompany expense so they don't double-count at group level.
+Consolidation agent for the PE month-end close pipeline.
 
-================================================================================
-GAAP CONSOLIDATION — the "matched IC" elimination
-================================================================================
-If Company A sells $500K to Company B and B records the mirror $500K, then
-at group level this is ZERO economic activity — money never left the group.
-GAAP requires that BOTH the $500K of intercompany revenue (on A's books) AND
-the $500K of intercompany expense/purchases (on B's books) be eliminated.
+IMPORTANT — this module enforces DATA MASKING at the LLM boundary:
 
-We compute the matched portion as sum(min(flow_ab, flow_ba)) for each pair.
-This is subtracted from group revenue, and an equivalent amount is subtracted
-from group COGS + OpEx (split proportionally).
+  * The prompt passed to ``agent.run()`` is masked before it leaves the process.
+  * All tools are wrapped by ``DataMasker.wrap_tool`` so the LLM only ever
+    sees tokens (``Entity_A``) — never real company IDs or names.
+  * The LLM's JSON response is rehydrated back to real identifiers before
+    it is parsed into a Pydantic model and stored.
 
-Unmatched flow (asymmetry) is NOT netted — it represents a real disagreement
-between the two entities' books and is booked as a conservative EBITDA haircut.
-
-================================================================================
-HYBRID DESIGN (Python Math + LLM Reasoning)
-================================================================================
-- Python owns ALL arithmetic:
-    - Account-type bucketing
-    - Intercompany netting (matched portion only)
-    - Asymmetry haircut
-    - EBITDA math
-- Gemini owns ONLY the executive narrative.
-================================================================================
+If ``run_id`` is not provided (e.g. ad-hoc call from a notebook), masking
+is disabled and a warning is logged. The pipeline always passes run_id.
 """
-
 from __future__ import annotations
 
 import json
 import logging
-import time
 import os
+import time
 from decimal import Decimal
 from typing import Any
 
 from agno.agent import Agent
-from agno.models.google import Gemini
-from app.core.llm import get_model
 from pydantic import BaseModel, Field
 from sqlalchemy import select
 
+from app.core.privacy import get_masker
+from app.core.llm import get_model
 from app.db.database import SessionLocal, settings
 from app.db.models import Company, TrialBalance
 
@@ -65,12 +42,10 @@ OPEX_TYPES = {"operating expense", "expense"}
 
 
 # =============================================================================
-# 1. STRUCTURED OUTPUT SCHEMA
+# 1. PYDANTIC RESULT SCHEMA
 # =============================================================================
 
 class ConsolidationResult(BaseModel):
-    """Final structured group financials returned by the agent."""
-
     period: str
     status: str = Field(..., description="'COMPLETE' if all entities contributed, else 'INCOMPLETE'.")
     entity_count: int = Field(..., description="Number of companies included in the rollup.")
@@ -79,7 +54,7 @@ class ConsolidationResult(BaseModel):
     gross_profit: float = Field(..., description="gross_revenue - total_cogs.")
     total_opex: float = Field(..., description="Consolidated OpEx (post-IC elimination, positive).")
     raw_ebitda: float = Field(..., description="gross_profit - total_opex (pre-asymmetry haircut).")
-    # NEW: matched intercompany flow that was netted from revenue AND expense
+
     eliminated_intercompany_usd: float = Field(
         0.0,
         description="Matched intercompany flow netted from group revenue and expense.",
@@ -94,17 +69,11 @@ class ConsolidationResult(BaseModel):
 
 
 # =============================================================================
-# 2. DETERMINISTIC ANALYSIS TOOL
+# 2. DETERMINISTIC TOOLS (unchanged from v1 — these operate on REAL data)
 # =============================================================================
 
 def _get_phase3_totals(period: str, run_id: str | None) -> tuple[Decimal, Decimal]:
-    """
-    Return (asymmetry_usd, matched_intercompany_usd) for the period.
-
-    Prefers the value persisted by Phase 3 under `close:{run_id}:phase3:result`.
-    Falls back to recomputing from the IC ledger via the Phase 3 tool.
-    """
-    # ---- Preferred path: read from Redis (fast, exact run result) --------
+    """Read Phase-3 result (asymmetry, matched-IC) or recompute from the IC ledger."""
     if run_id:
         try:
             import redis as _redis
@@ -121,7 +90,6 @@ def _get_phase3_totals(period: str, run_id: str | None) -> tuple[Decimal, Decima
                 "Could not read phase3 result from Redis — recomputing from IC ledger."
             )
 
-    # ---- Fallback: recompute via the Phase 3 tool ------------------------
     from app.agents.elimination import verify_intercompany_eliminations
     facts = verify_intercompany_eliminations(period)
     return (
@@ -132,21 +100,10 @@ def _get_phase3_totals(period: str, run_id: str | None) -> tuple[Decimal, Decima
 
 def generate_consolidated_financials(period: str, run_id: str | None = None) -> dict[str, Any]:
     """
-    Deterministic group consolidation for one period.
+    Deterministic group P&L rollup with intercompany netting.
 
-    ALGORITHM
-    ---------
-    1. Load all TrialBalance rows for `period` across ALL companies.
-    2. Bucket by account_type:
-         Revenue                     → gross_revenue (flip sign)
-         COGS                        → total_cogs
-         Operating Expense / Expense → total_opex
-       Assets / Liabilities / Equity are ignored — P&L consolidation only.
-    3. Eliminate matched intercompany flow:
-         gross_revenue -= matched_ic
-         split matched_ic across COGS + OpEx proportionally and subtract.
-    4. Compute gross_profit and raw_ebitda from the post-elimination numbers.
-    5. Fetch the Phase 3 asymmetry and apply as a conservative EBITDA haircut.
+    NOTE: This tool operates on REAL data. When called by the LLM, the
+    DataMasker wrapper on the agent side will mask the return dict.
     """
     db = SessionLocal()
     try:
@@ -177,7 +134,6 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
                 "elimination_asymmetry": 0.0, "adjusted_group_ebitda": 0.0,
             }
 
-        # ---- Bucket by account_type (case-insensitive) -------------------
         gross_revenue = Decimal("0")
         total_cogs = Decimal("0")
         total_opex = Decimal("0")
@@ -189,19 +145,14 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
             entity_ids.add(r.company_id)
 
             if acct_type in REVENUE_TYPES:
-                # Credit-normal: our schema stores revenue as negative balance.
                 gross_revenue += -balance
             elif acct_type in COGS_TYPES:
                 total_cogs += balance
             elif acct_type in OPEX_TYPES:
                 total_opex += balance
 
-        # ---- Fetch Phase 3 totals: asymmetry + matched IC -----------------
         asymmetry, matched_ic = _get_phase3_totals(period, run_id)
 
-        # ---- Apply GAAP intercompany elimination --------------------------
-        # Subtract matched IC flow from revenue, and an equivalent amount
-        # from the expense side (split proportionally between COGS and OpEx).
         gross_revenue -= matched_ic
 
         combined_expense = total_cogs + total_opex
@@ -210,18 +161,12 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
             total_cogs -= cogs_share
             total_opex -= (matched_ic - cogs_share)
         else:
-            # No expense to offset (rare) — put it all against OpEx
             total_opex -= matched_ic
 
-        # ---- Compute post-elimination P&L --------------------------------
         gross_profit = gross_revenue - total_cogs
         raw_ebitda = gross_profit - total_opex
-
-        # ---- Apply asymmetry haircut (conservative LP view) --------------
         adjusted_ebitda = raw_ebitda - asymmetry
 
-        # ---- Entity coverage check ---------------------------------------
-                # Match the run's filter — if we're demoing 4 companies, expect 4.
         if run_id:
             try:
                 import redis as _redis
@@ -273,16 +218,14 @@ def generate_consolidated_financials(period: str, run_id: str | None = None) -> 
     finally:
         db.close()
 
-# =============================================================================
-# TOOL 2 — get_entity_breakdown
-# =============================================================================
 
 def get_entity_breakdown(period: str) -> list[dict[str, Any]]:
     """
-    Return per-entity revenue/COGS/OpEx totals for the period.
+    Per-entity P&L breakdown for the period.
 
-    Use this to see which entity contributes most to group revenue or
-    drives the biggest expense lines. Helps explain the group number.
+    Returns a list whose ``entity_id`` field is a REAL company slug. When
+    the LLM calls this tool, the DataMasker wrapper masks those IDs to
+    ``Entity_A``, ``Entity_B`` etc. before they land in the LLM context.
     """
     db = SessionLocal()
     try:
@@ -323,18 +266,8 @@ def get_entity_breakdown(period: str) -> list[dict[str, Any]]:
         db.close()
 
 
-# =============================================================================
-# TOOL 3 — get_ic_eliminations
-# =============================================================================
-
 def get_ic_eliminations(period: str, run_id: str | None = None) -> dict[str, Any]:
-    """
-    Return the intercompany amounts that will be netted in consolidation.
-
-    Use this to explain to the LLM what the elimination actually does —
-    the matched IC flow is subtracted from both group revenue and group
-    expense; the asymmetry is booked as an EBITDA haircut.
-    """
+    """Intercompany amounts being netted at group level."""
     asymmetry, matched = _get_phase3_totals(period, run_id)
     return {
         "matched_intercompany_usd": float(matched),
@@ -343,6 +276,7 @@ def get_ic_eliminations(period: str, run_id: str | None = None) -> dict[str, Any
                  f"revenue and group expense, and apply a ${asymmetry:,.2f} "
                  f"EBITDA haircut for the unmatched asymmetry."),
     }
+
 
 def _latest_period_globally() -> str | None:
     """Latest period present in trial_balances across all companies."""
@@ -358,7 +292,7 @@ def _latest_period_globally() -> str | None:
 
 
 # =============================================================================
-# 3. AGNO AGENT DEFINITION
+# 3. AGNO AGENT DEFINITION (masked tool list injected at build time)
 # =============================================================================
 
 AGENT_INSTRUCTIONS = [
@@ -382,21 +316,31 @@ AGENT_INSTRUCTIONS = [
     "2. Copy every numeric field verbatim from generate_consolidated_financials.",
     "3. `executive_summary` = 2-4 sentences leading with adjusted_group_ebitda.",
     "4. Mention the IC netting AND the asymmetry haircut explicitly.",
+    "5. Entity identifiers are pseudonymized (Entity_A, Entity_B, ...). Refer to them by the SAME token the tools returned — never invent or extrapolate a different name.",
     "",
     "Output ONLY the structured JSON schema.",
 ]
 
 
-def _build_agent() -> Agent:
-    """Build the Consolidation Agent."""
+def _build_agent(masker: Any | None = None) -> Agent:
+    """
+    Build the Consolidation Agent.
+
+    If ``masker`` is provided (a DataMasker), its tools are wrapped so that
+    both the arguments the LLM supplies and the values the tools return
+    are pseudonymized.
+    """
+    raw_tools = [
+        generate_consolidated_financials,
+        get_entity_breakdown,
+        get_ic_eliminations,
+    ]
+    tools = masker.wrap_tools(raw_tools) if masker is not None else raw_tools
+
     return Agent(
         name="Consolidation Agent",
         model=get_model(),
-        tools=[
-            generate_consolidated_financials,
-            get_entity_breakdown,
-            get_ic_eliminations,
-        ],
+        tools=tools,
         description="Produces consolidated group financials with GAAP IC elimination.",
         instructions=AGENT_INSTRUCTIONS,
         output_schema=ConsolidationResult,
@@ -408,11 +352,10 @@ def _build_agent() -> Agent:
 
 
 # =============================================================================
-# 4. PUBLIC ENTRYPOINT
+# 4. SAFE PARSE (unchanged)
 # =============================================================================
 
 def _safe_parse(content: Any) -> ConsolidationResult:
-    """Parse agent response; detect Gemini error payloads cleanly."""
     if isinstance(content, ConsolidationResult):
         return content
     if isinstance(content, dict):
@@ -430,6 +373,10 @@ def _safe_parse(content: Any) -> ConsolidationResult:
     raise ValueError(f"Unexpected agent response type: {type(content)}")
 
 
+# =============================================================================
+# 5. PUBLIC ENTRYPOINT — with masking applied at the LLM boundary
+# =============================================================================
+
 def run_consolidation(
     period: str | None = None,
     run_id: str | None = None,
@@ -437,8 +384,16 @@ def run_consolidation(
     """
     Run the Consolidation Agent for one period.
 
-    Falls back to a Python-only verdict if the LLM is unreachable — the
-    orchestrator never blocks on a Gemini rate-limit.
+    Data-flow (masking ON):
+
+        prompt  ──mask_text──▶  agent.run()  ──raw──▶  rehydrate_value ──▶ _safe_parse
+                       ▲                                  │
+                       │                                  │
+                  tool wrappers                    real company names
+                  (mask returns,                   restored before the
+                   unmask args)                    result leaves this fn.
+
+    Falls back to a deterministic verdict if the LLM is unreachable.
     """
     if period is None:
         period = _latest_period_globally()
@@ -452,7 +407,7 @@ def run_consolidation(
                 executive_summary="No trial balance data available for consolidation.",
             )
 
-    # ---- TIER 1: deterministic pre-check --------------------------------
+    # ---- TIER 1: deterministic pre-check (no LLM, no masking needed) ----
     precheck = generate_consolidated_financials(period, run_id=run_id)
     if (
         precheck.get("found")
@@ -482,28 +437,61 @@ def run_consolidation(
             ),
         )
 
-    prompt = (
-    f"Generate consolidated group financials for period={period!r}. "
-    f"Use the tools to understand the IC elimination being applied, then "
-    f"produce the structured ConsolidationResult."
-)
+    # ---- Acquire the per-run DataMasker (no-op if run_id is None) -------
+    masker = None
+    if run_id:
+        try:
+            masker = get_masker(run_id)
+            logger.info(
+                "[Consolidation] Masking enabled — %d tokens active for run %s",
+                len(masker._token_to_real), run_id,
+            )
+        except Exception as exc:  # noqa: BLE001
+            logger.warning(
+                "[Consolidation] DataMasker unavailable (%s) — proceeding UNMASKED. "
+                "This should not happen in production.",
+                type(exc).__name__,
+            )
+    else:
+        logger.warning(
+            "[Consolidation] No run_id — proceeding UNMASKED. "
+            "Only acceptable for ad-hoc/dev calls."
+        )
 
+    # ---- Prepare prompt (masked) ----------------------------------------
+    prompt = (
+        f"Generate consolidated group financials for period={period!r}. "
+        f"Use the tools to understand the IC elimination being applied, then "
+        f"produce the structured ConsolidationResult."
+    )
+    if masker is not None:
+        prompt = masker.mask_text(prompt)
+
+    # ---- LLM path (retries on transient errors) -------------------------
     last_exc: Exception | None = None
     for attempt in range(3):
         try:
-            agent = _build_agent()
+            agent = _build_agent(masker=masker)
             response = agent.run(prompt)
-            return _safe_parse(response.content)
+
+            content = response.content
+            if masker is not None:
+                # Rehydrate BEFORE Pydantic validation so the returned model
+                # contains real identifiers, not tokens.
+                content = masker.rehydrate_value(content)
+
+            return _safe_parse(content)
         except Exception as exc:  # noqa: BLE001
             last_exc = exc
             msg = str(exc).lower()
             if any(k in msg for k in ("503", "unavailable", "429", "quota", "timeout", "deadline")) and attempt < 2:
-                import random as _rnd; time.sleep((5 + _rnd.random() * 3) * (attempt + 1))
+                import random as _rnd
+                time.sleep((5 + _rnd.random() * 3) * (attempt + 1))
                 logger.warning("Transient error on consolidation attempt %d — retrying.", attempt + 1)
                 continue
             break
 
-    # ---- Deterministic fallback ------------------------------------------
+    # ---- Deterministic fallback (no LLM, no masking needed) --------------
     logger.warning(
         "LLM path failed for consolidation %s (%s) — falling back.",
         period, type(last_exc).__name__,

@@ -228,6 +228,16 @@ def run_month_end_close(
     redis_client.lpush("close:runs:recent", run_id)
     redis_client.ltrim("close:runs:recent", 0, 49)
 
+    try:
+        from app.core.privacy import get_masker
+        _masker = get_masker(run_id)
+        logger.info(
+            "[Orchestrator] Privacy tokens primed: %d entities masked for run %s",
+            len(_masker._token_to_real), run_id,
+        )
+    except Exception as exc:
+        logger.warning("[Orchestrator] Masker priming failed: %s", exc)
+
     # ---- 4. PHASE 0: Pre-Flight (agentic) -------------------------------
     try:
         from app.agents.orchestrator_agent import run_preflight

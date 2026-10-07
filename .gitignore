@@ -13,6 +13,7 @@
 *.local.env
 .env.*.local
 !.env.example
+.local_data/
 
 # ---- Python ------------------------------------------------
 __pycache__/

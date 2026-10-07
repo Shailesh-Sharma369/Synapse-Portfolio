@@ -2,40 +2,53 @@ services:
   db:
     image: postgres:15
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: password123
-      POSTGRES_DB: month_end_close
-    ports:
-      - "5432:5432"
+      POSTGRES_USER: ${POSTGRES_USER:-admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme_local_only}
+      POSTGRES_DB: ${POSTGRES_DB:-month_end_close}
+      AGNO_TELEMETRY: "false"
+      DO_NOT_TRACK: "1"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin -d month_end_close"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-admin} -d ${POSTGRES_DB:-month_end_close}"]
       interval: 5s
       timeout: 5s
       retries: 10
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    networks:
+      - synapse_internal
 
   redis:
     image: redis:alpine
-    ports:
-      - "6379:6379"
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
       timeout: 5s
       retries: 10
+    environment:
+      AGNO_TELEMETRY: "false"
+      DO_NOT_TRACK: "1"
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    networks:
+      - synapse_internal
 
   api:
     build: .
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
     env_file: .env
     environment:
-      DATABASE_URL: postgresql+psycopg2://admin:password123@db:5432/month_end_close
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-admin}:${POSTGRES_PASSWORD:-changeme_local_only}@db:5432/${POSTGRES_DB:-month_end_close}
       REDIS_URL: redis://redis:6379/0
       CELERY_BROKER_URL: redis://redis:6379/1
       CELERY_RESULT_BACKEND: redis://redis:6379/2
+      AGNO_TELEMETRY: "false"
+      DO_NOT_TRACK: "1"
+      ANONYMIZED_TELEMETRY: "false"
+      HF_HUB_DISABLE_TELEMETRY: "1"
     volumes:
       - ./app:/app/app
       - ./scripts:/app/scripts
@@ -45,16 +58,24 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    networks:
+      - synapse_internal
 
   worker:
     build: .
     command: celery -A app.core.celery_app worker -Q orchestrator,agents --loglevel=info --concurrency=4
     env_file: .env
     environment:
-      DATABASE_URL: postgresql+psycopg2://admin:password123@db:5432/month_end_close
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-admin}:${POSTGRES_PASSWORD:-changeme_local_only}@db:5432/${POSTGRES_DB:-month_end_close}
       REDIS_URL: redis://redis:6379/0
       CELERY_BROKER_URL: redis://redis:6379/1
       CELERY_RESULT_BACKEND: redis://redis:6379/2
+      AGNO_TELEMETRY: "false"
+      DO_NOT_TRACK: "1"
+      ANONYMIZED_TELEMETRY: "false"
+      HF_HUB_DISABLE_TELEMETRY: "1"
     volumes:
       - ./app:/app/app
       - ./scripts:/app/scripts
@@ -64,16 +85,22 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    networks:
+      - synapse_internal
 
   beat:
     build: .
     command: celery -A app.core.celery_app beat --loglevel=info
     env_file: .env
     environment:
-      DATABASE_URL: postgresql+psycopg2://admin:password123@db:5432/month_end_close
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-admin}:${POSTGRES_PASSWORD:-changeme_local_only}@db:5432/${POSTGRES_DB:-month_end_close}
       REDIS_URL: redis://redis:6379/0
       CELERY_BROKER_URL: redis://redis:6379/1
       CELERY_RESULT_BACKEND: redis://redis:6379/2
+      AGNO_TELEMETRY: "false"
+      DO_NOT_TRACK: "1"
     volumes:
       - ./app:/app/app
       - ./scripts:/app/scripts
@@ -83,18 +110,24 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    networks:
+      - synapse_internal
 
   ui:
     build: .
-    command: streamlit run app/ui/dashboard.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true
+    command: streamlit run app/ui/dashboard.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true --browser.gatherUsageStats=false --server.enableXsrfProtection=true --server.enableCORS=false
     ports:
-      - "8501:8501"
+      - "127.0.0.1:8501:8501"
     env_file: .env
     environment:
       REDIS_URL: redis://redis:6379/0
-      DATABASE_URL: postgresql+psycopg2://admin:password123@db:5432/month_end_close
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-admin}:${POSTGRES_PASSWORD:-changeme_local_only}@db:5432/${POSTGRES_DB:-month_end_close}
       STREAMLIT_SERVER_HEADLESS: "true"
       STREAMLIT_BROWSER_GATHER_USAGE_STATS: "false"
+      AGNO_TELEMETRY: "false"
+      DO_NOT_TRACK: "1"
     volumes:
       - ./app:/app/app
       - ./scripts:/app/scripts
@@ -102,6 +135,27 @@ services:
     depends_on:
       redis:
         condition: service_healthy
+      db:
+        condition: service_healthy
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    networks:
+      - synapse_internal
 
 volumes:
   postgres_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/.local_data/postgres
+  redis_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/.local_data/redis
+
+networks:
+  synapse_internal:
+    driver: bridge

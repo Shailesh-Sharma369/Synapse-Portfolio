@@ -1,12 +1,16 @@
-# app/main.py (replace top imports + endpoint)
-
-from __future__ import annotations
+import os
+os.environ.setdefault("AGNO_TELEMETRY", "false")
+os.environ.setdefault("ANONYMIZED_TELEMETRY", "false")
+os.environ.setdefault("DO_NOT_TRACK", "1")
+os.environ.setdefault("HF_HUB_DISABLE_TELEMETRY", "1")
+os.environ.setdefault("STREAMLIT_BROWSER_GATHER_USAGE_STATS", "false")
+os.environ.setdefault("LITELLM_TELEMETRY", "false")
 
 import uuid
 from typing import Any
 
 import redis
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from sqlalchemy import text
 
 from app.agents.orchestrator import run_month_end_close
@@ -41,6 +45,8 @@ def health() -> dict[str, Any]:
         "status": "healthy" if (postgres_ok and redis_ok) else "degraded",
         "postgres": postgres_ok,
         "redis": redis_ok,
+        "bind": "127.0.0.1 (host-loopback only)",
+        "telemetry": "disabled",
     }
 
 
@@ -55,3 +61,13 @@ def trigger_close() -> dict[str, Any]:
     except Exception:
         pass
     return {"run_id": run_id, "status": "queued"}
+
+
+@app.get("/api/v1/privacy/audit/{run_id}")
+def privacy_audit(run_id: str) -> dict[str, Any]:
+    try:
+        from app.core.privacy import describe_for_audit
+
+        return describe_for_audit(run_id)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
